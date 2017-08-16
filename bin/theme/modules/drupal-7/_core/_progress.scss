@@ -1,0 +1,31 @@
+// Barre de progression
+
+.progress {
+  position: relative;
+  margin: get-layout("text-spacing", "std") 0;
+
+  .bar {
+    height: 20px;
+    border: 1px solid get-color("grayscale", "medium");
+    background: get-color("grayscale", "medium");
+    margin-bottom: get-layout("text-spacing", "small");
+
+    .filled {
+      height: 100%;
+      background: get-color("system", "info");
+    }
+  }
+
+  .percentage {
+    @extend %fs-std-up-1;
+    float: right;
+    font-weight: bold;
+    margin-left: get-layout("text-spacing", "small");
+  }
+
+  .message {
+    @extend %fs-std-up-1;
+    width: 100%;
+    font-style: italic;
+  }
+}

@@ -1,0 +1,18 @@
+// Bouton d'administration "standalone"
+
+.admin-link {
+  @extend %color-grayscale-light;
+  @extend %typeface-system;
+  @extend %fs-system-down-1;
+  text-align: left;
+
+  a {
+    display: inline-block;
+    padding: get-layout("block-spacing", "small") / 2 get-layout("block-spacing", "small");
+    background-color: get-color("system", "info");
+
+    &:hover {
+      background-color: mix(get-color("system", "info"), #000000, 80%);
+    }
+  }
+}

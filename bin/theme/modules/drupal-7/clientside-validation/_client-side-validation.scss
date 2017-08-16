@@ -1,0 +1,8 @@
+// Validation via le module "client side validation"
+
+div.error.error-msg {
+  position: absolute;
+  width: 100%;
+  color: get-color("grayscale", "light");
+  background: get-color('system', 'danger');
+}

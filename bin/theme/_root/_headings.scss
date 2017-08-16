@@ -1,0 +1,7 @@
+@each $name, $datas in $headings {
+
+  .#{$name} {
+
+    @extend %#{$name};
+  }
+}

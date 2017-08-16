@@ -1,0 +1,10 @@
+// Group de checkboxes
+
+.form-checkboxes,
+.form-radios {
+
+  .form-item {
+    display: inline-block;
+    margin: get-layout("text-spacing", "smaller") get-layout("text-spacing", "std") get-layout("text-spacing", "smaller") 0;
+  }
+}

@@ -1,0 +1,16 @@
+// Tableaux (/!\ Impossible de cibler autrement que par la balise HTML)
+
+table {
+  @extend %table-base;
+
+  tr {
+
+    &.odd {
+      @extend %background-grayscale-light;
+    }
+
+    &.even {
+      @extend %background-grayscale-soft;
+    }
+  }
+}

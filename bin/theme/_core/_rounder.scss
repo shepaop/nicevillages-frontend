@@ -1,0 +1,13 @@
+@function rounder($number, $rounder: 3) {
+
+  $divider: 10;
+  @if $rounder > 0 {
+    @for $i from 1 to $rounder {
+      $divider: $divider * 10;
+    }
+  }
+
+  $number: round($number * $divider) / $divider;
+
+  @return $number;
+}

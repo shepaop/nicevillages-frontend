@@ -1,0 +1,16 @@
+// Zone d'actions du formulaire
+
+.form-actions {
+  margin: get-layout("text-spacing", "std") 0;
+  @extend %fs-std-up-1;
+
+  a {
+    color: get-color("brand", "first");
+    display: inline-block;
+  }
+
+  .form-submit,
+  a {
+    margin-right: get-layout("text-spacing", "std");
+  }
+}

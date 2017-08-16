@@ -1,0 +1,49 @@
+// Primary tabs
+
+/*
+Primary tabs
+
+Tables d'administration
+
+Markup:
+<ul class="tabs primary">
+  <li class="active">
+    <a href="#" class="active">Voir<span class="element-invisible">(onglet actif)</span></a>
+  </li>
+  <li><a href="#">Modifier</a></li>
+  <li><a href="#">Révisions</a></li>
+  <li><a href="#">Node export</a></li>
+  <li><a href="#">Devel</a></li>
+</ul>
+
+Styleguide 4.1.7.
+*/
+
+.tabs.primary {
+  margin: get-layout("block-spacing", "std") 0 get-layout("block-spacing", "std") 0;
+  @extend %typeface-std;
+  text-align: left;
+
+  > li {
+    display: inline-block;
+
+    > a {
+      display: block;
+      color: get-color("grayscale", "light");
+      padding: get-layout("block-spacing", "small") / 2 get-layout("block-spacing", "small");
+      background-color: get-color("system", "info");
+
+      &:hover {
+        background-color: mix(get-color("system", "info"), #000000, 80%);
+      }
+
+      &.active {
+        background-color: get-color("system", "success");
+
+        &:hover {
+          background-color: mix(get-color("system", "success"), #000000, 80%);
+        }
+      }
+    }
+  }
+}

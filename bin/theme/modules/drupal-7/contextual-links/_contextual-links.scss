@@ -1,0 +1,84 @@
+$name: 'contextual-links';
+$size-contextual-links: get-icon("icon-ui_burger-menu-std", "width");
+
+.#{$name} {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  @extend %background-grayscale-light;
+  @extend %box-shadow-std;
+
+  li {
+    display: block;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+
+    a {
+      display: block;
+      color: get-color("grayscale", "dark") !important;
+      border: 0 !important;
+      margin: 0 !important;
+      padding: get-layout("text-spacing", "smaller") get-layout("text-spacing", "small") !important;
+
+      &:hover {
+        color: get-color("grayscale", "light") !important;
+        @extend %background-grayscale-dark;
+      }
+    }
+  }
+
+  &-region {
+    outline: none;
+
+    &-active,
+    &:hover {
+      outline: 1px dashed get-color("grayscale", "medium");
+    }
+
+    &:hover {
+
+      .#{$name}-wrapper {
+        display: block;
+      }
+    }
+  }
+
+  &-wrapper {
+    display: none;
+    z-index: 1;
+    position: relative;
+    width: 0;
+    height: 0;
+    @extend %color-grayscale-dark;
+    text-align: left;
+    white-space: nowrap;
+    @extend %fs-std-down-1;
+    @extend %typeface-system;
+  }
+
+  &-trigger {
+    position: relative;
+    @extend %icon-ui_burger-menu-std;
+    @extend %text-overflow-from-mobile;
+    top: - $size-contextual-links;
+    width: $size-contextual-links;
+    height: $size-contextual-links;
+    background-size: $size-contextual-links;
+    background-position: center;
+    @extend %background-grayscale-light;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    opacity: .5;
+    @extend %box-shadow-std;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+/* stylelint-disable */
+
+@mixin breakpointBetween($deviceMin, $deviceMax){
+
+  $mediaQuery: "";
+
+  @if map-has-key($breakpoints, $deviceMin) {
+
+    $mediaQuery: $mediaQuery + "(min-width: #{map-get($breakpoints, $deviceMin)})";
+
+  }
+
+  @if map-has-key($breakpoints, $deviceMax) {
+
+    @if $mediaQuery != "" {
+      $mediaQuery: $mediaQuery + " and ";
+    }
+    $mediaQuery: $mediaQuery + "(max-width: #{map-get($breakpoints, $deviceMax) - 1px})";
+
+  }
+
+  @media #{$mediaQuery} {
+    @content;
+  }
+
+}
+
+/* stylelint-enable */

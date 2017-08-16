@@ -1,0 +1,35 @@
+%pager {
+  @extend %border-grayscale-medium;
+  @extend %border-radius-std;
+  display: table;
+  table-layout: fixed;
+  text-align: center;
+  margin: get-layout("block-spacing", "std") auto;
+
+  &--item {
+    display: table-cell;
+    @extend %border-grayscale-medium;
+
+    &:first-child {
+      border-left: 0;
+    }
+
+    &-active {
+      @extend %color-brand-first;
+      font-weight: bold;
+    }
+  }
+
+  &--link {
+    display: block;
+    padding: get-layout("block-spacing", "smaller") get-layout("block-spacing", "small");
+
+    &:hover {
+      @extend %color-ui-submit;
+    }
+
+    &:active {
+      opacity: .8;
+    }
+  }
+}

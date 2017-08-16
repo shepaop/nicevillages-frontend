@@ -1,0 +1,38 @@
+%table {
+  width: 100%;
+  table-layout: fixed;
+  @extend %typeface-std;
+
+  caption {
+    @extend %typeface-heading;
+    @extend %fs-heading-up-1--baseline-simple;
+    text-align: left;
+    margin-bottom: get-layout("block-spacing", "std");
+  }
+
+  thead {
+
+    tr {
+
+      &:first-child {
+
+        th,
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  th {
+    @extend %h5;
+  }
+
+  th,
+  td {
+    @extend %box-border-bottom-std;
+    @extend %border-grayscale-light;
+    text-align: left;
+    padding: get-layout("text-spacing", "std") 0 get-layout("text-spacing", "small");
+  }
+}

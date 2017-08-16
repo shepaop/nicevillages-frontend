@@ -1,0 +1,69 @@
+// Mises en forme de base de Drupal 7
+
+// Élément invisible
+
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+}
+
+// Élément rendu invisible par Javascript
+
+.js-hide {
+  display: none;
+}
+
+// Élément générique en ligne
+
+.container-inline {
+
+  div {
+    display: inline-block;
+    margin-right: get-layout("text-spacing", "std");
+  }
+
+  .form-item {
+    margin: 0 get-layout("text-spacing", "std") 0 0;
+  }
+}
+
+// Séparateur
+
+hr {
+  border: none;
+  border-top: 1px solid get-color("grayscale", "dark");
+  background: none;
+}
+
+// Citation
+
+code,
+pre {
+  @extend %typeface-system;
+  @extend %fs-system-down-1;
+  display: block;
+  padding: 0;
+}
+
+// Citation
+
+q,
+cite {
+  @extend %typeface-system;
+
+  &::before {
+    content: '‟';
+  }
+
+  &::after {
+    content: '”';
+  }
+}
+
+// Texte plus petit
+
+small {
+  font-size: .75em;
+}

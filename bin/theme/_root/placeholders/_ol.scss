@@ -1,0 +1,10 @@
+%ol {
+  @extend %typeface-std;
+  margin-left: 2em;
+  list-style-type: decimal-leading-zero;
+
+  ol,
+  ul {
+    margin-left: 1em;
+  }
+}

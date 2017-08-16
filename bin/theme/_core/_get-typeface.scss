@@ -1,0 +1,4 @@
+@function get-typeface($section:"standard", $suffix:"std") {
+
+  @return map-get(map-get($typefaces, $section), "value");
+}

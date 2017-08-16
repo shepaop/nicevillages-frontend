@@ -1,0 +1,26 @@
+%button-cancel {
+  @extend %typeface-std;
+  @extend %fs-std-down-1;
+  @extend %color-grayscale-strong;
+  @extend %background-ui-cancel;
+  @extend %border-radius-small;
+  @extend %box-shadow-small;
+  padding: get-layout("text-spacing", "smaller") get-layout("text-spacing", "small");
+  cursor: pointer;
+  border: 0;
+  font-weight: normal;
+
+  &--focus,
+  &--active {
+    outline: none;
+  }
+
+  &--hover {
+    @extend %color-grayscale-medium;
+  }
+
+  &--active {
+    opacity: .8;
+    box-shadow: none;
+  }
+}

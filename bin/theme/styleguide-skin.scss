@@ -1,0 +1,278 @@
+/* stylelint-disable */
+@import '_core/_hub';
+@import '_params/_hub';
+
+body.sg {
+
+  .sg-header {
+    @extend %color-grayscale-light;
+    @extend %background-brand-first;
+
+    .sg-title {
+      position: relative;
+      float: none;
+      min-height: 0;
+      padding-top: get-layout("text-spacing", "std");
+      padding-bottom: get-layout("text-spacing", "std");
+
+      h1 {
+        @extend %typeface-heading;
+        @extend %fs-heading-up-2;
+        line-height: normal;
+      }
+
+      &::before {
+        @extend %icon-styleguide_logo-client--standalone;
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include breakpoint("desktop") {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .sg-top-nav {
+    @extend %background-brand-first;
+
+    &.sg {
+      @extend %typeface-std;
+    }
+
+    &-menu {
+
+      > li {
+        @extend %background-brand-second;
+        line-height: normal;
+
+        > a {
+          @extend %color-grayscale-light;
+          line-height: normal;
+          padding-top: get-layout("text-spacing", "std");
+          padding-bottom: get-layout("text-spacing", "std");
+
+          &:hover,
+          &.active {
+            @extend %color-grayscale-dark;
+            @extend %background-grayscale-soft;
+          }
+
+          &.sub-active {
+            line-height: normal;
+            padding-top: get-layout("text-spacing", "std");
+            padding-bottom: get-layout("text-spacing", "std") - 3px;
+            border-bottom: 3px solid get-color("brand", "first");
+          }
+
+          .sg-ref {
+            display: none;
+          }
+        }
+
+        > ul.sg-nav-subsection {
+
+          > li {
+            @extend %color-grayscale-dark;
+            @extend %background-grayscale-soft;
+            border-bottom: 1px dashed get-color("grayscale", "medium");
+
+            > a {
+              @extend %color-grayscale-dark;
+              border: 0;
+              line-height: normal;
+              padding-top: get-layout("text-spacing", "small");
+              padding-bottom: get-layout("text-spacing", "small");
+
+              &:hover,
+              &.active {
+                @extend %color-grayscale-light;
+                @extend %background-brand-first;
+                border: 0;
+                padding-top: get-layout("text-spacing", "small");
+                padding-bottom: get-layout("text-spacing", "small");
+
+                .sg-ref {
+                  @extend %color-grayscale-light;
+                }
+              }
+
+              .sg-ref {
+                @extend %color-brand-first;
+                font-family: "Courier New", monotype, sans-serif;
+                font-size: 12px;
+                display: inline-block;
+                margin-right: get-layout("text-spacing", "std");
+              }
+            }
+
+            &:last-child {
+              border-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sg-wrapper {
+    padding-top: get-layout("block-spacing", "std");
+    padding-bottom: get-layout("block-spacing", "std");
+  }
+
+  .sg-section {
+    border-top-left-radius: get-layout("border-radius", "std");
+    border-top-right-radius: get-layout("border-radius", "std");
+    border: 1px solid get-color("grayscale", "soft");
+
+    &-description {
+
+      p.sg {
+        font-family: "Courier New", monotype, sans-serif;
+        font-size: 14px;
+        line-height: normal;
+        margin: 0 0 get-layout("text-spacing", "std");
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+    }
+
+    &-header {
+      @extend %color-grayscale-light;
+      @extend %background-brand-second;
+      display: block;
+      position: relative;
+      left: -1px;
+      top: -1px;
+      width: 100%;
+      padding: 1px 1px 0;
+      box-sizing: content-box;
+      border-top-left-radius: get-layout("border-radius", "std");
+      border-top-right-radius: get-layout("border-radius", "std");
+
+      h1 {
+        @extend %typeface-heading;
+        @extend %fs-heading-root;
+        font-size: 1.5em;
+        padding-top: get-layout("text-spacing", "small");
+        padding-bottom: get-layout("text-spacing", "small");
+
+        .sg-section-source,
+        .sg-reference-number {
+          font-family: "Courier New", monotype, sans-serif;
+          font-size: 12px;
+          line-height: normal;
+          margin-right: get-layout("text-spacing", "std");
+        }
+
+        .sg-reference-number {
+          @extend %color-grayscale-dark;
+          display: block;
+          position: absolute;
+          left: 50%;
+          top: 0;
+          transform: translateX(-50%);
+          padding: get-layout("text-spacing", "small") get-layout("text-spacing", "std");
+          background-color: rgba(red(get-color("grayscale", "light")), green(get-color("grayscale", "light")), blue(get-color("grayscale", "light")), .5);
+        }
+      }
+
+      & + .sg-section-partial {
+        border-top: 0 !important;
+      }
+    }
+
+    .sg.modifier-list {
+      @extend %typeface-std;
+      @extend %fs-std-down-1;
+      list-style-type: disc;
+      list-style-position: inside;
+      padding-left: 0;
+      padding-right: 0;
+      margin: get-layout("text-spacing", "std") 0 0;
+      border-top: 1px solid get-color("grayscale", "soft") !important;
+
+    }
+
+    .sg-code-listing {
+      background-color: get-color("grayscale", "soft") !important;
+
+      a.sg-show-section {
+        @extend %typeface-special;
+        @extend %fs-special-down-1;
+        @extend %color-grayscale-dark;
+        padding-top: get-layout("text-spacing", "small");
+        padding-bottom: get-layout("text-spacing", "small");
+      }
+
+      pre,
+      code {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: "Courier New", monotype, sans-serif;
+        font-size: 14px;
+      }
+
+      pre.ng-scope {
+        @extend %background-grayscale-light;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .2) inset;
+        padding: 0 !important;
+
+        > div.css,
+        > code.html {
+          padding: 0;
+          background-color: transparent;
+
+          > pre {
+            padding: 0;
+            background-color: transparent;
+
+            > code.hljs {
+              padding: get-layout("block-spacing", "std") !important;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+
+    .sg-section-partial {
+      border-top: 1px solid get-color("grayscale", "soft") !important;
+      margin-top: 1px;
+    }
+  }
+
+  .sg-footer {
+    border-top: 1px solid get-color("grayscale", "dark");
+
+    .sg-content {
+
+      &::before {
+        @extend %icon-styleguide_logo-footer--standalone;
+        margin: 0 auto;
+      }
+
+      * {
+        display: none;
+      }
+    }
+  }
+
+  .side-nav {
+
+    &-search {
+      display: none;
+    }
+  }
+
+  .sg-design {
+    display: none;
+  }
+}

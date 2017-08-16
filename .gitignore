@@ -1,0 +1,31 @@
+# Dist files #
+###################
+dist/js/*
+dist/img/*
+dist/favicon/*
+dist/*.html
+dist/css/*
+!dist/css/*.js
+index.html
+
+# Bin folder #
+###################
+node_modules/
+npm-debug.log
+
+# Jsdoc folder #
+###################
+jsdoc/*
+
+# Styleguide folder #
+###################
+styleguide/*
+
+# Components #
+###################
+bin/html/components/
+
+# Specific files #
+###################
+.DS_Store
+.idea/

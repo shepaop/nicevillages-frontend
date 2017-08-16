@@ -1,0 +1,26 @@
+%button-action {
+  @extend %typeface-std;
+  @extend %fs-std-root;
+  @extend %color-grayscale-light;
+  @extend %background-ui-submit;
+  @extend %border-radius-std;
+  @extend %box-shadow-small;
+  padding: get-layout("text-spacing", "small") get-layout("text-spacing", "std");
+  cursor: pointer;
+  border: 0;
+  font-weight: bold;
+
+  &--focus,
+  &--active {
+    outline: none;
+  }
+
+  &--hover {
+    @extend %color-grayscale-dark;
+  }
+
+  &--active {
+    opacity: .8;
+    box-shadow: none;
+  }
+}

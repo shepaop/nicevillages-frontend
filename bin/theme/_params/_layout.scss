@@ -1,0 +1,280 @@
+/*
+Layout
+
+Styleguide 1.1.
+*/
+
+// ---------------------------------------------------
+
+$site-range-mix: 320px;
+$site-range-max: 1280px;
+$site-range: (
+  "min": $site-range-mix,
+  "max": $site-range-max
+);
+
+$responsive-system: (
+  "mobile",
+  "tablet",
+  "desktop"
+);
+
+$breakpoints: (
+  "tablet": 640px,
+  "desktop": 960px
+);
+$styleguide-breakpoints: "";
+
+@each $name, $value in $breakpoints {
+  $styleguide-breakpoints: $styleguide-breakpoints + "Breakpoint #{$name} : <strong>#{$value}</strong><br />";
+}
+
+/*
+Règles responsives
+
+Largeur minimale du site : <strong>#{$site-range-mix}</strong><br />
+Largeur maximale du site : <strong>#{$site-range-max}</strong>
+<br />
+<br />
+#{$styleguide-breakpoints}
+
+Styleguide 1.1.1.
+*/
+
+// ---------------------------------------------------
+
+$theme-grids: (
+  "mobile":         12,
+  "tablet":         12,
+  "desktop":        12
+);
+
+@include grid-absolute("1.1.2.");
+
+// ---------------------------------------------------
+
+$layout: (
+  "block-spacing": (
+    "name":         "Block spacing",
+    "description":  "Marges internes/externes des blocks",
+    "css":          "padding",
+    "values": (
+      "x-large":    80px,
+      "large":      40px,
+      "std":        20px,
+      "small":      10px
+    )
+  ),
+  "box-border": (
+    "name":         "Border",
+    "description":  "Bordures",
+    "css":          "border-width",
+    "values": (
+      "large":      4px,
+      "std":        2px,
+      "small":      0
+    )
+  ),
+  "border-radius": (
+    "name":         "Border radius",
+    "description":  "Coins arrondis des blocks",
+    "css":          "border-radius",
+    "values": (
+      "large":      15px,
+      "std":        5px,
+      "small":      3px
+    )
+  ),
+  "box-shadow": (
+    "name":         "Box shadow",
+    "description":  "Ombres des blocks",
+    "css":          "box-shadow",
+    "values": (
+      "large":      0 0 10px rgba(0, 0, 0, .6),
+      "std":        0 0 5px rgba(0, 0, 0, .6),
+      "small":      1px 1px 2px rgba(0, 0, 0, .4)
+    )
+  ),
+  "text-spacing": (
+    "name":         "Text spacing",
+    "description":  "Règles d'espacement du texte",
+    "css":          "margin",
+    "values": (
+      "large":      24px,
+      "std":        12px,
+      "small":      6px,
+      "smaller":    3px
+    )
+  )
+);
+$styleguide-layout: "";
+$index: 1;
+
+@each $section-name, $section in $layout {
+  @if $index != 1 {
+    $styleguide-layout: $styleguide-layout + styleguide-print-separator();
+  }
+  $styleguide-layout: $styleguide-layout + styleguide-print-title(map-get($section, "name"));
+  $styleguide-layout: $styleguide-layout + styleguide-print-desc(map-get($section, "description"));
+
+  @each $name, $value in map-get($section, "values") {
+
+    @if map-get($section, "css") == "padding" {
+      $styleguide-layout: $styleguide-layout + "<div style=\"position:relative;box-sizing:border-box;display:inline-block;vertical-align:top;margin-right:#{$styleguide-item-box-margin};margin-bottom:#{$styleguide-item-box-margin};height:#{$styleguide-item-box-height};width:#{$styleguide-item-box-width};padding:#{$value};background:rgba(#{$styleguide-item-box-bg},.5);\">";
+      $styleguide-layout: $styleguide-layout + "<div style=\"text-align:center;line-height:#{$styleguide-item-box-height - $value*2};\">#{$name}: <strong>#{$value}</strong></div>";
+      $styleguide-layout: $styleguide-layout + "<div style=\"position:absolute;box-sizing:border-box;left:0;top:0;width:100%;height:100%;border:#{$value} solid rgba(255,255,255,.4);\">";
+      $styleguide-layout: $styleguide-layout + "</div>";
+      $styleguide-layout: $styleguide-layout + "<div style=\"position:absolute;box-sizing:border-box;left:0;top:0;width:100%;height:#{$value};border-bottom:1px dashed rgb(#{$styleguide-item-box-bg});\">";
+      $styleguide-layout: $styleguide-layout + "</div>";
+      $styleguide-layout: $styleguide-layout + "<div style=\"position:absolute;box-sizing:border-box;left:0;bottom:0;width:100%;height:#{$value};border-top:1px dashed rgb(#{$styleguide-item-box-bg});\">";
+      $styleguide-layout: $styleguide-layout + "</div>";
+      $styleguide-layout: $styleguide-layout + "<div style=\"position:absolute;box-sizing:border-box;left:0;top:0;width:#{$value};height:100%;border-right:1px dashed rgb(#{$styleguide-item-box-bg});\">";
+      $styleguide-layout: $styleguide-layout + "</div>";
+      $styleguide-layout: $styleguide-layout + "<div style=\"position:absolute;box-sizing:border-box;right:0;top:0;width:#{$value};height:100%;border-left:1px dashed rgb(#{$styleguide-item-box-bg});\">";
+      $styleguide-layout: $styleguide-layout + "</div>";
+      $styleguide-layout: $styleguide-layout + "</div>";
+
+      %#{$section-name} {
+
+        &-#{$name} {
+          padding: #{$value};
+        }
+
+        &-left-#{$name} {
+          padding-left: #{$value};
+        }
+
+        &-right-#{$name} {
+          padding-right: #{$value};
+        }
+
+        &-left-#{$name} {
+          padding-left: #{$value};
+        }
+
+        &-right-#{$name} {
+          padding-right: #{$value};
+        }
+      }
+    }
+    @else if map-get($section, "css") == "margin" {
+      $styleguide-layout: $styleguide-layout + "<div style=\"position:relative;box-sizing:border-box;display:inline-block;margin-right:#{$styleguide-item-box-margin};margin:#{$value};margin-right:#{$styleguide-item-box-margin + $value};margin-bottom:#{$styleguide-item-box-margin + $value};background:rgba(#{$styleguide-item-box-bg},.5);\">";
+      $styleguide-layout: $styleguide-layout + "<div>#{$name}: <strong>#{$value}</strong></div>";
+      $styleguide-layout: $styleguide-layout + "<div style=\"position:absolute;left:-#{$value};top:-#{$value};width:100%;height:100%;border:#{$value} solid rgba(0,0,0,.1);\">";
+      $styleguide-layout: $styleguide-layout + "</div>";
+      $styleguide-layout: $styleguide-layout + "<div style=\"position:absolute;left:-#{$value};bottom:100%;width:100%;height:#{$value};border-bottom:1px dashed rgb(#{$styleguide-item-box-bg});padding:0 #{$value};\">";
+      $styleguide-layout: $styleguide-layout + "</div>";
+      $styleguide-layout: $styleguide-layout + "<div style=\"position:absolute;left:-#{$value};top:100%;width:100%;height:#{$value};border-top:1px dashed rgb(#{$styleguide-item-box-bg});padding:0 #{$value};\">";
+      $styleguide-layout: $styleguide-layout + "</div>";
+      $styleguide-layout: $styleguide-layout + "<div style=\"position:absolute;right:100%;top:-#{$value};width:#{$value};height:100%;border-right:1px dashed rgb(#{$styleguide-item-box-bg});padding:#{$value} 0;\">";
+      $styleguide-layout: $styleguide-layout + "</div>";
+      $styleguide-layout: $styleguide-layout + "<div style=\"position:absolute;left:100%;top:-#{$value};width:#{$value};height:100%;border-left:1px dashed rgb(#{$styleguide-item-box-bg});padding:#{$value} 0;\">";
+      $styleguide-layout: $styleguide-layout + "</div>";
+      $styleguide-layout: $styleguide-layout + "</div>";
+
+      %#{$section-name} {
+
+        &-#{$name} {
+          margin: #{$value};
+        }
+
+        &-left-#{$name} {
+          margin-left: #{$value};
+        }
+
+        &-right-#{$name} {
+          margin-right: #{$value};
+        }
+
+        &-left-#{$name} {
+          margin-left: #{$value};
+        }
+
+        &-right-#{$name} {
+          margin-right: #{$value};
+        }
+      }
+    }
+    @else if map-get($section, "css") == "border-width" {
+      $styleguide-layout: $styleguide-layout + "<div style=\"border-style:solid;border-color:#000000;border-width:#{$value};height:#{$styleguide-item-box-height};width:#{$styleguide-item-box-width};display:inline-block;margin-right:#{$styleguide-item-box-margin};margin-bottom:#{$styleguide-item-box-margin};background:rgba(#{$styleguide-item-box-bg},.5);\">";
+      $styleguide-layout: $styleguide-layout + "<div style=\"text-align:center;line-height:#{$styleguide-item-box-height};\">#{$name}: <strong>#{$value}</strong></div>";
+      $styleguide-layout: $styleguide-layout + "</div>";
+
+      %#{$section-name} {
+
+        &-#{$name} {
+          border-style: solid;
+          border-width: #{$value};
+        }
+
+        &-top-#{$name} {
+          border-style: solid;
+          border-width: #{$value} 0 0;
+        }
+
+        &-right-#{$name} {
+          border-style: solid;
+          border-width: 0 #{$value} 0 0;
+        }
+
+        &-bottom-#{$name} {
+          border-style: solid;
+          border-width: 0 0 #{$value};
+        }
+
+        &-left-#{$name} {
+          border-style: solid;
+          border-width: 0 0 0 #{$value};
+        }
+      }
+    }
+    @else if map-get($section, "css") == "border-radius" {
+      $styleguide-layout: $styleguide-layout + "<div style=\"border-radius:#{$value};height:#{$styleguide-item-box-height};width:#{$styleguide-item-box-width};display:inline-block;margin-right:#{$styleguide-item-box-margin};margin-bottom:#{$styleguide-item-box-margin};background:rgba(#{$styleguide-item-box-bg},.5);\">";
+      $styleguide-layout: $styleguide-layout + "<div style=\"text-align:center;line-height:#{$styleguide-item-box-height};\">#{$name}: <strong>#{$value}</strong></div>";
+      $styleguide-layout: $styleguide-layout + "</div>";
+
+      %#{$section-name} {
+
+        &-#{$name} {
+          border-radius: #{$value};
+        }
+
+        &-top-left-#{$name} {
+          border-top-left-radius: #{$value};
+        }
+
+        &-top-right-#{$name} {
+          border-top-right-radius: #{$value};
+        }
+
+        &-bottom-left-#{$name} {
+          border-bottom-left-radius: #{$value};
+        }
+
+        &-bottom-right-#{$name} {
+          border-bottom-right-radius: #{$value};
+        }
+      }
+    }
+    @else if map-get($section, "css") == "box-shadow" {
+      $styleguide-layout: $styleguide-layout + "<div style=\"box-shadow:#{$value};height:#{$styleguide-item-box-height};width:#{$styleguide-item-box-width};display:inline-block;margin-right:#{$styleguide-item-box-margin};margin-bottom:#{$styleguide-item-box-margin};background:rgba(#{$styleguide-item-box-bg},.5);\">";
+      $styleguide-layout: $styleguide-layout + "<div style=\"text-align:center;line-height:#{$styleguide-item-box-height};\">#{$name}</div>";
+      $styleguide-layout: $styleguide-layout + "</div>";
+
+      %#{$section-name}-#{$name} {
+        box-shadow: #{$value};
+      }
+    }
+  }
+  $index: $index + 1;
+}
+
+/*
+Règles d'agencement
+
+#{$styleguide-layout}
+
+Styleguide 1.1.3.
+*/
+
+// ---------------------------------------------------

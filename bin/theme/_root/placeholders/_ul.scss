@@ -1,0 +1,10 @@
+%ul {
+  @extend %typeface-std;
+  margin-left: 1.1em;
+  list-style-type: disc;
+
+  ul {
+    margin-left: 1em;
+    list-style-type: square;
+  }
+}

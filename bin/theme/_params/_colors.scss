@@ -1,0 +1,106 @@
+$color-system: (
+  // Couleurs de base des blocks
+  "brand": (
+    "name":         "Brand",
+    "description":  "Couleurs choisies pour illustrer la marque.",
+    "values": (
+      "first":                  #1fb6ff,
+      "second":                 #7e5bef,
+      "third":                  #ff49db,
+      "fourth":                 #ff7849,
+      "fith":                   #ffc82c
+    )
+  ),
+  // Couleurs de texte de base
+  "grayscale": (
+    "name":         "Grayscale",
+    "description":  "Nuances de gris utilisées pour les textes, fonds de blocks, lignes et bordures",
+    "values": (
+      "dark":                   #333333,
+      "strong":                 #777777,
+      "medium":                 #aaaaaa,
+      "soft":                   #dddddd,
+      "light":                  #eeeeee
+    )
+  ),
+  // Couleurs du thème
+  "ui":(
+    "name":         "User interface",
+    "description":  "Couleurs liées aux différentes",
+    "values": (
+      "submit":                 #1fb6ff,
+      "cancel":                 #dddddd,
+      "follow":                 #777777
+    )
+  ),
+  // Couleurs systèmes du thème
+  "system": (
+    "name":         "System",
+    "description":  "Couleurs utilisées pour les messages sytème",
+    "values": (
+      "info":                   #1fb6ff,
+      "warning":                #ffc82c,
+      "success":                #13ce66,
+      "error":                  #ff4949
+    )
+  ),
+  // Couleurs réseaux sociaux
+  "community": (
+    "name":         "Social",
+    "description":  "Couleurs des réseaux sociaux",
+    "values": (
+      "facebook":               #3b5998,
+      "twitter":                #55acee
+    )
+  )
+);
+
+$styleguide-colors: "";
+$index: 1;
+
+@each $groupName, $datas in $color-system {
+
+  @if $index != 1 {
+    $styleguide-colors: $styleguide-colors + styleguide-print-separator();
+  }
+  $styleguide-colors: $styleguide-colors + styleguide-print-title(map-get($datas, "name"));
+  $styleguide-colors: $styleguide-colors + styleguide-print-desc(map-get($datas, "description"));
+
+  @each $name, $color in map-get($datas, "values") {
+
+    /* stylelint-disable */
+    $finalName: "color-#{$groupName}-#{$name}";
+    $css: "width:#{$styleguide-item-box-width};height:#{$styleguide-item-box-height};display:inline-block;background-color:#{$color};position:relative;margin-right:#{$styleguide-item-box-margin};margin-bottom:#{$styleguide-item-box-margin};padding:#{$styleguide-item-box-margin};box-sizing:border-box;";
+
+    $styleguide-colors: $styleguide-colors+"<div title=\"#{$finalName}\" style=\"#{$css}\"><div style=\"color:#ffffff;text-transform:uppercase;text-shadow:#{get-layout("box-shadow", "small")};\"><span style=\"font-size:1.5em;\">#{$name}</span><br /> #{$color}</div></div>";
+    /* stylelint-enable */
+  }
+
+  @each $name, $color in map-get($datas, "values") {
+
+    $finalName: "#{$groupName}-#{$name}";
+    $hex: $color;
+
+    %color-#{$finalName} {
+      color: $hex;
+    }
+
+    %border-#{$finalName} {
+      border-color: $hex;
+    }
+
+    %background-#{$finalName} {
+      background-color: $hex;
+    }
+  }
+
+  $index: $index+1;
+}
+
+/*
+Color
+
+#{$styleguide-colors}
+
+Styleguide 1.2.
+*/

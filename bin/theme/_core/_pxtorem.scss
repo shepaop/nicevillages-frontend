@@ -1,0 +1,10 @@
+@mixin pxtorem($size, $lineheight: null) {
+  $basesize: $base-font-size;
+  $sizeoutput: round(($size / $basesize) * 1000) / 1000;
+  font-size: #{$sizeoutput}rem;
+
+  @if $lineheight != null {
+    $lineheightoutput: round(($lineheight / $size) * 1000) / 1000;
+    line-height: $lineheightoutput;
+  }
+}

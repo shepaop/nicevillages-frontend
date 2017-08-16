@@ -1,0 +1,56 @@
+@mixin colorway($scope, $rule, $closerSelector:"") {
+
+  @each $context, $rules in $scope {
+
+    @if map-has-key($rules, $rule) {
+
+      @if $closerSelector == "" {
+
+        .#{$context} & {
+
+          @each $type, $css in map-get($rules, $rule) {
+
+            @include colorwayApplyRule($type, $css);
+          }
+        }
+      }
+      @else {
+
+        &.#{$context} #{$closerSelector} {
+
+          @each $type, $css in map-get($rules, $rule) {
+
+            @include colorwayApplyRule($type, $css);
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin colorwayApplyRule($type, $css) {
+
+  @if $type == 'color' {
+    @extend %color-#{$css};
+  }
+
+  @if $type == 'bgcolor' {
+    @extend %background-#{$css};
+  }
+
+  @if $type == 'border' {
+    @extend %border-#{$css};
+  }
+
+  @if $type == 'bgimg' {
+    background-image: url($css);
+  }
+
+  @if $type == 'bgsize' {
+    background-size: $css;
+  }
+
+  @if $type == 'icon' {
+    @extend %#{$css};
+  }
+}

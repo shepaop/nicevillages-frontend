@@ -1,0 +1,12 @@
+// Regroupement des styles CSS du theme nécessaires à l"édition WYSIWYG en Back-office
+
+@import 'reset';
+@import '_core/_hub';
+@import '_params/_hub';
+@import '_root/placeholders/_hub';
+@import '_root/_wysiwyg';
+
+#{$wysiwyg_cssrule} {
+  @extend .wysiwyg;
+}
+

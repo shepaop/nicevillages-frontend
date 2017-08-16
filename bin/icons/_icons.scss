@@ -1,0 +1,60 @@
+$icon-system: ();
+$styleguide-icons: "";
+$icons-map: ();
+<% i = 1 %><% _.forEach( icons, function( icon ){ %>
+// Référentiel des icônes
+$unit: (
+  '<%= icon.name %>': (
+    'width': <%= icon.width %>px,
+    'height': <%= icon.height %>px
+  )
+);
+$icon-system: map-merge($icon-system, $unit);
+
+// Regroupement par familles
+
+@if ("<%= icon.family %>") != "icon-styleguide" {
+
+  @if map-has-key($icons-map, "<%= icon.family %>") == false {
+    $icons-map: map-merge(
+      $icons-map,
+      (
+        "<%= icon.family %>": true
+      )
+    );
+
+    $styleguide-icons: $styleguide-icons + styleguide-print-title("<%= icon.family %>");
+    $styleguide-icons: $styleguide-icons + styleguide-print-desc("Télécharger le fichier Illustrator: <a target=\"_blank\" href=\"<%= icon.path %><%= icon.family %>.ai\" download><%= icon.family %>.ai</a>");
+    $styleguide-icons: $styleguide-icons + styleguide-print-separator();
+    $styleguide-icons: $styleguide-icons + "<br /><br />";
+  }
+
+  $styleguide-icons: $styleguide-icons + "<div style=\"text-align:center;font-size:12px;min-height:#{$styleguide-item-box-height};min-width:#{$styleguide-item-box-width};margin-right:#{$styleguide-item-box-margin};margin-bottom:#{$styleguide-item-box-margin};display:inline-block;vertical-align:top;\">";
+  $styleguide-icons: $styleguide-icons + "<img src=\"<%= icon.datauri %>\" alt=\"\" width=\"<%= icon.width %>\" height=\"<%= icon.height %>\" style=\"background-color:#e0dfdf;\" />";
+  $styleguide-icons: $styleguide-icons + "<div style=\"margin-top:#{$styleguide-item-box-margin};\">";
+  $styleguide-icons: $styleguide-icons + "<%= icon.name %>";
+  $styleguide-icons: $styleguide-icons + "</div>";
+  $styleguide-icons: $styleguide-icons + "</div>";
+}
+
+%<%= icon.name %> {
+  background-image: url("<%= icon.datauri %>");
+  background-repeat: no-repeat;
+}
+
+%<%= icon.name %>--standalone {
+  content: "";
+  @extend %<%= icon.name %>;
+  display: inline-block;
+  width: <%= icon.width %>px;
+  height: <%= icon.height %>px;
+  background-size: <%= icon.width %>px <%= icon.height %>px;
+}
+<% i++ %><% }); %>
+/*
+Icons
+
+#{$styleguide-icons}
+
+Styleguide 1.5.
+*/

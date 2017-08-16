@@ -1,0 +1,104 @@
+/*
+Slider
+
+Slider responsive
+
+Markup:
+<style type="text/css">
+  .slider-test {
+      width: 50%;
+  }
+  .slider-test--slider {
+      float: left;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+  }
+  .slider-test--slider > li {
+      float: left;
+      width: 33.33333%;
+      padding: 0;
+      margin: 0;
+  }
+  .slider-test--slider > li.item-1 {background-color:pink;}
+  .slider-test--slider > li.item-2 {background-color:blue;}
+  .slider-test--slider > li.item-3 {background-color:red;}
+  .slider-test--slider > li.item-4 {background-color:orange;}
+  .slider-test--slider > li.item-5 {background-color:lightgreen;}
+</style>
+<div class="slider-test">
+    <ul class="slider-test--slider">
+        <li class="item-1">Item #1<br /> lorem ipsum dolor sit amet</li>
+        <li class="item-2">Item #2</li>
+        <li class="item-3">Item #3</li>
+        <li class="item-4">Item #4</li>
+        <li class="item-5">Item #5</li>
+    </ul>
+</div>
+<script>
+    var testSlider = $('.slider-test--slider').responsiveSlider({
+        mode: 'flex',
+        adaptativeHeight: false,
+        sliderRange: 3,
+        fitSlides: true
+    });
+    //console.log(testSlider);
+</script>
+
+Styleguide 5.6.
+*/
+
+$name: "responsive-slider";
+
+.#{$name} {
+
+  &--pager {
+
+    &-prev,
+    &-next {
+      cursor: pointer;
+
+      &.off {
+        cursor: default;
+        opacity: .5;
+      }
+    }
+
+    &-prev {
+      content: "prev";
+    }
+
+    &-next {
+      content: "next";
+    }
+
+    &-dots {
+      display: block;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      text-align: center;
+    }
+
+    &-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      background: get-color("grayscale", "strong");
+      margin: 0 get-layout("text-spacing", "small");
+
+      &:hover,
+      &:active {
+        background: get-color("grayscale", "dark");
+      }
+
+      &.current {
+        cursor: default;
+        background: get-color("brand", "first");
+      }
+    }
+  }
+}

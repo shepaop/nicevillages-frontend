@@ -1,0 +1,32 @@
+$name: "name";
+
+/*
+#{$name}
+
+Styleguide description
+
+modifier-1             - Description
+modifier-2             - Description
+
+sg-filename:
+#{$name}
+
+Markup:
+<div class="#{$name} {$modifiers}">
+  Lorem ipsum
+  <sg-insert>1.2.1</sg-insert>
+  <sg-insert>1.2.1-5</sg-insert>
+  <sg-insert>1.2.1-all</sg-insert>1
+</div>
+
+sg-wrapper:
+<div style="">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide X.X.
+*/
+
+.#{$name} {
+  //
+}

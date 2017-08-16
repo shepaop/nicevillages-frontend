@@ -1,0 +1,6 @@
+node_modules/**/*.js
+gulp-tasks/**/*.js
+dist/**/*.js
+jsdoc/**/*.js
+styleguide/**/*.js
+gulpfile.js

@@ -1,0 +1,75 @@
+/* stylelint-disable */
+
+$grid-system: ();
+
+@mixin grid-strech($styleguideSectionPrefix:"1.1."){
+
+  // Loop
+  $index: 1;
+  $markup : "Grilles déclarées pour chaque palier responsive<br />";
+
+  @each $name, $gidSize in $theme-grids {
+
+    // Nom de la grille
+    @if $index != 1 {
+      $markup: $markup + styleguide-print-separator();
+    }
+    $markup: $markup + styleguide-print-title("Grille #{$name}");
+
+    // Calculs
+    $gridUnitWith: percentage(round((1/$gidSize)*1000000)/1000000);
+
+    // Préparation du styleguide
+    $i: 1;
+    @while $i <= $gidSize {
+      $unitIndex: ($gidSize - ($i - 1));
+      $unitWith: percentage(round((1/$gidSize)*$i*1000000)/1000000);
+
+      $css: 'float:left;width:#{$gridUnitWith};padding:75px 0;background:rgba(#{$styleguide-item-box-bg},0.5);text-align:center;box-sizing:border-box;';
+      @if $i > 1 {
+        $css: $css+'border-left:1px solid rgb(#{$styleguide-item-box-bg});';
+      }
+
+      $markup: $markup+"<div title=\"[#{$unitWith}] %grid-#{$name}-#{$i}\" style=\"#{$css}\">#{$i}</div>";
+
+      $i: $i+1;
+    }
+
+    // Génération des placeholder à étendre
+    %grid-#{$name} {
+
+      $i: 1;
+      @while $i <= $gidSize {
+        $unitWith: percentage(round((1/$gidSize)*$i*1000000)/1000000);
+
+        &-#{$i} {
+
+          // Construction de la map SASS
+          $grid-system: map-merge($grid-system, ("grid-#{$name}-#{$i}": $unitWith)) !global;
+
+          @include breakpoint($name) {
+
+            width: $unitWith;
+
+          }
+
+        }
+
+        $i: $i+1;
+      }
+
+    }
+
+    $index: $index+1;
+  }
+
+  /*
+  Grilles
+
+  #{$markup}
+
+  Styleguide #{$styleguideSectionPrefix}
+  */
+}
+
+/* stylelint-enable */

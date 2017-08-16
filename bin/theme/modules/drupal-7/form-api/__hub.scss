@@ -1,0 +1,566 @@
+// Styles pour mettre en forme via Form API
+
+/*
+Form API
+
+Styles pour mettre en forme via Form API
+
+Markup:
+<a name="form"></a>
+<h2 style="font-weight:bold;padding-bottom:3px;border-bottom:1px solid #000000;margin-top:20px;margin-bottom:10px;">Forms, basic</h2>
+<div>
+	<form accept-charset="UTF-8" id="styleguide-form" method="post" action="/admin/appearance/styleguide" enctype="multipart/form-data">
+		<div>
+			<div class="form-item form-type-select form-item-select">
+				<label for="edit-select">Select </label>
+				<select class="form-select" name="select" id="edit-select">
+					<option value="Lorem et erat">Lorem et erat</option>
+					<option value="Magna ipsum tortor">Magna ipsum tortor</option>
+					<option value="Aliquam accumsan eget">Aliquam accumsan eget</option>
+					<option value="Iaculis velit malesuada">Iaculis velit malesuada</option>
+					<option value="Eget urna aliquam">Eget urna aliquam</option>
+				</select>
+				<div class="description">Mauris eros quam, varius eget volutpat vel, tristique sed est.</div>
+			</div>
+			<div class="form-item form-type-checkbox form-item-checkbox">
+				<input type="checkbox" class="form-checkbox" checked="checked" value="1" name="checkbox" id="edit-checkbox">  <label for="edit-checkbox" class="option">Checkbox </label>
+				<div class="description">Aliquam sed quam eget ligula luctus aliquam sed vitae nulla.</div>
+			</div>
+			<div class="form-item form-type-checkboxes form-item-checkboxes">
+				<label for="edit-checkboxes">Checkboxes </label>
+				<div class="form-checkboxes" id="edit-checkboxes">
+					<div class="form-item form-type-checkbox form-item-checkboxes-Lorem-et-erat">
+						<input type="checkbox" class="form-checkbox" value="Lorem et erat" name="checkboxes[Lorem et erat]" id="edit-checkboxes-lorem-et-erat">  <label for="edit-checkboxes-lorem-et-erat" class="option">Lorem et erat </label>
+					</div>
+					<div class="form-item form-type-checkbox form-item-checkboxes-Magna-ipsum-tortor">
+						<input type="checkbox" class="form-checkbox" value="Magna ipsum tortor" name="checkboxes[Magna ipsum tortor]" id="edit-checkboxes-magna-ipsum-tortor">  <label for="edit-checkboxes-magna-ipsum-tortor" class="option">Magna ipsum tortor </label>
+					</div>
+					<div class="form-item form-type-checkbox form-item-checkboxes-Aliquam-accumsan-eget">
+						<input type="checkbox" class="form-checkbox" value="Aliquam accumsan eget" name="checkboxes[Aliquam accumsan eget]" id="edit-checkboxes-aliquam-accumsan-eget">  <label for="edit-checkboxes-aliquam-accumsan-eget" class="option">Aliquam accumsan eget </label>
+					</div>
+					<div class="form-item form-type-checkbox form-item-checkboxes-Iaculis-velit-malesuada">
+						<input type="checkbox" class="form-checkbox" value="Iaculis velit malesuada" name="checkboxes[Iaculis velit malesuada]" id="edit-checkboxes-iaculis-velit-malesuada">  <label for="edit-checkboxes-iaculis-velit-malesuada" class="option">Iaculis velit malesuada </label>
+					</div>
+					<div class="form-item form-type-checkbox form-item-checkboxes-Eget-urna-aliquam">
+						<input type="checkbox" class="form-checkbox" value="Eget urna aliquam" name="checkboxes[Eget urna aliquam]" id="edit-checkboxes-eget-urna-aliquam">  <label for="edit-checkboxes-eget-urna-aliquam" class="option">Eget urna aliquam </label>
+					</div>
+				</div>
+				<div class="description">In vel iaculis ligula.</div>
+			</div>
+			<div class="form-item form-type-radios form-item-radios">
+				<label for="edit-radios">Radios </label>
+				<div class="form-radios" id="edit-radios">
+					<div class="form-item form-type-radio form-item-radios">
+						<input type="radio" class="form-radio" value="Lorem et erat" name="radios" id="edit-radios-lorem-et-erat">  <label for="edit-radios-lorem-et-erat" class="option">Lorem et erat </label>
+					</div>
+					<div class="form-item form-type-radio form-item-radios">
+						<input type="radio" class="form-radio" value="Magna ipsum tortor" name="radios" id="edit-radios-magna-ipsum-tortor">  <label for="edit-radios-magna-ipsum-tortor" class="option">Magna ipsum tortor </label>
+					</div>
+					<div class="form-item form-type-radio form-item-radios">
+						<input type="radio" class="form-radio" value="Aliquam accumsan eget" name="radios" id="edit-radios-aliquam-accumsan-eget">  <label for="edit-radios-aliquam-accumsan-eget" class="option">Aliquam accumsan eget </label>
+					</div>
+					<div class="form-item form-type-radio form-item-radios">
+						<input type="radio" class="form-radio" value="Iaculis velit malesuada" name="radios" id="edit-radios-iaculis-velit-malesuada">  <label for="edit-radios-iaculis-velit-malesuada" class="option">Iaculis velit malesuada </label>
+					</div>
+					<div class="form-item form-type-radio form-item-radios">
+						<input type="radio" class="form-radio" value="Eget urna aliquam" name="radios" id="edit-radios-eget-urna-aliquam">  <label for="edit-radios-eget-urna-aliquam" class="option">Eget urna aliquam </label>
+					</div>
+				</div>
+				<div class="description">Curabitur dapibus odio quis enim hendrerit eu placerat lorem accumsan.</div>
+			</div>
+			<div class="form-item form-type-textfield form-item-textfield">
+				<label for="edit-textfield">Textfield </label>
+				<input type="text" class="form-text" maxlength="128" size="60" value="Convallis in iaculis" name="textfield" id="edit-textfield">
+				<div class="description">Cras metus lorem, euismod ornare mattis sagittis, ultrices eget turpis.</div>
+			</div>
+			<div class="form-item form-type-textfield form-item-autocomplete">
+				<label for="edit-autocomplete">Autocomplete textfield </label>
+				<input type="text" class="form-text" maxlength="128" size="60" value="amet" name="autocomplete" id="edit-autocomplete">
+				<div class="description">Phasellus sagittis, orci vel laoreet molestie, urna orci imperdiet elit, quis ultricies orci mauris vel ante.</div>
+			</div>
+			<div class="form-item form-type-textfield form-item-textfield-machine">
+				<label for="edit-textfield-machine">Textfield, with machine name </label>
+				<input type="text" class="form-text machine-name-source" maxlength="128" size="60" value="Dictum eros dui" name="textfield-machine" id="edit-textfield-machine"> <span class="field-suffix"> <small id="edit-textfield-machine-machine-name-suffix"> <span class="machine-name-label">Machine name:</span> <span class="machine-name-value">dictum_eros_dui</span> <span class="admin-link"><a href="#">Edit</a></span></small></span>
+				<div class="description">Sed et enim nunc, nec vehicula sem.</div>
+			</div>
+			<div class="form-item form-type-machine-name form-item-machine-name" style="display: none;">
+				<label for="edit-machine-name">Machine name <span title="This field is required." class="form-required">*</span></label>
+				<span class="field-prefix"></span> <input type="text" class="form-text required machine-name-target" maxlength="64" size="60" value="" name="machine_name" id="edit-machine-name" dir="ltr"> <span class="field-suffix"></span>
+				<div class="description">Ut dignissim convallis eros, viverra luctus lacus consequat ac.</div>
+			</div>
+			<div class="form-item form-type-textarea form-item-textarea">
+				<label for="edit-textarea">Textarea </label>
+				<div class="form-textarea-wrapper resizable textarea-processed resizable-textarea">
+					<textarea class="form-textarea" rows="5" cols="60" name="textarea" id="edit-textarea">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis, velit gravida convallis tincidunt, felis enim venenatis lorem, nec lobortis nisl urna et mi. Pellentesque ac dictum ante. Fusce dignissim tempor elementum. Ut dignissim convallis eros, viverra luctus lacus consequat ac. Sed feugiat velit sed magna aliquam accumsan. Nam vitae porta tortor. Nam auctor dui a neque iaculis in aliquam erat viverra. Duis orci nunc, lacinia in malesuada et, euismod id turpis. Cras mattis vulputate erat, eget tempor magna egestas eu. Vestibulum sit amet massa est.&lt;/p&gt;&lt;p&gt;Vivamus pretium placerat lorem, in tempor massa convallis sit amet. Aliquam sed quam eget ligula luctus aliquam sed vitae nulla. Aliquam dui dolor, ullamcorper eget rutrum ut, hendrerit ac lorem. Donec magna est, sollicitudin vel ultrices vel, mattis ut odio. Integer vel felis laoreet purus sollicitudin varius sed id ipsum. Suspendisse potenti. Praesent ut justo vitae metus luctus vehicula a et purus. Suspendisse potenti. Sed viverra, quam non hendrerit laoreet, massa odio blandit arcu, ac molestie metus diam eu tortor. Donec erat arcu, ultrices sit amet placerat non, feugiat in arcu. Mauris eros quam, varius eget volutpat vel, tristique sed est. In faucibus feugiat urna sit amet elementum. Integer consequat rhoncus libero, in molestie augue posuere et. Phasellus ac eleifend magna. Proin vulputate dui ac justo pharetra consequat. In vel iaculis ligula.&lt;/p&gt;&lt;p&gt;Cras vestibulum lacus sit amet sem commodo ullamcorper aliquet eros vestibulum. Sed fermentum nulla quis risus suscipit dapibus. Sed vitae velit ut dolor varius semper at id lectus. Aenean quis leo sit amet tellus tempus cursus. Vivamus semper vehicula ante eget semper. In ac ipsum erat. Suspendisse lectus erat, commodo nec fringilla quis, interdum non leo. Vivamus et lectus vitae risus porta sollicitudin luctus eget est. Etiam quis elit vel est suscipit tristique. Nullam fringilla purus ac velit gravida ullamcorper. Praesent porttitor ante non lacus suscipit porta. Nunc fermentum sem et metus aliquam ultricies non sollicitudin nibh. Vestibulum ut ligula dolor, in placerat tortor. Sed nec lacus sed nibh iaculis luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur rutrum, diam vel tempor commodo, augue nunc viverra risus, in pellentesque neque justo eget dolor. Maecenas quis odio leo, a auctor lorem.&lt;/p&gt;&lt;p&gt;Curabitur dapibus odio quis enim hendrerit eu placerat lorem accumsan. Phasellus sagittis, orci vel laoreet molestie, urna orci imperdiet elit, quis ultricies orci mauris vel ante. Cras pharetra, nisl a sagittis feugiat, turpis magna placerat sem, sed euismod erat elit in magna. Phasellus blandit ullamcorper diam vel porta. Vivamus mollis, metus nec tincidunt venenatis, risus odio sodales risus, vitae ultrices est nisi eget ante. Aenean eget nisi mi. Nulla non nulla nec metus rhoncus congue. Curabitur quis nunc nibh. Cras metus lorem, euismod ornare mattis sagittis, ultrices eget turpis. Integer quis dui tellus. Morbi vel dolor sit amet metus eleifend fringilla. Fusce nunc neque, ultricies et commodo semper, dignissim vitae tortor. Phasellus et ipsum quis sapien accumsan auctor. Morbi congue nulla vel tortor aliquet imperdiet. Morbi eget odio elit, et cursus odio. Quisque a velit diam. Duis urna libero, tempus non mattis a, convallis ac erat. Etiam vel dui posuere lectus auctor viverra vitae id eros. Maecenas mollis eros non elit sollicitudin quis fermentum diam lacinia. Quisque at ante nibh, a molestie ligula.&lt;/p&gt;&lt;p&gt;Sed et enim nunc, nec vehicula sem. Sed risus orci, auctor et dictum at, hendrerit eu augue. Curabitur sed ante non quam fermentum vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt dictum molestie. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus nec urna ut lorem tempus aliquet eget nec lectus. Phasellus quis venenatis tortor. Integer elementum, sapien at feugiat cursus, tortor sapien adipiscing massa, non molestie elit lacus vel velit. Suspendisse sit amet sem id libero auctor pharetra sit amet ut dui. Aenean sit amet tellus sit amet ante congue faucibus. Nullam hendrerit, justo et iaculis tristique, ligula risus pretium erat, sed tempus lacus felis ut nulla.&lt;/p&gt;</textarea>
+					<div class="grippie"></div>
+				</div>
+				<div class="description">Nullam fringilla purus ac velit gravida ullamcorper.</div>
+			</div>
+			<div class="form-item form-type-date form-item-date">
+				<label for="edit-date">Date </label>
+				<div class="container-inline" id="edit-date">
+					<div class="form-item form-type-select form-item-date-month">
+						<label for="edit-date-month" class="element-invisible">Month </label>
+						<select class="form-select" name="date[month]" id="edit-date-month">
+							<option value="1">Jan</option>
+							<option value="2">Feb</option>
+							<option selected="selected" value="3">Mar</option>
+							<option value="4">Apr</option>
+							<option value="5">May</option>
+							<option value="6">Jun</option>
+							<option value="7">Jul</option>
+							<option value="8">Aug</option>
+							<option value="9">Sep</option>
+							<option value="10">Oct</option>
+							<option value="11">Nov</option>
+							<option value="12">Dec</option>
+						</select>
+					</div>
+					<div class="form-item form-type-select form-item-date-day">
+						<label for="edit-date-day" class="element-invisible">Day </label>
+						<select class="form-select" name="date[day]" id="edit-date-day">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option selected="selected" value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+							<option value="24">24</option>
+							<option value="25">25</option>
+							<option value="26">26</option>
+							<option value="27">27</option>
+							<option value="28">28</option>
+							<option value="29">29</option>
+							<option value="30">30</option>
+							<option value="31">31</option>
+						</select>
+					</div>
+					<div class="form-item form-type-select form-item-date-year">
+						<label for="edit-date-year" class="element-invisible">Year </label>
+						<select class="form-select" name="date[year]" id="edit-date-year">
+							<option value="1900">1900</option>
+							<option value="1901">1901</option>
+							<option value="1902">1902</option>
+							<option value="1903">1903</option>
+							<option value="1904">1904</option>
+							<option value="1905">1905</option>
+							<option value="1906">1906</option>
+							<option value="1907">1907</option>
+							<option value="1908">1908</option>
+							<option value="1909">1909</option>
+							<option value="1910">1910</option>
+							<option value="1911">1911</option>
+							<option value="1912">1912</option>
+							<option value="1913">1913</option>
+							<option value="1914">1914</option>
+							<option value="1915">1915</option>
+							<option value="1916">1916</option>
+							<option value="1917">1917</option>
+							<option value="1918">1918</option>
+							<option value="1919">1919</option>
+							<option value="1920">1920</option>
+							<option value="1921">1921</option>
+							<option value="1922">1922</option>
+							<option value="1923">1923</option>
+							<option value="1924">1924</option>
+							<option value="1925">1925</option>
+							<option value="1926">1926</option>
+							<option value="1927">1927</option>
+							<option value="1928">1928</option>
+							<option value="1929">1929</option>
+							<option value="1930">1930</option>
+							<option value="1931">1931</option>
+							<option value="1932">1932</option>
+							<option value="1933">1933</option>
+							<option value="1934">1934</option>
+							<option value="1935">1935</option>
+							<option value="1936">1936</option>
+							<option value="1937">1937</option>
+							<option value="1938">1938</option>
+							<option value="1939">1939</option>
+							<option value="1940">1940</option>
+							<option value="1941">1941</option>
+							<option value="1942">1942</option>
+							<option value="1943">1943</option>
+							<option value="1944">1944</option>
+							<option value="1945">1945</option>
+							<option value="1946">1946</option>
+							<option value="1947">1947</option>
+							<option value="1948">1948</option>
+							<option value="1949">1949</option>
+							<option value="1950">1950</option>
+							<option value="1951">1951</option>
+							<option value="1952">1952</option>
+							<option value="1953">1953</option>
+							<option value="1954">1954</option>
+							<option value="1955">1955</option>
+							<option value="1956">1956</option>
+							<option value="1957">1957</option>
+							<option value="1958">1958</option>
+							<option value="1959">1959</option>
+							<option value="1960">1960</option>
+							<option value="1961">1961</option>
+							<option value="1962">1962</option>
+							<option value="1963">1963</option>
+							<option value="1964">1964</option>
+							<option value="1965">1965</option>
+							<option value="1966">1966</option>
+							<option value="1967">1967</option>
+							<option value="1968">1968</option>
+							<option value="1969">1969</option>
+							<option value="1970">1970</option>
+							<option value="1971">1971</option>
+							<option value="1972">1972</option>
+							<option value="1973">1973</option>
+							<option value="1974">1974</option>
+							<option value="1975">1975</option>
+							<option value="1976">1976</option>
+							<option value="1977">1977</option>
+							<option value="1978">1978</option>
+							<option value="1979">1979</option>
+							<option value="1980">1980</option>
+							<option value="1981">1981</option>
+							<option value="1982">1982</option>
+							<option value="1983">1983</option>
+							<option value="1984">1984</option>
+							<option value="1985">1985</option>
+							<option value="1986">1986</option>
+							<option value="1987">1987</option>
+							<option value="1988">1988</option>
+							<option value="1989">1989</option>
+							<option value="1990">1990</option>
+							<option value="1991">1991</option>
+							<option value="1992">1992</option>
+							<option value="1993">1993</option>
+							<option value="1994">1994</option>
+							<option value="1995">1995</option>
+							<option value="1996">1996</option>
+							<option value="1997">1997</option>
+							<option value="1998">1998</option>
+							<option value="1999">1999</option>
+							<option value="2000">2000</option>
+							<option value="2001">2001</option>
+							<option value="2002">2002</option>
+							<option value="2003">2003</option>
+							<option value="2004">2004</option>
+							<option value="2005">2005</option>
+							<option value="2006">2006</option>
+							<option value="2007">2007</option>
+							<option value="2008">2008</option>
+							<option value="2009">2009</option>
+							<option value="2010">2010</option>
+							<option value="2011">2011</option>
+							<option value="2012">2012</option>
+							<option value="2013">2013</option>
+							<option value="2014">2014</option>
+							<option selected="selected" value="2015">2015</option>
+							<option value="2016">2016</option>
+							<option value="2017">2017</option>
+							<option value="2018">2018</option>
+							<option value="2019">2019</option>
+							<option value="2020">2020</option>
+							<option value="2021">2021</option>
+							<option value="2022">2022</option>
+							<option value="2023">2023</option>
+							<option value="2024">2024</option>
+							<option value="2025">2025</option>
+							<option value="2026">2026</option>
+							<option value="2027">2027</option>
+							<option value="2028">2028</option>
+							<option value="2029">2029</option>
+							<option value="2030">2030</option>
+							<option value="2031">2031</option>
+							<option value="2032">2032</option>
+							<option value="2033">2033</option>
+							<option value="2034">2034</option>
+							<option value="2035">2035</option>
+							<option value="2036">2036</option>
+							<option value="2037">2037</option>
+							<option value="2038">2038</option>
+							<option value="2039">2039</option>
+							<option value="2040">2040</option>
+							<option value="2041">2041</option>
+							<option value="2042">2042</option>
+							<option value="2043">2043</option>
+							<option value="2044">2044</option>
+							<option value="2045">2045</option>
+							<option value="2046">2046</option>
+							<option value="2047">2047</option>
+							<option value="2048">2048</option>
+							<option value="2049">2049</option>
+							<option value="2050">2050</option>
+						</select>
+					</div>
+				</div>
+				<div class="description">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus nec urna ut lorem tempus aliquet eget nec lectus.</div>
+			</div>
+			<div class="form-item form-type-file form-item-files-file">
+				<label for="edit-file">File </label>
+				<input type="file" class="form-file" size="60" name="files[file]" id="edit-file">
+				<div class="description">Nullam fringilla purus ac velit gravida ullamcorper.</div>
+			</div>
+			<div id="edit-managed-file-ajax-wrapper">
+				<div class="form-item form-type-managed-file form-item-managed-file">
+					<label for="edit-managed-file">Managed file </label>
+					<div class="form-managed-file" id="edit-managed-file"><input type="file" class="form-file" size="22" name="files[managed_file]" id="edit-managed-file-upload"><input type="submit" class="form-submit ajax-processed" value="Upload" name="managed_file_upload_button" id="edit-managed-file-upload-button"><input type="hidden" value="0" name="managed_file[fid]"></div>
+					<div class="description">Duis orci nunc, lacinia in malesuada et, euismod id turpis.</div>
+				</div>
+			</div>
+			<div class="form-item form-type-password form-item-password">
+				<label for="edit-password">Password </label>
+				<input type="password" class="form-text" maxlength="128" size="60" name="password" id="edit-password">
+				<div class="description">Vestibulum sit amet massa est.</div>
+			</div>
+			<div class="form-item form-type-password-confirm form-item-password-confirm">
+				<label for="edit-password-confirm">Password confirm </label>
+				<div class="form-item form-type-password form-item-password-confirm-pass1 password-parent">
+					<div class="password-strength">
+						<div aria-live="assertive" class="password-strength-text"></div>
+						<div class="password-strength-title">Password strength:</div>
+						<div class="password-indicator">
+							<div class="indicator"></div>
+						</div>
+					</div>
+					<label for="edit-password-confirm-pass1">Password </label>
+					<input type="password" maxlength="128" size="60" name="password_confirm[pass1]" id="edit-password-confirm-pass1" class="password-field form-text password-processed">
+				</div>
+				<div class="form-item form-type-password form-item-password-confirm-pass2 confirm-parent">
+					<div class="password-confirm">Passwords match: <span></span></div>
+					<label for="edit-password-confirm-pass2">Confirm password </label>
+					<input type="password" maxlength="128" size="60" name="password_confirm[pass2]" id="edit-password-confirm-pass2" class="password-confirm form-text">
+				</div>
+				<div class="password-suggestions description" style="display: none;"></div>
+			</div>
+			<div class="form-item form-type-select form-item-weight">
+				<label for="edit-weight">Weight </label>
+				<select class="form-select" name="weight" id="edit-weight">
+					<option value="-10">-10</option>
+					<option value="-9">-9</option>
+					<option value="-8">-8</option>
+					<option value="-7">-7</option>
+					<option value="-6">-6</option>
+					<option value="-5">-5</option>
+					<option value="-4">-4</option>
+					<option value="-3">-3</option>
+					<option value="-2">-2</option>
+					<option value="-1">-1</option>
+					<option selected="selected" value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select>
+				<div class="description">Sed et enim nunc, nec vehicula sem.</div>
+			</div>
+			<input type="hidden" value="form-ctZvDFlkUr5KqG7Xr2teDnnfPeK3ngQxB1GY9Tu8uS8" name="form_build_id">
+			<input type="hidden" value="styleguide_form" name="form_id">
+		</div>
+	</form>
+</div>
+<a name="form-submit"></a>
+<h2 style="font-weight:bold;padding-bottom:3px;border-bottom:1px solid #000000;margin-top:20px;margin-bottom:10px;">Forms, submit</h2>
+<div>
+	<form accept-charset="UTF-8" id="styleguide-form--2" method="post" action="/admin/appearance/styleguide">
+		<div><input type="submit" class="form-submit" value="Submit" name="op" id="edit-submit"><input type="hidden" value="form-X9sP5C8CqGwUfpoBnxlbdMSdyfDiqrzHWCxO2EiXckI" name="form_build_id">
+			<input type="hidden" value="styleguide_form" name="form_id">
+		</div>
+	</form>
+</div>
+<a name="form-button"></a>
+<h2 style="font-weight:bold;padding-bottom:3px;border-bottom:1px solid #000000;margin-top:20px;margin-bottom:10px;">Forms, button</h2>
+<div>
+	<form accept-charset="UTF-8" id="styleguide-form--3" method="post" action="/admin/appearance/styleguide">
+		<div><input type="submit" class="form-submit" value="Button" name="op" id="edit-button"><input type="hidden" value="form-1YqlC4DC3gGf_L7-J5XQ7T_BqGJ1GIS6u2XvD_ALaUs" name="form_build_id">
+			<input type="hidden" value="styleguide_form" name="form_id">
+		</div>
+	</form>
+</div>
+<a name="form-image-button"></a>
+<h2 style="font-weight:bold;padding-bottom:3px;border-bottom:1px solid #000000;margin-top:20px;margin-bottom:10px;">Forms, image button</h2>
+<div>
+	<form accept-charset="UTF-8" id="styleguide-form--4" method="post" action="/admin/appearance/styleguide">
+		<div><input type="image" height="20" class="form-submit" src="http://styleguide.allgoo.de/misc/druplicon.png" name="Image button" id="edit-image-button"><input type="hidden" value="form-r5oWrr3tOVeggu8dk4xpgcXO6HU3J3fpz43EUg6qSAE" name="form_build_id">
+			<input type="hidden" value="styleguide_form" name="form_id">
+		</div>
+	</form>
+</div>
+<a name="form-markup"></a>
+<h2 style="font-weight:bold;padding-bottom:3px;border-bottom:1px solid #000000;margin-top:20px;margin-bottom:10px;">Forms, markup</h2>
+<div>
+	<form accept-charset="UTF-8" id="styleguide-form--5" method="post" action="/admin/appearance/styleguide">
+		<div>
+			<p><em>Markup</em>: Note that markup does not allow titles or descriptions. Use "item" for those options.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis, velit gravida convallis tincidunt, felis enim venenatis lorem, nec lobortis nisl urna et mi. Pellentesque ac dictum ante. Fusce dignissim tempor elementum. Ut dignissim convallis eros, viverra luctus lacus consequat ac. Sed feugiat velit sed magna aliquam accumsan. Nam vitae porta tortor. Nam auctor dui a neque iaculis in aliquam erat viverra. Duis orci nunc, lacinia in malesuada et, euismod id turpis. Cras mattis vulputate erat, eget tempor magna egestas eu. Vestibulum sit amet massa est.</p>
+			<div class="form-item form-type-item" id="edit-item">
+				<label for="edit-item">Item </label>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis, velit gravida convallis tincidunt, felis enim venenatis lorem, nec lobortis nisl urna et mi. Pellentesque ac dictum ante. Fusce dignissim tempor elementum. Ut dignissim convallis eros, viverra luctus lacus consequat ac. Sed feugiat velit sed magna aliquam accumsan. Nam vitae porta tortor. Nam auctor dui a neque iaculis in aliquam erat viverra. Duis orci nunc, lacinia in malesuada et, euismod id turpis. Cras mattis vulputate erat, eget tempor magna egestas eu. Vestibulum sit amet massa est.</p>
+				<div class="description">Praesent porttitor ante non lacus suscipit porta.</div>
+			</div>
+			<input type="hidden" value="form-xAF06x_KWckCFMEftKyF49Ln8pjhD5OK2qxKhd0Jb04" name="form_build_id">
+			<input type="hidden" value="styleguide_form" name="form_id">
+		</div>
+	</form>
+</div>
+<a name="form-fieldsets"></a>
+<h2 style="font-weight:bold;padding-bottom:3px;border-bottom:1px solid #000000;margin-top:20px;margin-bottom:10px;">Forms, fieldsets</h2>
+<div>
+	<form accept-charset="UTF-8" id="styleguide-form--6" method="post" action="/admin/appearance/styleguide">
+		<div>
+			<fieldset id="edit-fieldset-collapsed" class="collapsible collapsed form-wrapper collapse-processed">
+				<legend><span class="fieldset-legend"><a href="#" class="fieldset-title"><span class="fieldset-legend-prefix element-invisible">Show</span> Fieldset collapsed</a><span class="summary"></span></span></legend>
+				<div class="fieldset-wrapper">
+					<div class="fieldset-description">Sed viverra, quam non hendrerit laoreet, massa odio blandit arcu, ac molestie metus diam eu tortor.</div>
+					<div class="form-item form-type-select form-item-select-fieldset-collapsed">
+						<label for="edit-select-fieldset-collapsed">Select </label>
+						<select class="form-select" name="select-fieldset-collapsed" id="edit-select-fieldset-collapsed">
+							<option value="Nisl neque in">Nisl neque in</option>
+							<option value="Sed consectetur feugiat">Sed consectetur feugiat</option>
+							<option value="Erat sit vitae">Erat sit vitae</option>
+							<option value="Sed et consequat">Sed et consequat</option>
+							<option value="Fusce magna lorem">Fusce magna lorem</option>
+						</select>
+						<div class="description">Nunc fermentum sem et metus aliquam ultricies non sollicitudin nibh.</div>
+					</div>
+					<div class="form-item form-type-checkboxes form-item-checkboxes-fieldset-collapsed">
+						<label for="edit-checkboxes-fieldset-collapsed">Checkboxes </label>
+						<div class="form-checkboxes" id="edit-checkboxes-fieldset-collapsed">
+							<div class="form-item form-type-checkbox form-item-checkboxes-fieldset-collapsed-Nisl-neque-in">
+								<input type="checkbox" class="form-checkbox" value="Nisl neque in" name="checkboxes-fieldset-collapsed[Nisl neque in]" id="edit-checkboxes-fieldset-collapsed-nisl-neque-in">  <label for="edit-checkboxes-fieldset-collapsed-nisl-neque-in" class="option">Nisl neque in </label>
+							</div>
+							<div class="form-item form-type-checkbox form-item-checkboxes-fieldset-collapsed-Sed-consectetur-feugiat">
+								<input type="checkbox" class="form-checkbox" value="Sed consectetur feugiat" name="checkboxes-fieldset-collapsed[Sed consectetur feugiat]" id="edit-checkboxes-fieldset-collapsed-sed-consectetur-feugiat">  <label for="edit-checkboxes-fieldset-collapsed-sed-consectetur-feugiat" class="option">Sed consectetur feugiat </label>
+							</div>
+							<div class="form-item form-type-checkbox form-item-checkboxes-fieldset-collapsed-Erat-sit-vitae">
+								<input type="checkbox" class="form-checkbox" value="Erat sit vitae" name="checkboxes-fieldset-collapsed[Erat sit vitae]" id="edit-checkboxes-fieldset-collapsed-erat-sit-vitae">  <label for="edit-checkboxes-fieldset-collapsed-erat-sit-vitae" class="option">Erat sit vitae </label>
+							</div>
+							<div class="form-item form-type-checkbox form-item-checkboxes-fieldset-collapsed-Sed-et-consequat">
+								<input type="checkbox" class="form-checkbox" value="Sed et consequat" name="checkboxes-fieldset-collapsed[Sed et consequat]" id="edit-checkboxes-fieldset-collapsed-sed-et-consequat">  <label for="edit-checkboxes-fieldset-collapsed-sed-et-consequat" class="option">Sed et consequat </label>
+							</div>
+							<div class="form-item form-type-checkbox form-item-checkboxes-fieldset-collapsed-Fusce-magna-lorem">
+								<input type="checkbox" class="form-checkbox" value="Fusce magna lorem" name="checkboxes-fieldset-collapsed[Fusce magna lorem]" id="edit-checkboxes-fieldset-collapsed-fusce-magna-lorem">  <label for="edit-checkboxes-fieldset-collapsed-fusce-magna-lorem" class="option">Fusce magna lorem </label>
+							</div>
+						</div>
+						<div class="description">Sed viverra, quam non hendrerit laoreet, massa odio blandit arcu, ac molestie metus diam eu tortor.</div>
+					</div>
+				</div>
+			</fieldset>
+			<fieldset id="edit-fieldset-collapsible" class="collapsible form-wrapper collapse-processed">
+				<legend><span class="fieldset-legend"><a href="#" class="fieldset-title"><span class="fieldset-legend-prefix element-invisible">Hide</span> Fieldset collapsible</a><span class="summary"></span></span></legend>
+				<div class="fieldset-wrapper">
+					<div class="fieldset-description">Suspendisse potenti.</div>
+					<div class="form-item form-type-select form-item-select-fieldset-collapsible">
+						<label for="edit-select-fieldset-collapsible">Select </label>
+						<select class="form-select" name="select-fieldset-collapsible" id="edit-select-fieldset-collapsible">
+							<option value="Nisl neque in">Nisl neque in</option>
+							<option value="Sed consectetur feugiat">Sed consectetur feugiat</option>
+							<option value="Erat sit vitae">Erat sit vitae</option>
+							<option value="Sed et consequat">Sed et consequat</option>
+							<option value="Fusce magna lorem">Fusce magna lorem</option>
+						</select>
+						<div class="description">Nunc fermentum sem et metus aliquam ultricies non sollicitudin nibh.</div>
+					</div>
+					<div class="form-item form-type-checkboxes form-item-checkboxes-fieldset-collapsible">
+						<label for="edit-checkboxes-fieldset-collapsible">Checkboxes </label>
+						<div class="form-checkboxes" id="edit-checkboxes-fieldset-collapsible">
+							<div class="form-item form-type-checkbox form-item-checkboxes-fieldset-collapsible-Nisl-neque-in">
+								<input type="checkbox" class="form-checkbox" value="Nisl neque in" name="checkboxes-fieldset-collapsible[Nisl neque in]" id="edit-checkboxes-fieldset-collapsible-nisl-neque-in">  <label for="edit-checkboxes-fieldset-collapsible-nisl-neque-in" class="option">Nisl neque in </label>
+							</div>
+							<div class="form-item form-type-checkbox form-item-checkboxes-fieldset-collapsible-Sed-consectetur-feugiat">
+								<input type="checkbox" class="form-checkbox" value="Sed consectetur feugiat" name="checkboxes-fieldset-collapsible[Sed consectetur feugiat]" id="edit-checkboxes-fieldset-collapsible-sed-consectetur-feugiat">  <label for="edit-checkboxes-fieldset-collapsible-sed-consectetur-feugiat" class="option">Sed consectetur feugiat </label>
+							</div>
+							<div class="form-item form-type-checkbox form-item-checkboxes-fieldset-collapsible-Erat-sit-vitae">
+								<input type="checkbox" class="form-checkbox" value="Erat sit vitae" name="checkboxes-fieldset-collapsible[Erat sit vitae]" id="edit-checkboxes-fieldset-collapsible-erat-sit-vitae">  <label for="edit-checkboxes-fieldset-collapsible-erat-sit-vitae" class="option">Erat sit vitae </label>
+							</div>
+							<div class="form-item form-type-checkbox form-item-checkboxes-fieldset-collapsible-Sed-et-consequat">
+								<input type="checkbox" class="form-checkbox" value="Sed et consequat" name="checkboxes-fieldset-collapsible[Sed et consequat]" id="edit-checkboxes-fieldset-collapsible-sed-et-consequat">  <label for="edit-checkboxes-fieldset-collapsible-sed-et-consequat" class="option">Sed et consequat </label>
+							</div>
+							<div class="form-item form-type-checkbox form-item-checkboxes-fieldset-collapsible-Fusce-magna-lorem">
+								<input type="checkbox" class="form-checkbox" value="Fusce magna lorem" name="checkboxes-fieldset-collapsible[Fusce magna lorem]" id="edit-checkboxes-fieldset-collapsible-fusce-magna-lorem">  <label for="edit-checkboxes-fieldset-collapsible-fusce-magna-lorem" class="option">Fusce magna lorem </label>
+							</div>
+						</div>
+						<div class="description">Sed viverra, quam non hendrerit laoreet, massa odio blandit arcu, ac molestie metus diam eu tortor.</div>
+					</div>
+				</div>
+			</fieldset>
+			<fieldset id="edit-fieldset" class="form-wrapper">
+				<legend><span class="fieldset-legend">Fieldset</span></legend>
+				<div class="fieldset-wrapper">
+					<div class="fieldset-description">Curabitur sed ante non quam fermentum vehicula.</div>
+					<div class="form-item form-type-select form-item-select-fieldset">
+						<label for="edit-select-fieldset">Select </label>
+						<select class="form-select" name="select-fieldset" id="edit-select-fieldset">
+							<option value="Nisl neque in">Nisl neque in</option>
+							<option value="Sed consectetur feugiat">Sed consectetur feugiat</option>
+							<option value="Erat sit vitae">Erat sit vitae</option>
+							<option value="Sed et consequat">Sed et consequat</option>
+							<option value="Fusce magna lorem">Fusce magna lorem</option>
+						</select>
+						<div class="description">Nunc fermentum sem et metus aliquam ultricies non sollicitudin nibh.</div>
+					</div>
+					<div class="form-item form-type-checkboxes form-item-checkboxes-fieldset">
+						<label for="edit-checkboxes-fieldset">Checkboxes </label>
+						<div class="form-checkboxes" id="edit-checkboxes-fieldset">
+							<div class="form-item form-type-checkbox form-item-checkboxes-fieldset-Nisl-neque-in">
+								<input type="checkbox" class="form-checkbox" value="Nisl neque in" name="checkboxes-fieldset[Nisl neque in]" id="edit-checkboxes-fieldset-nisl-neque-in">  <label for="edit-checkboxes-fieldset-nisl-neque-in" class="option">Nisl neque in </label>
+							</div>
+							<div class="form-item form-type-checkbox form-item-checkboxes-fieldset-Sed-consectetur-feugiat">
+								<input type="checkbox" class="form-checkbox" value="Sed consectetur feugiat" name="checkboxes-fieldset[Sed consectetur feugiat]" id="edit-checkboxes-fieldset-sed-consectetur-feugiat">  <label for="edit-checkboxes-fieldset-sed-consectetur-feugiat" class="option">Sed consectetur feugiat </label>
+							</div>
+							<div class="form-item form-type-checkbox form-item-checkboxes-fieldset-Erat-sit-vitae">
+								<input type="checkbox" class="form-checkbox" value="Erat sit vitae" name="checkboxes-fieldset[Erat sit vitae]" id="edit-checkboxes-fieldset-erat-sit-vitae">  <label for="edit-checkboxes-fieldset-erat-sit-vitae" class="option">Erat sit vitae </label>
+							</div>
+							<div class="form-item form-type-checkbox form-item-checkboxes-fieldset-Sed-et-consequat">
+								<input type="checkbox" class="form-checkbox" value="Sed et consequat" name="checkboxes-fieldset[Sed et consequat]" id="edit-checkboxes-fieldset-sed-et-consequat">  <label for="edit-checkboxes-fieldset-sed-et-consequat" class="option">Sed et consequat </label>
+							</div>
+							<div class="form-item form-type-checkbox form-item-checkboxes-fieldset-Fusce-magna-lorem">
+								<input type="checkbox" class="form-checkbox" value="Fusce magna lorem" name="checkboxes-fieldset[Fusce magna lorem]" id="edit-checkboxes-fieldset-fusce-magna-lorem">  <label for="edit-checkboxes-fieldset-fusce-magna-lorem" class="option">Fusce magna lorem </label>
+							</div>
+						</div>
+						<div class="description">Sed viverra, quam non hendrerit laoreet, massa odio blandit arcu, ac molestie metus diam eu tortor.</div>
+					</div>
+				</div>
+			</fieldset>
+			<input type="hidden" value="form-q-OVKOs0VdzZS3vKbNHKUInGZUITUPH9joGmjZxjG4Y" name="form_build_id">
+			<input type="hidden" value="styleguide_form" name="form_id">
+		</div>
+	</form>
+</div>
+
+Styleguide 4.1.10
+*/
+
+@import 'address-field';
+@import 'autocomplete';
+@import 'field-suffix';
+@import 'form-actions';
+@import 'form-checkboxes-and-radios';
+@import 'form-fieldset';
+@import 'form-item';
+@import 'form-managed-file';
+@import 'form-submit';
+@import 'form-textarea-wrapper';
+@import 'password-strength-and-confirm';
+@import 'resizable';

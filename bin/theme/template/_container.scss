@@ -1,0 +1,7 @@
+.container {
+  min-width: map-get($site-range, "min");
+  width: 100%;
+  max-width: map-get($site-range, "max");
+  margin: 0 auto;
+  position: relative;
+}

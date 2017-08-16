@@ -1,0 +1,83 @@
+@function font-calculator($cfg, $exp, $up: true) {
+
+  // Précision arrondi
+  $round: 5;
+
+  // Mémorisation des datas
+  $font-root: map-get($cfg, "root");
+  $font-multiplier: map-get($cfg, "multiplier");
+  $font-vw-max: map-get($cfg, "vw-max");
+  $font-vw-min: map-get($cfg, "vw-min");
+  $margin-weight: map-get($cfg, "margin-weight");
+  $font-scale: map-get($font-scales, map-get($cfg, "scale"));
+  $font-cap-height: map-get($cfg, "cap-height");
+  $font-baseline-scale: map-get($cfg, "baseline");
+  $font-baseline: $font-root * $font-baseline-scale;
+
+  $font-size-min: $font-root;
+
+  $font-exp: 1;
+  @if $up == true {
+    @for $j from 1 to $exp {
+      $font-exp: $font-exp * $font-scale;
+    }
+  }
+  @else {
+    @for $i from 1 to $exp {
+      $font-exp: $font-exp / $font-scale;
+    }
+  }
+
+  // Font size
+  $font-size-min: $font-size-min * $font-exp;
+  $font-size-max: $font-size-min * $font-multiplier;
+
+  // Baseline multiplier
+  $baseline-unit-raw: $font-size-min / $font-baseline;
+  $baseline-unit: ceil($font-size-min / $font-baseline);
+
+  // Condition pour empêcher les interlettrage trop petits
+  //@if ($baseline-unit - $baseline-unit-raw) < .1 and $baseline-unit > 1 {
+  //  $baseline-unit: $baseline-unit + 1;
+  //}
+
+  // Baseline
+  $baseline-min: $font-baseline;
+
+  // Line height
+  $line-height: $baseline-unit * $font-baseline;
+  $line-height-rel: rounder(($line-height / $font-size-min), $round);
+
+  // Offset
+  $offset-top: ($line-height - ($font-size-min * $font-cap-height)) / 2;
+
+  // Padding-top
+  $padding-top-min: $offset-top;
+  $padding-top-rel: rounder(($padding-top-min / $font-size-min), $round);
+
+  // Margin bottom
+  $margin-bottom: ($baseline-min * $margin-weight * 2) - $offset-top;
+  $margin-bottom-rel: rounder(($margin-bottom / $font-size-min), $round);
+
+  // Margin bottom simple
+  $margin-bottom-simple: ($baseline-min * $margin-weight) - $offset-top;
+  $margin-bottom-simple-rel: rounder(($margin-bottom-simple / $font-size-min), $round);
+
+  /* ------------ Arrondis ------------ */
+
+  // Line height
+  $font-size-min: rounder($font-size-min, $round);
+  $font-size-max: rounder($font-size-max, $round);
+
+  $output: (
+    "font-size": calc(#{$font-size-min} + (#{strip-unit($font-size-max) - strip-unit($font-size-min)}) * (100vw - #{$font-vw-min}) / (#{strip-unit($font-vw-max)} - #{strip-unit($font-vw-min)})),
+    "line-height": #{$line-height-rel}em,
+    "padding-top": #{$padding-top-rel}em,
+    "margin-bottom": #{$margin-bottom-rel}em,
+    "margin-bottom-simple": #{$margin-bottom-simple-rel}em,
+    "font-size-max": $font-size-max,
+    "styleguide-ref": rounder($font-size-min, 1)
+  );
+
+  @return $output;
+}

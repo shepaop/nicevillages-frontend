@@ -1,0 +1,9 @@
+// Chargement ajax
+
+.ajax-progress {
+  margin: 0 get-layout("text-spacing", "small");
+
+  .throbber {
+    float: left;
+  }
+}

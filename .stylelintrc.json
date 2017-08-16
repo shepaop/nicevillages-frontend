@@ -1,0 +1,22 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "rule-empty-line-before": "always",
+    "at-rule-no-unknown": null,
+    "at-rule-empty-line-before": ["always", {
+      "except": [
+        "blockless-after-blockless"
+      ],
+      "ignore": [
+        "inside-block"
+      ]
+    }],
+    "number-leading-zero": "never",
+    "color-hex-length": "long",
+    "color-named": "never",
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-empty-line-before": "never",
+    "no-missing-end-of-source-newline": null,
+    "function-calc-no-unspaced-operator": null
+  }
+}

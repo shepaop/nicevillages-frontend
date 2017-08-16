@@ -1,0 +1,4 @@
+@function get-icon($name:"icon-ui_close-std", $value:"width") {
+
+  @return map-get(map-get($icon-system, $name), $value);
+}

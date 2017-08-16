@@ -1,0 +1,16 @@
+%blockquote {
+  @extend %typeface-heading;
+  @extend %fs-heading-up-2;
+  @extend %color-brand-first;
+  text-align: center;
+  margin: get-layout("block-spacing", "large") 0 get-layout("block-spacing", "x-large");
+  padding: 0 get-layout("block-spacing", "large");
+
+  p {
+    font-family: inherit;
+    font-size: inherit;
+    text-align: inherit;
+    padding: 0;
+    margin: 0;
+  }
+}

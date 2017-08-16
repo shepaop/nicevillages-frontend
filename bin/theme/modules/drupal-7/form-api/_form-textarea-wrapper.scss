@@ -1,0 +1,14 @@
+// Wrapper de textarea
+
+.form-textarea-wrapper {
+
+  textarea {
+    display: block !important;
+    width: 100%;
+    min-height: 15em;
+
+    &[style*="display: none"] {
+      min-height: 0;
+    }
+  }
+}

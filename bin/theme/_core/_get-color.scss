@@ -1,0 +1,4 @@
+@function get-color($section:"text", $suffix:"base") {
+
+  @return map-get(map-get(map-get($color-system, $section), "values"), $suffix);
+}

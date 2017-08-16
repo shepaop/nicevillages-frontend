@@ -1,0 +1,10 @@
+// Champ d'upload de fichier
+
+.form-managed-file {
+
+  .form-submit {
+    @extend %button-action;
+    margin-left: get-layout("text-spacing", "small");
+    text-transform: none;
+  }
+}

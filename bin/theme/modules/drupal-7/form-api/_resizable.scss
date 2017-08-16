@@ -1,0 +1,15 @@
+// Resize des champs de formulaire
+
+.resizable-textarea {
+
+  .grippie {
+    content: "…";
+    @extend %typeface-std;
+    text-align: center;
+    background-color: get-color('grayscale', 'medium');
+    background-position: center;
+    cursor: s-resize;
+    height: get-layout("text-spacing", "std");
+    overflow: hidden;
+  }
+}

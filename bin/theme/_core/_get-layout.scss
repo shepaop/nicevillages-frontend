@@ -1,0 +1,4 @@
+@function get-layout($section:"block-spacing", $suffix:"std") {
+
+  @return map-get(map-get(map-get($layout, $section), "values"), $suffix);
+}

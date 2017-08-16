@@ -1,0 +1,51 @@
+// Address field
+
+.webform-component-addressfield {
+  clear: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .form-text,
+  .form-textarea {
+    width: 100%;
+  }
+
+  .form-select {
+    @extend %grid-desktop-4 !optional;
+  }
+
+  > .street-block,
+  > .locality-block {
+    clear: left;
+    float: left;
+
+    > .form-item {
+      float: left;
+      margin-left: get-layout("text-spacing", "std");
+      margin-top: 0;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  > .street-block {
+    margin-left: 0;
+    width: 100%;
+
+    > .form-item {
+      @extend %grid-desktop-4 !optional;
+    }
+  }
+
+  > .locality-block {
+    width: 100%;
+
+    > .form-item {
+      @extend %grid-desktop-4 !optional;
+    }
+  }
+}

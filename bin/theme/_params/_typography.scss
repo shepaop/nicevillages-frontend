@@ -1,0 +1,736 @@
+/*
+Typefaces
+
+Styleguide 1.3.
+*/
+
+// ---------------------------------------------------
+
+// Familles de polices utilisées dans le site et configuration
+
+/* stylelint-disable */
+$font-families: (
+  "arial-regular": (
+    "name": "Arial regular",
+    "css": (
+      "font-family": "Arial, Verdana, sans-serif",
+      "font-weight": "normal"
+    ),
+    "responsive": (
+      "mobile": (
+        "scale": "Minor Third",                         // Règle d'échelle de variation des taille de la typo
+        "root": 12.8px,                                 // Taille (en px) dans la fourchette basse du palier responsive
+        "baseline": .83333,                                 // Ligne de base (en px) dans la fourchette basse du palier responsive
+        "multiplier": 1.25,                             // Variation MAX de la taille de typoe entre la fourchette basse et ahute du palier
+        "cap-height": (573/800),                        // Proportion de la hauteur d'une lettre capitale par rapport à une taille définie
+        "vw-min": $site-range-mix,                      // Largeur du viewport pour la taille de typo minimum
+        "vw-max": map-get($breakpoints, "tablet"),      // Largeur du viewport pour la taille de typo maximum
+        "margin-weight": 3                              // Poids des marges
+      ),
+      "tablet": (
+        "scale": "Perfect Fourth",
+        "root": 12.8px,
+        "baseline": .83333,
+        "multiplier": 1.25,
+        "cap-height": (573/800),
+        "vw-min": map-get($breakpoints, "tablet"),
+        "vw-max": map-get($breakpoints, "desktop"),
+        "margin-weight": 3
+      ),
+      "desktop": (
+        "scale": "Augmented Fourth",
+        "root": 12.8px,
+        "baseline": .83333,
+        "multiplier": 1.25,
+        "cap-height": (573/800),
+        "vw-min": map-get($breakpoints, "desktop"),
+        "vw-max": $site-range-max,
+        "margin-weight": 3
+      )
+    )
+  ),
+  "arial-bold": (
+    "name": "Arial bold",
+    "css": (
+      "font-family": "Arial, Verdana, sans-serif",
+      "font-weight": "bold"
+    ),
+    "responsive": (
+      "mobile": (
+        "scale": "Minor Third",
+        "root": 12.8px,
+        "baseline": .83333,
+        "multiplier": 1.25,
+        "cap-height": (573/800),
+        "vw-min": $site-range-mix,
+        "vw-max": map-get($breakpoints, "tablet"),
+        "margin-weight": 3
+      ),
+      "tablet": (
+        "scale": "Perfect Fourth",
+        "root": 12.8px,
+        "baseline": .83333,
+        "multiplier": 1.25,
+        "cap-height": (573/800),
+        "vw-min": map-get($breakpoints, "tablet"),
+        "vw-max": map-get($breakpoints, "desktop"),
+        "margin-weight": 3
+      ),
+      "desktop": (
+        "scale": "Augmented Fourth",
+        "root": 12.8px,
+        "baseline": .83333,
+        "multiplier": 1.25,
+        "cap-height": (573/800),
+        "vw-min": map-get($breakpoints, "desktop"),
+        "vw-max": $site-range-max,
+        "margin-weight": 3
+      )
+    )
+  )
+);
+/* stylelint-enable */
+
+// ---------------------------------------------------
+
+// Génération des placeholders de font-sizes
+$sepId: 1;
+
+@each $name, $datas in $font-families {
+
+  // Styleguide
+  $styleguide-font-families: "";
+  $styleguide-font-families-css: "";
+  $styleguide-font-families-thead: "";
+  $styleguide-font-families-tbody: "";
+  $tbody: ();
+
+  @if map-has-key($datas, "css") {
+
+    %typeface-#{$name} {
+
+      @each $css-rule, $value in map-get($datas, "css") {
+
+        // Styleguide
+        $styleguide-font-families-css: "#{$styleguide-font-families-css}#{$css-rule}:#{$value};";
+
+        // CSS Rules
+        #{$css-rule}: #{$value};
+      }
+    }
+  }
+
+  // Styleguide
+  $styleguide-font-families: $styleguide-font-families + styleguide-print-title("Preview");
+  $styleguide-font-families: $styleguide-font-families + "<br />";
+  $styleguide-font-families: $styleguide-font-families + "<div style=\"margin-bottom:#{$styleguide-item-box-margin};#{$styleguide-font-families-css}letter-spacing:.75em;\">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>";
+  $styleguide-font-families: $styleguide-font-families + "<div style=\"margin-bottom:#{$styleguide-item-box-margin};#{$styleguide-font-families-css}letter-spacing:.75em;\">abcdefghijklmnopqrstuvwxyz</div>";
+  $styleguide-font-families: $styleguide-font-families + "<div style=\"margin-bottom:#{$styleguide-item-box-margin};#{$styleguide-font-families-css}letter-spacing:.75em;\">0123456789</div>";
+  $styleguide-font-families: $styleguide-font-families + "<br />";
+  $styleguide-font-families: $styleguide-font-families + styleguide-print-separator();
+
+  @if map-has-key($datas, "responsive") {
+    /* styleguide:ignore:start */
+
+    // Styleguide
+    $styleguide-font-families-thead: $styleguide-font-families-thead + "<thead><tr><th></th>";
+    $styleguide-font-families-tbody: $styleguide-font-families-tbody + "<tbody>";
+
+    $map-length: length(map-keys(map-get($datas, "responsive")));
+    $index: 1;
+    @each $device, $cfg in map-get($datas, "responsive") {
+
+      // Styleguide
+      $styleguide-font-families-thead: $styleguide-font-families-thead + "<th colspan=\"2\" style=\"background-color:rgba(#{$styleguide-highlight},.6);width:30%;text-align:center;\">#{$device}</th>";
+
+      // Styleguide
+      @if $index != 1 {
+        $styleguide-font-families: $styleguide-font-families + styleguide-print-separator();
+      }
+      $styleguide-font-families: $styleguide-font-families + styleguide-print-title("Tailles #{$device}");
+      $styleguide-font-families: $styleguide-font-families + styleguide-print-desc("Echelle des tailes de polices: <strong>#{map-get($cfg, "scale")}</strong><small>&nbsp;(#{map-get($font-scales, map-get($cfg, "scale"))})</small><br />");
+      $desc: "";
+      $desc: $desc + "Interlignage: <strong>#{map-get($cfg, "baseline")}</strong>";
+      $styleguide-font-families: $styleguide-font-families + styleguide-print-desc("#{$desc}");
+      $desc: "";
+      $desc: $desc + "Taille de police à <strong>#{map-get($cfg, "vw-min")}</strong>: <strong>#{map-get($cfg, "root")}</strong><br />";
+      $desc: $desc + "Taille de police à <strong>#{map-get($cfg, "vw-max")}</strong>: <strong>#{map-get($cfg, "root") * map-get($cfg, "multiplier")}</strong>";
+      $styleguide-font-families: $styleguide-font-families + styleguide-print-desc("#{$desc}");
+      $desc: "";
+      $desc: $desc + "Cap height: <strong>#{map-get($cfg, "cap-height")}</strong>";
+      $styleguide-font-families: $styleguide-font-families + styleguide-print-desc("#{$desc}");
+      $styleguide-font-families: $styleguide-font-families + "<br />";
+      $styleguide-font-families: $styleguide-font-families + "<table style=\"border:0;margin-bottom:#{$styleguide-item-box-margin};\">";
+
+      // Taille maximale d'évolution de la typo
+      $font-vw-max: map-get($cfg, "vw-max");
+
+      // Tailles croissantes
+
+      @for $i from 9 to 0 {
+
+        $output: font-calculator($cfg, $i, true);
+
+        $suffix: "root";
+        @if $i > 1 {
+          $suffix: "up-#{$i - 1}";
+        }
+
+        %fs-#{$name}-#{$suffix} {
+
+          @include breakpoint($device) {
+            font-size: map-get($output, "font-size");
+          }
+
+          @if $index == $map-length {
+
+            @include tweakpoint($font-vw-max) {
+              @include pxtorem(map-get($output, "font-size-max"));
+            }
+          }
+        }
+
+        %fs-#{$name}-#{$suffix}--baseline {
+
+          @include breakpoint($device) {
+            font-size: map-get($output, "font-size");
+            line-height: map-get($output, "line-height");
+            padding-top: map-get($output, "padding-top");
+            margin-bottom: map-get($output, "margin-bottom");
+          }
+
+          @if $index == $map-length {
+
+            @include tweakpoint($font-vw-max) {
+              @include pxtorem(map-get($output, "font-size-max"));
+            }
+          }
+        }
+
+        %fs-#{$name}-#{$suffix}--baseline-simple {
+
+          @include breakpoint($device) {
+            font-size: map-get($output, "font-size");
+            line-height: map-get($output, "line-height");
+            padding-top: map-get($output, "padding-top");
+            margin-bottom: map-get($output, "margin-bottom-simple");
+          }
+
+          @if $index == $map-length {
+
+            @include tweakpoint($font-vw-max) {
+              @include pxtorem(map-get($output, "font-size-max"));
+            }
+          }
+        }
+
+        // Styleguide
+        @if $i <= 6 {
+          $highlighter: "";
+          @if $i == 1 {
+            $highlighter: " style=\"background-color:rgba(#{$styleguide-highlight},.3);\"";
+          }
+          $styleguide-font-families: $styleguide-font-families + "<tr#{$highlighter}>";
+          $styleguide-font-families: $styleguide-font-families + "<td style=\"border:0;color:#aaaaaa;white-space:nowrap;font-size:11px;text-align:right;\">#{map-get($output, "styleguide-ref")}</td>";
+          $styleguide-font-families: $styleguide-font-families + "<td style=\"#{$styleguide-font-families-css}font-size:#{map-get($output, "styleguide-ref")};padding:0;width:100%;border:0;white-space:nowrap;overflow:hidden;\">The quick brown fox jumps over the lazy dog</td>";
+          $styleguide-font-families: $styleguide-font-families + "</tr>";
+
+          // Styleguide
+          @if map-has-key($tbody, $suffix) == false {
+            $map-temp: (
+              #{$suffix}: (
+                #{$device}: (
+                  "min": map-get($output, "styleguide-ref"),
+                  "max": map-get($output, "styleguide-ref") * map-get($cfg, "multiplier")
+                )
+              )
+            );
+            $tbody: map-merge($tbody, $map-temp);
+          }
+          @else {
+            $map-temp: map-get($tbody, $suffix);
+            $map-temp-add: (
+              #{$device}: (
+                "min": map-get($output, "styleguide-ref"),
+                "max": map-get($output, "styleguide-ref") * map-get($cfg, "multiplier")
+              )
+            );
+            $merged-map: map-merge($map-temp, $map-temp-add);
+            $output-map: (
+              #{$suffix}: $merged-map
+            );
+            $tbody: map-merge($tbody, $output-map);
+          }
+        }
+      }
+
+      // Tailles décroissantes
+
+      @for $i from 2 to 4 {
+
+        $output: font-calculator($cfg, $i, false);
+
+        $suffix: "down-#{$i - 1}";
+
+        %fs-#{$name}-#{$suffix} {
+
+          @include breakpoint($device) {
+            font-size: map-get($output, "font-size");
+          }
+
+          @if $index == $map-length {
+
+            @include tweakpoint($font-vw-max) {
+              @include pxtorem(map-get($output, "font-size-max"));
+            }
+          }
+        }
+
+        %fs-#{$name}-#{$suffix}--baseline {
+
+          @include breakpoint($device) {
+            font-size: map-get($output, "font-size");
+            line-height: map-get($output, "line-height");
+            padding-top: map-get($output, "padding-top");
+            margin-bottom: map-get($output, "margin-bottom");
+          }
+
+          @if $index == $map-length {
+
+            @include tweakpoint($font-vw-max) {
+              @include pxtorem(map-get($output, "font-size-max"));
+            }
+          }
+        }
+
+        %fs-#{$name}-#{$suffix}--baseline-simple {
+
+          @include breakpoint($device) {
+            font-size: map-get($output, "font-size");
+            line-height: map-get($output, "line-height");
+            padding-top: map-get($output, "padding-top");
+            margin-bottom: map-get($output, "margin-bottom-simple");
+          }
+
+          @if $index == $map-length {
+
+            @include tweakpoint($font-vw-max) {
+              @include pxtorem(map-get($output, "font-size-max"));
+            }
+          }
+        }
+
+        // Styleguide
+        @if map-has-key($tbody, $suffix) == false {
+          $map-temp: (
+            #{$suffix}: (
+              #{$device}: (
+                "min": map-get($output, "styleguide-ref"),
+                "max": map-get($output, "styleguide-ref") * map-get($cfg, "multiplier")
+              )
+            )
+          );
+          $tbody: map-merge($tbody, $map-temp);
+        }
+        @else {
+          $map-temp: map-get($tbody, $suffix);
+          $map-temp-add: (
+            #{$device}: (
+              "min": map-get($output, "styleguide-ref"),
+              "max": map-get($output, "styleguide-ref") * map-get($cfg, "multiplier")
+            )
+          );
+          $merged-map: map-merge($map-temp, $map-temp-add);
+          $output-map: (
+            #{$suffix}: $merged-map
+          );
+          $tbody: map-merge($tbody, $output-map);
+        }
+
+        // Styleguide
+        $styleguide-font-families: $styleguide-font-families + "<tr>";
+        $styleguide-font-families: $styleguide-font-families + "<td style=\"border:0;color:#aaaaaa;white-space:nowrap;font-size:11px;text-align:right;\">#{map-get($output, "styleguide-ref")}</td>";
+        $styleguide-font-families: $styleguide-font-families + "<td style=\"#{$styleguide-font-families-css}font-size:#{map-get($output, "styleguide-ref")};padding:0;width:100%;border:0;white-space:nowrap;overflow:hidden;\">The quick brown fox jumps over the lazy dog</td>";
+        $styleguide-font-families: $styleguide-font-families + "</tr>";
+      }
+
+      // Styleguide
+      $styleguide-font-families: $styleguide-font-families + "</table>";
+
+      $index: $index + 1;
+    }
+
+    // Styleguide
+    $odd-counter: 1;
+    @each $name, $values in $tbody {
+      $bgcolor: "";
+      @if ($odd-counter % 2) == 1 {
+        $bgcolor: "background-color:rgba(#{$styleguide-item-box-bg},.1);";
+      }
+      @if $name == "root" {
+        $bgcolor: "background-color:rgba(#{$styleguide-highlight},.3);";
+      }
+      $styleguide-font-families-tbody: $styleguide-font-families-tbody + "<tr style=\"#{$bgcolor}\"><th style=\"background-color:rgba(#{$styleguide-highlight},.3);width:10%;text-align:left;\">#{$name}</th>";
+      @each $device, $sizes in $values {
+        $styleguide-font-families-tbody: $styleguide-font-families-tbody + "<td style=\"width:10%;text-align:left;font-size:11px;color:#aaaaaa;\">#{round(map-get($sizes, "min") * 10) / 10}</td>";
+        $styleguide-font-families-tbody: $styleguide-font-families-tbody + "<td style=\"width:10%;text-align:right;\">#{round(map-get($sizes, "max") * 10) / 10}</td>";
+      }
+      $styleguide-font-families-tbody: $styleguide-font-families-tbody + "</tr>";
+
+      $odd-counter: $odd-counter + 1;
+    }
+
+    // Styleguide
+    $styleguide-font-families-thead: $styleguide-font-families-thead + "</tr></thead>";
+    $styleguide-font-families-tbody: $styleguide-font-families-tbody + "</tbody>";
+
+    /* styleguide:ignore:end */
+  }
+
+  // Styleguide
+  $styleguide-font-families: $styleguide-font-families + styleguide-print-separator();
+  $styleguide-font-families: $styleguide-font-families + "<div style=\"margin-bottom:#{$styleguide-item-box-margin};\">";
+  $styleguide-font-families: $styleguide-font-families + styleguide-print-title("Overview");
+  $styleguide-font-families: $styleguide-font-families + "<table>";
+  $styleguide-font-families: $styleguide-font-families + $styleguide-font-families-thead;
+  $styleguide-font-families: $styleguide-font-families + $styleguide-font-families-tbody;
+  $styleguide-font-families: $styleguide-font-families + "</table>";
+  $styleguide-font-families: $styleguide-font-families + "</div>";
+
+  $sepId: $sepId + 1;
+
+  /*
+  #{map-get($datas, "name")}
+
+  #{$styleguide-font-families}
+
+  Styleguide 1.3.#{$sepId}.
+  */
+}
+
+// ---------------------------------------------------
+
+$typefaces: (
+  "std": (
+    "name": "Standard",
+    "description": "Typographie de base",
+    "font": "arial-regular"
+  ),
+  "heading": (
+    "name": "Heading",
+    "description": "Typographie pour le titrage",
+    "font": "arial-bold"
+  ),
+  "special": (
+    "name": "Special",
+    "description": "Typographie pour les éléments graphique qui doivent se distinguer visuellement",
+    "font": "arial-regular"
+  ),
+  "system": (
+    "name": "System",
+    "description": "Typographie pour les messages système",
+    "font": "arial-regular"
+  )
+);
+
+// Génération des placeholders de font-family sémantiques
+
+$styleguide-typefaces: "";
+$index: 1;
+
+@each $typeface, $datas in $typefaces {
+
+  @if $index != 1 {
+    $styleguide-typefaces: $styleguide-typefaces + styleguide-print-separator();
+  }
+  $styleguide-typefaces: $styleguide-typefaces + styleguide-print-title(map-get($datas, "name"));
+  $styleguide-typefaces: $styleguide-typefaces + styleguide-print-desc("#{map-get($datas, "description")}");
+
+  $styleguide-typefaces: $styleguide-typefaces + "<div style=\"margin-bottom:#{$styleguide-item-box-margin};font-family:#{map-get($datas, "value")};letter-spacing:.75em;\">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>";
+  $styleguide-typefaces: $styleguide-typefaces + "<div style=\"margin-bottom:#{$styleguide-item-box-margin};font-family:#{map-get($datas, "value")};letter-spacing:.75em;\">abcdefghijklmnopqrstuvwxyz</div>";
+  $styleguide-typefaces: $styleguide-typefaces + "<div style=\"margin-bottom:#{$styleguide-item-box-margin};font-family:#{map-get($datas, "value")};letter-spacing:.75em;\">0123456789</div>";
+
+  $font: map-get($datas, "font");
+
+  %typeface-#{$typeface} {
+    @extend %typeface-#{$font};
+
+    // On ajoute des propriétés CSS spécifiques si besoin
+    @if map-has-key($datas, "css") {
+      @each $css-rule, $value in map-get($datas, "css") {
+        $css-rule: $value;
+      }
+    }
+  }
+
+  %fs-#{$typeface}-up-8 {
+    @extend %fs-#{$font}-up-8 !optional;
+
+    &--baseline {
+      @extend %fs-#{$font}-up-8--baseline !optional;
+    }
+
+    &--baseline-simple {
+      @extend %fs-#{$font}-up-8--baseline-simple !optional;
+    }
+  }
+
+  %fs-#{$typeface}-up-7 {
+    @extend %fs-#{$font}-up-7 !optional;
+
+    &--baseline {
+      @extend %fs-#{$font}-up-7--baseline !optional;
+    }
+
+    &--baseline-simple {
+      @extend %fs-#{$font}-up-7--baseline-simple !optional;
+    }
+  }
+
+  %fs-#{$typeface}-up-6 {
+    @extend %fs-#{$font}-up-6 !optional;
+
+    &--baseline {
+      @extend %fs-#{$font}-up-6--baseline !optional;
+    }
+
+    &--baseline-simple {
+      @extend %fs-#{$font}-up-6--baseline-simple !optional;
+    }
+  }
+
+  %fs-#{$typeface}-up-5 {
+    @extend %fs-#{$font}-up-5 !optional;
+
+    &--baseline {
+      @extend %fs-#{$font}-up-5--baseline !optional;
+    }
+
+    &--baseline-simple {
+      @extend %fs-#{$font}-up-5--baseline-simple !optional;
+    }
+  }
+
+  %fs-#{$typeface}-up-4 {
+    @extend %fs-#{$font}-up-4 !optional;
+
+    &--baseline {
+      @extend %fs-#{$font}-up-4--baseline !optional;
+    }
+
+    &--baseline-simple {
+      @extend %fs-#{$font}-up-4--baseline-simple !optional;
+    }
+  }
+
+  %fs-#{$typeface}-up-3 {
+    @extend %fs-#{$font}-up-3 !optional;
+
+    &--baseline {
+      @extend %fs-#{$font}-up-3--baseline !optional;
+    }
+
+    &--baseline-simple {
+      @extend %fs-#{$font}-up-3--baseline-simple !optional;
+    }
+  }
+
+  %fs-#{$typeface}-up-2 {
+    @extend %fs-#{$font}-up-2 !optional;
+
+    &--baseline {
+      @extend %fs-#{$font}-up-2--baseline !optional;
+    }
+
+    &--baseline-simple {
+      @extend %fs-#{$font}-up-2--baseline-simple !optional;
+    }
+  }
+
+  %fs-#{$typeface}-up-1 {
+    @extend %fs-#{$font}-up-1 !optional;
+
+    &--baseline {
+      @extend %fs-#{$font}-up-1--baseline !optional;
+    }
+
+    &--baseline-simple {
+      @extend %fs-#{$font}-up-1--baseline-simple !optional;
+    }
+  }
+
+  %fs-#{$typeface}-root {
+    @extend %fs-#{$font}-root !optional;
+
+    &--baseline {
+      @extend %fs-#{$font}-root--baseline !optional;
+    }
+
+    &--baseline-simple {
+      @extend %fs-#{$font}-root--baseline-simple !optional;
+    }
+  }
+
+  %fs-#{$typeface}-down-1 {
+    @extend %fs-#{$font}-down-1 !optional;
+
+    &--baseline {
+      @extend %fs-#{$font}-down-1--baseline !optional;
+    }
+
+    &--baseline-simple {
+      @extend %fs-#{$font}-down-1--baseline-simple !optional;
+    }
+  }
+
+  %fs-#{$typeface}-down-2 {
+    @extend %fs-#{$font}-down-2 !optional;
+
+    &--baseline {
+      @extend %fs-#{$font}-down-2--baseline !optional;
+    }
+
+    &--baseline-simple {
+      @extend %fs-#{$font}-down-2--baseline-simple !optional;
+    }
+  }
+
+  %fs-#{$typeface}-down-3 {
+    @extend %fs-#{$font}-down-3 !optional;
+
+    &--baseline {
+      @extend %fs-#{$font}-down-3--baseline !optional;
+    }
+
+    &--baseline-simple {
+      @extend %fs-#{$font}-down-3--baseline-simple !optional;
+    }
+  }
+
+  $index: $index+1;
+}
+
+// ---------------------------------------------------
+
+$headings: (
+  "h1": (
+    "name":               "Titre de niveau 1",
+    "extends": (
+      "typeface-heading",
+      "fs-heading-up-4--baseline-simple"
+    ),
+    "css": (),
+    "before": (),
+    "after": ()
+  ),
+  "h2": (
+    "name":               "Titre de niveau 2",
+    "extends": (
+      "typeface-heading",
+      "fs-heading-up-3--baseline-simple"
+    ),
+    "css": (),
+    "before": (),
+    "after": ()
+  ),
+  "h3": (
+    "name":               "Titre de niveau 3",
+    "extends": (
+      "typeface-heading",
+      "fs-heading-up-2--baseline-simple"
+    ),
+    "css": (),
+    "before": (),
+    "after": ()
+  ),
+  "h4": (
+    "name":               "Titre de niveau 4",
+    "extends": (
+      "typeface-heading",
+      "fs-heading-up-1--baseline-simple"
+    ),
+    "css": (),
+    "before": (),
+    "after": ()
+  ),
+  "h5": (
+    "name":               "Titre de niveau 5",
+    "extends": (
+      "typeface-heading",
+      "fs-heading-root--baseline-simple"
+    ),
+    "css": (),
+    "before": (),
+    "after": ()
+  ),
+  "h6": (
+    "name":               "Titre de niveau 6",
+    "extends": (
+      "typeface-heading",
+      "fs-heading-down-1--baseline-simple"
+    ),
+    "css": (),
+    "before": (),
+    "after": ()
+  )
+);
+
+$index: 1;
+$styleguide-headings: "";
+
+@each $name, $datas in $headings {
+
+  // $styleguide-font-sizes: $styleguide-font-sizes + "<div style=\"font-size:#{$font-size};line-height:#{$line-height};margin-bottom:#{$styleguide-item-box-margin};\">The quick brown fox jumps over the lazy dog<br /> <span style=\"font-size:12px;font-style:italic;\">#{map-get($datas, "name")}-#{$font-size}/#{$line-height}</span></div>" !global;
+  $styleguide-headings: $styleguide-headings + "<div class=\"#{$name}\" style=\"white-space:nowrap;overflow:hidden;\">";
+  $styleguide-headings: $styleguide-headings + "#{$name}-The quick brown fox";
+  $styleguide-headings: $styleguide-headings + "</div>";
+
+  %#{$name} {
+
+    @if (map-has-key($datas, "extends")) {
+
+      @each $extend in map-get($datas, "extends") {
+
+        @extend %#{$extend};
+      }
+    }
+
+    @if (map-has-key($datas, "css")) {
+
+      @each $rule, $css in map-get($datas, "css") {
+        #{$rule}: #{$css};
+      }
+    }
+
+    @if (map-has-key($datas, "before")) {
+
+      &::before {
+
+        @each $rule, $css in map-get($datas, "before") {
+          #{$rule}: #{$css};
+        }
+      }
+    }
+
+    @if (map-has-key($datas, "after")) {
+
+      &::after {
+
+        @each $rule, $css in map-get($datas, "after") {
+          #{$rule}: #{$css};
+        }
+      }
+    }
+  }
+
+  $index: $index + 1;
+}
+
+/*
+Headings
+
+Markup:
+#{$styleguide-headings}
+
+Styleguide 1.4.
+*/

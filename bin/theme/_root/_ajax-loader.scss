@@ -1,0 +1,14 @@
+/*
+Ajax loader
+
+Signification de chargement asynchrone
+
+Markup:
+<div class="ajax-loader"></div>
+
+Styleguide 2.3.
+*/
+
+.ajax-loader {
+  @extend %ajax-loader;
+}

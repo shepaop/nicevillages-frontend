@@ -1,0 +1,18 @@
+// Largeur d'un item
+$styleguide-item-box-width:       300px;
+$styleguide-item-box-height:      150px;
+$styleguide-item-box-bg:          "53,177,241";
+$styleguide-item-box-margin:      20px;
+$styleguide-highlight:            "255,219,73";
+
+@function styleguide-print-title($text) {
+  @return "<h3>#{$text}</h3>";
+}
+
+@function styleguide-print-desc($text) {
+  @return "<p>#{$text}</p>";
+}
+
+@function styleguide-print-separator() {
+  @return "<hr />";
+}

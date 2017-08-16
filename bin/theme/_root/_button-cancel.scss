@@ -1,0 +1,29 @@
+/*
+Bouton d'annulation
+
+button-cancel
+
+default     - Version de base
+:hover      - Roll-over
+
+Markup:
+<button class="button-cancel {$modifiers}">Lorem ipsum</button>
+
+Styleguide 2.5.
+*/
+
+.button-cancel {
+  @extend %button-cancel;
+
+  &:focus {
+    @extend %button-cancel--focus;
+  }
+
+  &:hover {
+    // @extend %button-action--hover;
+  }
+
+  &:active {
+    @extend %button-cancel--active;
+  }
+}

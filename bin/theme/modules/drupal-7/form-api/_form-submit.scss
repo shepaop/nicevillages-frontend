@@ -1,0 +1,17 @@
+// Bouton de validation
+
+.form-submit {
+  @extend %button-action;
+
+  &[type="image"] {
+    box-sizing: content-box;
+  }
+
+  &[id="edit-preview"] {
+    @extend %button-cancel;
+  }
+
+  &[id="edit-delete"] {
+    @extend %button-cancel;
+  }
+}

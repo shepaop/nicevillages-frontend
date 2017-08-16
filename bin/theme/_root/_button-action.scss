@@ -1,0 +1,29 @@
+/*
+Bouton d'action
+
+button-action
+
+default     - Version de base
+:hover      - Roll-over
+
+Markup:
+<button class="button-action {$modifiers}">Lorem ipsum</button>
+
+Styleguide 2.4.
+*/
+
+.button-action {
+  @extend %button-action;
+
+  &:focus {
+    @extend %button-action--focus;
+  }
+
+  &:hover {
+    // @extend %button-action--hover;
+  }
+
+  &:active {
+    @extend %button-action--active;
+  }
+}

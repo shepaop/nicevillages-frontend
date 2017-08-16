@@ -1,0 +1,50 @@
+// List d'éléments en ligne
+
+/*
+Inline list
+
+Liste "en ligne" d'éléments
+
+Markup:
+<ul class="inline">
+    <li class="fusce first active"><a class="active" href="#">fusce</a></li>
+    <li class="tincidunt active"><a class="active" href="#">tincidunt</a></li>
+    <li class="eros active"><a class="active" href="#">eros</a></li>
+    <li class="lorem active"><a class="active" href="#">lorem</a></li>
+    <li class="sed active"><a class="active" href="#">sed</a></li>
+    <li class="malesuada active"><a class="active" href="#">malesuada</a></li>
+    <li class="et active"><a class="active" href="#">et</a></li>
+    <li class="nec active"><a class="active" href="#">nec</a></li>
+    <li class="viverra active"><a class="active" href="#">viverra</a></li>
+    <li class="consectetur last active"><a class="active" href="#">consectetur</a></li>
+</ul>
+
+Styleguide 4.1.5.
+*/
+
+.inline {
+
+  > li {
+    display: inline;
+
+    &::before {
+      content: ", ";
+      padding-right: get-layout("text-spacing", "smaller");
+    }
+
+    &:first-child {
+
+      &::before {
+        display: none;
+      }
+    }
+
+    a {
+      @extend %color-brand-first;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+}

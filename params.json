@@ -1,0 +1,110 @@
+{
+  "siteName": "Name",
+  "tasksPath": {
+    "source": {
+      "favicon": "./bin/favicon.png",
+      "modernizr": "./bin/js/*.js",
+      "sass": "./bin/theme/**/*.scss",
+      "sassDir": "./bin/theme/",
+      "themeComponents": "./bin/theme/",
+      "icons": "./bin/icons/",
+      "scripts": "./bin/js/",
+      "images": "./bin/img/",
+      "files": "./bin/html/"
+    },
+    "destination": {
+      "favicon": "./dist/favicon/",
+      "modernizr": "./dist/js/",
+      "css": "./dist/css/",
+      "icons": "./dist/icons/",
+      "styleguide": "./styleguide/",
+      "components": "./bin/html/components/",
+      "jsdoc": "./jsdoc/",
+      "stylelint": "./stylelint/",
+      "iconsScss": "./bin/theme/_params/",
+      "scripts": "./dist/js/",
+      "images": "./dist/img/",
+      "font": "./dist/font/",
+      "files": "./dist/",
+      "file-index": "./"
+    }
+  },
+  "copy": {
+    "theme": {
+      "keepTree": true,
+      "source": "./dist/",
+      "dest": null,
+      "files": [
+        "**/*",
+        "!css/*.css",
+        "css/*.min.css",
+        "!css/styleguide*.css",
+        "!*.html",
+        "!img/models/**/*"
+      ]
+    }
+  },
+  "clean": {
+    "css": {
+      "source": "./dist/",
+      "files": [
+        "css/*.css",
+        "!css/*.min.css"
+      ]
+    }
+  },
+  "styleguide": {
+    "serverRoot": ".",
+    "readme": "./styleguide.md",
+    "componentsSection": "3",
+    "skin": "css/styleguide-skin.min.css"
+  },
+  "autoprefixer": {
+    "browsers": [
+      "last 2 Edge versions",
+      "last 2 Chrome versions",
+      "last 2 Firefox versions",
+      "last 2 Safari versions",
+      "ie 11",
+      "last 2 iOS versions"
+    ]
+  },
+  "favicon": {
+    "include": "./bin/html/includes/_favicon.html",
+    "relativePath": "",
+    "theme": "#333333",
+    "background": "#ffffff"
+  },
+  "index": {
+    "html": {
+      "title": "Templates HTML",
+      "baseUrl": "dist/",
+      "files": [
+        "./dist/*.html"
+      ]
+    }
+  },
+  "modernizr": [
+    "picture",
+    "canvas",
+    "input",
+    "inputtypes",
+    "svg",
+    "svgasimg",
+    "touchevents",
+    "forcetouch",
+    "cssanimations",
+    "csscalc",
+    "csscolumns",
+    "cssfilters",
+    "flexbox",
+    "multiplebgs",
+    "csstransforms",
+    "csstransforms3d",
+    "csstransitions",
+    "csspseudotransitions",
+    "cssanimations",
+    "cssgridcssgridlegacy",
+    "apng"
+  ]
+}

@@ -1,0 +1,62 @@
+// Listes de Drupal standard
+
+/*
+Item-list
+
+Liste par défaut
+
+Markup:
+<div class="item-list">
+    <ul>
+        <li class="first">Erat convallis nam</li>
+        <li>Ante dolor sed</li>
+        <li>Velit sed ac</li>
+        <li>Nam consequat lobortis</li>
+        <li class="last">Viverra iaculis aliquam</li>
+    </ul>
+</div>
+<div class="item-list">
+    <ol>
+        <li class="first">A lacus aliquam</li>
+        <li>Massa magna fusce</li>
+        <li>Ante lacus accumsan</li>
+        <li>Adipiscing ac urna</li>
+        <li class="last">Iaculis nam dignissim</li>
+    </ol>
+</div>
+
+Styleguide 4.1.3.
+*/
+
+.item-list {
+  margin: get-layout("text-spacing", "std") 0;
+
+  h3 {
+    @extend %h2;
+    margin-bottom: get-layout("text-spacing", "small");
+  }
+
+  ul,
+  ol {
+    margin-bottom: get-layout("text-spacing", "std");
+
+    li {
+      margin-bottom: get-layout("text-spacing", "smaller");
+    }
+
+    ul,
+    ol {
+      margin-bottom: get-layout("text-spacing", "small");
+    }
+  }
+
+  ul {
+    margin-left: 1.1em;
+    list-style-type: disc;
+  }
+
+  ol {
+    margin-left: 2em;
+    list-style-type: decimal-leading-zero;
+  }
+}

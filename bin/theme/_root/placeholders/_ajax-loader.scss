@@ -1,0 +1,59 @@
+$width: 4px;
+$height: 20px;
+
+@mixin bounce-bottom($dur: .5s, $delay: 0s) {
+  animation: ajax-loader $dur ease $delay infinite;
+}
+
+@keyframes ajax-loader {
+
+  0% {
+    height: 5px;
+    margin-top: $height - 5px;
+  }
+
+  50% {
+    height: $height;
+    margin-top: 0;
+  }
+
+  100% {
+    height: 5px;
+    margin-top: $height - 5px;
+  }
+}
+
+%ajax-loader--bar-base {
+  width: $width;
+  height: $height;
+  border-radius: $width;
+  @extend %background-brand-first;
+}
+
+%ajax-loader {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  @extend %ajax-loader--bar-base;
+  position: relative;
+  @include bounce-bottom(.6s, .1s);
+
+  &::after,
+  &::before {
+    content: "";
+    @extend %ajax-loader--bar-base;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+  }
+
+  &::before {
+    right: - $width - 2px;
+    @include bounce-bottom(.6s, 0s);
+  }
+
+  &::after {
+    left: - $width - 2px;
+    @include bounce-bottom(.6s, .2s);
+  }
+}
