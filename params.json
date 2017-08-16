@@ -33,7 +33,7 @@
     "theme": {
       "keepTree": true,
       "source": "./dist/",
-      "dest": null,
+      "dest": "../drupal/themes/nicevillages/",
       "files": [
         "**/*",
         "!css/*.css",
