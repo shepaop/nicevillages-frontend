@@ -42,22 +42,25 @@ Markup:
 Styleguide 5.7.
 */
 
-.infoBox {
-  position: relative;
-  background-color: get-color("grayscale", "light");
-  @extend %box-shadow-large;
+.gmap {
 
-  > img:first-child {
-    z-index: 20;
-    cursor: pointer;
-    position: absolute !important;
-    right: 5px;
-    top: 5px;
-    margin: 0 !important;
-    @extend %icon-ui_close-std--standalone;
+  &-infobox {
+    position: relative;
+    background-color: get-color("grayscale", "light");
+    @extend %box-shadow-large;
 
-    &:hover {
-      @extend %icon-ui_close-action;
+    > img:first-child {
+      z-index: 20;
+      cursor: pointer;
+      position: absolute !important;
+      right: 5px;
+      top: 5px;
+      margin: 0 !important;
+      @extend %icon-ui_close-std--standalone;
+
+      &:hover {
+        @extend %icon-ui_close-action;
+      }
     }
   }
 }

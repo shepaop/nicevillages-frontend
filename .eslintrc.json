@@ -36,7 +36,8 @@
     "cfgManager": true,
     "mixRgbColors": true,
     "gMap": true,
-    "gb": true
+    "gb": true,
+    "google": true
   },
   "rules": {
     // Errors.
