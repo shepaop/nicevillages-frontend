@@ -1,0 +1,129 @@
+/*
+Drop menu
+
+Menu déroulant
+
+Markup:
+<style type="text/css">
+  body {
+      margin: 0;
+      padding: 0;
+      font-family: Helvetica, Arial, sans-serif;
+  }
+  .main-menu {
+      position: relative;
+      background: pink;
+  }
+  .main-menu > .menu {
+      display: table;
+      width: 75%;
+      margin: 0 auto;
+      table-layout: fixed;
+  }
+  .main-menu > .menu > li {
+      display: table-cell;
+  }
+  .main-menu > .menu > li > a {
+      display: block;
+      padding: 10px 15px;
+      text-align: center;
+  }
+  .main-menu > .menu > li > .menu {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 100%;
+      background: blue;
+      color: white;
+      padding: 10px 15px;
+      box-sizing: border-box;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  }
+  .main-menu > .menu > li > .menu a {
+      color: white;
+  }
+  .lang {
+      position: absolute;
+      width: 50px;
+      height: 100%;
+      color: white;
+      background: black;
+      text-align: center;
+  }
+  .lang .current {
+      line-height: 38px;
+  }
+  .lang .menu {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 100%;
+      color: white;
+      background: black;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+  }
+  .lang .menu a {
+      display: block;
+      padding: 5px 10px;
+  }
+  .drop-menu--overlay {
+      z-index: 19;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+  }
+</style>
+<div class="main-menu">
+    <div class="lang">
+        <div class="current">Fr</div>
+        <ul class="menu">
+            <li><a href="">Fr</a></li>
+            <li><a href="">En</a></li>
+        </ul>
+    </div>
+    <ul class="menu">
+        <li><a href="#">Item</a><ul class="menu">
+            <li><a href="#">Sub-item</a></li>
+            <li><a href="#">Sub-item</a></li>
+            <li><a href="#">Sub-item</a></li>
+            <li><a href="#">Sub-item</a></li>
+        </ul></li>
+        <li><a href="#">Item</a><ul class="menu">
+            <li><a href="#">Sub-item</a></li>
+            <li><a href="#">Sub-item</a></li>
+            <li><a href="#">Sub-item</a></li>
+            <li><a href="#">Sub-item</a></li>
+        </ul></li>
+        <li><a href="http://www.google.fr" target="_blank">Item sans menu</a></li>
+        <li><a href="#">Item</a><ul class="menu">
+            <li><a href="#">Sub-item</a></li>
+            <li><a href="#">Sub-item</a></li>
+            <li><a href="#">Sub-item</a></li>
+            <li><a href="#">Sub-item</a></li>
+        </ul></li>
+    </ul>
+</div>
+<script>
+  var testDropMenu = $('.main-menu').dropMenu({
+      contexes: [{
+          group: '> .menu > li',
+          trigger: '> a',
+          section: '> .menu'
+      }, {
+          group: '> .lang',
+          trigger: '> .current',
+          section: '> .menu'
+      }],
+      duration: 250
+  });
+  console.log(testDropMenu);
+</script>
+
+Styleguide 5.1.8.
+*/

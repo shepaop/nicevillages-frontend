@@ -1,0 +1,356 @@
+%inline-list {
+
+  @each $device in $responsive-system {
+
+    &-from-#{$device} {
+
+      @include breakpoint($device) {
+
+        > li {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+%table-list {
+
+  @each $device in $responsive-system {
+
+    &-from-#{$device} {
+
+      @include breakpoint($device) {
+        display: table;
+        width: 100%;
+
+        > li,
+        > .cell {
+          display: table-cell;
+        }
+      }
+    }
+  }
+}
+
+%flex-image {
+
+  @each $device in $responsive-system {
+
+    &-from-#{$device} {
+
+      @include breakpoint($device) {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+%flex-child-image {
+
+  @each $device in $responsive-system {
+
+    &-from-#{$device} {
+
+      img {
+
+        @extend %flex-image-from-#{$device};
+      }
+    }
+  }
+}
+
+%overlay {
+
+  @each $device in $responsive-system {
+
+    &-from-#{$device} {
+
+      @include breakpoint($device) {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+%clearfix {
+
+  @each $device in $responsive-system {
+
+    &-from-#{$device} {
+
+      @include breakpoint($device) {
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+%v-align {
+
+  @each $device in $responsive-system {
+
+    &-from-#{$device} {
+
+      @include breakpoint($device) {
+        position: relative;
+        display: block;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+%text-overflow {
+
+  @each $device in $responsive-system {
+
+    &-from-#{$device} {
+
+      @include breakpoint($device) {
+        display: inline-block;
+        text-indent: 150%;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+%text {
+
+  &-left {
+
+    @each $device in $responsive-system {
+
+      &-from-#{$device} {
+
+        @include breakpoint($device) {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  &-right {
+
+    @each $device in $responsive-system {
+
+      &-from-#{$device} {
+
+        @include breakpoint($device) {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  &-center {
+
+    @each $device in $responsive-system {
+
+      &-from-#{$device} {
+
+        @include breakpoint($device) {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+%set-relative {
+
+  @each $device in $responsive-system {
+
+    &-from-#{$device} {
+
+      @include breakpoint($device) {
+        position: relative;
+      }
+    }
+  }
+}
+
+%hide {
+
+  @each $device in $responsive-system {
+
+    &-from-#{$device} {
+
+      @include breakpoint($device) {
+        display: none;
+      }
+    }
+  }
+}
+
+%clear-grid {
+
+  @each $device in $responsive-system {
+
+    &-from-#{$device} {
+
+      @include breakpoint($device) {
+        clear: both;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+%clear-left {
+
+  @each $device in $responsive-system {
+
+    &-from-#{$device} {
+
+      @include breakpoint($device) {
+        clear: left;
+      }
+    }
+  }
+}
+
+%clear-right {
+
+  @each $device in $responsive-system {
+
+    &-from-#{$device} {
+
+      @include breakpoint($device) {
+        clear: left;
+      }
+    }
+  }
+}
+
+%grid-strech-float {
+
+  @each $device in $responsive-system {
+
+    &-from-#{$device} {
+
+      @include breakpoint($device) {
+        float: left;
+        margin-left: 0;
+
+        &:first-child {
+          clear: left;
+        }
+      }
+    }
+  }
+}
+
+%grid-strech-flex {
+
+  @each $device in $responsive-system {
+
+    &-from-#{$device} {
+
+      @include breakpoint($device) {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+%strech-child {
+
+  @each $device in $responsive-system {
+
+    &-from-#{$device} {
+
+      @include breakpoint($device) {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+      }
+    }
+  }
+}
+
+%grid-strech-flex {
+
+  @each $device in $responsive-system {
+
+    &-from-#{$device} {
+
+      @include breakpoint($device) {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+%visually-hidden {
+
+  @each $device in $responsive-system {
+
+    &-from-#{$device} {
+
+      @include breakpoint($device) {
+        position: absolute !important;
+        clip: rect(1px, 1px, 1px, 1px);
+        overflow: hidden;
+        height: 1px;
+      }
+    }
+  }
+}
+
+%padder {
+  padding: get-layout("block-spacing", "std");
+
+  &-top {
+    padding-top: get-layout("block-spacing", "std");
+  }
+
+  &-right {
+    padding-right: get-layout("block-spacing", "std");
+  }
+
+  &-bottom {
+    padding-bottom: get-layout("block-spacing", "std");
+  }
+
+  &-left {
+    padding-left: get-layout("block-spacing", "std");
+  }
+}
+
+%marger {
+  margin: get-layout("block-spacing", "std");
+
+  &-top {
+    margin-top: get-layout("block-spacing", "std");
+  }
+
+  &-right {
+    margin-right: get-layout("block-spacing", "std");
+  }
+
+  &-bottom {
+    margin-bottom: get-layout("block-spacing", "std");
+  }
+
+  &-left {
+    margin-left: get-layout("block-spacing", "std");
+  }
+}

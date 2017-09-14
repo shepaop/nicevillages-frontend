@@ -1,0 +1,21 @@
+/*
+Help Link
+
+Markup:
+<p>
+  <a href="#" class="icon-help">
+    More help
+  </a>
+</p>
+
+Styleguide 5.3.8
+*/
+
+.icon-help {
+
+  &::before {
+    content: "?";
+    display: inline-block;
+    margin-right: get-layout("text-spacing", "small");
+  }
+}

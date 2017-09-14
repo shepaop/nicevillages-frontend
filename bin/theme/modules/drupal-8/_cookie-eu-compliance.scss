@@ -1,0 +1,89 @@
+/*
+Cookie EU Compliance
+
+Markup:
+<div id="sliding-popup">
+  <div class="popup-content info">
+    <div id="popup-text">
+      <p>We use cookies on this site to enhance your user experience.</p>
+      <p>By clicking any link on this page you are giving your consent for us to set cookies.</p>
+    </div>
+    <div id="popup-buttons">
+      <button type="button" class="agree-button">OK, I agree</button>
+      <button type="button" class="find-more-button">No, give me more info</button>
+    </div>
+  </div>
+</div>
+
+Styleguide 5.3.23
+*/
+
+#sliding-popup {
+  @extend %fs-std-down-1;
+  @extend %color-grayscale-dark;
+  @extend %background-system-info;
+  line-height: 1;
+  display: block;
+  margin: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99;
+  padding: get-layout("block-spacing", "small") 0;
+
+  &.sliding-popup-bottom {
+    position: absolute;
+  }
+
+  &.sliding-popup-top {
+    position: relative;
+  }
+
+  .popup-content {
+    @extend .container;
+    @extend %grid-strech-flex-from-tablet;
+
+    @include breakpoint("tablet") {
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+#popup-text {
+  padding: 0 get-layout("block-spacing", "small");
+  margin-bottom: get-layout("block-spacing", "small");
+
+  @include breakpoint("tablet") {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  > p {
+    display: inline;
+  }
+}
+
+#popup-buttons {
+  text-align: center;
+  padding: 0 get-layout("block-spacing", "small");
+
+  @include breakpoint("tablet") {
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  .agree-button {
+    @extend %button-action;
+    @extend %button-action--small;
+  }
+
+  .find-more-button {
+    border: 0;
+    background: none;
+    appearance: none;
+  }
+}

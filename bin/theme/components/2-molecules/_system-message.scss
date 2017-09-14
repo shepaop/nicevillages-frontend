@@ -1,0 +1,42 @@
+$name: "system-message";
+
+/*
+Messages
+
+Messages d'information système
+
+info          - Message informatif
+success       - Message de succès
+warning       - Message d'alerte
+error         - Message d'erreur
+
+sg-filename:
+#{$name}
+
+Markup:
+<div class="system-message {$modifiers}">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</div>
+
+Styleguide 3.4.
+*/
+
+.#{$name} {
+  @extend %system-message;
+
+  &.info {
+    @extend %system-message--info;
+  }
+
+  &.success {
+    @extend %system-message--success;
+  }
+
+  &.warning {
+    @extend %system-message--warning;
+  }
+
+  &.error {
+    @extend %system-message--error;
+  }
+}

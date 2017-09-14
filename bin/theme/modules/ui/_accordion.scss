@@ -1,0 +1,172 @@
+/*
+Accordion
+
+Expand-collapse de section, avec possibilité de transformer en onglets
+
+Markup:
+<style type="text/css">
+    body {
+        padding: 50px;
+    }
+    .accordion-tabs {
+        display: table;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-spacing: 0;
+        list-style: none;
+        text-align: center;
+        table-layout: fixed;
+    }
+    .accordion-tabs > li {
+        display: table-cell;
+        padding: 0 2px;
+        vertical-align: middle;
+        border-right: 1px dotted grey;
+    }
+    .accordion-tabs > li:first-child{
+        border-left: 1px dotted grey;
+    }
+    .accordion ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .accordion > ul > li > p {
+        padding: 10px 0;
+    }
+    .accordion-enabled {
+        border-bottom: 1px dotted grey;
+    }
+    .accordion-enabled > p {
+        cursor: pointer;
+        font-weight: bold;
+        font-family: Arial, Sans-serif;
+    }
+    .accordion-enabled > p:hover {
+        background-color: #eeeeee;
+    }
+    .expanded > p,
+    .accordion-tabs > li.expanded {
+        color: #cc0000;
+        text-decoration: underline;
+    }
+    @media (min-width: 640px) {
+        .accordion > ul > li > p {
+            display: none;
+        }
+        .accordion-enabled {
+            border-bottom: 0;
+        }
+    }
+</style>
+<div class="accordion">
+    <ul>
+        <li>
+            <p>Item #1</p>
+            <div>
+                <h3>Section #1</h3>
+                <p>Alios autem dicere aiunt multo etiam inhumanius (quem locum breviter paulo ante perstrinxi) praesidii adiumentique causa, non benevolentiae neque caritatis, amicitias esse expetendas; itaque, ut quisque minimum firmitatis haberet minimumque virium, ita amicitias appetere maxime; ex eo fieri ut mulierculae magis amicitiarum praesidia quaerant quam viri et inopes quam opulenti et calamitosi quam ii qui putentur beati.</p>
+                <p>Et Epigonus quidem amictu tenus philosophus, ut apparuit, prece frustra temptata, sulcatis lateribus mortisque metu admoto turpi confessione cogitatorum socium, quae nulla erant, fuisse firmavit cum nec vidisset quicquam nec audisset penitus expers forensium rerum; Eusebius vero obiecta fidentius negans, suspensus in eodem gradu constantiae stetit latrocinium illud esse, non iudicium clamans.</p>
+                <p>Itaque tum Scaevola cum in eam ipsam mentionem incidisset, exposuit nobis sermonem Laeli de amicitia habitum ab illo secum et cum altero genero, C. Fannio Marci filio, paucis diebus post mortem Africani. Eius disputationis sententias memoriae mandavi, quas hoc libro exposui arbitratu meo; quasi enim ipsos induxi loquentes, ne 'inquam' et 'inquit' saepius interponeretur, atque ut tamquam a praesentibus coram haberi sermo videretur.</p>
+            </div>
+        </li>
+        <li>
+            <p>Item #2</p>
+            <div>
+                <h3>Section #2</h3>
+                <ul>
+                    <li>
+                        <p>Sub-item #1</p>
+                        <div>
+                            <p>Alios autem dicere aiunt multo etiam inhumanius (quem locum breviter paulo ante perstrinxi) praesidii adiumentique causa, non benevolentiae neque caritatis, amicitias esse expetendas; itaque, ut quisque minimum firmitatis haberet minimumque virium, ita amicitias appetere maxime; ex eo fieri ut mulierculae magis amicitiarum praesidia quaerant quam viri et inopes quam opulenti et calamitosi quam ii qui putentur beati.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Sub-item #2</p>
+                        <div>
+                            <p>Alios autem dicere aiunt multo etiam inhumanius (quem locum breviter paulo ante perstrinxi) praesidii adiumentique causa, non benevolentiae neque caritatis, amicitias esse expetendas; itaque, ut quisque minimum firmitatis haberet minimumque virium, ita amicitias appetere maxime; ex eo fieri ut mulierculae magis amicitiarum praesidia quaerant quam viri et inopes quam opulenti et calamitosi quam ii qui putentur beati.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Sub-item #3</p>
+                        <div>
+                            <p>Alios autem dicere aiunt multo etiam inhumanius (quem locum breviter paulo ante perstrinxi) praesidii adiumentique causa, non benevolentiae neque caritatis, amicitias esse expetendas; itaque, ut quisque minimum firmitatis haberet minimumque virium, ita amicitias appetere maxime; ex eo fieri ut mulierculae magis amicitiarum praesidia quaerant quam viri et inopes quam opulenti et calamitosi quam ii qui putentur beati.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Sub-item #4</p>
+                        <div>
+                            <p>Alios autem dicere aiunt multo etiam inhumanius (quem locum breviter paulo ante perstrinxi) praesidii adiumentique causa, non benevolentiae neque caritatis, amicitias esse expetendas; itaque, ut quisque minimum firmitatis haberet minimumque virium, ita amicitias appetere maxime; ex eo fieri ut mulierculae magis amicitiarum praesidia quaerant quam viri et inopes quam opulenti et calamitosi quam ii qui putentur beati.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Sub-item #5</p>
+                        <div>
+                            <p>Alios autem dicere aiunt multo etiam inhumanius (quem locum breviter paulo ante perstrinxi) praesidii adiumentique causa, non benevolentiae neque caritatis, amicitias esse expetendas; itaque, ut quisque minimum firmitatis haberet minimumque virium, ita amicitias appetere maxime; ex eo fieri ut mulierculae magis amicitiarum praesidia quaerant quam viri et inopes quam opulenti et calamitosi quam ii qui putentur beati.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <p>Item #3</p>
+            <div>
+                <h3>Section #3</h3>
+                <p>Alios autem dicere aiunt multo etiam inhumanius (quem locum breviter paulo ante perstrinxi) praesidii adiumentique causa, non benevolentiae neque caritatis, amicitias esse expetendas; itaque, ut quisque minimum firmitatis haberet minimumque virium, ita amicitias appetere maxime; ex eo fieri ut mulierculae magis amicitiarum praesidia quaerant quam viri et inopes quam opulenti et calamitosi quam ii qui putentur beati.</p>
+                <p>Et Epigonus quidem amictu tenus philosophus, ut apparuit, prece frustra temptata, sulcatis lateribus mortisque metu admoto turpi confessione cogitatorum socium, quae nulla erant, fuisse firmavit cum nec vidisset quicquam nec audisset penitus expers forensium rerum; Eusebius vero obiecta fidentius negans, suspensus in eodem gradu constantiae stetit latrocinium illud esse, non iudicium clamans.</p>
+                <p>Itaque tum Scaevola cum in eam ipsam mentionem incidisset, exposuit nobis sermonem Laeli de amicitia habitum ab illo secum et cum altero genero, C. Fannio Marci filio, paucis diebus post mortem Africani. Eius disputationis sententias memoriae mandavi, quas hoc libro exposui arbitratu meo; quasi enim ipsos induxi loquentes, ne 'inquam' et 'inquit' saepius interponeretur, atque ut tamquam a praesentibus coram haberi sermo videretur.</p>
+            </div>
+        </li>
+        <li>
+            <p>Item #4</p>
+            <div>
+                <h3>Section #4</h3>
+                <p>Alios autem dicere aiunt multo etiam inhumanius (quem locum breviter paulo ante perstrinxi) praesidii adiumentique causa, non benevolentiae neque caritatis, amicitias esse expetendas; itaque, ut quisque minimum firmitatis haberet minimumque virium, ita amicitias appetere maxime; ex eo fieri ut mulierculae magis amicitiarum praesidia quaerant quam viri et inopes quam opulenti et calamitosi quam ii qui putentur beati.</p>
+                <p>Et Epigonus quidem amictu tenus philosophus, ut apparuit, prece frustra temptata, sulcatis lateribus mortisque metu admoto turpi confessione cogitatorum socium, quae nulla erant, fuisse firmavit cum nec vidisset quicquam nec audisset penitus expers forensium rerum; Eusebius vero obiecta fidentius negans, suspensus in eodem gradu constantiae stetit latrocinium illud esse, non iudicium clamans.</p>
+                <p>Itaque tum Scaevola cum in eam ipsam mentionem incidisset, exposuit nobis sermonem Laeli de amicitia habitum ab illo secum et cum altero genero, C. Fannio Marci filio, paucis diebus post mortem Africani. Eius disputationis sententias memoriae mandavi, quas hoc libro exposui arbitratu meo; quasi enim ipsos induxi loquentes, ne 'inquam' et 'inquit' saepius interponeretur, atque ut tamquam a praesentibus coram haberi sermo videretur.</p>
+            </div>
+        </li>
+        <li>
+            <p><a href="http://www.google.fr" target="_blank">Item #5 : no-section blank link</a></p>
+        </li>
+    </ul>
+</div>
+<script>
+    var $accordion = $('.accordion');
+    var testAccordion = $accordion.rsAccordion({
+        group: '> ul > li',
+        trigger: '> p',
+        section: '> div',
+        startOpened: '',
+        //startOpened: ':first',
+        easing: 'linear',
+        duration: 250,
+        oneByOne: true,
+        atLeastOne: false,
+        expandedClass: 'expanded',
+        collapsedClass: 'collapsed',
+        accordionEnabled: 'accordion-enabled',
+        scrollTo: true,
+        tabs: false,
+        //onBeforeExpand: function(id, self){console.log('Before Expand', id, self);console.log(self.expandedStatus);},
+        onAfterExpand: function(id, self){console.log('After Expand', id, self);console.log(self.expandedStatus);},
+        //onBeforeCollapse: function(id, self){console.log('Before Collapse', id, self);console.log(self.expandedStatus);},
+        //onAfterCollapse: function(id, self){console.log('After Collapse', id, self);console.log(self.expandedStatus);},
+        responsive: {
+            640: {
+                tabs: function(tabs){
+                    $accordion.prepend(tabs);
+                },
+                atLeastOne: true,
+                startOpened: ':first',
+                scrollTo: false,
+                duration: 0
+            }
+        }
+    });
+    //console.log(testAccordion);
+</script>
+
+Styleguide 5.1.1.
+*/

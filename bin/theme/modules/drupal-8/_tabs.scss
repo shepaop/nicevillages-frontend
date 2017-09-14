@@ -1,0 +1,97 @@
+/*
+Primary tabs, Secondary tabs
+
+Markup:
+<nav class="tabs" role="navigation" aria-label="Tabs">
+  <h2 class="visually-hidden">Primary tabs</h2>
+  <ul class="tabs primary">
+    <li><a href="#" data-drupal-link-system-path="admin/appearance">List</a></li>
+    <li><a href="#" data-drupal-link-system-path="admin/theme/update">Update</a></li>
+    <li class="is-active"><a href="#" data-drupal-link-system-path="admin/appearance/styleguide" class="is-active">Styleguide<span class="visually-hidden">(active tab)</span></a></li>
+    <li><a href="#" data-drupal-link-system-path="admin/appearance/settings">Settings</a></li>
+  </ul>
+  <h2 class="visually-hidden">Secondary tabs</h2>
+  <ul class="tabs secondary">
+    <li class="is-active"><a href="#" data-drupal-link-system-path="admin/appearance/styleguide/seven">Seven</a></li>
+    <li><a href="#" data-drupal-link-system-path="admin/appearance/styleguide/bartik">Bartik</a></li>
+  </ul>
+</nav>
+
+Styleguide 5.3.14
+*/
+
+.tabs {
+  margin-bottom: get-layout("block-spacing", "std");
+
+  ul.primary,
+  ul.secondary {
+
+    li {
+      display: inline-block;
+      margin: 0 get-layout("text-spacing", "smaller");
+    }
+
+    a {
+      display: block;
+      padding: get-layout("text-spacing", "small") get-layout("text-spacing", "std");
+    }
+  }
+
+  ul.primary {
+    @extend %box-border-bottom-std;
+    @extend %border-grayscale-strong;
+    @extend %h6;
+    margin: 0;
+    padding: 0;
+
+    a {
+      @extend %color-grayscale-medium;
+      @extend %background-grayscale-soft;
+      white-space: nowrap;
+
+      &:hover,
+      &:active {
+        @extend %color-grayscale-dark;
+        @extend %background-grayscale-medium;
+      }
+    }
+
+    li {
+      vertical-align: bottom;
+
+      &.is-active {
+
+        a {
+          @extend %color-grayscale-light;
+          @extend %background-grayscale-strong;
+        }
+      }
+    }
+  }
+
+  ul.secondary {
+    @extend %fs-std-down-1;
+
+    a {
+      @extend %border-radius-std;
+      @extend %color-grayscale-medium;
+
+      &:hover,
+      &:active {
+        @extend %color-grayscale-strong;
+      }
+    }
+
+    li {
+      vertical-align: middle;
+
+      &.is-active {
+
+        a {
+          @extend %color-grayscale-strong;
+          @extend %background-grayscale-soft;
+        }
+      }
+    }
+  }
+}

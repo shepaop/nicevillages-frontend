@@ -1,0 +1,666 @@
+/*
+Form, Basic
+
+Markup:
+<form data-drupal-selector="styleguide-form-2" enctype="multipart/form-data" action="#" method="post" id="styleguide-form--2" accept-charset="UTF-8" data-drupal-form-fields="edit-select--2,edit-checkbox--2,edit-checkboxes-pruswap-cleuise-gegivifr,edit-checkboxes-cispe-jotrumora-tholusp,edit-checkboxes-satrospiclo-lumanokibusw-daclasta,edit-checkboxes-siclodratruu-bradrof-punedresho,edit-checkboxes-mejospafri-chafrac-clatat,edit-radios-pruswap-cleuise-gegivifr,edit-radios-cispe-jotrumora-tholusp,edit-radios-satrospiclo-lumanokibusw-daclasta,edit-radios-siclodratruu-bradrof-punedresho,edit-radios-mejospafri-chafrac-clatat,edit-textfield--2,edit-autocomplete--2,edit-textfield-machine--2,edit-machine-name--2,edit-textarea--2,edit-date--2,edit-file--2,edit-managed-file-upload--2,edit-managed-file-upload-button--2,edit-password--2,edit-password-confirm-pass1--2,edit-password-confirm-pass2--2,edit-weight--2,edit-select-fieldset--3,edit-checkboxes-fieldset-pruswap-cleuise-gegivifr,edit-checkboxes-fieldset-cispe-jotrumora-tholusp,edit-checkboxes-fieldset-satrospiclo-lumanokibusw-daclasta,edit-checkboxes-fieldset-siclodratruu-bradrof-punedresho,edit-checkboxes-fieldset-mejospafri-chafrac-clatat,edit-text-format-value--2">
+  <div class="js-form-item form-item js-form-type-select form-type-select js-form-item-select form-item-select">
+    <label for="edit-select--2">Select</label>
+    <select data-drupal-selector="edit-select" aria-describedby="edit-select--2--description" id="edit-select--2" name="select" class="form-select">
+      <option value="Pruswap cleuise gegivifr">Pruswap cleuise gegivifr</option>
+      <option value="Cispe jotrumora tholusp">Cispe jotrumora tholusp</option>
+      <option value="Satrospiclo lumanokibusw daclasta">Satrospiclo lumanokibusw daclasta</option>
+      <option value="Siclodratruu bradrof punedresho">Siclodratruu bradrof punedresho</option>
+      <option value="Mejospafri chafrac clatat">Mejospafri chafrac clatat</option>
+    </select>
+    <div id="edit-select--2--description" class="description">
+      Aliquip causa eum lucidus patria quae ulciscor.
+    </div>
+  </div>
+  <div class="js-form-item form-item js-form-type-checkbox form-type-checkbox js-form-item-checkbox form-item-checkbox">
+    <input data-drupal-selector="edit-checkbox" aria-describedby="edit-checkbox--2--description" type="checkbox" id="edit-checkbox--2" name="checkbox" value="1" checked="checked" class="form-checkbox">
+    <label for="edit-checkbox--2" class="option">Checkbox</label>
+    <div id="edit-checkbox--2--description" class="description">
+      Esse eu haero praemitto premo saluto typicus.
+    </div>
+  </div>
+  <fieldset data-drupal-selector="edit-checkboxes" aria-describedby="edit-checkboxes--2--wrapper--description" id="edit-checkboxes--2--wrapper" class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper">
+    <legend>
+      <span class="fieldset-legend">Checkboxes</span>
+    </legend>
+    <div class="fieldset-wrapper">
+      <div id="edit-checkboxes--2" class="form-checkboxes">
+        <div class="js-form-item form-item js-form-type-checkbox form-type-checkbox js-form-item-checkboxes-pruswap-cleuise-gegivifr form-item-checkboxes-pruswap-cleuise-gegivifr">
+          <input data-drupal-selector="edit-checkboxes-pruswap-cleuise-gegivifr" aria-describedby="edit-checkboxes--2--description" type="checkbox" id="edit-checkboxes-pruswap-cleuise-gegivifr" name="checkboxes[Pruswap cleuise gegivifr]" value="Pruswap cleuise gegivifr" class="form-checkbox">
+          <label for="edit-checkboxes-pruswap-cleuise-gegivifr" class="option">Pruswap cleuise gegivifr</label>
+        </div>
+        <div class="js-form-item form-item js-form-type-checkbox form-type-checkbox js-form-item-checkboxes-cispe-jotrumora-tholusp form-item-checkboxes-cispe-jotrumora-tholusp">
+          <input data-drupal-selector="edit-checkboxes-cispe-jotrumora-tholusp" aria-describedby="edit-checkboxes--2--description" type="checkbox" id="edit-checkboxes-cispe-jotrumora-tholusp" name="checkboxes[Cispe jotrumora tholusp]" value="Cispe jotrumora tholusp" class="form-checkbox">
+          <label for="edit-checkboxes-cispe-jotrumora-tholusp" class="option">Cispe jotrumora tholusp</label>
+        </div>
+        <div class="js-form-item form-item js-form-type-checkbox form-type-checkbox js-form-item-checkboxes-satrospiclo-lumanokibusw-daclasta form-item-checkboxes-satrospiclo-lumanokibusw-daclasta">
+          <input data-drupal-selector="edit-checkboxes-satrospiclo-lumanokibusw-daclasta" aria-describedby="edit-checkboxes--2--description" type="checkbox" id="edit-checkboxes-satrospiclo-lumanokibusw-daclasta" name="checkboxes[Satrospiclo lumanokibusw daclasta]" value="Satrospiclo lumanokibusw daclasta" class="form-checkbox">
+          <label for="edit-checkboxes-satrospiclo-lumanokibusw-daclasta" class="option">Satrospiclo lumanokibusw daclasta</label>
+        </div>
+        <div class="js-form-item form-item js-form-type-checkbox form-type-checkbox js-form-item-checkboxes-siclodratruu-bradrof-punedresho form-item-checkboxes-siclodratruu-bradrof-punedresho">
+          <input data-drupal-selector="edit-checkboxes-siclodratruu-bradrof-punedresho" aria-describedby="edit-checkboxes--2--description" type="checkbox" id="edit-checkboxes-siclodratruu-bradrof-punedresho" name="checkboxes[Siclodratruu bradrof punedresho]" value="Siclodratruu bradrof punedresho" class="form-checkbox">
+          <label for="edit-checkboxes-siclodratruu-bradrof-punedresho" class="option">Siclodratruu bradrof punedresho</label>
+        </div>
+        <div class="js-form-item form-item js-form-type-checkbox form-type-checkbox js-form-item-checkboxes-mejospafri-chafrac-clatat form-item-checkboxes-mejospafri-chafrac-clatat">
+          <input data-drupal-selector="edit-checkboxes-mejospafri-chafrac-clatat" aria-describedby="edit-checkboxes--2--description" type="checkbox" id="edit-checkboxes-mejospafri-chafrac-clatat" name="checkboxes[Mejospafri chafrac clatat]" value="Mejospafri chafrac clatat" class="form-checkbox">
+          <label for="edit-checkboxes-mejospafri-chafrac-clatat" class="option">Mejospafri chafrac clatat</label>
+        </div>
+      </div>
+      <div id="edit-checkboxes--2--wrapper--description" class="description">Abdo facilisis jugis.</div>
+    </div>
+  </fieldset>
+  <fieldset data-drupal-selector="edit-radios" aria-describedby="edit-radios--2--wrapper--description" id="edit-radios--2--wrapper" class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper">
+    <legend>
+      <span class="fieldset-legend">Radios</span>
+    </legend>
+    <div class="fieldset-wrapper">
+      <div id="edit-radios--2" class="form-radios">
+        <div class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-radios form-item-radios">
+          <input data-drupal-selector="edit-radios-pruswap-cleuise-gegivifr" aria-describedby="edit-radios--2--description" type="radio" id="edit-radios-pruswap-cleuise-gegivifr" name="radios" value="Pruswap cleuise gegivifr" class="form-radio">
+          <label for="edit-radios-pruswap-cleuise-gegivifr" class="option">Pruswap cleuise gegivifr</label>
+        </div>
+        <div class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-radios form-item-radios">
+          <input data-drupal-selector="edit-radios-cispe-jotrumora-tholusp" aria-describedby="edit-radios--2--description" type="radio" id="edit-radios-cispe-jotrumora-tholusp" name="radios" value="Cispe jotrumora tholusp" class="form-radio">
+          <label for="edit-radios-cispe-jotrumora-tholusp" class="option">Cispe jotrumora tholusp</label>
+        </div>
+        <div class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-radios form-item-radios">
+          <input data-drupal-selector="edit-radios-satrospiclo-lumanokibusw-daclasta" aria-describedby="edit-radios--2--description" type="radio" id="edit-radios-satrospiclo-lumanokibusw-daclasta" name="radios" value="Satrospiclo lumanokibusw daclasta" class="form-radio">
+          <label for="edit-radios-satrospiclo-lumanokibusw-daclasta" class="option">Satrospiclo lumanokibusw daclasta</label>
+        </div>
+        <div class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-radios form-item-radios">
+          <input data-drupal-selector="edit-radios-siclodratruu-bradrof-punedresho" aria-describedby="edit-radios--2--description" type="radio" id="edit-radios-siclodratruu-bradrof-punedresho" name="radios" value="Siclodratruu bradrof punedresho" class="form-radio">
+          <label for="edit-radios-siclodratruu-bradrof-punedresho" class="option">Siclodratruu bradrof punedresho</label>
+        </div>
+        <div class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-radios form-item-radios">
+          <input data-drupal-selector="edit-radios-mejospafri-chafrac-clatat" aria-describedby="edit-radios--2--description" type="radio" id="edit-radios-mejospafri-chafrac-clatat" name="radios" value="Mejospafri chafrac clatat" class="form-radio">
+          <label for="edit-radios-mejospafri-chafrac-clatat" class="option">Mejospafri chafrac clatat</label>
+        </div>
+      </div>
+      <div id="edit-radios--2--wrapper--description" class="description">Decet paulatim qui tation te utrum.</div>
+    </div>
+  </fieldset>
+  <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-textfield form-item-textfield">
+    <label for="edit-textfield--2">Textfield</label>
+    <input data-drupal-selector="edit-textfield" aria-describedby="edit-textfield--2--description" type="text" id="edit-textfield--2" name="textfield" value="Slucud hodeswu wachishuch" size="60" maxlength="128" class="form-text">
+    <div id="edit-textfield--2--description" class="description">
+      Causa pecus quibus voco vulpes zelus.
+    </div>
+  </div>
+  <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-autocomplete form-item-autocomplete">
+    <label for="edit-autocomplete--2">Autocomplete textfield</label>
+    <input data-drupal-selector="edit-autocomplete" aria-describedby="edit-autocomplete--2--description" type="text" id="edit-autocomplete--2" name="autocomplete" value="lifra" size="60" maxlength="128" class="form-text">
+    <div id="edit-autocomplete--2--description" class="description">
+      Accumsan illum lucidus oppeto.
+    </div>
+  </div>
+  <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-textfield-machine form-item-textfield-machine">
+    <label for="edit-textfield-machine--2">Textfield, with machine name</label>
+    <input data-drupal-selector="edit-textfield-machine" aria-describedby="edit-textfield-machine--2--description" type="text" id="edit-textfield-machine--2" name="textfield-machine" value="Brehitha lodonostochu suvos" size="60" maxlength="128" class="form-text machine-name-source">
+    <span class="field-suffix"> <small id="edit-textfield-machine--2-machine-name-suffix"><span class="machine-name-label">Machine name: </span><span class="machine-name-value">brehitha_lodonostochu_suvos</span><span class="admin-link"><button type="button" class="link">Edit</button></span></small></span>
+    <div id="edit-textfield-machine--2--description" class="description">
+      Antehabeo damnum enim huic.
+    </div>
+  </div>
+  <div class="js-form-item form-item js-form-type-machine-name form-type-machine-name js-form-item-machine-name form-item-machine-name visually-hidden">
+    <label for="edit-machine-name--2" class="js-form-required form-required">Machine name</label>
+    <input data-drupal-selector="edit-machine-name" aria-describedby="edit-machine-name--2--description" dir="ltr" type="text" id="edit-machine-name--2" name="machine_name" value="" size="60" maxlength="64" class="form-text required machine-name-target" required="required" aria-required="true">
+    <div id="edit-machine-name--2--description" class="description">
+      Appellatio augue commoveo nulla paulatim.
+    </div>
+  </div>
+  <div class="js-form-item form-item js-form-type-textarea form-type-textarea js-form-item-textarea form-item-textarea">
+    <label for="edit-textarea--2">Textarea</label>
+    <div class="form-textarea-wrapper">
+      <textarea data-drupal-selector="edit-textarea" aria-describedby="edit-textarea--2--description" id="edit-textarea--2" name="textarea" rows="5" cols="60" class="form-textarea resize-vertical">&lt;p&gt;Diam iaceo lenis magna odio vel. Conventio pertineo quidem. Eros esca ludus. Accumsan adipiscing commodo fere humo lenis. Blandit gravis macto metuo quadrum quis sed turpis utrum virtus. Erat exputo incassum jus mauris probo quae tamen usitas wisi.&lt;/p&gt;
+      &lt;p&gt;Diam facilisis lucidus modo molior quia roto singularis suscipere ullamcorper. Commodo eligo elit feugiat melior modo populus quidne ratis. Antehabeo gemino ibidem interdico saepius. Antehabeo caecus capto incassum nunc paratus praesent qui vero. Cogo esse jugis mauris occuro probo typicus veniam. Accumsan consequat ea ideo minim obruo pertineo praesent valde voco.&lt;/p&gt;
+      &lt;p&gt;Diam eligo huic quae qui. Hendrerit illum minim quis. Comis ex luctus quae. Antehabeo blandit iustum magna neque nimis sudo. Hendrerit quidne virtus vulpes. Eu ibidem jugis macto ullamcorper verto wisi. Haero hos sit. Brevitas decet eu obruo quis sagaciter sino suscipit uxor valde. Commodo eum huic interdico quae typicus vindico. Capto facilisi humo incassum quadrum.&lt;/p&gt;
+      &lt;p&gt;Capto huic in macto modo turpis. Exerci feugiat humo quidne roto saluto tamen ulciscor utinam. Plaga premo saepius secundum. Abico aliquip facilisis nunc utrum virtus.&lt;/p&gt;
+      &lt;p&gt;Distineo ex pertineo plaga veniam vindico. Diam elit iriure pagus quae utinam. Autem nobis quae rusticus sagaciter. Augue feugiat laoreet minim populus typicus vereor virtus wisi. Comis inhibeo melior occuro si sit sudo tincidunt utrum. Accumsan esca et eu haero lenis nimis pala tum venio.&lt;/p&gt;
+      </textarea>
+    </div>
+    <div id="edit-textarea--2--description" class="description">
+      Lenis loquor usitas.
+    </div>
+  </div>
+  <div class="js-form-item form-item js-form-type-date form-type-date js-form-item-date form-item-date">
+    <label for="edit-date--2">Date</label>
+    <input type="date" data-drupal-selector="edit-date" aria-describedby="edit-date--2--description" data-drupal-date-format="Y-m-d" id="edit-date--2" name="date" value="" class="form-date">
+    <div id="edit-date--2--description" class="description">
+      Aliquip consequat duis erat quibus veniam.
+    </div>
+  </div>
+  <div class="js-form-item form-item js-form-type-file form-type-file js-form-item-files-file form-item-files-file">
+    <label for="edit-file--2">File</label>
+    <input data-drupal-selector="edit-file" aria-describedby="edit-file--2--description" type="file" id="edit-file--2" name="files[file]" size="60" class="js-form-file form-file">
+    <div id="edit-file--2--description" class="description">
+      Acsi adipiscing comis facilisi hos metuo praesent torqueo veniam.
+    </div>
+  </div>
+  <div id="ajax-wrapper--2">
+    <div class="js-form-item form-item js-form-type-managed-file form-type-managed-file js-form-item-managed-file form-item-managed-file">
+      <label for="edit-managed-file-upload--2">Managed file</label>
+      <div id="edit-managed-file-upload--2" class="js-form-managed-file form-managed-file">
+        <div id="ajax-wrapper--2"><input data-drupal-selector="edit-managed-file-upload" type="file" id="edit-managed-file-upload--2" name="files[managed_file]" size="22" class="js-form-file form-file">
+          <input class="js-hide button js-form-submit form-submit" data-drupal-selector="edit-managed-file-upload-button" formnovalidate="formnovalidate" type="submit" id="edit-managed-file-upload-button--2" name="managed_file_upload_button" value="Upload">
+          <input data-drupal-selector="edit-managed-file-fids" type="hidden" name="managed_file[fids]">
+        </div>
+      </div>
+      <div id="edit-managed-file-upload--2--description" class="description">
+        Commoveo dolore esse eum ex humo persto si vel.
+      </div>
+    </div>
+  </div>
+  <div class="js-form-item form-item js-form-type-password form-type-password js-form-item-password form-item-password">
+    <label for="edit-password--2">Password</label>
+    <input data-drupal-selector="edit-password" aria-describedby="edit-password--2--description" type="password" id="edit-password--2" name="password" size="60" maxlength="128" class="form-text">
+    <div id="edit-password--2--description" class="description">
+      Capto eu praesent sino ulciscor usitas.
+    </div>
+  </div>
+  <div id="edit-password-confirm--2" class="js-form-item form-item js-form-type-password-confirm form-type-password-confirm js-form-item-password-confirm form-item-password-confirm">
+    <label for="edit-password-confirm--2">Password confirm</label>
+    <div class="js-form-item form-item js-form-type-password form-type-password js-form-item-password-confirm-pass1 form-item-password-confirm-pass1 password-parent">
+      <label for="edit-password-confirm-pass1--2">Password</label>
+      <input class="password-field js-password-field form-text" data-drupal-selector="edit-password-confirm-pass1" type="password" id="edit-password-confirm-pass1--2" name="password_confirm[pass1]" size="60" maxlength="128">
+      <div class="password-strength">
+        <div class="password-strength__meter">
+          <div class="password-strength__indicator js-password-strength__indicator is-weak" style="width: 15%;"></div>
+        </div>
+        <div aria-live="polite" aria-atomic="true" class="password-strength__title">Password strength: <span class="password-strength__text js-password-strength__text">Weak</span></div>
+      </div>
+    </div>
+    <div class="js-form-item form-item js-form-type-password form-type-password js-form-item-password-confirm-pass2 form-item-password-confirm-pass2 confirm-parent">
+      <label for="edit-password-confirm-pass2--2">Confirm password</label>
+      <input class="password-confirm js-password-confirm form-text" data-drupal-selector="edit-password-confirm-pass2" type="password" id="edit-password-confirm-pass2--2" name="password_confirm[pass2]" size="60" maxlength="128">
+      <div aria-live="polite" aria-atomic="true" class="password-confirm js-password-confirm">
+        Passwords match: <span class="ok">yes</span>
+      </div>
+    </div>
+    <div class="password-suggestions description" style="display: block;">
+      Recommendations to make your password stronger:
+      <ul>
+        <li>Make it at least 12 characters</li>
+        <li>Add uppercase letters</li>
+        <li>Add numbers</li>
+        <li>Add punctuation</li>
+      </ul>
+    </div>
+  </div>
+  <div class="js-form-item form-item js-form-type-select form-type-select js-form-item-weight form-item-weight">
+    <label for="edit-weight--2">Weight</label>
+    <select data-drupal-selector="edit-weight" aria-describedby="edit-weight--2--description" id="edit-weight--2" name="weight" class="form-select">
+      <option value="-10">-10</option>
+      <option value="-9">-9</option>
+      <option value="-8">-8</option>
+      <option value="-7">-7</option>
+      <option value="-6">-6</option>
+      <option value="-5">-5</option>
+      <option value="-4">-4</option>
+      <option value="-3">-3</option>
+      <option value="-2">-2</option>
+      <option value="-1">-1</option>
+      <option value="0" selected="selected">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+    <div id="edit-weight--2--description" class="description">
+      Acsi distineo fere inhibeo jumentum pecus quibus ratis vindico voco.
+    </div>
+  </div>
+  <fieldset data-drupal-selector="edit-fieldset" aria-describedby="edit-fieldset--3--description" id="edit-fieldset--3" class="js-form-item form-item js-form-wrapper form-wrapper">
+    <legend>
+      <span class="fieldset-legend">Fieldset</span>
+    </legend>
+    <div class="fieldset-wrapper">
+      <div class="js-form-item form-item js-form-type-select form-type-select js-form-item-select-fieldset form-item-select-fieldset">
+        <label for="edit-select-fieldset--3">Select</label>
+        <select data-drupal-selector="edit-select-fieldset" aria-describedby="edit-select-fieldset--3--description" id="edit-select-fieldset--3" name="select-fieldset" class="form-select">
+          <option value="Pruswap cleuise gegivifr">Pruswap cleuise gegivifr</option>
+          <option value="Cispe jotrumora tholusp">Cispe jotrumora tholusp</option>
+          <option value="Satrospiclo lumanokibusw daclasta">Satrospiclo lumanokibusw daclasta</option>
+          <option value="Siclodratruu bradrof punedresho">Siclodratruu bradrof punedresho</option>
+          <option value="Mejospafri chafrac clatat">Mejospafri chafrac clatat</option>
+        </select>
+        <div id="edit-select-fieldset--3--description" class="description">
+          Aliquip causa eum lucidus patria quae ulciscor.
+        </div>
+      </div>
+      <fieldset data-drupal-selector="edit-checkboxes-fieldset" aria-describedby="edit-checkboxes-fieldset--3--wrapper--description" id="edit-checkboxes-fieldset--3--wrapper" class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper">
+        <legend>
+          <span class="fieldset-legend">Checkboxes</span>
+        </legend>
+        <div class="fieldset-wrapper">
+          <div id="edit-checkboxes-fieldset--3" class="form-checkboxes">
+            <div class="js-form-item form-item js-form-type-checkbox form-type-checkbox js-form-item-checkboxes-fieldset-pruswap-cleuise-gegivifr form-item-checkboxes-fieldset-pruswap-cleuise-gegivifr">
+              <input data-drupal-selector="edit-checkboxes-fieldset-pruswap-cleuise-gegivifr" aria-describedby="edit-checkboxes-fieldset--3--description" type="checkbox" id="edit-checkboxes-fieldset-pruswap-cleuise-gegivifr" name="checkboxes-fieldset[Pruswap cleuise gegivifr]" value="Pruswap cleuise gegivifr" class="form-checkbox">
+              <label for="edit-checkboxes-fieldset-pruswap-cleuise-gegivifr" class="option">Pruswap cleuise gegivifr</label>
+            </div>
+            <div class="js-form-item form-item js-form-type-checkbox form-type-checkbox js-form-item-checkboxes-fieldset-cispe-jotrumora-tholusp form-item-checkboxes-fieldset-cispe-jotrumora-tholusp">
+              <input data-drupal-selector="edit-checkboxes-fieldset-cispe-jotrumora-tholusp" aria-describedby="edit-checkboxes-fieldset--3--description" type="checkbox" id="edit-checkboxes-fieldset-cispe-jotrumora-tholusp" name="checkboxes-fieldset[Cispe jotrumora tholusp]" value="Cispe jotrumora tholusp" class="form-checkbox">
+              <label for="edit-checkboxes-fieldset-cispe-jotrumora-tholusp" class="option">Cispe jotrumora tholusp</label>
+            </div>
+            <div class="js-form-item form-item js-form-type-checkbox form-type-checkbox js-form-item-checkboxes-fieldset-satrospiclo-lumanokibusw-daclasta form-item-checkboxes-fieldset-satrospiclo-lumanokibusw-daclasta">
+              <input data-drupal-selector="edit-checkboxes-fieldset-satrospiclo-lumanokibusw-daclasta" aria-describedby="edit-checkboxes-fieldset--3--description" type="checkbox" id="edit-checkboxes-fieldset-satrospiclo-lumanokibusw-daclasta" name="checkboxes-fieldset[Satrospiclo lumanokibusw daclasta]" value="Satrospiclo lumanokibusw daclasta" class="form-checkbox">
+              <label for="edit-checkboxes-fieldset-satrospiclo-lumanokibusw-daclasta" class="option">Satrospiclo lumanokibusw daclasta</label>
+            </div>
+            <div class="js-form-item form-item js-form-type-checkbox form-type-checkbox js-form-item-checkboxes-fieldset-siclodratruu-bradrof-punedresho form-item-checkboxes-fieldset-siclodratruu-bradrof-punedresho">
+              <input data-drupal-selector="edit-checkboxes-fieldset-siclodratruu-bradrof-punedresho" aria-describedby="edit-checkboxes-fieldset--3--description" type="checkbox" id="edit-checkboxes-fieldset-siclodratruu-bradrof-punedresho" name="checkboxes-fieldset[Siclodratruu bradrof punedresho]" value="Siclodratruu bradrof punedresho" class="form-checkbox">
+              <label for="edit-checkboxes-fieldset-siclodratruu-bradrof-punedresho" class="option">Siclodratruu bradrof punedresho</label>
+            </div>
+            <div class="js-form-item form-item js-form-type-checkbox form-type-checkbox js-form-item-checkboxes-fieldset-mejospafri-chafrac-clatat form-item-checkboxes-fieldset-mejospafri-chafrac-clatat">
+              <input data-drupal-selector="edit-checkboxes-fieldset-mejospafri-chafrac-clatat" aria-describedby="edit-checkboxes-fieldset--3--description" type="checkbox" id="edit-checkboxes-fieldset-mejospafri-chafrac-clatat" name="checkboxes-fieldset[Mejospafri chafrac clatat]" value="Mejospafri chafrac clatat" class="form-checkbox">
+              <label for="edit-checkboxes-fieldset-mejospafri-chafrac-clatat" class="option">Mejospafri chafrac clatat</label>
+            </div>
+          </div>
+          <div id="edit-checkboxes-fieldset--3--wrapper--description" class="description">Abdo facilisis jugis.</div>
+        </div>
+      </fieldset>
+      <div id="edit-fieldset--3--description" class="description">Hos interdico meus.</div>
+    </div>
+  </fieldset>
+  <div class="js-text-format-wrapper text-format-wrapper js-form-item form-item">
+    <div class="js-form-item form-item js-form-type-textarea form-type-textarea js-form-item-text-format-value form-item-text-format-value">
+      <label for="edit-text-format-value--2">Abigo dolus duis huic immitto quae quis singularis.</label>
+      <div class="form-textarea-wrapper">
+        <textarea data-drupal-selector="edit-text-format-value" id="edit-text-format-value--2" name="text_format[value]" rows="5" cols="60" class="form-textarea resize-vertical">&lt;p&gt;Amet caecus gemino hos molior nostrud occuro. Augue imputo lucidus roto sudo volutpat. Ad ea facilisi inhibeo magna melior pala refero. Comis consequat defui dignissim dolus jugis nibh quis ullamcorper virtus. Amet eligo humo incassum interdico meus minim similis. Lucidus luctus vulpes. Damnum pala persto quibus saepius ut vulpes.&lt;/p&gt;
+        &lt;p&gt;Commodo dolor duis macto pertineo saepius typicus utinam velit. Genitus pagus scisco te. Acsi causa duis enim esca facilisis mauris patria utinam velit. Autem et ex minim rusticus usitas. Autem melior nimis tego ulciscor usitas vereor vicis zelus.&lt;/p&gt;
+        &lt;p&gt;Camur cui gemino meus pecus refero valde volutpat. Abigo dolus eligo magna os quae valetudo validus. Damnum ibidem iustum paulatim voco. Acsi dignissim fere importunus lobortis metuo mos vicis vindico. Accumsan facilisis interdico meus natu proprius sudo wisi. Mauris neo torqueo zelus. Consectetuer erat os saluto scisco. Abluo comis consectetuer luctus probo quibus tincidunt vel.&lt;/p&gt;
+        &lt;p&gt;Augue paratus scisco. At camur duis eligo et plaga si. Autem cogo eligo facilisis jumentum neque patria vereor. Blandit dolus ea genitus ille meus sed vulputate. Esca gilvus lucidus qui turpis valetudo. Cogo fere vulpes. Letalis oppeto tego. Abico distineo erat interdico lenis metuo vindico.&lt;/p&gt;
+        &lt;p&gt;Blandit eros occuro quia sit tincidunt ut. Abluo ad camur gravis jugis modo patria secundum si torqueo. Acsi eligo natu saepius. Elit iaceo paratus paulatim plaga quae. Abbas eum gilvus hos letalis lucidus macto patria persto quae. Abdo iriure neo sino. Abdo causa dolor humo jugis patria tum virtus.&lt;/p&gt;
+        </textarea>
+      </div>
+    </div>
+    <div class="filter-wrapper js-form-wrapper form-wrapper" data-drupal-selector="edit-text-format-format" id="edit-text-format-format--3">
+      <div class="filter-help js-form-wrapper form-wrapper" data-drupal-selector="edit-text-format-format-help" id="edit-text-format-format-help--2"><a href="#" target="_blank" data-drupal-selector="edit-text-format-format-help-about" id="edit-text-format-format-help-about--2">About text formats</a></div>
+      <div class="filter-guidelines js-form-wrapper form-wrapper" data-drupal-selector="edit-text-format-format-guidelines" id="edit-text-format-format-guidelines--2">
+        <div class="filter-guidelines-item filter-guidelines-plain_text">
+          <h4 class="label" style="display: none;">Plain text</h4>
+          <ul class="tips">
+            <li>Allowed HTML tags: &lt;br&gt; &lt;p&gt;</li>
+            <li>No HTML tags allowed.</li>
+            <li>Lines and paragraphs break automatically.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <input data-drupal-selector="form-fzfdzurbb7irh8irfwihynjkoaewsronh3hsmzqux8c" type="hidden" name="form_build_id" value="form-FzfdzUrbB7iRH8IrFWihynJkOaeWsRONH3hsmzQux8c">
+  <input data-drupal-selector="edit-styleguide-form-form-token-2" type="hidden" name="form_token" value="ctvKcaQzIblxKjYkZSJabh6I8oi_r-n_YXWcM7I5l3U">
+  <input data-drupal-selector="edit-styleguide-form-2" type="hidden" name="form_id" value="styleguide_form">
+</form>
+
+Styleguide 5.3.7
+*/
+
+// Password field.
+
+.password-field {
+  margin: 0;
+}
+
+.filter-wrapper {
+  // border-radius: 4px;
+}
+
+.filter-wrapper {
+  // border-top-left-radius: 0;
+  // border-top-right-radius: 0;
+}
+
+.filter-help a {
+  @extend %fs-std-down-1;
+}
+
+.filter-wrapper .form-item label {
+  margin-right: get-layout("block-spacing", "small");
+}
+
+.form-item {
+  margin-bottom: get-layout("block-spacing", "std");
+
+  .description {
+    @extend %form-field--description;
+  }
+
+  .form-radios &,
+  .form-checkboxes & {
+    margin-bottom: get-layout("text-spacing", "small");
+  }
+}
+
+.form-managed-file {
+
+  > div {
+    @extend %grid-strech-flex-from-mobile;
+    flex-wrap: nowrap;
+
+    input {
+      height: auto;
+
+      &[type="submit"] {
+        @extend %button-action--small;
+      }
+    }
+  }
+}
+
+.field-suffix {
+  @extend %typeface-system;
+  @extend %fs-system-down-1;
+  margin-top: get-layout("text-spacing", "small");
+}
+
+.admin-link button {
+  @extend %button-action;
+  @extend %button-action--small;
+}
+
+.machine-name {
+
+  &-label {
+    display: inline-block;
+    margin-right: get-layout("text-spacing", "small");
+  }
+
+  &-value {
+    display: inline-block;
+    margin-right: get-layout("text-spacing", "small");
+  }
+}
+
+fieldset.form-item {
+  @extend %form-fieldset;
+}
+
+details summary a {
+  @extend %color-ui-follow;
+}
+
+details summary a:hover,
+details summary a:active,
+details summary a:focus {
+  @extend %color-brand-first;
+}
+
+details .details-description {
+  @extend %typeface-special;
+  @extend %fs-special-down-1;
+}
+
+.password-strength,
+.password-confirm {
+  @extend %typeface-system;
+  @extend %fs-system-down-1;
+  margin-top: get-layout("text-spacing", "small");
+}
+
+.password-confirm {
+
+  .error {
+    @extend %color-system-error;
+    font-weight: bold;
+  }
+
+  .ok {
+    @extend %color-system-success;
+    font-weight: bold;
+  }
+}
+
+.password-strength {
+
+  @include breakpoint("tablet") {
+    width: 50%;
+  }
+
+  @include breakpoint("desktop") {
+    width: 25%;
+  }
+
+  &__meter {
+    @extend %background-grayscale-soft;
+  }
+
+  &__indicator {
+    @extend %background-grayscale-medium;
+    height: 16px;
+
+    &.is-weak {
+      @extend %background-system-error;
+    }
+
+    &.is-fair,
+    &.is-good {
+      @extend %background-system-info;
+    }
+
+    &.is-strong {
+      @extend %background-system-success;
+    }
+  }
+
+  &__title {
+    //
+  }
+
+  &__text {
+    font-weight: bold;
+  }
+}
+
+.password-suggestions {
+  @extend %ul;
+}
+
+.filter-guidelines-item {
+  margin: get-layout("block-spacing", "small") 0 get-layout("block-spacing", "std");
+
+  .label {
+    @extend %form-label;
+  }
+
+  .tips {
+    @extend %ul;
+    @extend %typeface-system;
+    @extend %fs-system-down-1;
+  }
+}
+
+.form-item label,
+.form-wrapper .label {
+  // font-size: .929em;
+}
+
+.form-wrapper .field-multiple-table .label {
+  // font-size: inherit;
+}
+
+.form-type-radio label,
+.form-type-checkbox label {
+  margin-left: get-layout("text-spacing", "smaller");
+}
+
+.form-type-radio .description,
+.form-type-checkbox .description {
+  margin-left: get-layout("text-spacing", "smaller");
+}
+
+.form-actions {
+  margin-top: get-layout("block-spacing", "std");
+}
+
+// Node Form
+
+#edit-body {
+  margin-bottom: 2em;
+}
+
+.node-form label,
+.node-form .description,
+.node-form .form-wrapper .label {
+  // font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.node-form .form-wrapper .field-multiple-table .label {
+  // font-family: inherit;
+}
+
+.node-form .form-wrapper {
+  // margin-bottom: 2em;
+}
+
+// Contact Form
+
+.contact-form #edit-name {
+  // width: 75%;
+  // border-radius: 4px;
+}
+
+.contact-form #edit-mail {
+  // width: 75%;
+  // border-radius: 4px;
+}
+
+.contact-form #edit-subject {
+  // width: 75%;
+  // border-radius: 4px;
+}
+
+.contact-form #edit-message {
+  // width: 76.3%;
+  // border-top-left-radius: 4px;
+  // border-top-right-radius: 4px;
+}
+
+// Disabled form elements
+
+.form-disabled input,
+.form-disabled select,
+.form-disabled textarea {
+  opacity: .75;
+  // background: #ededed;
+  // border-color: #bbb;
+  // color: #717171;
+}
+
+.form-disabled label {
+  opacity: .75;
+  // color: #717171;
+}
+
+// Comment form
+
+.comment-form label {
+  // float: left;
+  // font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  // font-size: .929em;
+  // width: 120px;
+}
+
+.comment-form input,
+.comment-form .form-select {
+  // margin: 0;
+  // border-radius: 4px;
+}
+
+.comment-form .form-type-textarea label {
+  // float: none;
+}
+
+.comment-form .form-item,
+.comment-form .form-radios,
+.comment-form .form-type-checkbox,
+.comment-form .form-select {
+  // margin-bottom: 10px;
+  // overflow: hidden;
+}
+
+.comment-form .form-type-checkbox,
+.comment-form .form-radios {
+  // margin-left: 120px;
+}
+
+.comment-form .form-type-checkbox label,
+.comment-form .form-radios label {
+  // float: none;
+  // margin-top: 0;
+}
+
+.comment-form input.form-file {
+  // width: auto;
+}
+
+.layout-no-sidebars .comment-form .form-text {
+  // width: 800px;
+}
+
+.layout-one-sidebar .comment-form .form-text {
+  // width: 500px;
+}
+
+.layout-two-sidebars .comment-form .form-text {
+  // width: 320px;
+}
+
+.comment-form .form-item .description {
+  // font-size: .786em;
+  // line-height: 1.2;
+  // margin-left: 120px;
+}
+
+.comment-form .form-textarea {
+  // border-top-left-radius: 4px;
+  // border-top-right-radius: 4px;
+}
+
+.comment-form details.filter-wrapper .details-wrapper,
+.comment-form .text-format-wrapper .form-item {
+  // margin-top: 0;
+  // margin-bottom: 0;
+}
+
+.filter-wrapper label {
+  // width: auto;
+  // float: none;
+}
+
+.filter-wrapper .form-select {
+  // min-width: 120px;
+}
+
+.comment-form details.filter-wrapper .tips {
+  // font-size: .786em;
+}
+
+#comment-body-add-more-wrapper .form-type-textarea label {
+  // margin-bottom: .4em;
+}
+
+#edit-actions input {
+  // margin-right: .6em;
+}
+
+// Form error styles
+
+.form-item textarea.error + .cke {
+  @extend %color-system-error;
+  @extend %border-system-error;
+}
+
+// Form error message styles
+
+.form-item--error-message {
+  @extend %color-system-error;
+}

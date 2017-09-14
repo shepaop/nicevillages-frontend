@@ -1,0 +1,50 @@
+/*
+Form inline
+
+Markup:
+<form class="form--inline" data-drupal-selector="styleguide-form-2" enctype="multipart/form-data" action="#" method="post" id="styleguide-form--2" accept-charset="UTF-8" data-drupal-form-fields="edit-select--2,edit-checkbox--2,edit-checkboxes-pruswap-cleuise-gegivifr,edit-checkboxes-cispe-jotrumora-tholusp,edit-checkboxes-satrospiclo-lumanokibusw-daclasta,edit-checkboxes-siclodratruu-bradrof-punedresho,edit-checkboxes-mejospafri-chafrac-clatat,edit-radios-pruswap-cleuise-gegivifr,edit-radios-cispe-jotrumora-tholusp,edit-radios-satrospiclo-lumanokibusw-daclasta,edit-radios-siclodratruu-bradrof-punedresho,edit-radios-mejospafri-chafrac-clatat,edit-textfield--2,edit-autocomplete--2,edit-textfield-machine--2,edit-machine-name--2,edit-textarea--2,edit-date--2,edit-file--2,edit-managed-file-upload--2,edit-managed-file-upload-button--2,edit-password--2,edit-password-confirm-pass1--2,edit-password-confirm-pass2--2,edit-weight--2,edit-select-fieldset--3,edit-checkboxes-fieldset-pruswap-cleuise-gegivifr,edit-checkboxes-fieldset-cispe-jotrumora-tholusp,edit-checkboxes-fieldset-satrospiclo-lumanokibusw-daclasta,edit-checkboxes-fieldset-siclodratruu-bradrof-punedresho,edit-checkboxes-fieldset-mejospafri-chafrac-clatat,edit-text-format-value--2">
+  <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-autocomplete form-item-autocomplete">
+    <label for="edit-autocomplete--2">Autocomplete textfield</label>
+    <input data-drupal-selector="edit-autocomplete" aria-describedby="edit-autocomplete--2--description" type="text" id="edit-autocomplete--2" name="autocomplete" value="lifra" size="60" maxlength="128" class="form-text">
+    <div id="edit-autocomplete--2--description" class="description">
+      Accumsan illum lucidus oppeto.
+    </div>
+  </div>
+  <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-textfield-machine form-item-textfield-machine">
+    <label for="edit-textfield-machine--2">Textfield, with machine name</label>
+    <input data-drupal-selector="edit-textfield-machine" aria-describedby="edit-textfield-machine--2--description" type="text" id="edit-textfield-machine--2" name="textfield-machine" value="Brehitha lodonostochu suvos" size="60" maxlength="128" class="form-text machine-name-source">
+    <span class="field-suffix"> <small id="edit-textfield-machine--2-machine-name-suffix"><span class="machine-name-label">Machine name: </span><span class="machine-name-value">brehitha_lodonostochu_suvos</span><span class="admin-link"><button type="button" class="link">Edit</button></span></small></span>
+    <div id="edit-textfield-machine--2--description" class="description">
+      Antehabeo damnum enim huic.
+    </div>
+  </div>
+  <div class="js-form-item form-item js-form-type-machine-name form-type-machine-name js-form-item-machine-name form-item-machine-name visually-hidden">
+    <label for="edit-machine-name--2" class="js-form-required form-required">Machine name</label>
+    <input data-drupal-selector="edit-machine-name" aria-describedby="edit-machine-name--2--description" dir="ltr" type="text" id="edit-machine-name--2" name="machine_name" value="" size="60" maxlength="64" class="form-text required machine-name-target" required="required" aria-required="true">
+    <div id="edit-machine-name--2--description" class="description">
+      Appellatio augue commoveo nulla paulatim.
+    </div>
+  </div>
+</form>
+
+Styleguide 5.3.9
+*/
+
+.form--inline .form-item {
+  width: auto;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: get-layout("block-spacing", "std");
+}
+
+.form--inline .form-item-separator {
+  content: "|";
+  vertical-align: top;
+  margin: 0 get-layout("text-spacing", "std");
+}
+
+.form--inline .form-actions {
+  clear: left;
+  width: 100%;
+  box-sizing: border-box;
+}

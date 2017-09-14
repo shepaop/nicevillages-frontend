@@ -1,0 +1,33 @@
+$name: "breadcrumbs";
+
+/*
+#{$name}
+
+Fil d'ariane
+
+sg-filename:
+#{$name}
+
+Markup:
+<ul class="#{$name}">
+  <li>
+    <a href="#">Lorem ipusm</a>
+  </li>
+  <li>
+    <a href="#">Lorem ipusm</a>
+  </li>
+  <li>
+    <a href="#">Lorem ipusm</a>
+  </li>
+</ul>
+
+Styleguide 3.2
+*/
+
+.#{$name} {
+  @extend %#{$name};
+
+  li {
+    @extend %#{$name}--item;
+  }
+}

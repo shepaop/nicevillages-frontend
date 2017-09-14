@@ -1,0 +1,8 @@
+tr.selected td {
+  @extend %background-system-warning;
+}
+
+td.checkbox,
+th.checkbox {
+  text-align: center;
+}

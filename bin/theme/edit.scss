@@ -3,8 +3,8 @@
 @import 'reset';
 @import '_core/_hub';
 @import '_params/_hub';
-@import '_root/placeholders/_hub';
-@import '_root/_wysiwyg';
+@import '_placeholders/_hub';
+@import 'components/2-molecules/_wysiwyg';
 
 #{$wysiwyg_cssrule} {
   @extend .wysiwyg;

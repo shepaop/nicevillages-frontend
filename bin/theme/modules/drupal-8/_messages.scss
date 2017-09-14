@@ -1,0 +1,68 @@
+/*
+Messages
+
+Markup:
+<div class="messages__wrapper layout-container">
+  <div role="contentinfo" aria-label="" class="messages messages--status">
+    causa elit imputo neque quis.
+  </div>
+  <div role="contentinfo" aria-label="" class="messages messages--warning">
+    volutpat ymo.
+  </div>
+  <div role="contentinfo" aria-label="" class="messages messages--error">
+    <div role="alert">
+      consectetuer elit in lucidus ludus nibh premo.
+    </div>
+  </div>
+  <div role="contentinfo" aria-label="" class="messages messages--status">
+    <ul class="messages__list">
+      <li class="messages__item">
+        Operating in maintenance mode. <a href="/admin/config/development/maintenance">Go online.</a>
+      </li>
+      <li class="messages__item">
+        Reset vocabulary <em class="placeholder">Labels</em> to alphabetical order.
+      </li>
+    </ul>
+  </div>
+</div>
+
+Styleguide 5.3.15
+*/
+
+.messages__wrapper {
+  margin: get-layout("block-spacing", "std");
+
+  .messages {
+    @extend %system-message;
+    margin: get-layout("block-spacing", "small");
+
+    &--info {
+      @extend %system-message--info;
+    }
+
+    &--status {
+      @extend %system-message--success;
+    }
+
+    &--warning {
+      @extend %system-message--warning;
+    }
+
+    &--error {
+      @extend %system-message--error;
+    }
+  }
+
+  .messages__list {
+    @extend %ul;
+  }
+
+  a {
+    @extend %color-ui-follow;
+
+    &:hover,
+    &:active {
+      @extend %color-brand-first;
+    }
+  }
+}

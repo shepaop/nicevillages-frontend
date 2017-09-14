@@ -1,0 +1,30 @@
+/*
+Details
+
+Markup:
+<details class="js-form-wrapper form-wrapper">
+  <summary>Details closed</summary>
+  <div class="details-wrapper">
+    Content
+  </div>
+</details>
+
+Styleguide 5.3.5
+*/
+
+details {
+  margin: get-layout("block-spacing", "std") 0;
+}
+
+details > .details-wrapper {
+  padding: get-layout("block-spacing", "std");
+}
+
+summary {
+  display: block;
+  @extend %typeface-heading;
+  @extend %fs-heading-root;
+  @extend %background-brand-first;
+  @extend %color-grayscale-light;
+  padding: get-layout("text-spacing", "small") get-layout("text-spacing", "std");
+}

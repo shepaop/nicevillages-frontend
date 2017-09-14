@@ -1,0 +1,34 @@
+a.link {
+  @extend %color-ui-follow;
+  text-decoration: underline;
+}
+
+.link:hover,
+.link:active,
+.link:focus {
+  @extend %color-ui-submit;
+}
+
+.heading-a {
+  @extend %h1;
+}
+
+.heading-b {
+  @extend %h2;
+}
+
+.heading-c {
+  @extend %h3;
+}
+
+.heading-d {
+  @extend %h4;
+}
+
+.heading-e {
+  @extend %h5;
+}
+
+.heading-f {
+  @extend %h6;
+}

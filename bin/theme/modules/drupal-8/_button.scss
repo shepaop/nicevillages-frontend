@@ -1,0 +1,36 @@
+/*
+Button
+
+default                 - Default
+is-disabled             - Disabled
+
+Markup:
+<form data-drupal-selector="styleguide-form-4" action="#" method="post" id="styleguide-form--4" accept-charset="UTF-8" data-drupal-form-fields="edit-button--2">
+  <input data-drupal-selector="edit-button" type="submit" id="edit-button--2" name="op" value="Button" class="{$modifiers} button js-form-submit form-submit">
+</form>
+
+Styleguide 5.3.22
+*/
+
+.button {
+  @extend %button-action;
+
+  &:hover,
+  &:active,
+  &:focus {
+    @extend %button-action--hover;
+  }
+
+  &.is-disabled {
+    @extend %background-ui-cancel;
+    opacity: .5;
+    cursor: default;
+
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: .5;
+      @extend %background-ui-cancel;
+    }
+  }
+}

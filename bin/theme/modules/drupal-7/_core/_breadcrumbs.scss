@@ -14,39 +14,14 @@ Markup:
   <span class="current">Current item</span>
 </div>
 
-Styleguide 4.1.1.
+Styleguide 5.3.1.
 */
 
 .breadcrumbs {
-  @extend %typeface-std;
-  @extend %fs-std-down-1;
-  margin-bottom: get-layout("block-spacing", "std");
-  color: get-color("grayscale", "medium");
+  @extend %breadcrumbs;
 
   a,
   span {
-    display: inline-block;
-
-    &::before {
-      content: "-";
-      display: inline-block;
-      margin: 0 get-layout("text-spacing", "std");
-    }
-
-    &:first-child {
-
-      &::before {
-        display: none;
-      }
-    }
-  }
-
-  a:hover,
-  .current {
-    @extend %color-brand-first;
-
-    &::before {
-      border-color: transparent transparent transparent get-color("brand", "first");
-    }
+    @extend %breadcrumbs--item;
   }
 }

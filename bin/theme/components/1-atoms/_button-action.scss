@@ -1,0 +1,39 @@
+$name: "button-action";
+
+/*
+Bouton d'action
+
+button-action
+
+default     - Version de base
+small       - Version small
+:hover      - Roll-over
+
+sg-filename:
+#{$name}
+
+Markup:
+<button class="button-action {$modifiers}">Lorem ipsum</button>
+
+Styleguide 2.5.1
+*/
+
+.#{$name} {
+  @extend %button-action;
+
+  &:focus {
+    @extend %button-action--focus;
+  }
+
+  &:hover {
+    // @extend %button-action--hover;
+  }
+
+  &:active {
+    @extend %button-action--active;
+  }
+
+  &.small {
+    @extend %button-action--small;
+  }
+}

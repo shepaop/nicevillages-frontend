@@ -1,0 +1,125 @@
+$name: "wysiwyg";
+
+/*
+Editorial
+
+Zone de contenu éditorial standard
+
+sg-filename:
+#{$name}
+
+Markup:
+<div class="#{$name}">
+  <h2>H2 : Lorem ipsum</h2>
+  <p class="text-highlight">
+      Paragraphe "text-highlight": Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+  </p>
+  <p>
+    Paragraphe : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#">Exemple de lien</a>, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </p>
+  <p class="responsive-image">
+    <img src="http://www.gettyimages.fr/CMS/Pages/RoyaltyFree/StaticContent/113198687.jpg" alt="" width="637" height="450" />
+  </p>
+  <p class="baseline-simple">
+    Paragraphe "baseline-simple" : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#">Exemple de lien</a>, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </p>
+  <p>
+    Paragraphe : Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </p>
+  <h2>H2 : Lorem ipsum</h2>
+  <ul>
+    <li>Nunc rhoncus nibh et semper tincidunt. Vestibulum varius nulla urna, congue luctus nisl pulvinar in. Sed venenatis magna vel volutpat rhoncus. Nullam eget odio felis. Phasellus faucibus nisl eu dolor efficitur lobortis.
+      <ul>
+        <li>Phasellus faucibus nisl eu dolor efficitur</li>
+        <li>Dolor efficitur lobortis</li>
+      </ul>
+    </li>
+    <li>Vestibulum varius nulla urna, congue luctus nisl pulvinar in. Sed venenatis magna vel volutpat rhoncus. Nullam eget odio felis. Phasellus faucibus nisl eu dolor efficitur lobortis.</li>
+  </ul>
+  <h3>H3 : Lorem ipsum</h3>
+  <ol>
+    <li>Nunc rhoncus nibh et semper tincidunt. Vestibulum varius nulla urna, congue luctus nisl pulvinar in. Sed venenatis magna vel volutpat rhoncus. Nullam eget odio felis. Phasellus faucibus nisl eu dolor efficitur lobortis.</li>
+    <li>Vestibulum varius nulla urna, congue luctus nisl pulvinar in. Sed venenatis magna vel volutpat rhoncus. Nullam eget odio felis. Phasellus faucibus nisl eu dolor efficitur lobortis.</li>
+  </ol>
+  <blockquote class="blockquote">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </blockquote>
+  <h4>H4 : Lorem ipsum</h4>
+  <p>
+    Paragraphe : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </p>
+  <h5>H5 : Lorem ipsum</h5>
+  <p>
+    Paragraphe : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </p>
+  <h6>H6 : Lorem ipsum</h6>
+  <p>
+    Paragraphe : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </p>
+  <p class="text-notification">
+      Paragraphe "text-notification": Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+  </p>
+  <table>
+    <caption>Table caption</caption>
+    <thead>
+      <tr>
+        <th>Table cell</th>
+        <th>Table cell</th>
+        <th>Table cell</th>
+      </tr>
+    </thead>
+    <body>
+      <tr>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
+      </tr>
+      <tr>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
+      </tr>
+      <tr>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
+      </tr>
+      <tr>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
+      </tr>
+    </body>
+  </table>
+</div>
+
+Styleguide 3.1.
+*/
+
+.#{$name} {
+  @extend %wysiwyg;
+
+  p.text-highlight {
+    @extend %fs-std-up-1--baseline-simple;
+  }
+
+  p.text-notification {
+    @extend %fs-std-down-1--baseline-simple;
+  }
+
+  p.responsive-image {
+    @extend %flex-child-image-from-mobile;
+
+    @include breakpoint("tablet") {
+      float: left;
+      width: 50%;
+      margin-right: get-layout("block-spacing", "std");
+    }
+
+    @include breakpoint("desktop") {
+      width: 25%;
+    }
+  }
+}

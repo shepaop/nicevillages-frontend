@@ -3,8 +3,12 @@ Modules
 
 Modules inclus dans le framework
 
-Styleguide 4.
+Styleguide 5.
 */
 
-@import 'drupal-7/_hub';
-// @import 'jquery-ui/_hub';
+@import 'ui/_hub';
+
+// @import 'drupal-7/_hub';
+
+@import 'drupal-8/_hub';
+@import 'jquery-ui/_hub';

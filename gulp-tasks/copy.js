@@ -4,10 +4,10 @@ module.exports = function (gulp, plugins, params) {
 
     return function () {
 
-      for(var i = 0; i < Object.keys(params.copy).length; i++){
+      for (var i = 0; i < Object.keys(params.copy).length; i++) {
         var key = Object.keys(params.copy)[i];
 
-        if(params.copy[key].dest !== null) {
+        if (params.copy[key].dest !== null) {
 
           var result = plugins.globule.find(params.copy[key].files, {srcBase: params.copy[key].source});
 
@@ -18,7 +18,7 @@ module.exports = function (gulp, plugins, params) {
           var baseDir = {};
 
           // Souhaite-on respecter la structure des dossiers ou non ?
-          if(typeof params.copy[key].keepTree === 'boolean' && params.copy[key].keepTree){
+          if (typeof params.copy[key].keepTree === 'boolean' && params.copy[key].keepTree) {
             baseDir = {
               base: params.copy[key].source
             }
@@ -28,9 +28,9 @@ module.exports = function (gulp, plugins, params) {
           gulp.src(
             result, baseDir
           )
-          .pipe(
-            gulp.dest(params.copy[key].dest)
-          );
+            .pipe(
+              gulp.dest(params.copy[key].dest)
+            );
 
         }
       }
@@ -40,7 +40,8 @@ module.exports = function (gulp, plugins, params) {
   }
   else {
 
-    return function () {};
+    return function () {
+    };
 
   }
 

@@ -1,0 +1,22 @@
+$styleguide-headings: "";
+
+@each $name, $datas in $headings {
+
+  // $styleguide-font-sizes: $styleguide-font-sizes + "<div style=\"font-size:#{$font-size};line-height:#{$line-height};margin-bottom:#{$styleguide-item-box-margin};\">The quick brown fox jumps over the lazy dog<br /> <span style=\"font-size:12px;font-style:italic;\">#{map-get($datas, "name")}-#{$font-size}/#{$line-height}</span></div>" !global;
+  $styleguide-headings: $styleguide-headings + "<div class=\"#{$name}\" style=\"white-space:nowrap;overflow:hidden;\">";
+  $styleguide-headings: $styleguide-headings + "#{$name}-The quick brown fox";
+  $styleguide-headings: $styleguide-headings + "</div>";
+
+  .#{$name} {
+    @extend %#{$name};
+  }
+}
+
+/*
+Headings
+
+Markup:
+#{$styleguide-headings}
+
+Styleguide 2.3.
+*/

@@ -1,0 +1,11 @@
+tr.drag {
+  @extend %background-grayscale-light;
+}
+
+tr.drag-previous {
+  @extend %background-grayscale-soft;
+}
+
+.tabledrag-changed-warning {
+  margin-bottom: get-layout("block-spacing", "std");
+}

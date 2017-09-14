@@ -1,0 +1,21 @@
+/*
+Countdown
+
+We're leaving together, But still it's farewell... It's the final countdown. The final countdown !
+
+Markup:
+<script>
+  var deadline = new Date('2017', 5);
+  console.log(deadline);
+  var testCountdown = new Countdown({
+    deadline: deadline,
+    interval: 60,
+    callback: function(datas){
+      console.log(datas);
+    }
+  });
+  console.log(testCountdown);
+</script>
+
+Styleguide 5.1.11.
+*/

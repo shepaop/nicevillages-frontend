@@ -1,0 +1,73 @@
+/*
+Search Results
+
+Markup:
+<div class="item-list">
+  <ol class="search-results node_search-results">
+    <li>
+      <h3 class="search-result__title">
+        <a href="#">Title 0</a>
+      </h3>
+      <div class="search-result__snippet-info">
+        <p class="search-result__snippet"><strong>Title</strong> 0
+          username
+          Thu, 09/07/2017 - 10:16
+        </p>
+        <p class="search-result__info"><a title="View user profile." href="#" lang="" about="#" typeof="schema:Person" property="schema:name" datatype="" class="username">shepaop</a> - 09/07/2017 - 10:16</p>
+      </div>
+    </li>
+    <li>
+      <h3 class="search-result__title">
+        <a href="#">Title 1</a>
+      </h3>
+      <div class="search-result__snippet-info">
+        <p class="search-result__snippet"><strong>Title</strong> 1
+          username
+          Thu, 09/07/2017 - 10:16
+        </p>
+        <p class="search-result__info"><a title="View user profile." href="#" lang="" about="#" typeof="schema:Person" property="schema:name" datatype="" class="username">shepaop</a> - 09/07/2017 - 10:16</p>
+      </div>
+    </li>
+    <li>
+      <h3 class="search-result__title">
+        <a href="#">Title 2</a>
+      </h3>
+      <div class="search-result__snippet-info">
+        <p class="search-result__snippet"><strong>Title</strong> 2
+          username
+          Thu, 09/07/2017 - 10:16
+        </p>
+        <p class="search-result__info"><a title="View user profile." href="#" lang="" about="#" typeof="schema:Person" property="schema:name" datatype="" class="username">shepaop</a> - 09/07/2017 - 10:16</p>
+      </div>
+    </li>
+  </ol>
+</div>
+
+Styleguide 5.3.20.
+*/
+
+.search-results {
+  margin-bottom: get-layout("block-spacing", "std");
+
+  li {
+    @extend %box-border-bottom-std;
+    @extend %border-grayscale-medium;
+    margin-bottom: get-layout("text-spacing", "std");
+    padding-bottom: get-layout("text-spacing", "std");
+
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.search-result__title {
+  @extend %h4;
+}
+
+.search-result__snippet-info {
+  @extend %fs-std-down-1;
+  margin-top: get-layout("text-spacing", "small");
+}

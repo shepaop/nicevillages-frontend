@@ -3,7 +3,7 @@
 dist/js/*
 dist/img/*
 dist/favicon/*
-dist/*.html
+dist/**/*.html
 dist/css/*
 !dist/css/*.js
 index.html

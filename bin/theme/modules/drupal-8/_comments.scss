@@ -1,0 +1,129 @@
+/*
+Comment
+
+Markup:
+<article role="article" data-comment-user-id="0" about="#" typeof="schema:Comment" class="comment js-comment by-anonymous clearfix">
+  <span class="hidden" data-comment-timestamp="1504275640"></span>
+  <footer class="comment__meta">
+    <article data-quickedit-entity-id="user/0" typeof="schema:Person" about="#" class="profile">
+    </article>
+    <p class="comment__author"><span rel="schema:author"><span lang="" typeof="schema:Person" property="schema:name" datatype="">Anonymous (not verified)</span></span></p>
+    <p class="comment__time">Fri, 09/01/2017 - 16:20  <span class="rdf-meta hidden"></span></p>
+    <p class="comment__permalink"><a href="#" hreflang="en">Permalink</a></p>
+  </footer>
+  <div class="comment__content">
+    <h3 property="schema:name" datatype=""><a href="#" class="permalink" rel="bookmark" hreflang="en">crashe chisp damouo drihosw wravuspekar</a></h3>
+    <p>Inhibeo oppeto sino tum verto. Consequat cui ibidem letalis melior torqueo. Capto conventio gilvus inhibeo laoreet ludus molior tego. Abico cogo dolus elit iriure luctus olim quis vulpes. Cogo iaceo neo secundum uxor vulputate.</p>
+    <p>Ea sed si singularis. Abbas enim esca iustum sit ulciscor venio vereor vicis. Capto cui eligo eu fere nostrud os praesent quidem ymo. Augue commodo eum incassum magna pertineo sed suscipit ut. Facilisi ibidem loquor lucidus suscipit tation. Diam gilvus nulla nutus refoveo tamen veniam. Caecus euismod pala torqueo.</p>
+    <p>Ex nibh nunc paulatim valetudo virtus. Consequat dolore exputo hos nobis sino. Abdo accumsan macto quis tation typicus vereor. Acsi antehabeo autem cogo mauris metuo nunc quae sudo.</p>
+    <p>Ea facilisi iusto ludus validus. Adipiscing antehabeo caecus diam iriure nobis obruo patria uxor. Abigo commoveo haero letalis tum. Erat neque nibh nobis paulatim tego ymo.</p>
+    <p>Accumsan saepius torqueo. Aptent dolor illum. Esse in obruo pneum quadrum quae torqueo tum vulputate. Comis consectetuer velit. Exerci feugiat oppeto tincidunt tum ymo. Euismod pala pertineo virtus. Acsi dignissim duis esca immitto jugis populus verto. Acsi adipiscing aptent augue dolore lenis patria pecus sagaciter veniam. Abdo iustum nibh quia refero te vulputate.</p>
+    <sg-insert>5.3.11-2</sg-insert>
+  </div>
+</article>
+
+Styleguide 5.3.17
+*/
+
+.comment {
+  margin-bottom: get-layout("block-spacing", "std");
+  vertical-align: top;
+  display: table;
+}
+
+.comment__meta {
+  padding: 0 get-layout("block-spacing", "std") 0 0;
+}
+
+.comment__attribution img {
+  @extend %box-border-std;
+  @extend %border-grayscale-medium;
+}
+
+.comment .field--name-user-picture img {
+  margin: 0;
+}
+
+.comment__author .username {
+  white-space: nowrap;
+}
+
+.comment__author {
+  @extend %typeface-heading;
+  @extend %fs-heading-root;
+  margin-bottom: get-layout("text-spacing", "std");
+}
+
+.comment__time {
+  @extend %fs-std-down-1;
+  @extend %color-grayscale-medium;
+  margin-bottom: get-layout("text-spacing", "std");
+}
+
+.comment__permalink {
+  @extend %fs-std-down-1;
+  margin-bottom: get-layout("text-spacing", "std");
+
+  &:hover,
+  &:active {
+    @extend %color-brand-first;
+  }
+}
+
+.comment__content {
+  @extend %background-grayscale-light;
+  @extend %box-border-std;
+  @extend %border-grayscale-medium;
+  position: relative;
+  display: table-cell;
+  padding: get-layout("block-spacing", "large");
+  vertical-align: top;
+  width: 80%;
+  word-break: break-all;
+
+  h3 {
+    @extend %typeface-heading;
+    @extend %fs-heading-root;
+    margin-bottom: get-layout("text-spacing", "std");
+  }
+
+  p {
+    @extend %typeface-std;
+    @extend %fs-std-down-1;
+    margin-bottom: get-layout("text-spacing", "std");
+  }
+}
+
+.comment__content::before {
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 10px;
+  border-top: 10px solid transparent;
+  border-right: 10px solid get-color("grayscale", "medium");
+  border-bottom: 10px solid transparent;
+}
+
+.comment__content::after {
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 10px;
+  border-top: 10px solid transparent;
+  border-right: 10px solid get-color("grayscale", "light");
+  border-bottom: 10px solid transparent;
+  margin-right: -1px;
+}
+
+.indented {
+  margin-left: get-layout("block-spacing", "large");
+}
+
+.comment .links {
+  text-align: right;
+  margin-top: get-layout("text-spacing", "std");
+}
+
+.comment-footer {
+  display: table-row;
+}

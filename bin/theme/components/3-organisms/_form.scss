@@ -1,0 +1,175 @@
+/*
+Form
+
+Composants HTML natifs de formulaires
+
+sg-filename:
+form
+
+Markup:
+<form action="#" method="post">
+  <fieldset>
+    <legend>Legend: Titre de section</legend>
+    <div class="form-grid-1">
+      <label>Label: Votre nom</label>
+      <input class="error" type="text" placeholder="Placeholder: Texte par défaut (Input text)" />
+    </div>
+    <div class="form-grid-1 side-right">
+      <label>Label: Votre email</label>
+      <input type="email" placeholder="Placeholder: Texte par défaut (input email)" />
+      <span class="field-description">
+        field-description (info): Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+      </span>
+    </div>
+    <div class="form-grid-1">
+      <label>Label: Votre profession</label>
+      <select>
+        <option value="">Choisissez votre profession</option>
+        <option value="1">Job #1</option>
+        <option value="2">Job #2</option>
+        <option value="3">Job #3</option>
+        <option value="4">Job #4</option>
+      </select>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Legend: Titre de section</legend>
+    <div class="form-grid-1">
+      <span class="form-label">Label: Votre civilité</span>
+      <input type="radio" />
+      <label>Monsieur</label>
+      <input type="radio" />
+      <label>Madamme</label>
+      <input type="radio" />
+      <label>Autre</label>
+    </div>
+    <div class="form-grid-1 side-right">
+      <span class="form-label">Label: Vos choix</span>
+      <input type="checkbox" />
+      <label>Choix 1</label>
+      <input type="checkbox" />
+      <label>Choix 2</label>
+      <input type="checkbox" />
+      <label>Choix 3</label>
+      <input type="checkbox" />
+      <label>Choix 4</label>
+    </div>
+    <div class="form-grid-1">
+      <label>Label: Votre fichier</label>
+      <input type="file" placeholder="Placeholder: Texte par défaut (Input file)" />
+    </div>
+    <div class="form-grid-1 side-right">
+      <label>Label: Votre email</label>
+      <input type="email" placeholder="Placeholder: Texte par défaut (input email)" />
+    </div>
+    <div class="form-grid-2">
+      <label>Label: Votre message</label>
+      <textarea cols="10" rows="10" placeholder="Textarea: Texte par défaut (textarea)"></textarea>
+    </div>
+  </fieldset>
+  <input type="submit" value="Soumettre" />
+</form>
+
+Styleguide 4.1.
+*/
+
+form {
+
+  fieldset {
+    @extend %form-fieldset;
+  }
+
+  legend {
+    @extend %form-legend;
+  }
+
+  label,
+  .form-label {
+    @extend %form-label;
+  }
+
+  .form-label {
+    display: block;
+  }
+
+  select,
+  textarea,
+  input[type="file"],
+  input[type="date"],
+  input[type="number"],
+  input[type="datetime-local"],
+  input[type="text"],
+  input[type="email"],
+  input[type="search"],
+  input[type="password"] {
+    @extend %form-field;
+
+    &:focus {
+      @extend %form-field--focus;
+    }
+
+    &.error {
+      @extend %form-field--error;
+    }
+  }
+
+  select {
+    padding-left: 0;
+    padding-right: 0;
+
+    &[multiple="multiple"] {
+      min-height: 70px;
+    }
+  }
+
+  textarea {
+    height: auto;
+  }
+
+  input[type="radio"] {
+    @extend %form-radio;
+
+    & + label,
+    & + .form-label {
+      @extend %form-label--inline;
+    }
+  }
+
+  input[type="checkbox"] {
+    @extend %form-checkbox;
+
+    & + label,
+    & + .form-label {
+      @extend %form-label--inline;
+    }
+  }
+
+  input[type="submit"] {
+    @extend %form-submit;
+  }
+}
+
+.field-description {
+  @extend %form-field--description;
+
+  &.error {
+    @extend %color-system-error;
+  }
+}
+
+.form-grid {
+
+  &-1 {
+    margin-bottom: get-layout("block-spacing", "std");
+    @extend %form-grid-1;
+
+    &.side-right {
+      @extend %form-grid-1--side-right;
+    }
+  }
+
+  &-2 {
+    margin-bottom: get-layout("block-spacing", "std");
+    @extend %form-grid-2;
+  }
+}

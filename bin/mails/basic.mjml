@@ -1,0 +1,77 @@
+<mjml>
+
+    <mj-head>
+        <mj-attributes>
+            <mj-section background-color="#ffffff" padding="20px"/>
+
+            <mj-text font-family="Arial, sans-serif" font-size="16px" font-weight="normal" padding="20px 0 0 0"/>
+            <mj-table font-family="Arial, sans-serif" font-size="16px" font-weight="normal" padding="20px 0"/>
+
+            <mj-class name="title-1" color="#1fb6ff" font-size="21px" padding-top="40px" font-weight="bold"/>
+            <mj-class name="title-2" font-size="18px" padding-top="40px" font-weight="bold"/>
+            <mj-class name="small" font-size="12px" font-weight="normal"/>
+            <mj-class name="reversed" color="#ffffff"/>
+
+            <mj-all/>
+        </mj-attributes>
+        <mj-style inline="inline">
+            a {
+                color: #1fb6ff;
+                text-decoration: underline;
+            }
+            b, strong, th {
+                font-weight: bold;
+            }
+            p, ul {
+                margin-top: 0;
+            }
+        </mj-style>
+    </mj-head>
+
+    <mj-body>
+        <mj-container>
+
+            <mj-section>
+                <mj-column>
+                    <mj-image align="left" width="100" height="auto" src="../img/mails/brand-logo.png"/>
+                </mj-column>
+            </mj-section>
+
+            <mj-section>
+                <mj-column>
+                    <mj-text mj-class="title-1" padding-top="0">
+                        Bonjour Lorem Ipsum,
+                    </mj-text>
+                    <mj-text mj-class="title-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </mj-text>
+                    <mj-text>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        <a href="#">
+                            http://www.website.org/
+                        </a>
+                    </mj-text>
+                    <mj-text>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </mj-text>
+                    <mj-text>
+                        identifiant : <b>contact@website.org</b><br/>
+                        mot de passe : <b>yourpsswd</b>
+                    </mj-text>
+                </mj-column>
+            </mj-section>
+
+            <mj-section background-color="#1fb6ff" color="#ffffff">
+                <mj-column>
+                    <mj-text mj-class="reversed" align="center" padding-top="0">
+                        <b>Lorem ipsum</b><br/>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </mj-text>
+                </mj-column>
+            </mj-section>
+
+        </mj-container>
+    </mj-body>
+</mjml>

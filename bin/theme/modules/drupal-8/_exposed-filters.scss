@@ -1,0 +1,43 @@
+/*
+Exposed filters
+
+Markup:
+<div>Markup à préciser</div>
+
+Styleguide 5.3.6
+*/
+
+.exposed-filters .filters {
+  float: left;
+  margin-right: get-layout("block-spacing", "std");
+}
+
+.exposed-filters .form-item {
+  margin: 0 0 get-layout("text-spacing", "small");
+  padding: 0;
+}
+
+.exposed-filters .form-item label {
+  float: left;
+  width: 10em;
+}
+
+.exposed-filters .form-select {
+  width: 14em;
+}
+
+// Current filters
+
+.exposed-filters .current-filters {
+  margin-bottom: get-layout("block-spacing", "std");
+}
+
+.exposed-filters .current-filters .placeholder {
+  // font-style: normal;
+  // font-weight: bold;
+}
+
+.exposed-filters .additional-filters {
+  float: left;
+  margin-right: get-layout("block-spacing", "std");
+}

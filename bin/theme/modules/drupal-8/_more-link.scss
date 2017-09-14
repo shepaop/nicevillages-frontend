@@ -1,0 +1,26 @@
+/*
+More link
+
+Markup:
+<div class="more-link">
+  <a href="#">More</a>
+</div>
+
+Styleguide 5.3.12
+*/
+
+.more-link {
+  display: block;
+  text-align: right;
+  margin-top: get-layout("text-spacing", "std");
+
+  a {
+    @extend %fs-std-down-1;
+    @extend %color-ui-follow;
+
+    &:hover,
+    &:active {
+      @extend %color-brand-first;
+    }
+  }
+}

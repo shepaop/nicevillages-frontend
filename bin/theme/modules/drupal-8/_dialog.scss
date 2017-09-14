@@ -1,0 +1,113 @@
+/*
+Dialog
+
+Conflits de style probables entre jQuery-ui et Drupal.dialog
+
+Markup:
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front webform-confirmation-modal" style="height: auto; width: 600px; top: 50px; left: 712.25px; display: block; position: absolute;" tabindex="-1" role="dialog" aria-describedby="ui-id-1" aria-labelledby="ui-id-2">
+  <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+    <span class="ui-dialog-title">Dialog Title</span>
+    <button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" title="Close">
+      <span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span>
+      <span class="ui-button-text">Close</span>
+    </button>
+  </div>
+  <div class="webform-confirmation-modal--content ui-dialog-content ui-widget-content" style="width: auto; min-height: 35px; max-height: 228px; height: auto;">
+    Your message has been sent.
+  </div>
+</div>
+<div class="ui-widget-overlay ui-front" style="z-index: 99; position: absolute;"></div>
+
+sg-wrapper:
+<div style="height:250px;">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 5.3.2
+*/
+
+.ui-dialog {
+  @extend %background-grayscale-light;
+  z-index: 1260;
+  position: absolute;
+  overflow: visible;
+  padding: get-layout("block-spacing", "std");
+  transform: translateX(-50%);
+  top: 0;
+  left: 50% !important;
+  border: 0 !important;
+
+  @include breakpointBetween('mobile', 'tablet') {
+    width: calc(100% - #{get-layout("block-spacing", "large")}) !important;
+  }
+
+  @include breakpointBetween('tablet', 'desktop') {
+    width: 50% !important;
+  }
+
+  @include breakpoint('desktop') {
+    position: absolute;
+    width: 25%;
+    max-height: none;
+  }
+}
+
+.ui-dialog.ui-widget.ui-widget-content {
+  border: 0;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+  @extend %typeface-heading;
+  @extend %fs-heading-up-2;
+  border: 0;
+  padding: get-layout("block-spacing", "std");
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+  @extend %icon-ui_close-std--standalone;
+  background-color: transparent;
+  width: auto;
+  text-align: right;
+  border: 0 !important;
+  padding-right: 0 !important;
+
+  .ui-icon {
+    display: none;
+  }
+
+  .ui-button-text {
+    display: none;
+  }
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+  @extend %background-grayscale-light;
+  margin-top: 0;
+  padding: 0 get-layout("block-spacing", "std");
+}
+
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+  margin: 0;
+  padding: 0;
+}
+
+.ui-dialog .ui-dialog-buttonpane .ui-button-text-only .ui-button-text {
+  padding: 0;
+}
+
+/* Form action buttons are moved in dialogs. Remove empty space. */
+
+.ui-dialog .ui-dialog-content .form-actions {
+  padding: 0;
+  margin: 0;
+}
+
+.ui-dialog .ajax-progress-throbber {
+  @extend %ajax-loader;
+}
+
+.ui-dialog .ajax-progress-throbber .throbber,
+.ui-dialog .ajax-progress-throbber .message {
+  display: none;
+}
+

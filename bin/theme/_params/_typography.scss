@@ -23,7 +23,7 @@ $font-families: (
         "baseline": .83333,                                 // Ligne de base (en px) dans la fourchette basse du palier responsive
         "multiplier": 1.25,                             // Variation MAX de la taille de typoe entre la fourchette basse et ahute du palier
         "cap-height": (573/800),                        // Proportion de la hauteur d'une lettre capitale par rapport à une taille définie
-        "vw-min": $site-range-mix,                      // Largeur du viewport pour la taille de typo minimum
+        "vw-min": $site-range-min,                      // Largeur du viewport pour la taille de typo minimum
         "vw-max": map-get($breakpoints, "tablet"),      // Largeur du viewport pour la taille de typo maximum
         "margin-weight": 3                              // Poids des marges
       ),
@@ -62,7 +62,7 @@ $font-families: (
         "baseline": .83333,
         "multiplier": 1.25,
         "cap-height": (573/800),
-        "vw-min": $site-range-mix,
+        "vw-min": $site-range-min,
         "vw-max": map-get($breakpoints, "tablet"),
         "margin-weight": 3
       ),
@@ -676,14 +676,8 @@ $headings: (
 );
 
 $index: 1;
-$styleguide-headings: "";
 
 @each $name, $datas in $headings {
-
-  // $styleguide-font-sizes: $styleguide-font-sizes + "<div style=\"font-size:#{$font-size};line-height:#{$line-height};margin-bottom:#{$styleguide-item-box-margin};\">The quick brown fox jumps over the lazy dog<br /> <span style=\"font-size:12px;font-style:italic;\">#{map-get($datas, "name")}-#{$font-size}/#{$line-height}</span></div>" !global;
-  $styleguide-headings: $styleguide-headings + "<div class=\"#{$name}\" style=\"white-space:nowrap;overflow:hidden;\">";
-  $styleguide-headings: $styleguide-headings + "#{$name}-The quick brown fox";
-  $styleguide-headings: $styleguide-headings + "</div>";
 
   %#{$name} {
 
@@ -725,12 +719,3 @@ $styleguide-headings: "";
 
   $index: $index + 1;
 }
-
-/*
-Headings
-
-Markup:
-#{$styleguide-headings}
-
-Styleguide 1.4.
-*/

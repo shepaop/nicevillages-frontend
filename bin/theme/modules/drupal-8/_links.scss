@@ -1,0 +1,66 @@
+/*
+Links
+
+default            - Version standard
+inline             - Version inline
+
+Markup:
+<div class="links {$modifiers}">
+  <ul>
+    <li>
+      <a href="#">Add</a>
+    </li>
+    <li>
+      <a href="#">View</a>
+    </li>
+    <li>
+      <a href="#" class="is-active">Edit</a>
+    </li>
+    <li>
+      <a href="#">Delete</a>
+    </li>
+  </ul>
+</div>
+
+Styleguide 5.3.11
+*/
+
+.inline,
+.links.inline {
+  margin-bottom: 0;
+
+  li {
+    display: inline;
+    list-style-type: none;
+    margin-bottom: 0;
+    padding: 0 get-layout("text-spacing", "small");
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+ul.links,
+.links {
+  @extend %fs-std-down-1;
+  margin: get-layout("block-spacing", "small") 0;
+
+  li {
+    margin-bottom: get-layout("text-spacing", "smaller");
+  }
+
+  a {
+    @extend %color-ui-follow;
+
+    &:hover,
+    &:active,
+    &.is-active {
+      @extend %color-brand-first;
+    }
+  }
+}

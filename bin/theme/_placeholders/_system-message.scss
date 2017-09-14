@@ -1,0 +1,34 @@
+%system-message {
+  display: block;
+  border-width: get-layout("box-border", "std") get-layout("box-border", "large");
+  border-style: solid;
+  @extend %typeface-system;
+  @extend %border-grayscale-medium;
+  @extend %block-spacing-std;
+  @extend %border-radius-std;
+
+  &::before {
+    display: block;
+    margin: 0 auto get-layout("block-spacing", "std");
+  }
+
+  &--info {
+    @extend %color-system-info;
+    @extend %border-system-info;
+  }
+
+  &--success {
+    @extend %color-system-success;
+    @extend %border-system-success;
+  }
+
+  &--warning {
+    @extend %color-system-warning;
+    @extend %border-system-warning;
+  }
+
+  &--error {
+    @extend %color-system-error;
+    @extend %border-system-error;
+  }
+}

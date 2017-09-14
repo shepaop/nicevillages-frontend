@@ -1,0 +1,86 @@
+/*
+Progress bar
+
+Markup:
+<div class="progress" data-drupal-progress="">
+  <div class="progress__track"><div class="progress__bar" style="width: 57%"></div></div>
+  <div class="progress__percentage">57%</div>
+  <div class="progress__description"> capto dolus luctus modo obruo saepius similis ullamcorper.</div>
+</div>
+
+Styleguide 5.3.1
+*/
+
+.progress {
+  overflow: auto;
+  margin: get-layout("block-spacing", "std") 0;
+}
+
+.progress__track {
+  // @extend %box-border-std;
+  @extend %background-grayscale-soft;
+  // @extend %border-grayscale-medium;
+  @extend %border-radius-large;
+  margin-bottom: get-layout("text-spacing", "small");
+}
+
+.progress__bar {
+  @extend %background-brand-first;
+  @extend %border-radius-large;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .15)), linear-gradient(to right bottom, get-color("brand", "first") 0%, get-color("brand", "first") 25%, darken(get-color("brand", "first"), 10%) 25%, darken(get-color("brand", "first"), 10%) 50%, get-color("brand", "first") 50%, get-color("brand", "first") 75%, get-color("brand", "first") 100%);
+  background-size: 40px 40px;
+  height: 16px;
+  animation: animate-stripes 3s linear infinite;
+  transition: width .5s ease-out;
+}
+
+.progress__percentage {
+  float: right;
+  width: 27%;
+  margin-left: 3%;
+  text-align: right;
+}
+
+.progress__description {
+  float: left;
+  width: 67%;
+  margin-right: 3%;
+  text-align: left;
+}
+
+[dir="rtl"] .progress__bar {
+  animation-direction: reverse;
+}
+
+@-webkit-keyframes animate-stripes {
+
+  0% {
+    background-position: 0 0, 0 0;
+  }
+
+  100% {
+    background-position: 0 0, -80px 0;
+  }
+}
+
+@-ms-keyframes animate-stripes {
+
+  0% {
+    background-position: 0 0, 0 0;
+  }
+
+  100% {
+    background-position: 0 0, -80px 0;
+  }
+}
+
+@keyframes animate-stripes {
+
+  0% {
+    background-position: 0 0, 0 0;
+  }
+
+  100% {
+    background-position: 0 0, -80px 0;
+  }
+}

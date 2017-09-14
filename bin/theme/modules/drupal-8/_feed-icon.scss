@@ -1,0 +1,22 @@
+/*
+Feed icon
+
+Markup:
+<p>
+  <a href="#" class="feed-icon" style="background-color:#cccccc;">
+    Subscribe to Syndicate
+  </a>
+</p>
+
+Styleguide 5.3.18
+*/
+
+.feed-icon {
+  @extend %text-overflow-from-mobile;
+  @extend %icon-community_rss-std--standalone;
+
+  &:hover,
+  &:active {
+    opacity: .8;
+  }
+}

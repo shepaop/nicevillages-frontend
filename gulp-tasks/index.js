@@ -22,22 +22,23 @@ module.exports = function (gulp, plugins, params, path) {
     html += '<div class="wysiwyg marger-top marger-bottom" style="width:320px;margin-left:auto;margin-right:auto;">';
     html += '<h3>Documentation</h3>';
     html += '<ul>';
+    html += '<li><a href="README.md">Readme File</a></li>';
     html += '<li><a href="styleguide/">Styleguide</a></li>';
-    html += '<li><a href="jsdoc/">Documentation JS</a></li>';
+    html += '<li><a href="jsdoc/">Js Doc</a></li>';
     html += '</ul>';
     html += '</div>';
 
-    for(var i = 0; i < Object.keys(params.index).length; i++){
+    for (var i = 0; i < Object.keys(params.index).length; i++) {
       var key = Object.keys(params.index)[i];
       var result = plugins.globule.find(params.index[key].files);
 
-      if(result.length){
+      if (result.length) {
 
         html += '<div class="wysiwyg marger-top marger-bottom" style="width:320px;margin-left:auto;margin-right:auto;">';
         html += '<h3>' + params.index[key].title + '</h3>';
         html += '<ul>';
 
-        for(var j = 0; j < result.length; j++){
+        for (var j = 0; j < result.length; j++) {
 
           var fileName = path.basename(result[j]);
 

@@ -1,0 +1,30 @@
+/*
+Animated counter
+
+Animated number incrementation
+
+Markup:
+<div class="counter-up--number">5000</div>
+<script>
+  var $count = $('.counter-up--number');
+  $count.animatedCounter({
+    start: 1000,
+    end: 5000,
+    onComplete: function(self, value){
+      self.text(value + ' %');
+      $count.setStart(6000);
+      $count.setEnd(10000);
+      console.log('staaart : ' + self.getStart());
+      console.log('eeend : ' + self.getEnd());
+    },
+    onChange: function(self, value){
+      self.text(value + ' %');
+      if (value > 4000) {
+        self.css('color', '#7e5bef');
+      }
+    }
+  });
+</script>
+
+Styleguide 5.1.10.
+*/

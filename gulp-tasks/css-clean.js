@@ -6,26 +6,26 @@ module.exports = function (gulp, plugins, params) {
 
     // SASS Compile
     return gulp.src(result)
-    .pipe(
-      plugins.combineMq({
-        beautify: true
-      })
-    )
-    .pipe(
-      plugins.cssnano(
-        {zindex: false}
+      .pipe(
+        plugins.combineMq({
+          beautify: true
+        })
       )
-    )
-    .pipe(
-      plugins.rename({
-        suffix: ".min"
-      })
-    )
-    .pipe(
-      gulp.dest(
-        params.tasksPath.destination.css
+      .pipe(
+        plugins.cssnano(
+          {zindex: false}
+        )
       )
-    );
+      .pipe(
+        plugins.rename({
+          suffix: ".min"
+        })
+      )
+      .pipe(
+        gulp.dest(
+          params.tasksPath.destination.css
+        )
+      );
 
   };
 

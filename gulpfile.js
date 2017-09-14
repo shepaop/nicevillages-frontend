@@ -12,7 +12,7 @@ var plugins = require('gulp-load-plugins')({
 
 // Specifics includes
 plugins.sc5styleguide = require('sc5-styleguide');
-plugins.runSequence = require('run-sequence');
+plugins.runSequence = require('run-sequence').use(gulp);
 plugins.stylelint = require('gulp-stylelint');
 plugins.globule = require('globule');
 
@@ -40,9 +40,10 @@ gulp.task('favicon', require(gulpTasks + 'favicon')(gulp, plugins, params));
 
 // Génération des fichiers HTML et de l'index
 gulp.task('files:build', require(gulpTasks + 'files')(gulp, plugins, params));
+gulp.task('mails:build', require(gulpTasks + 'mjml')(gulp, plugins, params));
 gulp.task('index', require(gulpTasks + 'index')(gulp, plugins, params, path));
 gulp.task('files', function (callback) {
-  plugins.runSequence('index', 'files:build', callback);
+  plugins.runSequence(['files:build', 'mails:build'], 'index', callback);
 });
 
 // SASS Compilation
@@ -73,12 +74,21 @@ gulp.task('styleguide:copyassets', require(gulpTasks + 'styleguide-copyassets')(
 gulp.task('styleguide', function (callback) {
   plugins.runSequence(['sass', 'scripts'], 'styleguide:copyassets', ['styleguide:applystyles', 'styleguide:generate'], ['copy'], callback);
 });
+gulp.task('styleguide:sass', function (callback) {
+  plugins.runSequence(['sass'], 'styleguide:copyassets', ['styleguide:applystyles', 'styleguide:generate'], callback);
+});
+gulp.task('styleguide:scripts', function (callback) {
+  plugins.runSequence(['scripts'], 'styleguide:copyassets', ['styleguide:applystyles', 'styleguide:generate'], callback);
+});
 
 // Delete selected files
 gulp.task('clean', require(gulpTasks + 'clean')(gulp, plugins, params, path));
 
 // Generate icons
 gulp.task('icons', require(gulpTasks + 'icons')(gulp, plugins, params, path));
+
+// Generate icons
+gulp.task('font64', require(gulpTasks + 'font64')(gulp, plugins, params, path));
 
 // Minify images
 gulp.task('images', require(gulpTasks + 'images')(gulp, plugins, params, path));
@@ -92,4 +102,9 @@ gulp.task('watch', require(gulpTasks + 'watch')(gulp, plugins, params));
 // Fullmonty: Compilation globale
 gulp.task('fullmonty', function (callback) {
   plugins.runSequence(['modernizr', 'favicon', 'images'], ['sass', 'scripts'], 'styleguide:copyassets', ['styleguide:applystyles', 'styleguide:generate'], ['files'], ['copy'], callback);
+});
+
+// Deployment task
+gulp.task('deployment', function (callback) {
+  plugins.runSequence(['sass', 'scripts'], ['copy'], callback);
 });

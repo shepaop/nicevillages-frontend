@@ -1,5 +1,5 @@
 # Framework Front Insign
-**v 5.6.1**
+**v 5.7.5**
 
 
 ## Framework description
@@ -15,8 +15,8 @@
 
 ## Required configuration
 
-- node : 6.9.1
-- npm : 3.10.8
+- node : 6.11.2
+- npm : 3.10.10
 
 
 ## Installation
@@ -40,7 +40,7 @@
 - Imagesize sould be at least 260x260.
 
 ### `gulp files`
-- HTML with includes compilation from `/bin/sass/` folder.
+- Build HTML Templates located at `/bin/html/`.
 - index.html automatic generation
 - Destination Folder located at `dist/`.
 
@@ -60,11 +60,15 @@
 - Styleguide generation with sc5styleguide plugin.
 - Styleguide syntax is KSS.
 - Destination Folder located at `styleguide/`.
+- Exports HTML parts to `/bin/html/components/`, ready to include.
 
 ### `gulp icons`
 - Icons located at `/bin/icons/`, as SVG format, are encoded in base64.
 - The generation is based on a `/bin/icons/_icons.scss` template with `lodash` langage variables.
 - A SASS file with the datas is generated in the `bin/sass/_theme-placeholders/_icons.scss`.
+
+### `gulp font64`
+- Encodes custom fonts into base 64 file within the main stylesheet
 
 ### `gulp images`
 - Minify and copy images from `bin/img/` to `/img/`.
@@ -78,6 +82,9 @@
 
 ### `gulp fullmonty`
 - Executes all the routines necessary to build the whole framework functionalities
+
+### `gulp deployment`
+- Executes core routines just for VM deployment bash
 
 ### `gulp watch`
 - Watch `/bin/sass/**/*.scss` files changes, and apply `gulp styleguide` and `gulp copy`.

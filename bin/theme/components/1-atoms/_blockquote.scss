@@ -1,0 +1,21 @@
+/*
+Blockquote
+
+Signification de chargement asynchrone
+
+sg-filename:
+blockquote
+
+Markup:
+<blockquote>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+</blockquote>
+
+Styleguide 2.4.
+*/
+
+blockquote {
+  @extend %blockquote;
+}

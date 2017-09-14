@@ -37,7 +37,7 @@
     "mixRgbColors": true,
     "gMap": true,
     "gb": true,
-    "google": true
+    "Countdown": true
   },
   "rules": {
     // Errors.

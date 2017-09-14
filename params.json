@@ -10,7 +10,9 @@
       "icons": "./bin/icons/",
       "scripts": "./bin/js/",
       "images": "./bin/img/",
-      "files": "./bin/html/"
+      "files": "./bin/html/",
+      "mails": "./bin/mails/",
+      "font64": "./dist/font/"
     },
     "destination": {
       "favicon": "./dist/favicon/",
@@ -26,20 +28,24 @@
       "images": "./dist/img/",
       "font": "./dist/font/",
       "files": "./dist/",
-      "file-index": "./"
+      "file-index": "./",
+      "mails": "./dist/mails/",
+      "font64": "./bin/theme/_params/"
     }
   },
   "copy": {
     "theme": {
       "keepTree": true,
       "source": "./dist/",
-      "dest": "../drupal/themes/nicevillages/",
+      "dest": null,
       "files": [
         "**/*",
         "!css/*.css",
         "css/*.min.css",
         "!css/styleguide*.css",
-        "!*.html",
+        "!**/*.html",
+        "!mails",
+        "!font/*.woff2",
         "!img/models/**/*"
       ]
     }
@@ -81,6 +87,13 @@
       "baseUrl": "dist/",
       "files": [
         "./dist/*.html"
+      ]
+    },
+    "mail": {
+      "title": "Templates Mail",
+      "baseUrl": "dist/mails/",
+      "files": [
+        "./dist/mails/*.html"
       ]
     }
   },
