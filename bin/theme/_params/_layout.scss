@@ -7,7 +7,7 @@ Styleguide 1.1.
 // ---------------------------------------------------
 
 $site-range-min: 320px;
-$site-range-max: 1280px;
+$site-range-max: 1920px;
 $site-range: (
   "min": $site-range-min,
   "max": $site-range-max
@@ -16,12 +16,14 @@ $site-range: (
 $responsive-system: (
   "mobile",
   "tablet",
-  "desktop"
+  "desktop",
+  "desktop-large"
 );
 
 $breakpoints: (
   "tablet": 640px,
-  "desktop": 960px
+  "desktop": 960px,
+  "desktop-large": 1280px
 );
 $styleguide-breakpoints: "";
 
@@ -46,7 +48,8 @@ Styleguide 1.1.1.
 $theme-grids: (
   "mobile":         12,
   "tablet":         12,
-  "desktop":        12
+  "desktop":        12,
+  "desktop-large":  12
 );
 
 @include grid-strech("1.1.2.");
@@ -59,10 +62,11 @@ $layout: (
     "description":  "Marges internes/externes des blocks",
     "css":          "padding",
     "values": (
-      "x-large":    80px,
-      "large":      40px,
+      "x-large":    40px,
+      "large":      30px,
       "std":        20px,
-      "small":      10px
+      "small":      10px,
+      "x-small":    5px
     )
   ),
   "box-border": (
@@ -80,6 +84,7 @@ $layout: (
     "description":  "Coins arrondis des blocks",
     "css":          "border-radius",
     "values": (
+      "rounded":    999999em,
       "large":      15px,
       "std":        5px,
       "small":      3px
@@ -90,9 +95,19 @@ $layout: (
     "description":  "Ombres des blocks",
     "css":          "box-shadow",
     "values": (
-      "large":      0 0 10px rgba(0, 0, 0, .6),
-      "std":        0 0 5px rgba(0, 0, 0, .6),
+      "large":      0 5px 10px rgba(0, 0, 0, .25),
+      "std":        0 2px 5px rgba(0, 0, 0, .25),
       "small":      1px 1px 2px rgba(0, 0, 0, .4)
+    )
+  ),
+  "text-shadow": (
+    "name":         "Text shadow",
+    "description":  "Ombres des textes",
+    "css":          "text-shadow",
+    "values": (
+      "large":      0 4px 4px rgba(0, 0, 0, .75),
+      "std":        0 2px 2px rgba(0, 0, 0, .75),
+      "small":      1px 1px 1px rgba(0, 0, 0, .75)
     )
   ),
   "text-spacing": (
@@ -263,6 +278,15 @@ $index: 1;
 
       %#{$section-name}-#{$name} {
         box-shadow: #{$value};
+      }
+    }
+    @else if map-get($section, "css") == "text-shadow" {
+      $styleguide-layout: $styleguide-layout + "<div style=\"text-shadow:#{$value};margin-bottom:#{$styleguide-item-box-margin};\" class=\"h3\">";
+      $styleguide-layout: $styleguide-layout + "#{$name}: Loremimpsum dolor sit amet";
+      $styleguide-layout: $styleguide-layout + "</div>";
+
+      %#{$section-name}-#{$name} {
+        text-shadow: #{$value};
       }
     }
   }

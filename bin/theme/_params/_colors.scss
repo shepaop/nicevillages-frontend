@@ -4,11 +4,11 @@ $color-system: (
     "name":         "Brand",
     "description":  "Couleurs choisies pour illustrer la marque.",
     "values": (
-      "first":                  #1fb6ff,
-      "second":                 #7e5bef,
-      "third":                  #ff49db,
-      "fourth":                 #ff7849,
-      "fith":                   #ffc82c
+      "first":                  #2f75bd,
+      "second":                 #e58f3a,
+      "third":                  #262626,
+      "fourth":                 #c9c9c9,
+      "fith":                   #ffffff
     )
   ),
   // Couleurs de texte de base
@@ -16,11 +16,11 @@ $color-system: (
     "name":         "Grayscale",
     "description":  "Nuances de gris utilisées pour les textes, fonds de blocks, lignes et bordures",
     "values": (
-      "dark":                   #333333,
-      "strong":                 #777777,
-      "medium":                 #aaaaaa,
-      "soft":                   #dddddd,
-      "light":                  #eeeeee
+      "dark":                   #262626,
+      "strong":                 #505050,
+      "medium":                 #929292,
+      "soft":                   #c9c9c9,
+      "light":                  #ffffff
     )
   ),
   // Couleurs du thème
@@ -28,9 +28,11 @@ $color-system: (
     "name":         "User interface",
     "description":  "Couleurs liées aux différentes",
     "values": (
-      "submit":                 #1fb6ff,
-      "cancel":                 #dddddd,
-      "follow":                 #777777
+      "submit":                 #2f75bd,
+      "cancel":                 #929292,
+      "follow":                 #2f75bd,
+      "contribute":             #e58f3a,
+      "geolocation":            #262626
     )
   ),
   // Couleurs systèmes du thème
