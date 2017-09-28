@@ -1,0 +1,31 @@
+$name: "button-geolocate";
+
+/*
+Bouton de localisation sur une carte
+
+button-geolocate
+
+sg-filename:
+#{$name}
+
+Markup:
+<button class="#{$name} {$modifiers}">Localiser</button>
+
+Styleguide 2.5.3
+*/
+
+.#{$name} {
+  @extend %button-geolocate;
+
+  &:focus {
+    @extend %button-geolocate--focus;
+  }
+
+  &:hover {
+    @extend %button-geolocate--hover;
+  }
+
+  &:active {
+    @extend %button-geolocate--active;
+  }
+}

@@ -1,0 +1,39 @@
+$name: "button-contribute";
+
+/*
+Bouton de contribution
+
+button-contribute
+
+default     - Version de base
+current     - Version en cours
+:hover      - Roll-over
+
+sg-filename:
+#{$name}
+
+Markup:
+<button class="#{$name} {$modifiers}">Lorem ipsum</button>
+
+Styleguide 2.5.4
+*/
+
+.#{$name} {
+  @extend %button-contribute;
+
+  &:focus {
+    @extend %button-contribute--focus;
+  }
+
+  &:hover {
+    @extend %button-contribute--hover;
+  }
+
+  &:active {
+    @extend %button-contribute--active;
+  }
+
+  &.current {
+    @extend %button-contribute--hover;
+  }
+}

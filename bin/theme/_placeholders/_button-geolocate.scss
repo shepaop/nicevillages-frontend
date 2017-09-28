@@ -1,0 +1,30 @@
+%button-geolocate {
+  @extend %text-overflow-from-mobile;
+  @extend %background-ui-geolocation;
+  line-height: 1;
+  position: relative;
+  padding: get-layout("block-spacing", "small") 0;
+  cursor: pointer;
+  border: 0;
+  border-radius: 0;
+  display: inline-block;
+  text-align: center;
+  width: calc(1em + #{get-layout("block-spacing", "small") * 2});
+
+  &::before {
+    content: "O";
+  }
+
+  &--focus,
+  &--active {
+    outline: none;
+  }
+
+  &--hover {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 50%);
+  }
+
+  &--active {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 50%);
+  }
+}

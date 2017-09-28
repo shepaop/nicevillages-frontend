@@ -3,12 +3,10 @@
   @extend %fs-std-down-1;
   @extend %color-grayscale-strong;
   @extend %background-ui-cancel;
-  @extend %border-radius-small;
-  @extend %box-shadow-small;
   padding: get-layout("text-spacing", "smaller") get-layout("text-spacing", "small");
   cursor: pointer;
   border: 0;
-  font-weight: normal;
+  border-radius: 0;
 
   &--focus,
   &--active {
@@ -21,6 +19,5 @@
 
   &--active {
     opacity: .8;
-    box-shadow: none;
   }
 }

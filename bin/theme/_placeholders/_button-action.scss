@@ -1,14 +1,32 @@
 %button-action {
-  @extend %typeface-std;
-  @extend %fs-std-root;
+  @extend %typeface-heading;
+  @extend %fs-heading-root;
   @extend %color-grayscale-light;
   @extend %background-ui-submit;
-  @extend %border-radius-std;
-  @extend %box-shadow-small;
-  padding: get-layout("text-spacing", "small") get-layout("text-spacing", "std");
+  line-height: 1;
+  position: relative;
   cursor: pointer;
   border: 0;
-  font-weight: bold;
+  border-radius: 0;
+  display: inline-block;
+  text-align: left;
+  padding: get-layout("block-spacing", "std") calc(1em + #{(get-layout("block-spacing", "std") * 2) + get-layout("block-spacing", "small")}) get-layout("block-spacing", "std") get-layout("block-spacing", "small");
+
+  @include breakpoint("desktop-large") {
+    padding: get-layout("block-spacing", "std") calc(1em + #{get-layout("block-spacing", "std") * 3}) get-layout("block-spacing", "std") get-layout("block-spacing", "std");
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc(1em + #{get-layout("block-spacing", "std") * 2});
+    height: 100%;
+    box-sizing: border-box;
+    border-left: get-layout("box-border", "std") solid rgba(get-color("grayscale", "light"), .25);
+  }
 
   &--focus,
   &--active {
@@ -16,16 +34,35 @@
   }
 
   &--hover {
-    @extend %color-grayscale-dark;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 50%);
   }
 
   &--active {
-    opacity: .8;
-    box-shadow: none;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 50%);
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   &--small {
-    @extend %fs-std-down-1;
-    padding: get-layout("text-spacing", "smaller") get-layout("block-spacing", "small");
+    @extend %fs-heading-down-1;
+    padding: get-layout("text-spacing", "std") calc(1em + #{get-layout("text-spacing", "std") * 3}) get-layout("text-spacing", "std") get-layout("text-spacing", "std");
+
+    &::after {
+      width: calc(1em + #{get-layout("text-spacing", "std") * 2});
+    }
+  }
+
+  &--big {
+    @extend %fs-heading-up-1;
+    text-transform: uppercase;
+    padding: get-layout("block-spacing", "large") calc(1em + #{(get-layout("block-spacing", "large") * 2) + get-layout("block-spacing", "std")}) get-layout("block-spacing", "large") get-layout("block-spacing", "std");
+
+    &::after {
+      width: calc(1em + #{get-layout("text-spacing", "large") * 2});
+    }
   }
 }

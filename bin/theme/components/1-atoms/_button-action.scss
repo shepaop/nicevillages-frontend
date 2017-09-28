@@ -6,7 +6,9 @@ Bouton d'action
 button-action
 
 default     - Version de base
+block       - Version block
 small       - Version small
+big         - Version big
 :hover      - Roll-over
 
 sg-filename:
@@ -26,14 +28,22 @@ Styleguide 2.5.1
   }
 
   &:hover {
-    // @extend %button-action--hover;
+    @extend %button-action--hover;
   }
 
   &:active {
     @extend %button-action--active;
   }
 
+  &.block {
+    @extend %button-action--block;
+  }
+
   &.small {
     @extend %button-action--small;
+  }
+
+  &.big {
+    @extend %button-action--big;
   }
 }

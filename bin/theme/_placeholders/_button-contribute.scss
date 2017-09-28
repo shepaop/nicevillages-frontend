@@ -1,0 +1,38 @@
+%button-contribute {
+  @extend %typeface-heading;
+  @extend %fs-heading-root;
+  @extend %color-grayscale-light;
+  @extend %background-ui-contribute;
+  @extend %border-radius-rounded;
+  @extend %border-ui-contribute;
+  @extend %box-border-large;
+  line-height: 1;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  box-sizing: content-box;
+  padding: get-layout("block-spacing", "small") get-layout("block-spacing", "large");
+
+  @include breakpoint("desktop") {
+    padding: (get-layout("block-spacing", "std") - get-layout("box-border", "large")) (get-layout("block-spacing", "large") - get-layout("box-border", "large"));
+  }
+
+  @include breakpoint("desktop-large") {
+    padding: (get-layout("block-spacing", "std") - get-layout("box-border", "large")) (get-layout("block-spacing", "x-large") - get-layout("box-border", "large"));
+  }
+
+  &--focus,
+  &--active {
+    outline: none;
+  }
+
+  &--hover {
+    @extend %color-ui-contribute;
+    @extend %background-grayscale-light;
+  }
+
+  &--active {
+    opacity: .8;
+  }
+}
