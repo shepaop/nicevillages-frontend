@@ -17,6 +17,9 @@
   }
 
   &::after {
+    @extend %icon-tools_arrow-right;
+    background-position: center;
+    background-size: auto 2.5em;
     content: "";
     display: block;
     position: absolute;
@@ -63,6 +66,41 @@
 
     &::after {
       width: calc(1em + #{get-layout("text-spacing", "large") * 2});
+    }
+  }
+
+  &--search {
+
+    &::after {
+      @extend %icon-tools_search;
+    }
+  }
+
+  &--itinerary {
+
+    &::after {
+      @extend %icon-tools_itinerary;
+    }
+  }
+
+  &--share {
+    @extend %text-overflow-from-mobile;
+    position: relative;
+    padding: get-layout("block-spacing", "std") 0;
+    width: calc(1em + #{(get-layout("block-spacing", "std") * 2) + get-layout("block-spacing", "small")});
+
+    @include breakpoint("desktop-large") {
+      padding: get-layout("block-spacing", "std") 0;
+      width: calc(1em + #{get-layout("block-spacing", "std") * 3});
+    }
+
+    &::after {
+      @extend %icon-tools_share--standalone;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border: 0;
     }
   }
 }

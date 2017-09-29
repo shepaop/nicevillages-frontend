@@ -9,6 +9,9 @@ default     - Version de base
 block       - Version block
 small       - Version small
 big         - Version big
+search      - Version search
+itinerary   - Version itinerary
+share       - Version share
 :hover      - Roll-over
 
 sg-filename:
@@ -45,5 +48,17 @@ Styleguide 2.5.1
 
   &.big {
     @extend %button-action--big;
+  }
+
+  &.search {
+    @extend %button-action--search;
+  }
+
+  &.itinerary {
+    @extend %button-action--itinerary;
+  }
+
+  &.share {
+    @extend %button-action--share;
   }
 }
