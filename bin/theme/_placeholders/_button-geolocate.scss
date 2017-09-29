@@ -11,8 +11,18 @@
   text-align: center;
   width: calc(1em + #{get-layout("block-spacing", "small") * 2});
 
-  &::before {
-    content: "O";
+  &::after {
+    @extend %icon-tools_geolocate--standalone;
+    background-position: center;
+    background-size: auto 100%;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
   }
 
   &--focus,

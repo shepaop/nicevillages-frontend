@@ -31,6 +31,14 @@
     border-left: get-layout("box-border", "std") solid rgba(get-color("grayscale", "light"), .25);
   }
 
+  &--is-input {
+    padding-right: get-layout("block-spacing", "small");
+
+    @include breakpoint("desktop-large") {
+      padding-right: get-layout("block-spacing", "std");
+    }
+  }
+
   &--focus,
   &--active {
     outline: none;
@@ -97,6 +105,7 @@
     &::after {
       @extend %icon-tools_share--standalone;
       position: absolute;
+      right: auto;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);

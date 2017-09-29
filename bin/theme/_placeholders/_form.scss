@@ -85,6 +85,7 @@
 
   &-submit {
     @extend %button-action;
+    @extend %button-action--is-input;
 
     &:hover {
       @extend %button-action--hover;

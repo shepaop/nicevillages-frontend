@@ -1,0 +1,106 @@
+$name: "teaser-village";
+
+/*
+#{$name}
+
+Actions utilisateur sur une seule ligne
+
+Markup:
+<div class="#{$name}">
+  <div class="#{$name}--content">
+    <div class="#{$name}--picture">
+      <img src="img/models/teaser-village.jpg" alt="" width="400" height="225" />
+    </div>
+    <div class="#{$name}--overlay">
+      <h2 class="#{$name}--title">
+        Civita di Bagnoregio
+        <img class="#{$name}--flag" src="img/models/it.jpg" alt="" width="75" height="50" />
+      </h2>
+      <h2 class="#{$name}--labels">
+        <a href="#" class="#{$name}--label">
+          <img src="img/models/lpbvi.png" alt="" width="296" height="160" />
+        </a>
+        <a href="#" class="#{$name}--label">
+          <img src="img/models/unesco.jpg" alt="" width="500" height="500" />
+        </a>
+      </h2>
+    </div>
+  </div>
+  <sg-insert>3.5</sg-insert>
+</div>
+
+sg-wrapper:
+<div style="width:35%;">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 3.6
+*/
+
+.#{$name} {
+
+  &--content {
+    position: relative;
+  }
+
+  &--picture {
+
+    img {
+      @extend %flex-image-from-mobile;
+    }
+  }
+
+  &--overlay {
+    @extend %overlay-from-mobile;
+    @extend %color-grayscale-light;
+  }
+
+  &--title {
+    @extend %typeface-heading;
+    @extend %fs-heading-up-2;
+    @extend %text-shadow-std;
+    line-height: 1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0) 100%);
+    padding: get-layout("block-spacing", "large") get-layout("block-spacing", "small") get-layout("block-spacing", "small");
+
+    @include breakpoint("desktop-large") {
+      padding: get-layout("block-spacing", "x-large") get-layout("block-spacing", "std") get-layout("block-spacing", "std");
+    }
+  }
+
+  &--flag {
+    display: inline-block;
+    height: .6em;
+    width: auto;
+    margin-left: get-layout("text-spacing", "std");
+  }
+
+  &--labels {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: get-layout("block-spacing", "small") get-layout("block-spacing", "small") 0 0;
+
+    @include breakpoint("desktop-large") {
+      padding: get-layout("block-spacing", "std") get-layout("block-spacing", "std") 0 0;
+    }
+  }
+
+  &--label {
+    display: inline-block;
+    margin-left: get-layout("block-spacing", "x-small");
+
+    img {
+      display: block;
+      width: auto;
+      height: 2.5em;
+    }
+  }
+}

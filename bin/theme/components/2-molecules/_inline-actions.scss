@@ -1,0 +1,30 @@
+$name: "inline-actions";
+
+/*
+#{$name}
+
+Actions utilisateur sur une seule ligne
+
+Markup:
+<div class="#{$name}">
+  <sg-insert>2.5.1-1</sg-insert>
+  <sg-insert>2.5.3</sg-insert>
+</div>
+
+Styleguide 3.5
+*/
+
+.#{$name} {
+  @extend %grid-strech-flex-from-mobile;
+  width: 100%;
+  flex-wrap: nowrap;
+  align-items: stretch;
+
+  .button-action {
+    flex: 3;
+  }
+
+  .button-geolocate {
+    flex: 1;
+  }
+}
