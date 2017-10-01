@@ -13,17 +13,16 @@ Markup:
     </div>
     <div class="#{$name}--overlay">
       <h2 class="#{$name}--title">
-        Civita di Bagnoregio
-        <img class="#{$name}--flag" src="img/models/it.jpg" alt="" width="75" height="50" />
+        Civita di Bagnoregio&nbsp;<img class="#{$name}--flag" src="img/models/it.jpg" alt="" width="75" height="50" />
       </h2>
-      <h2 class="#{$name}--labels">
+      <p class="#{$name}--labels">
         <a href="#" class="#{$name}--label">
           <img src="img/models/lpbvi.png" alt="" width="296" height="160" />
         </a>
         <a href="#" class="#{$name}--label">
           <img src="img/models/unesco.jpg" alt="" width="500" height="500" />
         </a>
-      </h2>
+      </p>
     </div>
   </div>
   <sg-insert>3.5</sg-insert>
@@ -38,6 +37,7 @@ Styleguide 3.6
 */
 
 .#{$name} {
+  overflow: hidden;
 
   &--content {
     position: relative;
@@ -60,6 +60,7 @@ Styleguide 3.6
     @extend %fs-heading-up-2;
     @extend %text-shadow-std;
     line-height: 1;
+    z-index: 1;
     position: absolute;
     left: 0;
     bottom: 0;

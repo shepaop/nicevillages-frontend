@@ -1,0 +1,66 @@
+$name: "list-villages";
+
+/*
+#{$name}
+
+Styleguide description
+
+sg-filename:
+#{$name}
+
+Markup:
+<div class="#{$name}">
+  <ul class="#{$name}--list">
+    <li class="#{$name}--item">
+      <sg-insert>3.6</sg-insert>
+    </li>
+    <li class="#{$name}--item">
+      <sg-insert>3.6</sg-insert>
+    </li>
+    <li class="#{$name}--item">
+      <sg-insert>3.6</sg-insert>
+    </li>
+    <li class="#{$name}--item">
+      <sg-insert>3.6</sg-insert>
+    </li>
+    <li class="#{$name}--item">
+      <sg-insert>3.6</sg-insert>
+    </li>
+    <li class="#{$name}--item">
+      <sg-insert>3.6</sg-insert>
+    </li>
+  </ul>
+</div>
+
+Styleguide 4.2
+*/
+
+.#{$name} {
+
+  &--list {
+    @extend %grid-strech-flex-from-tablet;
+  }
+
+  &--item {
+    @extend %grid-tablet-6;
+    @extend %grid-desktop-4;
+    @extend %grid-desktop-large-3;
+    box-sizing: border-box;
+    margin: get-layout("block-spacing", "std") 0;
+    padding: 0 get-layout("block-spacing", "std");
+
+    @include breakpoint("tablet") {
+      margin: (get-layout("block-spacing", "std") / 2) 0;
+    }
+
+    @include breakpoint("desktop") {
+      margin: (get-layout("block-spacing", "large") / 2) 0;
+      padding: 0 get-layout("block-spacing", "large");
+    }
+
+    @include breakpoint("desktop-large") {
+      margin: (get-layout("block-spacing", "x-large") / 2) 0;
+      padding: 0 get-layout("block-spacing", "x-large");
+    }
+  }
+}
