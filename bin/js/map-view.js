@@ -119,7 +119,7 @@ var $view = {};
             // On renseigne les champs du view filter
             var bounds = villagesMap.mapbox.getBounds();
 
-            var rounder = function(int){
+            var rounder = function (int) {
               int = Math.round(int * 1000000) / 1000000;
               return int;
             };
@@ -145,7 +145,7 @@ var $view = {};
           villagesMap.markers = [];
 
           // Ajouter un marker
-          villagesMap.addMarker = function(datas){
+          villagesMap.addMarker = function (datas) {
 
             var output = datas;
 
@@ -154,7 +154,7 @@ var $view = {};
               style: 'width:20px;height:20px;background:black;border-radius:10px;'
             });
 
-            $marker.click(function() {
+            $marker.click(function () {
               console.log(output.$elt[0]);
             });
 
@@ -179,7 +179,8 @@ var $view = {};
               villagesMap.mapbox
             );
 
-            // Création du bouton sur le $li pour pouvoir afficher le point sur la carte
+            // Création du bouton sur le $li pour pouvoir afficher le point sur
+            // la carte
             output.$button = $('<div />', {
               class: 'button button-action'
             }).text(
@@ -187,7 +188,7 @@ var $view = {};
             );
 
             // Click event
-            output.$button.click(function(){
+            output.$button.click(function () {
 
               // On affiche la popup
               output.marker.togglePopup();
@@ -210,15 +211,15 @@ var $view = {};
           };
 
           // Ajouter un marker
-          villagesMap.removeAllMarkers = function(){
+          villagesMap.removeAllMarkers = function () {
 
-            $.each(villagesMap.markers, function(i, datas){
+            $.each(villagesMap.markers, function (i, datas) {
               datas.marker.remove();
             });
           };
 
           // Reload des datas
-          villagesMap.reloadDatas = function(datas){
+          villagesMap.reloadDatas = function (datas) {
 
             // On supprime tous les markers
             villagesMap.removeAllMarkers();
@@ -228,13 +229,13 @@ var $view = {};
           };
 
           // Affichages des datas
-          villagesMap.displayDatas = function(datas){
+          villagesMap.displayDatas = function (datas) {
 
-            if(datas.length >= maxItemsDisplay) {
+            if (datas.length >= maxItemsDisplay) {
               villagesMap.displayMessage();
             }
 
-            $.each(datas, function(i, liDatas){
+            $.each(datas, function (i, liDatas) {
 
               // On insère un marker
               villagesMap.addMarker(liDatas);
@@ -242,7 +243,7 @@ var $view = {};
           };
 
           // Affichage d'un message concernant le nombre maximum affiché
-          villagesMap.displayMessage = function(){
+          villagesMap.displayMessage = function () {
 
             alert('// @todo: Reste à dynamiser => Le nombre de points possible d‘afficher a été dépassée');
           };

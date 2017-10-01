@@ -37,7 +37,8 @@
     "mixRgbColors": true,
     "gMap": true,
     "gb": true,
-    "Countdown": true
+    "Countdown": true,
+    "mapboxgl": true
   },
   "rules": {
     // Errors.

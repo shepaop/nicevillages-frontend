@@ -1,0 +1,232 @@
+$name: "heading-village";
+
+/*
+#{$name}
+
+Zone d'entête présentant un village
+
+default             - Version de base
+focus               - Version avec priorité aux images
+
+Markup:
+<div class="#{$name} {$modifiers}">
+  <ul class="#{$name}--picture">
+    <li>
+      <img src="img/models/heading-village.jpg" alt="" width="1920" height="1080" />
+    </li>
+    <li>
+      <img src="img/models/heading-village-2.jpg" alt="" width="1920" height="1080" />
+    </li>
+    <li>
+      <img src="img/models/heading-village-3.jpg" alt="" width="1920" height="1080" />
+    </li>
+  </ul>
+  <div class="#{$name}--overlay">
+    <div class="#{$name}--title">
+      <h1>
+        Azenhas do Mar&nbsp;<img class="#{$name}--flag" src="img/models/it.jpg" alt="" width="75" height="50" />
+      </h1>
+    </div>
+    <p class="#{$name}--labels">
+      <a href="#" class="#{$name}--label">
+        <img src="img/models/lpbvi.png" alt="" width="296" height="160" />
+      </a>
+      <a href="#" class="#{$name}--label">
+        <img src="img/models/unesco.jpg" alt="" width="500" height="500" />
+      </a>
+    </p>
+    <ul class="#{$name}--actions">
+      <li><sg-insert>2.5.4-2</sg-insert></li>
+      <li><sg-insert>2.5.4-1</sg-insert></li>
+      <li><sg-insert>2.5.4-1</sg-insert></li>
+    </ul>
+      <p class="#{$name}--itinerary">
+        <sg-insert>2.5.1-6</sg-insert>
+      </p>
+  </div>
+</div>
+
+Styleguide 3.7
+*/
+
+.#{$name} {
+  position: relative;
+  overflow: hidden;
+
+  &--content {
+    position: relative;
+  }
+
+  &--picture {
+
+    img {
+      @extend %flex-image-from-mobile;
+    }
+  }
+
+  &--overlay {
+    @extend %overlay-from-mobile;
+    @extend %color-grayscale-light;
+    background-color: rgba(0, 0, 0, .6);
+    transition: background $css-transition-std ease-in-out;
+  }
+
+  &--title {
+    @extend %typeface-heading;
+    @extend %fs-heading-up-5;
+    @extend %text-shadow-large;
+    line-height: 1;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 get-layout("block-spacing", "x-large");
+    transition: all $css-transition-std ease-in-out;
+  }
+
+  &--flag {
+    display: inline-block;
+    height: .5em;
+    width: auto;
+    margin-left: get-layout("text-spacing", "std");
+  }
+
+  &--labels {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: get-layout("block-spacing", "small") get-layout("block-spacing", "small") 0 0;
+
+    @include breakpoint("tablet") {
+      padding: get-layout("block-spacing", "std") get-layout("block-spacing", "std") 0 0;
+    }
+
+    @include breakpoint("desktop") {
+      padding: get-layout("block-spacing", "large") get-layout("block-spacing", "large") 0 0;
+    }
+
+    @include breakpoint("desktop-large") {
+      padding: get-layout("block-spacing", "x-large") get-layout("block-spacing", "x-large") 0 0;
+    }
+  }
+
+  &--label {
+    display: inline-block;
+    margin-left: get-layout("block-spacing", "x-small");
+
+    img {
+      display: block;
+      width: auto;
+      height: 2.5em;
+    }
+  }
+
+  &--toggler {
+    @extend %fs-std-root;
+    display: block;
+    text-align: center;
+    margin-top: get-layout("block-spacing", "std");
+  }
+
+  &--itinerary {
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 get-layout("block-spacing", "small") get-layout("block-spacing", "small") 0;
+
+    @include breakpoint("tablet") {
+      padding: 0 get-layout("block-spacing", "std") get-layout("block-spacing", "std") 0;
+    }
+
+    @include breakpoint("desktop") {
+      padding: 0 get-layout("block-spacing", "large") get-layout("block-spacing", "large") 0;
+    }
+
+    @include breakpoint("desktop-large") {
+      padding: 0 get-layout("block-spacing", "x-large") get-layout("block-spacing", "x-large") 0;
+    }
+  }
+
+  &--actions {
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: get-layout("block-spacing", "small") 0 0 get-layout("block-spacing", "small");
+
+    @include breakpoint("tablet") {
+      padding: get-layout("block-spacing", "std") 0 0 get-layout("block-spacing", "std");
+    }
+
+    @include breakpoint("desktop") {
+      padding: get-layout("block-spacing", "large") 0 0 get-layout("block-spacing", "large");
+    }
+
+    @include breakpoint("desktop-large") {
+      padding: get-layout("block-spacing", "x-large") 0 0 get-layout("block-spacing", "x-large");
+    }
+
+    li {
+      display: inline-block;
+      margin-right: get-layout("text-spacing", "std");
+    }
+  }
+
+  &.focus {
+
+    .#{$name} {
+
+      &--overlay {
+        background-color: rgba(0, 0, 0, 0);
+      }
+
+      &--title {
+        @extend %fs-heading-up-4;
+        z-index: 1;
+        left: 0;
+        bottom: 0;
+        text-align: left;
+        transform: translate(0, 0);
+        background-image: linear-gradient(to top, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0) 100%);
+        padding: get-layout("block-spacing", "small");
+
+        @include breakpoint("tablet") {
+          padding: get-layout("block-spacing", "std");
+        }
+
+        @include breakpoint("desktop") {
+          padding: get-layout("block-spacing", "large");
+        }
+
+        @include breakpoint("desktop-large") {
+          padding: get-layout("block-spacing", "x-large");
+        }
+      }
+
+      &--actions,
+      &--itinerary,
+      &--toggler {
+        display: none;
+      }
+
+      .responsive-slider--pager {
+
+        &-prev,
+        &-next {
+          z-index: 4;
+        }
+      }
+    }
+  }
+}

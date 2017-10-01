@@ -57,6 +57,11 @@ $name: "responsive-slider";
 
     &-prev,
     &-next {
+      @extend %color-grayscale-light;
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
       cursor: pointer;
 
       &.off {
@@ -67,37 +72,35 @@ $name: "responsive-slider";
 
     &-prev {
       content: "prev";
+      left: get-layout("block-spacing", "small");
+
+      @include breakpoint("tablet") {
+        left: get-layout("block-spacing", "std");
+      }
+
+      @include breakpoint("desktop") {
+        left: get-layout("block-spacing", "large");
+      }
+
+      @include breakpoint("desktop-large") {
+        left: get-layout("block-spacing", "x-large");
+      }
     }
 
     &-next {
       content: "next";
-    }
+      right: get-layout("block-spacing", "small");
 
-    &-dots {
-      display: block;
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-      text-align: center;
-    }
-
-    &-dot {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      cursor: pointer;
-      border-radius: 50%;
-      background: get-color("grayscale", "strong");
-      margin: 0 get-layout("text-spacing", "small");
-
-      &:hover,
-      &:active {
-        background: get-color("grayscale", "dark");
+      @include breakpoint("tablet") {
+        right: get-layout("block-spacing", "std");
       }
 
-      &.current {
-        cursor: default;
-        background: get-color("brand", "first");
+      @include breakpoint("desktop") {
+        right: get-layout("block-spacing", "large");
+      }
+
+      @include breakpoint("desktop-large") {
+        right: get-layout("block-spacing", "x-large");
       }
     }
   }
