@@ -1,0 +1,179 @@
+$name: "content-tabs";
+
+/*
+#{$name}
+
+Onglets de contenu
+
+sg-filename:
+#{$name}
+
+Markup:
+<div class="#{$name}">
+  <ul>
+    <li class="active poi">Points of interest</li>
+    <li class="info">More info</li>
+    <li class="urls">Usefull links</li>
+    <li class="related">Related villages</li>
+    <li class="comments">Comments</li>
+    <li class="share button-action share"></li>
+  </ul>
+</div>
+
+Styleguide 3.8
+*/
+
+.#{$name} {
+  @extend %typeface-heading;
+  @extend %fs-heading-up-1;
+  @extend %background-grayscale-soft;
+  line-height: 1;
+
+  ul {
+    @extend %table-list-from-mobile;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  li {
+    @extend %box-border-std;
+    @extend %border-grayscale-dark;
+    @extend %color-grayscale-strong;
+    width: 18.5%;
+    vertical-align: middle;
+    cursor: pointer;
+    border-top: 0;
+    border-right: 0;
+    border-left-color: get-color("grayscale", "medium");
+    position: relative;
+    padding: get-layout("block-spacing", "x-small") get-layout("block-spacing", "x-small") get-layout("block-spacing", "x-small") (get-layout("block-spacing", "std") + (get-layout("block-spacing", "x-small") * 2));
+
+    @include breakpoint("desktop") {
+      padding: get-layout("block-spacing", "small") get-layout("block-spacing", "small") get-layout("block-spacing", "small") (get-layout("block-spacing", "large") + (get-layout("block-spacing", "small") * 2));
+    }
+
+    @include breakpoint("desktop-large") {
+      padding: get-layout("block-spacing", "std") get-layout("block-spacing", "std") get-layout("block-spacing", "std") (get-layout("block-spacing", "x-large") + (get-layout("block-spacing", "std") * 2));
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: get-layout("block-spacing", "x-small");
+      top: 50%;
+      transform: translateY(-50%);
+      display: inline-block;
+      width: get-layout("block-spacing", "std");
+      height: get-layout("block-spacing", "std");
+      background-size: auto 100%;
+      background-position: center;
+
+      @include breakpoint("desktop") {
+        left: get-layout("block-spacing", "small");
+        width: get-layout("block-spacing", "large");
+        height: get-layout("block-spacing", "large");
+      }
+
+      @include breakpoint("desktop-large") {
+        left: get-layout("block-spacing", "std");
+        width: get-layout("block-spacing", "x-large");
+        height: get-layout("block-spacing", "x-large");
+      }
+    }
+
+    &:hover,
+    &:active {
+      @extend %color-brand-first;
+    }
+
+    &.poi {
+
+      &::before {
+        @extend %icon-tools_marker;
+      }
+
+      &:hover,
+      &.active {
+
+        &::before {
+          @extend %icon-tools_marker-highlight;
+        }
+      }
+    }
+
+    &.info {
+
+      &::before {
+        @extend %icon-tools_info;
+      }
+
+      &:hover,
+      &.active {
+
+        &::before {
+          @extend %icon-tools_info-highlight;
+        }
+      }
+    }
+
+    &.urls {
+
+      &::before {
+        @extend %icon-tools_link;
+      }
+
+      &:hover,
+      &.active {
+
+        &::before {
+          @extend %icon-tools_link-highlight;
+        }
+      }
+    }
+
+    &.related {
+
+      &::before {
+        @extend %icon-tools_roads;
+      }
+
+      &:hover,
+      &.active {
+
+        &::before {
+          @extend %icon-tools_roads-highlight;
+        }
+      }
+    }
+
+    &.comments {
+
+      &::before {
+        @extend %icon-tools_comment;
+      }
+
+      &:hover,
+      &.active {
+
+        &::before {
+          @extend %icon-tools_comment-highlight;
+        }
+      }
+    }
+
+    &.share {
+      display: table-cell;
+      border: 0;
+    }
+
+    &.active {
+      @extend %color-brand-first;
+      @extend %background-grayscale-light;
+      border-bottom: 0;
+
+      & + li {
+        border-left-color: get-color("grayscale", "dark");
+      }
+    }
+  }
+}
