@@ -25,12 +25,18 @@
         $togglerButton.text(Drupal.t('Pictures'));
 
         // Slider
-        var $pictures = $('.' + cssClass + '--picture', $target);
+        var $pictures = $('.' + cssClass + '--picture > ul', $target);
+        $('> li', $pictures).show();
         $pictures.responsiveSlider({
           autoPlay: true,
           autoPlayDuration: 5,
-          mode: 'fade',
-          sliderRange: 1
+          mode: 'slide',
+          sliderRange: 1,
+          responsive: {
+            960: {
+              mode: 'fade'
+            }
+          }
         });
 
         // Click behavior

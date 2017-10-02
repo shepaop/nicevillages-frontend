@@ -45,6 +45,14 @@ Styleguide 3.6
 
   &--picture {
 
+    li {
+      display: none;
+
+      &:first-child {
+        display: block;
+      }
+    }
+
     img {
       @extend %flex-image-from-mobile;
     }

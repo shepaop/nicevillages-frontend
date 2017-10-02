@@ -61,8 +61,12 @@ $name: "responsive-slider";
       z-index: 1;
       position: absolute;
       top: 50%;
-      transform: translateY(-50%);
       cursor: pointer;
+      transform: translateY(-50%);
+      width: get-layout("block-spacing", "x-large");
+      height: get-layout("block-spacing", "x-large");
+      background-size: auto 100%;
+      background-position: center;
 
       &.off {
         cursor: default;
@@ -71,7 +75,7 @@ $name: "responsive-slider";
     }
 
     &-prev {
-      content: "prev";
+      @extend %icon-tools_arrow-left;
       left: get-layout("block-spacing", "small");
 
       @include breakpoint("tablet") {
@@ -88,7 +92,7 @@ $name: "responsive-slider";
     }
 
     &-next {
-      content: "next";
+      @extend %icon-tools_arrow-right;
       right: get-layout("block-spacing", "small");
 
       @include breakpoint("tablet") {

@@ -10,17 +10,23 @@ focus               - Version avec priorité aux images
 
 Markup:
 <div class="#{$name} {$modifiers}">
-  <ul class="#{$name}--picture">
-    <li>
-      <img src="img/models/heading-village.jpg" alt="" width="1920" height="1080" />
-    </li>
-    <li>
-      <img src="img/models/heading-village-2.jpg" alt="" width="1920" height="1080" />
-    </li>
-    <li>
-      <img src="img/models/heading-village-3.jpg" alt="" width="1920" height="1080" />
-    </li>
+  <ul class="#{$name}--actions">
+    <li><sg-insert>2.5.4-2</sg-insert></li>
+    <li><sg-insert>2.5.4-1</sg-insert></li>
   </ul>
+  <div class="#{$name}--picture">
+    <ul>
+      <li>
+        <img src="img/models/heading-village.jpg" alt="" width="1920" height="1080" />
+      </li>
+      <li>
+        <img src="img/models/heading-village-2.jpg" alt="" width="1920" height="1080" />
+      </li>
+      <li>
+        <img src="img/models/heading-village-3.jpg" alt="" width="1920" height="1080" />
+      </li>
+    </ul>
+  </div>
   <div class="#{$name}--overlay">
     <div class="#{$name}--title">
       <h1>
@@ -35,14 +41,9 @@ Markup:
         <img src="img/models/unesco.jpg" alt="" width="500" height="500" />
       </a>
     </p>
-    <ul class="#{$name}--actions">
-      <li><sg-insert>2.5.4-2</sg-insert></li>
-      <li><sg-insert>2.5.4-1</sg-insert></li>
-      <li><sg-insert>2.5.4-1</sg-insert></li>
-    </ul>
-      <p class="#{$name}--itinerary">
-        <sg-insert>2.5.1-6</sg-insert>
-      </p>
+    <p class="#{$name}--itinerary">
+      <sg-insert>2.5.1-6</sg-insert>
+    </p>
   </div>
 </div>
 
@@ -58,6 +59,7 @@ Styleguide 3.7
   }
 
   &--picture {
+    position: relative;
 
     img {
       @extend %flex-image-from-mobile;
@@ -65,27 +67,45 @@ Styleguide 3.7
   }
 
   &--overlay {
-    @extend %overlay-from-mobile;
     @extend %color-grayscale-light;
-    background-color: rgba(0, 0, 0, .6);
-    transition: background $css-transition-std ease-in-out;
+
+    @extend %overlay-from-tablet;
+    @include breakpoint("tablet") {
+      background-color: rgba(0, 0, 0, .6);
+      transition: background $css-transition-std ease-out;
+    }
   }
 
   &--title {
     @extend %typeface-heading;
     @extend %fs-heading-up-5;
     @extend %text-shadow-large;
-    line-height: 1;
-    z-index: 1;
-    position: absolute;
-    left: 50%;
-    bottom: 50%;
-    transform: translate(-50%, 50%);
-    width: 100%;
+    @extend %color-grayscale-light;
+    @extend %background-grayscale-dark;
     text-align: center;
-    box-sizing: border-box;
-    padding: 0 get-layout("block-spacing", "x-large");
-    transition: all $css-transition-std ease-in-out;
+    padding: get-layout("block-spacing", "std");
+
+    @include breakpointBetween("mobile", "tablet") {
+      text-shadow: none;
+    }
+
+    @include breakpoint("tablet") {
+      background-color: transparent;
+      line-height: 1;
+      z-index: 1;
+      position: absolute;
+      left: 50%;
+      bottom: 50%;
+      transform: translate(-50%, 50%);
+      width: 100%;
+      box-sizing: border-box;
+      transition: all $css-transition-std ease-out;
+      padding: 0 get-layout("block-spacing", "large");
+    }
+
+    @include breakpoint("desktop") {
+      padding: 0 get-layout("block-spacing", "x-large");
+    }
   }
 
   &--flag {
@@ -98,12 +118,14 @@ Styleguide 3.7
   &--labels {
     position: absolute;
     right: 0;
-    top: 0;
+    bottom: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    padding: get-layout("block-spacing", "small") get-layout("block-spacing", "small") 0 0;
+    padding: 0 get-layout("block-spacing", "small") get-layout("block-spacing", "small") 0;
 
     @include breakpoint("tablet") {
+      bottom: auto;
+      top: 0;
       padding: get-layout("block-spacing", "std") get-layout("block-spacing", "std") 0 0;
     }
 
@@ -129,21 +151,24 @@ Styleguide 3.7
 
   &--toggler {
     @extend %fs-std-root;
-    display: block;
+    display: none;
     text-align: center;
     margin-top: get-layout("block-spacing", "std");
+
+    @include breakpoint("tablet") {
+      display: block;
+    }
   }
 
   &--itinerary {
-    z-index: 2;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    max-width: 100%;
-    box-sizing: border-box;
-    padding: 0 get-layout("block-spacing", "small") get-layout("block-spacing", "small") 0;
 
     @include breakpoint("tablet") {
+      z-index: 2;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: auto;
+      max-width: 100%;
       padding: 0 get-layout("block-spacing", "std") get-layout("block-spacing", "std") 0;
     }
 
@@ -154,18 +179,31 @@ Styleguide 3.7
     @include breakpoint("desktop-large") {
       padding: 0 get-layout("block-spacing", "x-large") get-layout("block-spacing", "x-large") 0;
     }
+
+    .button-action {
+      @extend %button-action--block;
+
+      @include breakpoint("tablet") {
+        display: inline-block;
+      }
+    }
   }
 
   &--actions {
-    z-index: 3;
-    position: absolute;
-    left: 0;
-    top: 0;
-    max-width: 100%;
-    box-sizing: border-box;
-    padding: get-layout("block-spacing", "small") 0 0 get-layout("block-spacing", "small");
+    @extend %grid-strech-flex-from-mobile;
+    @extend %background-grayscale-dark;
+    flex-wrap: nowrap;
+    padding: get-layout("block-spacing", "small");
 
     @include breakpoint("tablet") {
+      display: block;
+      z-index: 3;
+      position: absolute;
+      left: 0;
+      top: 0;
+      max-width: 100%;
+      box-sizing: border-box;
+      background-color: transparent;
       padding: get-layout("block-spacing", "std") 0 0 get-layout("block-spacing", "std");
     }
 
@@ -180,6 +218,28 @@ Styleguide 3.7
     li {
       display: inline-block;
       margin-right: get-layout("text-spacing", "std");
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .responsive-slider--pager {
+
+    &-prev,
+    &-next {
+
+      @include breakpoint("tablet") {
+        opacity: .3;
+      }
+
+      &.off {
+
+        @include breakpoint("tablet") {
+          opacity: .15;
+        }
+      }
     }
   }
 
@@ -188,20 +248,22 @@ Styleguide 3.7
     .#{$name} {
 
       &--overlay {
-        background-color: rgba(0, 0, 0, 0);
+
+        @include breakpoint("tablet") {
+          background-color: rgba(0, 0, 0, 0);
+        }
       }
 
       &--title {
         @extend %fs-heading-up-4;
-        z-index: 1;
-        left: 0;
-        bottom: 0;
-        text-align: left;
-        transform: translate(0, 0);
-        background-image: linear-gradient(to top, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0) 100%);
-        padding: get-layout("block-spacing", "small");
 
         @include breakpoint("tablet") {
+          z-index: 1;
+          left: 0;
+          bottom: 0;
+          text-align: left;
+          transform: translate(0, 0);
+          background-image: linear-gradient(to top, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0) 100%);
           padding: get-layout("block-spacing", "std");
         }
 
@@ -217,14 +279,28 @@ Styleguide 3.7
       &--actions,
       &--itinerary,
       &--toggler {
-        display: none;
+
+        @include breakpoint("tablet") {
+          display: none;
+        }
       }
+    }
 
-      .responsive-slider--pager {
+    .responsive-slider--pager {
 
-        &-prev,
-        &-next {
+      &-prev,
+      &-next {
+
+        @include breakpoint("tablet") {
+          opacity: 1;
           z-index: 4;
+        }
+
+        &.off {
+
+          @include breakpoint("tablet") {
+            opacity: .5;
+          }
         }
       }
     }
