@@ -1,0 +1,25 @@
+$name: "map-filters";
+
+/*
+#{$name}
+
+Filtre de la carte
+
+sg-filename:
+#{$name}
+
+Markup:
+<form class="#{$name} action="#" method="get">
+  <input type="text" data-drupal-selector="edit-field-latitude-value-min" />
+  <input type="text" data-drupal-selector="edit-field-latitude-value-max" />
+  <input type="text" data-drupal-selector="edit-field-longitude-value-min" />
+  <input type="text" data-drupal-selector="edit-field-longitude-value-max" />
+  <button type="submit" class="button-action big block search">Rechercher</button>
+</form>
+
+Styleguide 4.3
+*/
+
+.#{$name} {
+  //
+}

@@ -11,7 +11,7 @@ sg-filename:
 Markup:
 <div class="#{$name}">
   <div class="#{$name}--aside">
-    Filters
+    <sg-insert>4.3</sg-insert>
   </div>
   <div class="#{$name}--section">
     <div class="#{$name}--map-canvas" id="mapTest"></div>
@@ -20,29 +20,34 @@ Markup:
     </div>
   </div>
 </div>
-<script>
-  var $mapTest = jQuery('#mapTest');
-  mapboxgl.accessToken = 'pk.eyJ1Ijoic2hlcGFvcDA3IiwiYSI6ImNqNjE5NThxZzByOHUzM21yd2Vtdjd2NmUifQ.KWUdy8hQ5LcLZvrQeoj1Zw';
-  var mapTest = new mapboxgl.Map({
-    container: $mapTest[0],
-    style: 'mapbox://styles/mapbox/outdoors-v10',
-    zoom: 8,
-    minZoom: 4,
-    maxZoom: 17,
-    dragRotate: false,
-    center: [0, 0],
-    logoPosition: 'top-left'
-  });
-  mapTest.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
-  mapTest.addControl(new mapboxgl.GeolocateControl({
-    positionOptions: {
-      enableHighAccuracy: true
-    },
-    trackUserLocation: true
-  }));
-</script>
 
-Styleguide 4.3
+sg-wrapper:
+<div>
+  <sg-wrapper-content/>
+  <script>
+    var $mapTest = jQuery('#mapTest');
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2hlcGFvcDA3IiwiYSI6ImNqNjE5NThxZzByOHUzM21yd2Vtdjd2NmUifQ.KWUdy8hQ5LcLZvrQeoj1Zw';
+    var mapTest = new mapboxgl.Map({
+      container: $mapTest[0],
+      style: 'mapbox://styles/mapbox/outdoors-v10',
+      zoom: 8,
+      minZoom: 4,
+      maxZoom: 17,
+      dragRotate: false,
+      center: [0, 0],
+      logoPosition: 'top-left'
+    });
+    mapTest.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+    mapTest.addControl(new mapboxgl.GeolocateControl({
+      positionOptions: {
+        enableHighAccuracy: true
+      },
+      trackUserLocation: true
+    }));
+  </script>
+</div>
+
+Styleguide 4.4
 */
 
 .#{$name} {
@@ -77,5 +82,18 @@ Styleguide 4.3
     @extend %grid-desktop-3;
     @extend %grid-desktop-large-4;
     @extend %background-grayscale-dark;
+  }
+
+  &--marker {
+    @extend %icon-map_std--standalone;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .9;
+    }
+
+    &:active {
+      opacity: .75;
+    }
   }
 }

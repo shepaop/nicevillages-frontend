@@ -5,19 +5,20 @@ var $view = {};
 (function ($) {
 
   var maxItemsDisplay = 400;
-  var mapboxView = function (context, settings) {
+  var searchVillages = function (context, settings) {
 
     if (typeof context === 'undefined') {
       context = document;
     }
 
-    var cssClass = 'view-villages';
+    var cssClass = 'search-villages';
     var $targets = $('.' + cssClass, context);
 
     $targets.each(function () {
       var $target = $(this);
 
-      $view.form = $('.views-exposed-form', $target);
+      $view.formHolder = $('.' + cssClass + '--filters', $target);
+      $view.form = $('form', $view.formHolder);
       $view.latMin = $('input[data-drupal-selector="edit-field-latitude-value-min"]', $view.form);
       $view.latMax = $('input[data-drupal-selector="edit-field-latitude-value-max"]', $view.form);
       $view.lngMin = $('input[data-drupal-selector="edit-field-longitude-value-min"]', $view.form);
@@ -25,12 +26,28 @@ var $view = {};
 
       $view.submit = $('input[type="submit"]', $view.form);
 
-      $view.list = $('.view-content ul:first > li', $target);
+      $view.list = $('.list-villages ul.list-villages--list > li', $target);
       villagesDatas = getDatasFromHtml(
         $view.list, {
-          title: '.field--name-title',
-          lat: '.field--name-field-latitude',
-          lng: '.field--name-field-longitude'
+          title: '.teaser-village--title',
+          html: {
+            rule: '.teaser-village--content',
+            cfg: {
+              html: true
+            }
+          },
+          lat: {
+            rule: 'meta[itemprop="latitude"]',
+            cfg: {
+              attribute: 'content'
+            }
+          },
+          lng: {
+            rule: 'meta[itemprop="longitude"]',
+            cfg: {
+              attribute: 'content'
+            }
+          }
         }
       );
       $.each(villagesDatas, function (i, datas) {
@@ -50,19 +67,22 @@ var $view = {};
           villagesMap = {};
 
           // Création du wrapper
-          villagesMap.$wrapper = $('<div />', {
-            style: 'position:relative;'
-          });
+          var cssPrefix = 'map-search';
+          villagesMap.$wrapper = $('.' + cssPrefix + '--section', $target);
 
           // Création du holder
           villagesMap.$holder = $('<div />', {
-            style: 'height:500px;'
+            class: cssPrefix + '--map-canvas'
+          });
+
+          // Création du wrappedu bouton
+          villagesMap.$buttonWrapper = $('<div />', {
+            class: cssPrefix + '--search'
           });
 
           // Création du bouton
           villagesMap.$button = $('<div />', {
-            style: 'position:absolute;right:20px;top:20px;',
-            class: 'button button action'
+            class: 'button-action search'
           }).text(
             Drupal.t('Search here')
           ).hide();
@@ -74,10 +94,11 @@ var $view = {};
           });
 
           // Insertion dans le DOM HTML
-          $target.before(
-            villagesMap.$wrapper.append(
-              villagesMap.$holder
-            ).append(
+          villagesMap.$wrapper.empty();
+          villagesMap.$wrapper.append(
+            villagesMap.$holder
+          ).append(
+            villagesMap.$buttonWrapper.append(
               villagesMap.$button
             )
           );
@@ -151,18 +172,14 @@ var $view = {};
 
             // Custom marker
             var $marker = $('<div />', {
-              style: 'width:20px;height:20px;background:black;border-radius:10px;'
-            });
-
-            $marker.click(function () {
-              console.log(output.$elt[0]);
+              class: cssPrefix + '--marker'
             });
 
             // Instanciation de la popup
             output.popup = new mapboxgl.Popup().setLngLat(
               [output.lng, output.lat]
             ).setHTML(
-              '<h1>' + output.title + '</h1>'
+              '<div class="teaser-village">' + output.html + '</div>'
             ).addTo(
               villagesMap.mapbox
             );
@@ -170,7 +187,7 @@ var $view = {};
             // Instanciation du marker
             output.marker = new mapboxgl.Marker(
               $marker[0],
-              [0, 10]
+              [0, 20]
             ).setLngLat(
               [output.lng, output.lat]
             ).setPopup(
@@ -181,11 +198,11 @@ var $view = {};
 
             // Création du bouton sur le $li pour pouvoir afficher le point sur
             // la carte
+            $('.button-geolocate', output.$elt).remove();
             output.$button = $('<div />', {
-              class: 'button button-action'
-            }).text(
-              '//@todo: Reste à skinner'
-            );
+              class: 'button-geolocate',
+              title: Drupal.t('Reveal on the map')
+            });
 
             // Click event
             output.$button.click(function () {
@@ -194,12 +211,16 @@ var $view = {};
               output.marker.togglePopup();
 
               // On remonte en haut de la carte
-              animatedScrollTo(villagesMap.$wrapper);
+              animatedScrollTo(villagesMap.$wrapper, function () {
+
+                // On centre la carte
+                villagesMap.mapbox.setCenter([output.lng, output.lat]);
+              });
             });
 
             // Insertion dans le DOM HTML
             output.$button.appendTo(
-              output.$elt
+              $('.inline-actions:first', output.$elt)
             );
 
             // On ajoute à la liste
@@ -262,8 +283,8 @@ var $view = {};
     });
   };
 
-  Drupal.behaviors.mapboxView = {
-    attach: mapboxView
+  Drupal.behaviors.searchVillages = {
+    attach: searchVillages
   };
 
 })(jQuery);

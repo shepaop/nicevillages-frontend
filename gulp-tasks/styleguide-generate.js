@@ -18,8 +18,8 @@ module.exports = function (gulp, plugins, params) {
           extraHead: [
             // Attention, la version de jQuery peut faire planter le styleguide
             // '<style type="text/css">@import url('+ params.styleguide.skin +');</style>',
-            '<style type="text/css">@import url(css/styles.min.css);</style>',
             '<style type="text/css">@import url(https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css);</style>',
+            '<style type="text/css">@import url(css/styles.min.css);</style>',
             '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>',
             '<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>',
             '<script src="https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js"></script>',
