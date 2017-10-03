@@ -90,13 +90,15 @@
 }
 
 .mapboxgl-popup-close-button {
+  @extend %text-overflow-from-mobile;
   @extend %icon-ui_close-std--standalone;
   border-radius: 0;
   padding: 0;
   right: auto;
   top: auto;
-  left: calc(100% - #{get-layout("block-spacing", "x-small")});
-  bottom: calc(100% - #{get-layout("block-spacing", "x-small")});
+  z-index: 1;
+  left: calc(100% - #{get-layout("block-spacing", "small")});
+  bottom: calc(100% - #{get-layout("block-spacing", "small")});
 }
 
 .mapboxgl-popup-close-button:hover {
