@@ -10,6 +10,7 @@ sg-filename:
 
 Markup:
 <div class="#{$name}">
+  <h2 class="#{$name}--title">6 village(s) found</h2>
   <ul class="#{$name}--list">
     <li class="#{$name}--item">
       <sg-insert>3.6</sg-insert>
@@ -36,6 +37,39 @@ Styleguide 4.2
 */
 
 .#{$name} {
+  padding-top: get-layout("block-spacing", "std");
+
+  @include breakpoint("tablet") {
+    padding-bottom: (get-layout("block-spacing", "std") / 2);
+  }
+
+  @include breakpoint("desktop") {
+    padding-top: get-layout("block-spacing", "large");
+    padding-bottom: (get-layout("block-spacing", "large") / 2);
+  }
+
+  @include breakpoint("desktop-large") {
+    padding-top: get-layout("block-spacing", "x-large");
+    padding-bottom: (get-layout("block-spacing", "x-large") / 2);
+  }
+
+  &--title {
+    @extend %fs-std-up-2;
+    text-align: center;
+    margin-bottom: get-layout("block-spacing", "std");
+
+    @include breakpoint("tablet") {
+      margin-bottom: (get-layout("block-spacing", "std") / 2);
+    }
+
+    @include breakpoint("desktop") {
+      margin-bottom: (get-layout("block-spacing", "large") / 2);
+    }
+
+    @include breakpoint("desktop-large") {
+      margin-bottom: (get-layout("block-spacing", "x-large") / 2);
+    }
+  }
 
   &--list {
     @extend %grid-strech-flex-from-tablet;
