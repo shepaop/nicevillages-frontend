@@ -1,0 +1,105 @@
+$name: "content-tab-system";
+
+/*
+#{$name}
+
+Contenu avec system d'onglets
+
+sg-filename:
+#{$name}
+
+Markup:
+<div class="#{$name}">
+  <h2 class="#{$name}--heading poi">Points of Interest</h2>
+  <div class="#{$name}--section">
+    <sg-insert>4.7</sg-insert>
+  </div>
+  <h2 class="#{$name}--heading info">More info</h2>
+  <div class="#{$name}--section">
+    <sg-insert>3.1</sg-insert>
+  </div>
+  <h2 class="#{$name}--heading urls">Usefull links</h2>
+  <div class="#{$name}--section">
+    <sg-insert>4.6</sg-insert>
+  </div>
+  <h2 class="#{$name}--heading related">Related villages</h2>
+  <div class="#{$name}--section">
+    <sg-insert>4.2</sg-insert>
+  </div>
+  <h2 class="#{$name}--heading comments">Comments</h2>
+  <div class="#{$name}--section">
+    <sg-insert>5.3.17</sg-insert>
+  </div>
+  <h2 class="#{$name}--heading button-action share"></h2>
+</div>
+
+Styleguide 4.8
+*/
+
+.#{$name} {
+
+  &--heading {
+    @extend %typeface-heading;
+    @extend %fs-heading-up-1;
+    @extend %box-border-bottom-std;
+    @extend %border-grayscale-soft;
+    position: relative;
+    padding: get-layout("text-spacing", "small") (get-layout("text-spacing", "std") + get-icon("icon-tools_arrow-right-dark")) get-layout("text-spacing", "small") get-layout("text-spacing", "std");
+
+    &::before {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      @extend %icon-tools_arrow-right-dark--standalone;
+    }
+
+    &.expanded {
+
+      &::before {
+        @extend %icon-tools_arrow-down-dark--standalone;
+      }
+    }
+
+    &.button-action {
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &--section {
+    padding: get-layout("block-spacing", "std");
+
+    @include breakpoint("tablet") {
+      padding: get-layout("block-spacing", "large");
+    }
+
+    @include breakpoint("desktop") {
+      padding: get-layout("block-spacing", "x-large");
+    }
+  }
+
+  .list-villages--item {
+    @extend %grid-tablet-12;
+    @extend %grid-desktop-6;
+    @extend %grid-desktop-large-4;
+    margin: get-layout("block-spacing", "small") 0;
+    padding: 0 get-layout("block-spacing", "small");
+
+    @include breakpoint("tablet") {
+      margin: (get-layout("block-spacing", "small") / 2) 0;
+    }
+
+    @include breakpoint("desktop") {
+      margin: (get-layout("block-spacing", "std") / 2) 0;
+      padding: 0 get-layout("block-spacing", "std");
+    }
+
+    @include breakpoint("desktop-large") {
+      margin: (get-layout("block-spacing", "large") / 2) 0;
+      padding: 0 get-layout("block-spacing", "large");
+    }
+  }
+}

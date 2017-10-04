@@ -26,7 +26,7 @@ Styleguide 4.7
   &--map {
     @extend %background-grayscale-soft;
     position: relative;
-    height: 33vh;
+    height: 50vh;
     margin-bottom: get-layout("block-spacing", "std");
 
     .ajax-loader {
@@ -37,7 +37,24 @@ Styleguide 4.7
     }
   }
 
+  &--map-canvas {
+    height: 50vh;
+  }
+
   &--content {
     //
+  }
+
+  &--marker {
+    @extend %icon-map_std--standalone;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .9;
+    }
+
+    &:active {
+      opacity: .75;
+    }
   }
 }
