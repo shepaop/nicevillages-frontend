@@ -58,7 +58,7 @@ Styleguide 4.8
     position: relative;
     padding: get-layout("text-spacing", "small") (get-layout("text-spacing", "std") + get-icon("icon-tools_arrow-right-dark")) get-layout("text-spacing", "small") get-layout("text-spacing", "std");
 
-    @include breakpoint("tablet") {
+    @include breakpoint("desktop") {
       display: none;
     }
 
@@ -78,9 +78,11 @@ Styleguide 4.8
     }
 
     &.button-action {
-      @extend %button-action--block;
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
 
-      @include breakpoint("tablet") {
+      @include breakpoint("desktop") {
         display: none;
       }
 
