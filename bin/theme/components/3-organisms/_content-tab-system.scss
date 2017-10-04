@@ -59,7 +59,7 @@ Styleguide 4.8
     padding: get-layout("text-spacing", "small") (get-layout("text-spacing", "std") + get-icon("icon-tools_arrow-right-dark")) get-layout("text-spacing", "small") get-layout("text-spacing", "std");
 
     @include breakpoint("tablet") {
-      display: none !important;
+      display: none;
     }
 
     &::before {
@@ -78,6 +78,11 @@ Styleguide 4.8
     }
 
     &.button-action {
+      @extend %button-action--block;
+
+      @include breakpoint("tablet") {
+        display: none;
+      }
 
       &::before {
         display: none;
@@ -101,25 +106,29 @@ Styleguide 4.8
     }
   }
 
-  .list-villages--item {
-    @extend %grid-tablet-12;
-    @extend %grid-desktop-6;
-    @extend %grid-desktop-large-4;
-    margin: get-layout("block-spacing", "small") 0;
-    padding: 0 get-layout("block-spacing", "small");
+  .list-villages {
+    padding-top: 0;
 
-    @include breakpoint("tablet") {
-      margin: (get-layout("block-spacing", "small") / 2) 0;
-    }
+    &--item {
+      @extend %grid-tablet-12;
+      @extend %grid-desktop-6;
+      @extend %grid-desktop-large-4;
+      margin: get-layout("block-spacing", "small") 0;
+      padding: 0 get-layout("block-spacing", "small");
 
-    @include breakpoint("desktop") {
-      margin: (get-layout("block-spacing", "std") / 2) 0;
-      padding: 0 get-layout("block-spacing", "std");
-    }
+      @include breakpoint("tablet") {
+        margin: (get-layout("block-spacing", "small") / 2) 0;
+      }
 
-    @include breakpoint("desktop-large") {
-      margin: (get-layout("block-spacing", "large") / 2) 0;
-      padding: 0 get-layout("block-spacing", "large");
+      @include breakpoint("desktop") {
+        margin: (get-layout("block-spacing", "std") / 2) 0;
+        padding: 0 get-layout("block-spacing", "std");
+      }
+
+      @include breakpoint("desktop-large") {
+        margin: (get-layout("block-spacing", "large") / 2) 0;
+        padding: 0 get-layout("block-spacing", "large");
+      }
     }
   }
 }

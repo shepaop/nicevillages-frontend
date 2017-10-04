@@ -100,6 +100,9 @@
       // On déclare le setTimeout de l'application du resize
       var resize;
 
+      // On mémorise la largeur du viewport à chaque réinitialisation du slider
+      var viewportWidth;
+
       // PRIVATE FUNCTIONS
       // Initialisation de l'accordéon
       var init = function () {
@@ -332,9 +335,15 @@
 
         clearTimeout(resize);
         resize = setTimeout(function () {
+          var instantViewport = getViewportWidth();
+          if (instantViewport !== viewportWidth) {
 
-          _self.destroy();
-          init();
+            // Si la largeur a changé, on mémorise la nouvelle largeur et on ajuste le margin-top de la greybox
+            viewportWidth = instantViewport;
+
+            _self.destroy();
+            init();
+          }
 
         }, (options._resizeTimeout * 1000));
 

@@ -31,7 +31,7 @@
           scrollTo: true,
           tabs: false,
           responsive: {
-            640: {
+            960: {
               tabs: function (tabs) {
                 tabs.addClass('content-tabs');
                 $('> li', tabs).each(function (i) {

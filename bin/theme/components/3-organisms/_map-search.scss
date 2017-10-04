@@ -58,9 +58,9 @@ Styleguide 4.4
   }
 
   &--section {
-    @extend %grid-tablet-10;
-    @extend %grid-desktop-9;
-    @extend %grid-desktop-large-8;
+    @extend %grid-tablet-7;
+    @extend %grid-desktop-8;
+    @extend %grid-desktop-large-9;
     @extend %background-grayscale-soft;
     position: relative;
   }
@@ -77,9 +77,9 @@ Styleguide 4.4
   }
 
   &--aside {
-    @extend %grid-tablet-2;
-    @extend %grid-desktop-3;
-    @extend %grid-desktop-large-4;
+    @extend %grid-tablet-5;
+    @extend %grid-desktop-4;
+    @extend %grid-desktop-large-3;
     @extend %background-grayscale-dark;
   }
 

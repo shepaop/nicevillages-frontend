@@ -177,7 +177,9 @@ var $view = {};
             });
 
             // Instanciation de la popup
-            output.popup = new mapboxgl.Popup().setLngLat(
+            output.popup = new mapboxgl.Popup({
+              closeButton: false
+            }).setLngLat(
               [output.lng, output.lat]
             ).setHTML(
               '<div class="teaser-village">' + output.html + '</div>'

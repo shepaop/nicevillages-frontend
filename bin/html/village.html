@@ -11,16 +11,18 @@
 </head>
 
 <body>
-    @@include("includes/_header.html")
-    @@include("components/heading-village.default.html")
-    <div class="two-cols">
-        <section class="two-cols--section">
-            @@include("components/content-tab-system.html")
-        </section>
-        <aside class="two-cols--aside">
-            aside
-        </aside>
+    <div class="container">
+        @@include("includes/_header.html")
+        @@include("components/heading-village.default.html")
+        <div class="two-cols">
+            <section class="two-cols--section">
+                @@include("components/content-tab-system.html")
+            </section>
+            <aside class="two-cols--aside">
+                aside
+            </aside>
+        </div>
+        @@include("includes/_footer.html")
     </div>
-    @@include("includes/_footer.html")
 </body>
 </html>
