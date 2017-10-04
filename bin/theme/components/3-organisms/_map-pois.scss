@@ -1,0 +1,43 @@
+$name: "map-pois";
+
+/*
+#{$name}
+
+Affichage sur une carte des POIs
+
+sg-filename:
+#{$name}
+
+Markup:
+<div class="#{$name}">
+  <div class="#{$name}--map">
+    <div class="ajax-loader"></div>
+  </div>
+  <div class="#{$name}--content">
+    <sg-insert>4.6</sg-insert>
+  </div>
+</div>
+
+Styleguide 4.7
+*/
+
+.#{$name} {
+
+  &--map {
+    @extend %background-grayscale-soft;
+    position: relative;
+    height: 33vh;
+    margin-bottom: get-layout("block-spacing", "std");
+
+    .ajax-loader {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &--content {
+    //
+  }
+}

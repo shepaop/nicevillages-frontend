@@ -18,7 +18,7 @@ Markup:
       <div class="ajax-loader"></div>
     </div>
   </div>
-  <div class="#{$name}--list">
+  <div class="#{$name}--content">
     <sg-insert>4.2</sg-insert>
   </div>
 </div>
@@ -28,7 +28,11 @@ Styleguide 4.5
 
 .#{$name} {
 
-  &--list {
+  &--filters {
+    //
+  }
+
+  &--content {
     //
   }
 }

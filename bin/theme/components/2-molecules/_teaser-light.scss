@@ -1,0 +1,46 @@
+$name: "teaser-light";
+
+/*
+#{$name}
+
+Petit teaser standard
+
+sg-filename:
+#{$name}
+
+Markup:
+<div class="#{$name}">
+  <div class="#{$name}--actions">
+    <sg-insert>2.5.3</sg-insert>
+  </div>
+  <h2 class="#{$name}--title">Lorem ipsum dolor sit amet</h2>
+  <meta itemprop="latitude" content="0" />
+  <meta itemprop="longitude" content="0" />
+  <p class="#{$name}--desc">
+    Lorem ipsum dolor sit amet lorem ipsum dolor sit amet  lorem ipsum dolor sit amet  lorem ipsum dolor sit amet.
+  </p>
+</div>
+
+Styleguide 3.9
+*/
+
+.#{$name} {
+  overflow: auto;
+
+  &--title {
+    @extend %typeface-heading;
+    @extend %fs-heading-root;
+    margin-bottom: get-layout("text-spacing", "small");
+  }
+
+  &--desc {
+    @extend %typeface-std;
+    @extend %fs-std-root;
+  }
+
+  &--actions {
+    float: right;
+    margin-left: get-layout("block-spacing", "std");
+    margin-bottom: get-layout("block-spacing", "std");
+  }
+}

@@ -51,7 +51,6 @@ Styleguide 4.4
 */
 
 .#{$name} {
-  //
 
   @extend %grid-strech-flex-from-tablet;
   @include breakpoint("tablet") {

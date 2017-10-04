@@ -1,0 +1,74 @@
+$name: "light-list";
+
+/*
+#{$name}
+
+Liste de petits teaser standards
+
+sg-filename:
+#{$name}
+
+Markup:
+<div class="#{$name}">
+  <ul class="#{$name}--list">
+    <li>
+      <sg-insert>3.9</sg-insert>
+    </li>
+    <li>
+      <sg-insert>3.9</sg-insert>
+    </li>
+    <li>
+      <sg-insert>3.9</sg-insert>
+    </li>
+    <li>
+      <sg-insert>3.9</sg-insert>
+    </li>
+  </ul>
+</div>
+
+Styleguide 4.6
+*/
+
+.#{$name} {
+
+  &--list {
+    counter-reset: #{$name};
+    @extend %grid-strech-flex-from-tablet;
+
+    li {
+      @extend %grid-tablet-6;
+      counter-increment: #{$name};
+      box-sizing: border-box;
+      margin-bottom: get-layout("block-spacing", "std");
+
+      &:nth-child(2n+1) {
+
+        @include breakpoint("tablet") {
+          padding-right: get-layout("block-spacing", "std");
+        }
+      }
+
+      &:nth-child(2n) {
+
+        @include breakpoint("tablet") {
+          padding-left: get-layout("block-spacing", "std");
+        }
+      }
+    }
+  }
+
+  .teaser-light {
+    position: relative;
+    padding-left: get-layout("block-spacing", "x-large");
+
+    &--title {
+
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "0" counter(#{$name}) ".";
+      }
+    }
+  }
+}
