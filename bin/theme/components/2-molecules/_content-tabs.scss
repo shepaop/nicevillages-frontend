@@ -9,31 +9,24 @@ sg-filename:
 #{$name}
 
 Markup:
-<div class="#{$name}">
-  <ul>
-    <li class="active poi">Points of interest</li>
-    <li class="info">More info</li>
-    <li class="urls">Usefull links</li>
-    <li class="related">Related villages</li>
-    <li class="comments">Comments</li>
-    <li class="button-action share"></li>
-  </ul>
-</div>
+<ul class="#{$name}">
+  <li class="active poi">Points of interest</li>
+  <li class="info">More info</li>
+  <li class="urls">Usefull links</li>
+  <li class="related">Related villages</li>
+  <li class="comments">Comments</li>
+  <li class="button-action share"></li>
+</ul>
 
 Styleguide 3.8
 */
 
 .#{$name} {
   @extend %typeface-heading;
-  @extend %fs-heading-up-1;
+  @extend %fs-heading-root;
   @extend %background-grayscale-soft;
+  @extend %table-list-from-mobile;
   line-height: 1;
-
-  ul {
-    @extend %table-list-from-mobile;
-    flex-wrap: nowrap;
-    justify-content: center;
-  }
 
   li {
     @extend %box-border-std;

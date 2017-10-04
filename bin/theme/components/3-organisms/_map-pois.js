@@ -64,6 +64,7 @@
           maxZoom: 17,
           dragRotate: false,
           center: [0, 0],
+          scrollZoom: false,
           logoPosition: 'top-left'
         });
         poisMap.mapbox.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
@@ -125,7 +126,7 @@
             output.marker.togglePopup();
 
             // On remonte en haut de la carte
-            animatedScrollTo(poisMap.$wrapper, function () {
+            animatedScrollTo(poisMap.$mapHolder, function () {
 
               // On centre la carte
               poisMap.mapbox.setCenter([output.lng, output.lat]);

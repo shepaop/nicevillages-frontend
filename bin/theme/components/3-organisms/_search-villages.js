@@ -113,6 +113,7 @@ var $view = {};
             maxZoom: 17,
             dragRotate: false,
             center: [0, 0],
+            scrollZoom: false,
             logoPosition: 'top-left'
           });
           villagesMap.mapbox.addControl(new mapboxgl.NavigationControl(), 'bottom-right');

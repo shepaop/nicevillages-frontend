@@ -8,6 +8,9 @@ Zone d'entête présentant un village
 default             - Version de base
 focus               - Version avec priorité aux images
 
+sg-filename:
+#{$name}
+
 Markup:
 <div class="#{$name} {$modifiers}">
   <ul class="#{$name}--actions">
@@ -61,7 +64,7 @@ Styleguide 3.7
   &--picture {
     position: relative;
     overflow: hidden;
-    max-height: 90vh;
+    max-height: 75vh;
 
     img {
       @extend %flex-image-from-mobile;
