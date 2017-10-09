@@ -1,0 +1,82 @@
+$name: "menu-simple";
+
+/*
+#{$name}
+
+Menu de liens simples
+
+default         - Version de base
+inlined         - Version en ligne
+
+sg-filename:
+#{$name}
+
+Markup:
+<div class="#{$name} {$modifiers}">
+  <h3 class="#{$name}--title">Menu title</h3>
+  <ul class="#{$name}--list">
+    <li><a href="#">Argentina</a></li>
+    <li><a href="#">Spain</a></li>
+    <li><a href="#">France</a></li>
+    <li><a href="#">Italy</a></li>
+    <li><a href="#">Czesh Republic</a></li>
+    <li><a href="#">Slovenia</a></li>
+    <li><a href="#">Tunisia</a></li>
+    <li><a href="#">Morroco</a></li>
+    <li><a href="#">Brazil</a></li>
+    <li><a href="#">Swiss</a></li>
+    <li><a href="#">Montenegro</a></li>
+    <li><a href="#">Serbia</a></li>
+    <li><a href="#">Germany</a></li>
+    <li><a href="#">United Kingdom</a></li>
+    <li><a href="#">Poland</a></li>
+    <li><a href="#">Chile</a></li>
+    <li><a href="#">Urugay</a></li>
+    <li><a href="#">Canada</a></li>
+  </ul>
+</div>
+
+Styleguide 3.11
+*/
+
+.#{$name} {
+
+  &--title {
+    @extend %typeface-std;
+    @extend %fs-std-up-1;
+    line-height: 1;
+    margin-bottom: get-layout("text-spacing", "large");
+  }
+
+  &--list {
+    @extend %typeface-std;
+    @extend %fs-std-root;
+
+    li {
+      margin-bottom: get-layout("text-spacing", "std");
+
+      &::before {
+        content: "- ";
+      }
+    }
+
+    a {
+
+      &:hover,
+      &:active {
+        @extend %color-brand-first;
+      }
+    }
+  }
+
+  &.inlined {
+
+    .#{$name}--list {
+      @extend %inline-list-from-mobile;
+
+      li {
+        margin-right: get-layout("text-spacing", "std");
+      }
+    }
+  }
+}

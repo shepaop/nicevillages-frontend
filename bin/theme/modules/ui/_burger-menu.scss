@@ -116,13 +116,20 @@ $open-class: 'open';
   }
 
   &--trigger {
+    @extend %typeface-std;
+    @extend %fs-std-root;
     cursor: pointer;
-    @extend %background-grayscale-soft;
-    @extend %icon-ui_burger-menu-std--standalone;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    padding-right: get-layout("text-spacing", "small") + get-icon("icon-ui_burger-menu-std", "width");
 
-    &.#{$open-class} {
-      @extend %background-grayscale-dark;
-      @extend %icon-ui_burger-menu-action;
+    &::after {
+      @extend %icon-ui_burger-menu-reversed--standalone;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }

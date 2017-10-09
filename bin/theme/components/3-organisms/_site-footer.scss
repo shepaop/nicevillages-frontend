@@ -1,0 +1,105 @@
+$name: "site-footer";
+
+/*
+#{$name}
+
+Footer
+
+sg-filename:
+#{$name}
+
+Markup:
+<footer class="#{$name}">
+  <div class="#{$name}--main">
+    <sg-insert>3.11-2</sg-insert>
+  </div>
+  <div class="#{$name}--aside">
+    <sg-insert>3.11-1</sg-insert>
+  </div>
+  <div class="#{$name}--brand">
+    <sg-insert>3.10</sg-insert>
+  </div>
+</footer>
+
+Styleguide 4.10
+*/
+
+.#{$name} {
+  @extend %background-grayscale-dark;
+  @extend %color-grayscale-medium;
+  @extend %grid-strech-flex-from-tablet;
+
+  @include breakpoint("tablet") {
+    align-items: flex-start;
+  }
+
+  &--main {
+    @extend %grid-tablet-6;
+    @extend %grid-desktop-6;
+    box-sizing: border-box;
+    padding: get-layout("block-spacing", "std");
+
+    @include breakpoint("desktop") {
+      flex-wrap: nowrap;
+      padding: get-layout("block-spacing", "large");
+    }
+
+    @include breakpoint("desktop-large") {
+      padding: get-layout("block-spacing", "x-large");
+    }
+  }
+
+  &--aside {
+    @extend %grid-tablet-6;
+    @extend %grid-desktop-3;
+    box-sizing: border-box;
+    padding: get-layout("block-spacing", "std");
+
+    @include breakpoint("desktop") {
+      padding: get-layout("block-spacing", "large");
+    }
+
+    @include breakpoint("desktop-large") {
+      padding: get-layout("block-spacing", "x-large");
+    }
+  }
+
+  &--brand {
+    @extend %grid-tablet-12;
+    @extend %grid-desktop-3;
+    box-sizing: border-box;
+    padding: get-layout("block-spacing", "std");
+
+    @include breakpoint("tablet") {
+      align-self: center;
+      padding: 0 get-layout("block-spacing", "large") get-layout("block-spacing", "large") get-layout("block-spacing", "large");
+    }
+
+    @include breakpoint("desktop") {
+      padding: get-layout("block-spacing", "large");
+    }
+
+    @include breakpoint("desktop-large") {
+      padding: get-layout("block-spacing", "x-large");
+    }
+  }
+
+  .site-branding {
+
+    &--name {
+      @extend %fs-heading-up-1;
+
+      &::before {
+        margin-right: get-layout("text-spacing", "std");
+      }
+
+      &::after {
+        margin-left: get-layout("text-spacing", "std");
+      }
+    }
+
+    &--baseline {
+      @extend %fs-heading-down-1;
+    }
+  }
+}

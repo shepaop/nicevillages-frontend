@@ -187,7 +187,11 @@ $name: "greybox";
     background-position: right center;
 
     &:hover {
-      @extend %icon-ui_close-action;
+      opacity: .9;
+    }
+
+    &:active {
+      opacity: .8;
     }
   }
 

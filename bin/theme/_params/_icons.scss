@@ -2013,7 +2013,7 @@ $icon-system: map-merge($icon-system, $unit);
 
 // Référentiel des icônes
 $unit: (
-  'icon-ui_burger-menu-action': (
+  'icon-ui_burger-menu-reversed': (
     'width': 32px,
     'height': 32px
   )
@@ -2039,21 +2039,21 @@ $icon-system: map-merge($icon-system, $unit);
   }
 
   $styleguide-icons: $styleguide-icons + "<div style=\"text-align:center;font-size:12px;min-height:#{$styleguide-item-box-height};min-width:#{$styleguide-item-box-width};margin-right:#{$styleguide-item-box-margin};margin-bottom:#{$styleguide-item-box-margin};display:inline-block;vertical-align:top;\">";
-  $styleguide-icons: $styleguide-icons + "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iIzMyOEZDRSIgZD0iTTMuMyAyNS40aDI1LjN2LTMuOUgzLjN2My45em0wLTcuOWgyNS4zdi0zLjhIMy4zdjMuOHptMC0xMC45djMuOGgyNS4zVjYuNkgzLjN6Ii8+PC9zdmc+\" alt=\"\" width=\"32\" height=\"32\" style=\"background-color:#e0dfdf;\" />";
+  $styleguide-icons: $styleguide-icons + "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMy4zIDI1LjRoMjUuM3YtMy45SDMuM3YzLjl6bTAtNy45aDI1LjN2LTMuOEgzLjN2My44em0wLTEwLjl2My44aDI1LjNWNi42SDMuM3oiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjZmZmIi8+PC9zdmc+\" alt=\"\" width=\"32\" height=\"32\" style=\"background-color:#e0dfdf;\" />";
   $styleguide-icons: $styleguide-icons + "<div style=\"margin-top:#{$styleguide-item-box-margin};\">";
-  $styleguide-icons: $styleguide-icons + "icon-ui_burger-menu-action";
+  $styleguide-icons: $styleguide-icons + "icon-ui_burger-menu-reversed";
   $styleguide-icons: $styleguide-icons + "</div>";
   $styleguide-icons: $styleguide-icons + "</div>";
 }
 
-%icon-ui_burger-menu-action {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iIzMyOEZDRSIgZD0iTTMuMyAyNS40aDI1LjN2LTMuOUgzLjN2My45em0wLTcuOWgyNS4zdi0zLjhIMy4zdjMuOHptMC0xMC45djMuOGgyNS4zVjYuNkgzLjN6Ii8+PC9zdmc+");
+%icon-ui_burger-menu-reversed {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMy4zIDI1LjRoMjUuM3YtMy45SDMuM3YzLjl6bTAtNy45aDI1LjN2LTMuOEgzLjN2My44em0wLTEwLjl2My44aDI1LjNWNi42SDMuM3oiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjZmZmIi8+PC9zdmc+");
   background-repeat: no-repeat;
 }
 
-%icon-ui_burger-menu-action--standalone {
+%icon-ui_burger-menu-reversed--standalone {
   content: "";
-  @extend %icon-ui_burger-menu-action;
+  @extend %icon-ui_burger-menu-reversed;
   display: inline-block;
   width: 32px;
   height: 32px;
@@ -2088,7 +2088,7 @@ $icon-system: map-merge($icon-system, $unit);
   }
 
   $styleguide-icons: $styleguide-icons + "<div style=\"text-align:center;font-size:12px;min-height:#{$styleguide-item-box-height};min-width:#{$styleguide-item-box-width};margin-right:#{$styleguide-item-box-margin};margin-bottom:#{$styleguide-item-box-margin};display:inline-block;vertical-align:top;\">";
-  $styleguide-icons: $styleguide-icons + "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iIzMzMyIgZD0iTTMuMyAyNS40aDI1LjN2LTMuOUgzLjN2My45em0wLTcuOWgyNS4zdi0zLjhIMy4zdjMuOHptMC0xMC45djMuOGgyNS4zVjYuNkgzLjN6Ii8+PC9zdmc+\" alt=\"\" width=\"32\" height=\"32\" style=\"background-color:#e0dfdf;\" />";
+  $styleguide-icons: $styleguide-icons + "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMy4zIDI1LjRoMjUuM3YtMy45SDMuM3YzLjl6bTAtNy45aDI1LjN2LTMuOEgzLjN2My44em0wLTEwLjl2My44aDI1LjNWNi42SDMuM3oiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjMmY3NWJkIi8+PC9zdmc+\" alt=\"\" width=\"32\" height=\"32\" style=\"background-color:#e0dfdf;\" />";
   $styleguide-icons: $styleguide-icons + "<div style=\"margin-top:#{$styleguide-item-box-margin};\">";
   $styleguide-icons: $styleguide-icons + "icon-ui_burger-menu-std";
   $styleguide-icons: $styleguide-icons + "</div>";
@@ -2096,7 +2096,7 @@ $icon-system: map-merge($icon-system, $unit);
 }
 
 %icon-ui_burger-menu-std {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iIzMzMyIgZD0iTTMuMyAyNS40aDI1LjN2LTMuOUgzLjN2My45em0wLTcuOWgyNS4zdi0zLjhIMy4zdjMuOHptMC0xMC45djMuOGgyNS4zVjYuNkgzLjN6Ii8+PC9zdmc+");
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMy4zIDI1LjRoMjUuM3YtMy45SDMuM3YzLjl6bTAtNy45aDI1LjN2LTMuOEgzLjN2My44em0wLTEwLjl2My44aDI1LjNWNi42SDMuM3oiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjMmY3NWJkIi8+PC9zdmc+");
   background-repeat: no-repeat;
 }
 
@@ -2111,7 +2111,7 @@ $icon-system: map-merge($icon-system, $unit);
 
 // Référentiel des icônes
 $unit: (
-  'icon-ui_close-action': (
+  'icon-ui_close-reversed': (
     'width': 32px,
     'height': 32px
   )
@@ -2137,21 +2137,21 @@ $icon-system: map-merge($icon-system, $unit);
   }
 
   $styleguide-icons: $styleguide-icons + "<div style=\"text-align:center;font-size:12px;min-height:#{$styleguide-item-box-height};min-width:#{$styleguide-item-box-width};margin-right:#{$styleguide-item-box-margin};margin-bottom:#{$styleguide-item-box-margin};display:inline-block;vertical-align:top;\">";
-  $styleguide-icons: $styleguide-icons + "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBmaWxsPSIjMzI4RkNFIiBkPSJNMjYuNSAyOC4xbDItMS45TDE4LjMgMTYgMjguNSA1LjhsLTItMS45LTEwLjEgMTAuMkw1LjUgMy4ybC0yIDEuOUwxNC40IDE2IDMuNSAyNi45bDIgMS45IDEwLjktMTAuOXoiLz48L3N2Zz4=\" alt=\"\" width=\"32\" height=\"32\" style=\"background-color:#e0dfdf;\" />";
+  $styleguide-icons: $styleguide-icons + "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMjYuNSAyOC4xbDItMS45TDE4LjMgMTYgMjguNSA1LjhsLTItMS45LTEwLjEgMTAuMkw1LjUgMy4ybC0yIDEuOUwxNC40IDE2IDMuNSAyNi45bDIgMS45IDEwLjktMTAuOXoiLz48L3N2Zz4=\" alt=\"\" width=\"32\" height=\"32\" style=\"background-color:#e0dfdf;\" />";
   $styleguide-icons: $styleguide-icons + "<div style=\"margin-top:#{$styleguide-item-box-margin};\">";
-  $styleguide-icons: $styleguide-icons + "icon-ui_close-action";
+  $styleguide-icons: $styleguide-icons + "icon-ui_close-reversed";
   $styleguide-icons: $styleguide-icons + "</div>";
   $styleguide-icons: $styleguide-icons + "</div>";
 }
 
-%icon-ui_close-action {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBmaWxsPSIjMzI4RkNFIiBkPSJNMjYuNSAyOC4xbDItMS45TDE4LjMgMTYgMjguNSA1LjhsLTItMS45LTEwLjEgMTAuMkw1LjUgMy4ybC0yIDEuOUwxNC40IDE2IDMuNSAyNi45bDIgMS45IDEwLjktMTAuOXoiLz48L3N2Zz4=");
+%icon-ui_close-reversed {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMjYuNSAyOC4xbDItMS45TDE4LjMgMTYgMjguNSA1LjhsLTItMS45LTEwLjEgMTAuMkw1LjUgMy4ybC0yIDEuOUwxNC40IDE2IDMuNSAyNi45bDIgMS45IDEwLjktMTAuOXoiLz48L3N2Zz4=");
   background-repeat: no-repeat;
 }
 
-%icon-ui_close-action--standalone {
+%icon-ui_close-reversed--standalone {
   content: "";
-  @extend %icon-ui_close-action;
+  @extend %icon-ui_close-reversed;
   display: inline-block;
   width: 32px;
   height: 32px;
@@ -2186,7 +2186,7 @@ $icon-system: map-merge($icon-system, $unit);
   }
 
   $styleguide-icons: $styleguide-icons + "<div style=\"text-align:center;font-size:12px;min-height:#{$styleguide-item-box-height};min-width:#{$styleguide-item-box-width};margin-right:#{$styleguide-item-box-margin};margin-bottom:#{$styleguide-item-box-margin};display:inline-block;vertical-align:top;\">";
-  $styleguide-icons: $styleguide-icons + "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBmaWxsPSIjMzMzIiBkPSJNMjYuNSAyOC4xbDItMS45TDE4LjMgMTYgMjguNSA1LjhsLTItMS45LTEwLjEgMTAuMkw1LjUgMy4ybC0yIDEuOUwxNC40IDE2IDMuNSAyNi45bDIgMS45IDEwLjktMTAuOXoiLz48L3N2Zz4=\" alt=\"\" width=\"32\" height=\"32\" style=\"background-color:#e0dfdf;\" />";
+  $styleguide-icons: $styleguide-icons + "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBmaWxsPSIjMmY3NWJkIiBkPSJNMjYuNSAyOC4xbDItMS45TDE4LjMgMTYgMjguNSA1LjhsLTItMS45LTEwLjEgMTAuMkw1LjUgMy4ybC0yIDEuOUwxNC40IDE2IDMuNSAyNi45bDIgMS45IDEwLjktMTAuOXoiLz48L3N2Zz4=\" alt=\"\" width=\"32\" height=\"32\" style=\"background-color:#e0dfdf;\" />";
   $styleguide-icons: $styleguide-icons + "<div style=\"margin-top:#{$styleguide-item-box-margin};\">";
   $styleguide-icons: $styleguide-icons + "icon-ui_close-std";
   $styleguide-icons: $styleguide-icons + "</div>";
@@ -2194,7 +2194,7 @@ $icon-system: map-merge($icon-system, $unit);
 }
 
 %icon-ui_close-std {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBmaWxsPSIjMzMzIiBkPSJNMjYuNSAyOC4xbDItMS45TDE4LjMgMTYgMjguNSA1LjhsLTItMS45LTEwLjEgMTAuMkw1LjUgMy4ybC0yIDEuOUwxNC40IDE2IDMuNSAyNi45bDIgMS45IDEwLjktMTAuOXoiLz48L3N2Zz4=");
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBmaWxsPSIjMmY3NWJkIiBkPSJNMjYuNSAyOC4xbDItMS45TDE4LjMgMTYgMjguNSA1LjhsLTItMS45LTEwLjEgMTAuMkw1LjUgMy4ybC0yIDEuOUwxNC40IDE2IDMuNSAyNi45bDIgMS45IDEwLjktMTAuOXoiLz48L3N2Zz4=");
   background-repeat: no-repeat;
 }
 

@@ -1,0 +1,201 @@
+$name: "site-header";
+
+/*
+#{$name}
+
+Zone header
+
+sg-filename:
+#{$name}
+
+Markup:
+<header class="#{$name}">
+  <div class="#{$name}--brand">
+    <sg-insert>3.10</sg-insert>
+  </div>
+  <div class="#{$name}--left">
+    <a href="#" class="button-contribute">Add a new village</a>
+  </div>
+  <div class="#{$name}--right">
+    <div class="burger-menu--trigger">Menu</div>
+    <a class="#{$name}--register" href="#">Sign in</a>
+    <a href="#" class="button-contribute">Sign up</a>
+  </div>
+</header>
+
+Styleguide 4.9
+*/
+
+.#{$name} {
+  @extend %color-grayscale-light;
+  @extend %grid-strech-flex-from-mobile;
+  @extend %background-brand-first;
+  z-index: 1;
+  position: relative;
+  padding: get-layout("block-spacing", "std");
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .25);
+  flex-direction: column;
+
+  @include breakpoint("tablet") {
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  &--left {
+    order: 3;
+    @extend %grid-tablet-3;
+    box-sizing: border-box;
+    text-align: left;
+    display: none;
+
+    @include breakpoint("tablet") {
+      order: 1;
+      display: block;
+      padding: get-layout("block-spacing", "std") 0 get-layout("block-spacing", "std") get-layout("block-spacing", "std");
+    }
+
+    @include breakpoint("desktop") {
+      padding: get-layout("block-spacing", "large") 0 get-layout("block-spacing", "large") get-layout("block-spacing", "large");
+    }
+
+    @include breakpoint("desktop-large") {
+      padding: get-layout("block-spacing", "x-large") 0 get-layout("block-spacing", "x-large") get-layout("block-spacing", "x-large");
+    }
+  }
+
+  &--right {
+    order: 2;
+    @extend %grid-tablet-3;
+    @extend %grid-strech-flex-from-mobile;
+    @extend %grid-strech-flex-from-desktop-large;
+    flex-wrap: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: right;
+
+    @include breakpoint("tablet") {
+      order: 3;
+      display: block;
+      padding: get-layout("block-spacing", "std") get-layout("block-spacing", "std") get-layout("block-spacing", "std") 0;
+    }
+
+    @include breakpoint("desktop") {
+      padding: get-layout("block-spacing", "large") get-layout("block-spacing", "large") get-layout("block-spacing", "large") 0;
+    }
+
+    @include breakpoint("desktop-large") {
+      align-items: center;
+      flex-wrap: nowrap;
+      padding: get-layout("block-spacing", "x-large") get-layout("block-spacing", "x-large") get-layout("block-spacing", "x-large") 0;
+    }
+
+    .button-contribute {
+      white-space: nowrap;
+    }
+  }
+
+  &--brand {
+    order: 1;
+    @extend %grid-tablet-6;
+
+    @include breakpoint("tablet") {
+      order: 2;
+    }
+  }
+
+  &--register {
+    @extend %typeface-heading;
+    @extend %fs-heading-root;
+    flex: 1;
+    display: block;
+    line-height: 1;
+    white-space: nowrap;
+    text-align: left;
+    padding: get-layout("text-spacing", "small") 0;
+    margin-right: get-layout("text-spacing", "std");
+
+    @include breakpoint("tablet") {
+      padding: get-layout("text-spacing", "std");
+      margin-right: 0;
+      text-align: center;
+    }
+
+    @include breakpoint("desktop") {
+      display: inline-block;
+      padding: 0;
+      margin-right: get-layout("text-spacing", "std");
+    }
+
+    &:hover,
+    &:active {
+      @extend %color-ui-contribute;
+    }
+  }
+
+  .button-contribute {
+    display: block;
+    flex: 2;
+
+    @include breakpoint("desktop") {
+      flex: auto;
+    }
+
+    @include breakpoint("desktop") {
+      display: inline-block;
+    }
+
+    @include breakpoint("desktop") {
+      flex: 0;
+    }
+  }
+
+  .site-branding {
+    @extend %text-shadow-small;
+    padding-bottom: get-layout("block-spacing", "std");
+
+    @include breakpoint("tablet") {
+      padding-bottom: 0;
+    }
+  }
+
+  .burger-menu {
+
+    &--trigger {
+      @extend %text-overflow-from-mobile;
+      order: 3;
+      flex: 0;
+      display: inline-block;
+      margin-left: get-layout("text-spacing", "std");
+      min-height: get-icon("icon-ui_burger-menu-std", "height");
+
+      @include breakpoint("tablet") {
+        text-indent: 0;
+        overflow: visible;
+        order: 1;
+        flex: auto;
+        display: block;
+        text-align: right;
+        margin-left: 0;
+        min-height: 0;
+      }
+
+      @include breakpointBetween("tablet", "desktop-large") {
+        z-index: 1;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding-top: get-layout("block-spacing", "x-small");
+        padding-bottom: get-layout("block-spacing", "x-small");
+      }
+
+      @include breakpoint("desktop-large") {
+        order: 3;
+        display: inline-block;
+        text-align: right;
+        margin-left: get-layout("text-spacing", "std");
+      }
+    }
+  }
+}

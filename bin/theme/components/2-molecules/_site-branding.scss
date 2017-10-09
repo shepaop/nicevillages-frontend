@@ -1,0 +1,76 @@
+$name: "site-branding";
+
+/*
+#{$name}
+
+Marque du site
+
+sg-filename:
+#{$name}
+
+Markup:
+<h1 class="#{$name}">
+  <span class="#{$name}--name">Nice Villages</span>
+  <span class="#{$name}--baseline">Explore villages that are worth seeing</span>
+</h1>
+
+Styleguide 3.10
+*/
+
+.#{$name} {
+  text-align: center;
+
+  &--name {
+    @extend %typeface-heading;
+    @extend %fs-heading-up-3;
+    line-height: 1;
+    display: block;
+    white-space: nowrap;
+
+    &::before,
+    &::after {
+      content: "—";
+      display: inline-block;
+    }
+
+    &::before {
+      margin-right: get-layout("block-spacing", "small");
+
+      @include breakpoint("tablet") {
+        margin-right: get-layout("block-spacing", "std");
+      }
+
+      @include breakpoint("desktop") {
+        margin-right: get-layout("block-spacing", "large");
+      }
+
+      @include breakpoint("desktop-large") {
+        margin-right: get-layout("block-spacing", "x-large");
+      }
+    }
+
+    &::after {
+      margin-left: get-layout("block-spacing", "small");
+
+      @include breakpoint("tablet") {
+        margin-left: get-layout("block-spacing", "std");
+      }
+
+      @include breakpoint("desktop") {
+        margin-left: get-layout("block-spacing", "large");
+      }
+
+      @include breakpoint("desktop-large") {
+        margin-left: get-layout("block-spacing", "x-large");
+      }
+    }
+  }
+
+  &--baseline {
+    @extend %typeface-std;
+    @extend %fs-heading-root;
+    line-height: 1;
+    display: block;
+    margin-top: .3333em;
+  }
+}
