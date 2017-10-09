@@ -24,6 +24,11 @@ var $view = {};
       $view.lngMin = $('input[data-drupal-selector="edit-field-longitude-value-min"]', $view.form);
       $view.lngMax = $('input[data-drupal-selector="edit-field-longitude-value-max"]', $view.form);
 
+      $view.latMin.parents('.form-item:first').hide();
+      $view.latMax.parents('.form-item:first').hide();
+      $view.lngMin.parents('.form-item:first').hide();
+      $view.lngMax.parents('.form-item:first').hide();
+
       $view.submit = $('input[type="submit"]', $view.form);
 
       $view.list = $('.list-villages ul.list-villages--list > li', $target);

@@ -9,52 +9,100 @@ sg-filename:
 #{$name}
 
 Markup:
-<form class="#{$name} action="#" method="get">
-  <div class="form-item">
-    <label>Note des internautes Min:</label>
-    <input type="text" value="1" />
+<div class="#{$name}">
+  <h2 class="#{$name}--title">
+    Search<span class="#{$name}--smaller">for a village</span>
+  </h2>
+  <div class="#{$name}--form">
+    <form class="" action="#" method="get">
+      <div class="form-item">
+        <label>Note des internautes Min:</label>
+        <input type="text" value="1" data-drupal-selector="edit-field-note-value-min" />
+      </div>
+      <div class="form-item">
+        <label>Note des internautes Max:</label>
+        <input type="text" value="5" data-drupal-selector="edit-field-note-value-max" />
+      </div>
+      <div class="form-item">
+        <label>Population Min:</label>
+        <input type="text" value="30" data-drupal-selector="edit-field-population-value-min" />
+      </div>
+      <div class="form-item">
+        <label>Population Max:</label>
+        <input type="text" value="80000" data-drupal-selector="edit-field-population-value-max" />
+      </div>
+      <div class="form-item">
+        <label>Labels:</label>
+        <input type="text" data-drupal-selector="edit-field-label" />
+        <div class="description">You can add multiple labels separated by a coma “,”.</div>
+      </div>
+      <div class="form-item">
+        <label>Latitude Min:</label>
+        <input type="text" data-drupal-selector="edit-field-latitude-value-min" />
+      </div>
+      <div class="form-item">
+        <label>Latitude Max:</label>
+      <input type="text" data-drupal-selector="edit-field-latitude-value-max" />
+      </div>
+      <div class="form-item">
+        <label>Longitude Min:</label>
+      <input type="text" data-drupal-selector="edit-field-longitude-value-min" />
+      </div>
+      <div class="form-item">
+        <label>Longitude Max:</label>
+      <input type="text" data-drupal-selector="edit-field-longitude-value-max" />
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="button-action big block search">Rechercher</button>
+      </div>
+    </form>
   </div>
-  <div class="form-item">
-    <label>Note des internautes Max:</label>
-    <input type="text" value="5" />
-  </div>
-  <div class="form-item">
-    <label>Population Min:</label>
-    <input type="text" value="30" />
-  </div>
-  <div class="form-item">
-    <label>Population Max:</label>
-    <input type="text" value="80000" />
-  </div>
-  <div class="form-item">
-    <label>Population Labels:</label>
-    <input type="text" />
-    <div class="form-description">You can add multiple labels separated by a coma “,”.</div>
-  </div>
-  <div class="form-item">
-    <label>Latitude Min:</label>
-    <input type="text" data-drupal-selector="edit-field-latitude-value-min" />
-  </div>
-  <div class="form-item">
-    <label>Latitude Max:</label>
-  <input type="text" data-drupal-selector="edit-field-latitude-value-max" />
-  </div>
-  <div class="form-item">
-    <label>Longitude Min:</label>
-  <input type="text" data-drupal-selector="edit-field-longitude-value-min" />
-  </div>
-  <div class="form-item">
-    <label>Longitude Max:</label>
-  <input type="text" data-drupal-selector="edit-field-longitude-value-max" />
-  </div>
-  <div class="form-actions">
-    <button type="submit" class="button-action big block search">Rechercher</button>
-  </div>
-</form>
+</div>
 
 Styleguide 4.3
 */
 
 .#{$name} {
-  //
+
+  &--title {
+    @extend %color-brand-first;
+    @extend %typeface-heading;
+    @extend %fs-heading-up-3;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: get-layout("block-spacing", "std");
+
+    @include breakpoint("desktop") {
+      margin-bottom: get-layout("block-spacing", "large");
+    }
+
+    @include breakpoint("desktop-large") {
+      margin-bottom: get-layout("block-spacing", "x-large");
+    }
+  }
+
+  &--smaller {
+    @extend %fs-heading-up-2;
+    line-height: 1;
+    display: block;
+    text-transform: none;
+  }
+
+  &--datas {
+    @extend %typeface-heading;
+    @extend %fs-heading-root;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: get-layout("text-spacing", "smaller");
+
+    &-left {
+      text-align: left;
+    }
+
+    &-right {
+      text-align: right;
+    }
+  }
 }

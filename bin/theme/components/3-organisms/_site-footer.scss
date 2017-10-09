@@ -17,7 +17,7 @@ Markup:
     <sg-insert>3.11-1</sg-insert>
   </div>
   <div class="#{$name}--brand">
-    <sg-insert>3.10</sg-insert>
+    <sg-insert>3.10-2</sg-insert>
   </div>
 </footer>
 
@@ -81,25 +81,6 @@ Styleguide 4.10
 
     @include breakpoint("desktop-large") {
       padding: get-layout("block-spacing", "x-large");
-    }
-  }
-
-  .site-branding {
-
-    &--name {
-      @extend %fs-heading-up-1;
-
-      &::before {
-        margin-right: get-layout("text-spacing", "std");
-      }
-
-      &::after {
-        margin-left: get-layout("text-spacing", "std");
-      }
-    }
-
-    &--baseline {
-      @extend %fs-heading-down-1;
     }
   }
 }

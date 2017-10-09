@@ -2,10 +2,11 @@
 
   &-field {
     @extend %typeface-std;
-    @extend %fs-std-down-1;
-    @extend %border-grayscale-strong;
-    @extend %color-grayscale-strong;
+    @extend %fs-std-root;
+    @extend %border-grayscale-medium;
+    @extend %color-grayscale-dark;
     @extend %background-grayscale-soft;
+    @extend %box-shadow-inset;
     display: block;
     width: 100%;
     height: 40px;
@@ -18,12 +19,8 @@
     // Attention: Si cette propriété n'est pas définie, sur iOs, une valeur par défaut est appliquée
     border-radius: 0;
 
-    // Pour iOs
-    box-shadow: none;
-
     &--focus {
-      @extend %color-grayscale-dark;
-      @extend %background-grayscale-soft;
+      @extend %color-brand-first;
     }
 
     &--error {
@@ -32,9 +29,9 @@
     }
 
     &--description {
-      @extend %typeface-special;
+      @extend %typeface-std;
       @extend %fs-std-down-1;
-      @extend %color-system-info;
+      @extend %color-grayscale-strong;
       display: block;
       margin: get-layout("text-spacing", "small") 0 get-layout("text-spacing", "std");
     }
@@ -53,8 +50,8 @@
   }
 
   &-label {
-    @extend %typeface-std;
-    @extend %fs-std-root;
+    @extend %typeface-heading;
+    @extend %fs-heading-root;
     display: inline-block;
     margin-bottom: get-layout("text-spacing", "smaller");
     font-weight: bold;

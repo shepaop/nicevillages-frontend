@@ -5,11 +5,14 @@ $name: "site-branding";
 
 Marque du site
 
+default         - Version de base
+small           - Version petite simple
+
 sg-filename:
 #{$name}
 
 Markup:
-<h1 class="#{$name}">
+<h1 class="#{$name} {$modifiers}">
   <span class="#{$name}--name">Nice Villages</span>
   <span class="#{$name}--baseline">Explore villages that are worth seeing</span>
 </h1>
@@ -72,5 +75,27 @@ Styleguide 3.10
     line-height: 1;
     display: block;
     margin-top: .3333em;
+  }
+
+  &.small {
+
+    .#{$name} {
+
+      &--name {
+        @extend %fs-heading-up-1;
+
+        &::before {
+          margin-right: get-layout("text-spacing", "std");
+        }
+
+        &::after {
+          margin-left: get-layout("text-spacing", "std");
+        }
+      }
+
+      &--baseline {
+        @extend %fs-heading-down-1;
+      }
+    }
   }
 }

@@ -63,10 +63,18 @@ Styleguide 4.4
     @extend %grid-desktop-large-9;
     @extend %background-grayscale-soft;
     position: relative;
+
+    .ajax-loader {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &--map-canvas {
     min-height: 75vh;
+    height: 100%;
   }
 
   &--search {
@@ -80,19 +88,28 @@ Styleguide 4.4
     @extend %grid-tablet-5;
     @extend %grid-desktop-4;
     @extend %grid-desktop-large-3;
-    @extend %background-grayscale-dark;
+    @extend %background-grayscale-light;
+    position: relative;
+    box-sizing: border-box;
+    padding: get-layout("block-spacing", "std") get-layout("block-spacing", "std") (get-layout("block-spacing", "std") + 80px);
+
+    @include breakpoint("desktop") {
+      padding: get-layout("block-spacing", "std") get-layout("block-spacing", "large") (get-layout("block-spacing", "large") + 80px);
+    }
+
+    @include breakpoint("desktop-large") {
+      padding: get-layout("block-spacing", "large") get-layout("block-spacing", "x-large") (get-layout("block-spacing", "x-large") + 80px);
+    }
+
+    .form-actions {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
   }
 
   &--marker {
-    @extend %icon-map_std--standalone;
-    cursor: pointer;
-
-    &:hover {
-      opacity: .9;
-    }
-
-    &:active {
-      opacity: .75;
-    }
+    @extend %map-marker;
   }
 }
