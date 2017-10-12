@@ -13,6 +13,7 @@
   text-align: center;
   box-sizing: content-box;
   padding: get-layout("block-spacing", "small") get-layout("block-spacing", "large");
+  transition: all $css-transition-std linear;
 
   @include breakpoint("desktop") {
     padding: (get-layout("block-spacing", "std") - get-layout("box-border", "large")) (get-layout("block-spacing", "large") - get-layout("box-border", "large"));

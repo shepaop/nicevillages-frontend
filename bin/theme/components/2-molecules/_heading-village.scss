@@ -141,6 +141,14 @@ Styleguide 3.7
     @include breakpoint("desktop-large") {
       padding: get-layout("block-spacing", "x-large") get-layout("block-spacing", "x-large") 0 0;
     }
+
+    a {
+
+      &:hover,
+      &:active {
+        opacity: .9;
+      }
+    }
   }
 
   &--label {

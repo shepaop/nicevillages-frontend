@@ -89,6 +89,8 @@ Styleguide 4.4
     @extend %grid-desktop-4;
     @extend %grid-desktop-large-3;
     @extend %background-grayscale-light;
+    @extend %icon-ui_map-filters;
+    background-position: right top;
     position: relative;
     box-sizing: border-box;
     padding: get-layout("block-spacing", "std") get-layout("block-spacing", "std") (get-layout("block-spacing", "std") + 80px);

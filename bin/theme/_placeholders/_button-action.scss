@@ -11,6 +11,7 @@
   display: inline-block;
   text-align: left;
   padding: get-layout("block-spacing", "std") calc(1em + #{(get-layout("block-spacing", "std") * 2) + get-layout("block-spacing", "small")}) get-layout("block-spacing", "std") get-layout("block-spacing", "small");
+  transition: background $css-transition-std linear;
 
   @include breakpoint("desktop-large") {
     padding: get-layout("block-spacing", "std") calc(1em + #{get-layout("block-spacing", "std") * 3}) get-layout("block-spacing", "std") get-layout("block-spacing", "std");

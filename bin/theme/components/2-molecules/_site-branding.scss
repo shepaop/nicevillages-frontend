@@ -37,6 +37,7 @@ Styleguide 3.10
     }
 
     &::before {
+      transition: margin $css-transition-std linear;
       margin-right: get-layout("block-spacing", "small");
 
       @include breakpoint("tablet") {
@@ -53,6 +54,7 @@ Styleguide 3.10
     }
 
     &::after {
+      transition: margin $css-transition-std linear;
       margin-left: get-layout("block-spacing", "small");
 
       @include breakpoint("tablet") {
@@ -95,6 +97,72 @@ Styleguide 3.10
 
       &--baseline {
         @extend %fs-heading-down-1;
+      }
+    }
+  }
+}
+
+a.#{$name} {
+  display: block;
+
+  &:hover {
+
+    .#{$name}--name {
+
+      &::before {
+        margin-right: get-layout("block-spacing", "small") / 2;
+
+        @include breakpoint("tablet") {
+          margin-right: get-layout("block-spacing", "std") / 2;
+        }
+
+        @include breakpoint("desktop") {
+          margin-right: get-layout("block-spacing", "large") / 2;
+        }
+
+        @include breakpoint("desktop-large") {
+          margin-right: get-layout("block-spacing", "x-large") / 2;
+        }
+      }
+
+      &::after {
+        margin-left: get-layout("block-spacing", "small") / 2;
+
+        @include breakpoint("tablet") {
+          margin-left: get-layout("block-spacing", "std") / 2;
+        }
+
+        @include breakpoint("desktop") {
+          margin-left: get-layout("block-spacing", "large") / 2;
+        }
+
+        @include breakpoint("desktop-large") {
+          margin-left: get-layout("block-spacing", "x-large") / 2;
+        }
+      }
+    }
+  }
+
+  &:active {
+    opacity: .9;
+  }
+
+  &.small {
+
+    &:hover {
+
+      .#{$name} {
+
+        &--name {
+
+          &::before {
+            margin-right: get-layout("text-spacing", "std") / 2;
+          }
+
+          &::after {
+            margin-left: get-layout("text-spacing", "std") / 2;
+          }
+        }
       }
     }
   }

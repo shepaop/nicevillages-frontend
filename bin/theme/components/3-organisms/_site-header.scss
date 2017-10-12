@@ -115,6 +115,7 @@ Styleguide 4.9
     text-align: left;
     padding: get-layout("text-spacing", "small") 0;
     margin-right: get-layout("text-spacing", "std");
+    transition: color $css-transition-std linear;
 
     @include breakpoint("tablet") {
       padding: get-layout("text-spacing", "std");

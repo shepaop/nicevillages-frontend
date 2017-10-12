@@ -61,6 +61,7 @@ Styleguide 3.11
     }
 
     a {
+      transition: color $css-transition-std linear;
 
       &:hover,
       &:active {

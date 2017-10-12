@@ -94,9 +94,9 @@ var mapFiltersParams = [{
               );
 
               // Slider jQuery UI
-              console.log(mapFiltersParams[i]);
               $holder.slider({
                 range: true,
+                animate: true,
                 min: mapFiltersParams[i].valMin,
                 max: mapFiltersParams[i].valMax,
                 values: [min, max],
