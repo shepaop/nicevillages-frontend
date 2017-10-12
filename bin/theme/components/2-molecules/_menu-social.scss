@@ -1,0 +1,88 @@
+$name: "menu-social";
+
+/*
+#{$name}
+
+Liens vers les réseaux sociaux
+
+sg-filename:
+#{$name}
+
+Markup:
+<ul class="#{$name} {$modifiers}">
+  <li class="facebook"><a href="#">Facebook</a></li>
+  <li class="twitter"><a href="#">Twitter</a></li>
+  <li class="instagram"><a href="#">Instagram</a></li>
+  <li class="pinterest"><a href="#">Pinterest</a></li>
+  <li class="googleplus"><a href="#">Google plus</a></li>
+  <li class="rss"><a href="#">RSS</a></li>
+</ul>
+
+Styleguide 3.12
+*/
+
+.#{$name} {
+  @extend %inline-list-from-mobile;
+
+  a {
+    @extend %text-overflow-from-mobile;
+    opacity: .75;
+    padding: get-layout("text-spacing", "small");
+    transition: opacity $css-transition-std linear;
+    background-position: center;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: .9;
+    }
+  }
+
+  li {
+    margin: 0 get-layout("text-spacing", "smaller");
+
+    &.facebook {
+
+      a {
+        @extend %icon-community_facebook-std--standalone;
+      }
+    }
+
+    &.twitter {
+
+      a {
+        @extend %icon-community_twitter-std--standalone;
+      }
+    }
+
+    &.instagram {
+
+      a {
+        @extend %icon-community_instagram-std--standalone;
+      }
+    }
+
+    &.pinterest {
+
+      a {
+        @extend %icon-community_pinterest-std--standalone;
+      }
+    }
+
+    &.googleplus {
+
+      a {
+        @extend %icon-community_googleplus-std--standalone;
+      }
+    }
+
+    &.rss {
+
+      a {
+        @extend %icon-community_rss-std--standalone;
+      }
+    }
+  }
+}

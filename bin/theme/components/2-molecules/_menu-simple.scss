@@ -67,6 +67,10 @@ Styleguide 3.11
       &:active {
         @extend %color-brand-first;
       }
+
+      &:active {
+        opacity: .9;
+      }
     }
   }
 

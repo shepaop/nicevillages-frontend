@@ -1,0 +1,213 @@
+$name: "main-menu";
+
+/*
+#{$name}
+
+Menu principal
+
+sg-filename:
+#{$name}
+
+Markup:
+<div class="#{$name}">
+  <div class="#{$name}--overlay"></div>
+  <div class="#{$name}--panel">
+    <div class="#{$name}--header">
+      <sg-insert>3.10-2</sg-insert>
+    </div>
+    <div class="#{$name}--content">
+      <ul class="#{$name}--menu">
+        <li>
+          <span>Villages par pays</span>
+          <div class="menu-simple inlined">
+            <ul class="menu-simple--list">
+              <li><a href="#">Argentina</a></li>
+              <li><a href="#">Spain</a></li>
+              <li><a href="#">France</a></li>
+              <li><a href="#">Italy</a></li>
+              <li><a href="#">Czesh Republic</a></li>
+              <li><a href="#">Slovenia</a></li>
+              <li><a href="#">Tunisia</a></li>
+              <li><a href="#">Morroco</a></li>
+              <li><a href="#">Brazil</a></li>
+              <li><a href="#">Swiss</a></li>
+              <li><a href="#">Montenegro</a></li>
+              <li><a href="#">Serbia</a></li>
+              <li><a href="#">Germany</a></li>
+              <li><a href="#">United Kingdom</a></li>
+              <li><a href="#">Poland</a></li>
+              <li><a href="#">Chile</a></li>
+              <li><a href="#">Urugay</a></li>
+              <li><a href="#">Canada</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#">Villages par labels</a>
+          <div class="menu-simple">
+            <ul class="menu-simple--list">
+              <li><a href="#">Les plus beaux villages de France</a></li>
+              <li><a href="#">Les plus beaux villages d'Italie</a></li>
+              <li><a href="#">Unesco</a></li>
+              <li><a href="#">Les plus beaux villages d'espagne</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#">A propos</a></li>
+        <li><a href="#">Nous contacter</a></li>
+      </ul>
+    </div>
+    <div class="#{$name}--footer">
+      <sg-insert>3.12</sg-insert>
+    </div>
+  </div>
+</div>
+
+sg-wrapper:
+<div style="position: relative; height: 480px;">
+  <sg-wrapper-content/>
+  <style>
+    .#{$name} {display: block !important;}
+    .#{$name}--panel {position: absolute;}
+    .#{$name}--overlay {position: absolute;}
+  </style>
+</div>
+
+Styleguide 4.11
+*/
+
+.#{$name} {
+  @extend %overlay-from-mobile;
+  position: fixed;
+  z-index: 44;
+  overflow: hidden;
+  display: none;
+
+  &--overlay {
+    @extend %overlay-from-mobile;
+    position: fixed;
+    z-index: 44;
+    background-color: rgba(get-color("grayscale", "dark"), .5);
+  }
+
+  &--panel {
+    @extend %background-grayscale-light;
+    z-index: 45;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 80vw;
+    box-shadow: -3px 0 3px rgba(get-color("grayscale", "dark"), .25);
+
+    @include breakpoint("tablet") {
+      width: 50vw;
+    }
+
+    @include breakpoint("desktop") {
+      width: map-get($grid-system, "grid-desktop-5");
+    }
+
+    @include breakpoint("desktop-large") {
+      width: map-get($grid-system, "grid-desktop-large-4");
+    }
+  }
+
+  &--header,
+  &--footer {
+    display: flex;
+    position: absolute;
+    left: 0;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+
+  &--header {
+    @extend %color-grayscale-light;
+    @extend %background-brand-first;
+    top: 0;
+    height: 15vh;
+  }
+
+  &--content {
+    height: calc(100% - 25vh);
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    overflow: scroll;
+  }
+
+  &--footer {
+    @extend %background-grayscale-soft;
+    bottom: 0;
+    text-align: center;
+    height: 10vh;
+  }
+
+  &--menu {
+
+    > li {
+
+      > a,
+      > span {
+        @extend %typeface-std;
+        @extend %fs-heading-up-1;
+        @extend %box-border-bottom-std;
+        @extend %border-grayscale-soft;
+        position: relative;
+        cursor: pointer;
+        display: block;
+        padding: get-layout("text-spacing", "small") (get-layout("text-spacing", "std") + get-icon("icon-tools_arrow-right-dark")) get-layout("text-spacing", "small") get-layout("text-spacing", "std");
+
+        &::before {
+          @extend %icon-tools_arrow-right-dark--standalone;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: get-icon("icon-tools_arrow-right-dark", "width") / 2;
+          height: get-icon("icon-tools_arrow-right-dark", "height") / 2;
+          background-size: cover;
+        }
+      }
+
+      &.expanded {
+
+        > a,
+        > span {
+
+          &::before {
+            @extend %icon-tools_arrow-down-dark;
+          }
+        }
+      }
+
+      > a {
+        transition: color $css-transition-std linear;
+
+        &:hover,
+        &:active {
+          @extend %color-brand-first;
+        }
+
+        &:active {
+          opacity: .9;
+        }
+      }
+
+      .menu-simple--list {
+        @extend %box-border-bottom-std;
+        @extend %border-grayscale-soft;
+        padding: get-layout("block-spacing", "x-small");
+
+        @include breakpoint("tablet") {
+          padding: get-layout("block-spacing", "small");
+        }
+
+        @include breakpoint("desktop") {
+          padding: get-layout("block-spacing", "std");
+        }
+      }
+    }
+  }
+}

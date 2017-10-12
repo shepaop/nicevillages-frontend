@@ -167,9 +167,19 @@ Styleguide 4.9
       @extend %text-overflow-from-mobile;
       order: 3;
       flex: 0;
+      cursor: pointer;
       display: inline-block;
       margin-left: get-layout("text-spacing", "std");
       min-height: get-icon("icon-ui_burger-menu-std", "height");
+
+      &:hover,
+      &:active {
+        @extend %color-grayscale-dark;
+      }
+
+      &:active {
+        opacity: .9;
+      }
 
       @include breakpoint("tablet") {
         text-indent: 0;
