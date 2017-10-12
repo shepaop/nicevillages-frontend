@@ -59,7 +59,6 @@ var $view = {};
         datas.lat = parseFloat(datas.lat);
         datas.lng = parseFloat(datas.lng);
       });
-      console.log(villagesDatas);
 
       if (typeof $target.data('init-' + cssClass) === 'undefined') {
         $target.data('init-' + cssClass, true);

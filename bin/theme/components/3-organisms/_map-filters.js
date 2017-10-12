@@ -115,8 +115,6 @@ var mapFiltersParams = [{
                   );
                 }
               });
-
-              console.log(min, max);
             }
           }
         });

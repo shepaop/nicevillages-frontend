@@ -41,7 +41,6 @@
           datas.lat = parseFloat(datas.lat);
           datas.lng = parseFloat(datas.lng);
         });
-        console.log(poisDatas);
 
         // Création du holder
         poisMap.$holder = $('<div />', {

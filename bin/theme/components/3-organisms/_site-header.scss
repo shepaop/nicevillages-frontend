@@ -171,6 +171,7 @@ Styleguide 4.9
       display: inline-block;
       margin-left: get-layout("text-spacing", "std");
       min-height: get-icon("icon-ui_burger-menu-std", "height");
+      transition: color $css-transition-std linear;
 
       &:hover,
       &:active {
