@@ -85,10 +85,13 @@ Styleguide 3.6
   }
 
   &--flag {
-    display: inline-block;
-    height: .6em;
-    width: auto;
-    margin-left: get-layout("text-spacing", "std");
+
+    img {
+      display: inline-block;
+      height: .6em;
+      width: auto;
+      margin-left: get-layout("text-spacing", "std");
+    }
   }
 
   &--labels {
