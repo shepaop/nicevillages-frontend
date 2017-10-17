@@ -22,7 +22,7 @@
         var $togglerButton = $('<button />', {
           class: 'button-action'
         });
-        $togglerButton.text(Drupal.t('Pictures'));
+        $togglerButton.text(Drupal.t('See pictures'));
 
         // Slider
         var $pictures = $('.' + cssClass + '--picture > ul', $target);
