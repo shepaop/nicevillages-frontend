@@ -187,7 +187,7 @@ var $view = {};
           // Instanciation du marker
           output.marker = new mapboxgl.Marker(
             $marker[0],
-            [0, 20]
+            [0, 0]
           ).setLngLat(
             [output.lng, output.lat]
           ).setPopup(

@@ -114,10 +114,13 @@ Styleguide 3.7
   }
 
   &--flag {
-    display: inline-block;
-    height: .5em;
-    width: auto;
-    margin-left: get-layout("text-spacing", "std");
+
+    img {
+      display: inline-block;
+      height: .5em;
+      width: auto;
+      margin-left: get-layout("text-spacing", "std");
+    }
   }
 
   &--labels {

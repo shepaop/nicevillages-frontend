@@ -31,6 +31,19 @@ Styleguide 3.9
     @extend %typeface-heading;
     @extend %fs-heading-root;
     margin-bottom: get-layout("text-spacing", "small");
+    transform: color $css-transition-std linear;
+
+    a {
+
+      &:hover,
+      &:active {
+        @extend %color-brand-first;
+      }
+
+      &:active {
+        opacity: .9;
+      }
+    }
   }
 
   &--desc {
