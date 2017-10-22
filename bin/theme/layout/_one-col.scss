@@ -1,15 +1,15 @@
 .one-col {
-  padding: 0 get-layout("block-spacing", "std");
+  padding: get-layout("block-spacing", "std");
 
   @include breakpoint("table") {
-    padding: 0 map-get($grid-system, "grid-tablet-1");
+    padding: get-layout("block-spacing", "std") map-get($grid-system, "grid-tablet-1");
   }
 
   @include breakpoint("desktop") {
-    padding: 0 map-get($grid-system, "grid-desktop-2");
+    padding: get-layout("block-spacing", "large") map-get($grid-system, "grid-desktop-2");
   }
 
   @include breakpoint("desktop-large") {
-    padding: 0 map-get($grid-system, "grid-desktop-large-3");
+    padding: get-layout("block-spacing", "x-large") map-get($grid-system, "grid-desktop-large-3");
   }
 }

@@ -87,7 +87,7 @@ Styleguide 4.11
     @extend %overlay-from-mobile;
     position: fixed;
     z-index: 44;
-    background-color: rgba(get-color("grayscale", "dark"), .5);
+    background-color: rgba(0, 0, 0, .75);
   }
 
   &--panel {
@@ -134,7 +134,7 @@ Styleguide 4.11
     height: calc(100% - 25vh);
     margin-top: 15vh;
     margin-bottom: 10vh;
-    overflow: scroll;
+    overflow-y: scroll;
   }
 
   &--footer {
