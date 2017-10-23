@@ -2,7 +2,7 @@
 Messages
 
 Markup:
-<div class="messages__wrapper layout-container">
+<div>
   <div role="contentinfo" aria-label="" class="messages messages--status">
     causa elit imputo neque quis.
   </div>
@@ -29,32 +29,24 @@ Markup:
 Styleguide 5.3.15
 */
 
-.messages__wrapper {
-  margin: get-layout("block-spacing", "std");
+.messages {
+  @extend %system-message;
+  margin: get-layout("block-spacing", "small") 0;
 
-  .messages {
-    @extend %system-message;
-    margin: get-layout("block-spacing", "small");
-
-    &--info {
-      @extend %system-message--info;
-    }
-
-    &--status {
-      @extend %system-message--success;
-    }
-
-    &--warning {
-      @extend %system-message--warning;
-    }
-
-    &--error {
-      @extend %system-message--error;
-    }
+  &--info {
+    @extend %system-message--info;
   }
 
-  .messages__list {
-    @extend %ul;
+  &--status {
+    @extend %system-message--success;
+  }
+
+  &--warning {
+    @extend %system-message--warning;
+  }
+
+  &--error {
+    @extend %system-message--error;
   }
 
   a {
@@ -65,4 +57,8 @@ Styleguide 5.3.15
       @extend %color-brand-first;
     }
   }
+}
+
+.messages__list {
+  @extend %ul;
 }
