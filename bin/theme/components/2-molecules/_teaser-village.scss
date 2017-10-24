@@ -105,6 +105,13 @@ Styleguide 3.6
     @include breakpoint("desktop-large") {
       padding: get-layout("block-spacing", "std") get-layout("block-spacing", "std") 0 0;
     }
+
+    img {
+      display: inline-block;
+      width: auto;
+      height: 2.5em;
+      margin-left: get-layout("block-spacing", "x-small");
+    }
   }
 
   &--label {

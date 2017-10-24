@@ -1,9 +1,9 @@
 %map-marker {
-  @extend %icon-map_plain--standalone;
+  @extend %icon-map_std--standalone;
   cursor: pointer;
 
   &:hover {
-    @extend %icon-map_std--standalone;
+    @extend %icon-map_plain--standalone;
   }
 
   &:active {

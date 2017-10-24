@@ -15,10 +15,10 @@ var $view = {};
 
       $view.formHolder = $('.' + cssClass + '--filters', $target);
       $view.form = $('form', $view.formHolder);
-      $view.latMin = $('input[data-drupal-selector="edit-field-latitude-value-min"]', $view.form);
-      $view.latMax = $('input[data-drupal-selector="edit-field-latitude-value-max"]', $view.form);
-      $view.lngMin = $('input[data-drupal-selector="edit-field-longitude-value-min"]', $view.form);
-      $view.lngMax = $('input[data-drupal-selector="edit-field-longitude-value-max"]', $view.form);
+      $view.latMin = $('input[name="field_latitude_value[min]"]', $view.form);
+      $view.latMax = $('input[name="field_latitude_value[max]"]', $view.form);
+      $view.lngMin = $('input[name="field_longitude_value[min]"]', $view.form);
+      $view.lngMax = $('input[name="field_longitude_value[max]"]', $view.form);
 
       $view.latMin.parents('.form-item:first').hide();
       $view.latMax.parents('.form-item:first').hide();
@@ -189,8 +189,7 @@ var $view = {};
 
           // Instanciation du marker
           output.marker = new mapboxgl.Marker(
-            $marker[0],
-            [0, 0]
+            $marker[0]
           ).setLngLat(
             [output.lng, output.lat]
           ).setPopup(

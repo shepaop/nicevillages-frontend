@@ -118,11 +118,11 @@
     width: 50vw;
 
     @include breakpoint("tablet") {
-      width: 40vw;
+      width: 30vw;
     }
 
     @include breakpoint("desktop") {
-      width: 30vw;
+      width: 25vw;
     }
 
     @include breakpoint("desktop-large") {

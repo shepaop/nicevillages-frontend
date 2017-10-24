@@ -34,7 +34,6 @@
 
         var $trigger = $('.site-header .burger-menu--trigger');
 
-        console.log($trigger);
         if ($trigger.length) {
 
           var $overlay = $('.' + cssClass + '--overlay', $target);

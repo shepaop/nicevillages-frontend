@@ -17,19 +17,19 @@ Markup:
     <form class="" action="#" method="get">
       <div class="form-item">
         <label>Note des internautes Min:</label>
-        <input type="text" value="1" data-drupal-selector="edit-field-note-value-min" />
+        <input type="text" value="1" name="field_note_value[min]" />
       </div>
       <div class="form-item">
         <label>Note des internautes Max:</label>
-        <input type="text" value="5" data-drupal-selector="edit-field-note-value-max" />
+        <input type="text" value="5" name="field_note_value[max]" />
       </div>
       <div class="form-item">
         <label>Population Min:</label>
-        <input type="text" value="30" data-drupal-selector="edit-field-population-value-min" />
+        <input type="text" value="0" name="field_population_value[min]" />
       </div>
       <div class="form-item">
         <label>Population Max:</label>
-        <input type="text" value="80000" data-drupal-selector="edit-field-population-value-max" />
+        <input type="text" value="80000" name="field_population_value[max]" />
       </div>
       <div class="form-item">
         <label>Labels:</label>
@@ -38,19 +38,19 @@ Markup:
       </div>
       <div class="form-item">
         <label>Latitude Min:</label>
-        <input type="text" data-drupal-selector="edit-field-latitude-value-min" />
+        <input type="text" name="field_latitude_value[min]" />
       </div>
       <div class="form-item">
         <label>Latitude Max:</label>
-      <input type="text" data-drupal-selector="edit-field-latitude-value-max" />
+      <input type="text" name="field_latitude_value[max]" />
       </div>
       <div class="form-item">
         <label>Longitude Min:</label>
-      <input type="text" data-drupal-selector="edit-field-longitude-value-min" />
+      <input type="text" name="field_longitude_value[min]" />
       </div>
       <div class="form-item">
         <label>Longitude Max:</label>
-      <input type="text" data-drupal-selector="edit-field-longitude-value-max" />
+      <input type="text" name="field_longitude_value[max]" />
       </div>
       <div class="form-actions">
         <button type="submit" class="button-action big block search">Rechercher</button>
@@ -103,6 +103,18 @@ Styleguide 4.3
 
     &-right {
       text-align: right;
+    }
+  }
+
+  &--slider-wrapper {
+    margin-top: get-layout("text-spacing", "smaller");
+  }
+
+  .form--inline {
+
+    .form-item {
+      display: block;
+      margin-right: 0;
     }
   }
 }
