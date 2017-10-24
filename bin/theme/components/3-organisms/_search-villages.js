@@ -131,6 +131,9 @@ var $view = {};
         if (!(isNaN(latMin) || isNaN(latMax) || isNaN(lngMin) || isNaN(lngMax))) {
           villagesMap.mapbox.fitBounds([[lngMin, latMin], [lngMax, latMax]]);
         }
+        else {
+          villagesMap.mapbox.fitBounds([[-2.5, 41.41], [11.22, 45.84]]);
+        }
 
         // Ajout de l'évènement "move"
         villagesMap.mapbox.on('move', function () {
