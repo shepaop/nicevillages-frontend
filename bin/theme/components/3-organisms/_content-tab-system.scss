@@ -106,6 +106,10 @@ Styleguide 4.8
     @include breakpoint("desktop") {
       padding: get-layout("block-spacing", "x-large");
     }
+
+    &.no-padding-bottom {
+      padding-bottom: 0;
+    }
   }
 
   .list-villages {
@@ -131,6 +135,22 @@ Styleguide 4.8
         margin: (get-layout("block-spacing", "large") / 2) 0;
         padding: 0 get-layout("block-spacing", "large");
       }
+    }
+  }
+
+  .heading-village--title {
+    @extend %color-grayscale-dark;
+    background: none;
+    position: static;
+    transition: none;
+    text-shadow: none;
+    transform: none;
+  }
+
+  .wysiwyg {
+
+    p:last-child {
+      margin-bottom: 0;
     }
   }
 }

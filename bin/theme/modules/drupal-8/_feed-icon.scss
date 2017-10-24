@@ -11,6 +11,19 @@ Markup:
 Styleguide 5.3.18
 */
 
+.feed-icons {
+  @extend %text-right-from-mobile;
+  padding: get-layout("block-spacing", "std");
+
+  @include breakpoint("tablet") {
+    padding: get-layout("block-spacing", "large");
+  }
+
+  @include breakpoint("desktop") {
+    padding: get-layout("block-spacing", "x-large");
+  }
+}
+
 .feed-icon {
   @extend %text-overflow-from-mobile;
   @extend %icon-community_rss-std--standalone;
