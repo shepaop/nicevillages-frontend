@@ -14,6 +14,7 @@
 
       if (typeof $target.data('init-' + cssClass) === 'undefined') {
         $target.data('init-' + cssClass, true);
+        var $body = $('body:first');
 
         var $menu = $('.' + cssClass + '--menu', $target);
         $menu.rsAccordion({
@@ -47,6 +48,7 @@
             $panel.hide();
             $target.show();
 
+            $body.css('overflow-y', 'hidden');
             $overlay.stop(true, true).fadeIn(_duration);
             $panel.css('right', '-' + $panel.css('width')).show();
             $panel.stop(true, true).animate({
@@ -59,6 +61,7 @@
 
           // Click sur l'overlay
           $overlay.click(function () {
+            $body.css('overflow-y', 'inherit');
             $panel.stop(true, true).animate({
               right: '-' + $panel.css('width')
             }, {

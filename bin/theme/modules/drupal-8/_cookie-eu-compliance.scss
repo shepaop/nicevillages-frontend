@@ -21,7 +21,7 @@ Styleguide 5.3.23
 #sliding-popup {
   @extend %fs-std-down-1;
   @extend %color-grayscale-dark;
-  @extend %background-system-info;
+  @extend %background-grayscale-soft;
   line-height: 1;
   display: block;
   margin: 0;
@@ -41,6 +41,7 @@ Styleguide 5.3.23
   .popup-content {
     @extend .container;
     @extend %grid-strech-flex-from-tablet;
+    background: none;
 
     @include breakpoint("tablet") {
       align-items: center;
@@ -77,8 +78,10 @@ Styleguide 5.3.23
   }
 
   .agree-button {
-    @extend %button-action;
-    @extend %button-action--small;
+    @extend %typeface-heading;
+    @extend %color-grayscale-dark;
+    display: inline-block;
+    margin: 0 get-layout("text-spacing", "large");
   }
 
   .find-more-button {

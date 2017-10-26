@@ -38,8 +38,6 @@ Styleguide 5.3.14
   }
 
   ul.primary {
-    @extend %box-border-bottom-std;
-    @extend %border-grayscale-strong;
     @extend %h6;
     margin: 0;
     padding: 0;

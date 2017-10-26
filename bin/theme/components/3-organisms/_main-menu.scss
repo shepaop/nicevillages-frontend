@@ -139,9 +139,61 @@ Styleguide 4.11
 
   &--footer {
     @extend %background-grayscale-soft;
+    justify-content: space-around;
     bottom: 0;
     text-align: center;
     height: 10vh;
+
+    .links {
+      padding: get-layout("block-spacing", "small") (get-layout("block-spacing", "small") - get-layout("text-spacing", "small"));
+      margin: 0;
+
+      > li {
+        display: inline-block;
+        padding: 0 get-layout("text-spacing", "small");
+      }
+
+      a {
+
+        &.is-active,
+        &:active,
+        &:hover {
+          @extend %color-grayscale-dark;
+        }
+
+        &.is-active {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &--search {
+    @extend %background-grayscale-soft;
+    padding: get-layout("block-spacing", "std");
+
+    form {
+      @extend %grid-strech-flex-from-mobile;
+      width: 100%;
+
+      > .form-item {
+        flex: 1;
+      }
+
+      > .form-item,
+      > .form-actions {
+        @extend %strech-child-from-mobile;
+        margin-bottom: 0;
+      }
+
+      > .form-actions {
+
+        input[type="submit"] {
+          padding-top: initial;
+          padding-bottom: initial;
+        }
+      }
+    }
   }
 
   &--menu > .menu,

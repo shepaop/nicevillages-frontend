@@ -88,7 +88,9 @@
           });
 
           // Instanciation de la popup
-          output.popup = new mapboxgl.Popup().setLngLat(
+          output.popup = new mapboxgl.Popup({
+            closeButton: false
+          }).setLngLat(
             [output.lng, output.lat]
           ).setHTML(
             '<div class="padder">' + output.title + '</div>'

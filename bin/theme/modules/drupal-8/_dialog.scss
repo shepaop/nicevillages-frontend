@@ -31,7 +31,7 @@ Styleguide 5.3.2
   z-index: 1260;
   position: absolute;
   overflow: visible;
-  padding: get-layout("block-spacing", "std");
+  padding: 0;
   transform: translateX(-50%);
   top: 0;
   left: 50% !important;
@@ -56,20 +56,40 @@ Styleguide 5.3.2
   border: 0;
 }
 
+.ui-dialog .ui-widget-content {
+  display: block;
+  padding: get-layout("block-spacing", "std");
+}
+
+.ui-dialog iframe.ui-widget-content {
+  padding: 0;
+}
+
 .ui-dialog .ui-dialog-titlebar {
+  position: relative;
+  @extend %color-grayscale-dark;
+  border: 0;
+  padding: 0;
+  background: none;
+}
+
+.ui-dialog .ui-dialog-title {
   @extend %typeface-heading;
   @extend %fs-heading-up-2;
-  border: 0;
+  display: block;
   padding: get-layout("block-spacing", "std");
 }
 
 .ui-dialog .ui-dialog-titlebar-close {
+  @extend %text-overflow-from-mobile;
   @extend %icon-ui_close-std--standalone;
   background-color: transparent;
-  width: auto;
   text-align: right;
-  border: 0 !important;
-  padding-right: 0 !important;
+  border: 0;
+  padding: 0;
+  position: absolute;
+  top: get-layout("block-spacing", "std");
+  right: get-layout("block-spacing", "std");
 
   .ui-icon {
     display: none;
@@ -77,6 +97,10 @@ Styleguide 5.3.2
 
   .ui-button-text {
     display: none;
+  }
+
+  &:active {
+    background-color: transparent;
   }
 }
 
