@@ -1,4 +1,3 @@
-var $mapFiltersFakeButton;
 var mapFiltersParams = [{
   min: 'input[name="field_note_value[min]"]',
   max: 'input[name="field_note_value[max]"]',
@@ -26,32 +25,12 @@ var mapFiltersParams = [{
     var cssClass = 'map-filters';
     var $targets = $('.' + cssClass, context);
 
-    if (typeof $mapFiltersFakeButton === 'object') {
-      $mapFiltersFakeButton.removeAttr('disabled');
-    }
-
     $targets.each(function () {
       var $target = $(this);
       var $form = $('.' + cssClass + '--form form', $target);
 
       if (typeof $form.data('init-' + cssClass) === 'undefined') {
         $form.data('init-' + cssClass, true);
-
-        var $submit = $('.form-actions input[type="submit"]', $form);
-        $submit.hide();
-        $mapFiltersFakeButton = $('<button type="submit" class="button-action big block search">' + $submit.val() + '</button>');
-
-        // Click relay
-        $mapFiltersFakeButton.click(function (e) {
-          e.preventDefault();
-          $mapFiltersFakeButton.attr('disabled', true);
-          $submit.click();
-        });
-
-        // Insertion dans le DOM HTML
-        $submit.after(
-          $mapFiltersFakeButton
-        );
 
         $.each(mapFiltersParams, function (i, slider) {
 

@@ -723,19 +723,47 @@ button.ui-button::-moz-focus-inner {
 .ui-slider {
   position: relative;
   text-align: left;
+
+  &.ui-widget-content {
+    @extend %background-grayscale-soft;
+    @extend %border-radius-rounded;
+    @extend %box-shadow-small;
+    @extend %icon-ui_slider-pattern;
+    background-repeat: repeat-x;
+    background-position: center;
+    padding: 0;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+  }
 }
 
 .ui-slider .ui-slider-handle {
+  @extend %box-border-large;
+  @extend %border-grayscale-medium;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .25);
   position: absolute;
   z-index: 2;
   width: 1.2em;
   height: 1.2em;
-  cursor: default;
   -ms-touch-action: none;
   touch-action: none;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &.ui-state-default {
+    @extend %background-brand-first;
+    @extend %box-border-large;
+    @extend %border-grayscale-soft;
+  }
+
+  &.ui-state-focus {
+    @extend %background-grayscale-strong;
+    @extend %box-border-large;
+    @extend %border-grayscale-soft;
+  }
 }
 
 .ui-slider .ui-slider-range {
+  background-color: rgba(get-color("brand", "first"), .5);
   position: absolute;
   z-index: 1;
   // font-size: .7em;
@@ -756,13 +784,13 @@ button.ui-button::-moz-focus-inner {
 }
 
 .ui-slider-horizontal .ui-slider-handle {
-  top: -.3em;
-  margin-left: -.6em;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .ui-slider-horizontal .ui-slider-range {
-  top: 0;
-  height: 100%;
+  top: get-layout("box-border", "large");
+  height: calc(100% - #{get-layout("box-border", "large") * 2});
 }
 
 .ui-slider-horizontal .ui-slider-range-min {
@@ -779,14 +807,13 @@ button.ui-button::-moz-focus-inner {
 }
 
 .ui-slider-vertical .ui-slider-handle {
-  left: -.3em;
-  margin-left: 0;
-  margin-bottom: -.6em;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .ui-slider-vertical .ui-slider-range {
-  left: 0;
-  width: 100%;
+  left: get-layout("box-border", "large");
+  width: calc(100% - #{get-layout("box-border", "large") * 2});
 }
 
 .ui-slider-vertical .ui-slider-range-min {

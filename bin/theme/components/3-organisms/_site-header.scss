@@ -61,7 +61,7 @@ Styleguide 4.9
     }
 
     @include breakpoint("desktop-large") {
-      padding: get-layout("block-spacing", "x-large") 0 get-layout("block-spacing", "x-large") get-layout("block-spacing", "x-large");
+      padding: get-layout("block-spacing", "std") 0 get-layout("block-spacing", "std") get-layout("block-spacing", "x-large");
     }
   }
 
@@ -88,7 +88,7 @@ Styleguide 4.9
     @include breakpoint("desktop-large") {
       align-items: center;
       flex-wrap: nowrap;
-      padding: get-layout("block-spacing", "x-large") get-layout("block-spacing", "x-large") get-layout("block-spacing", "x-large") 0;
+      padding: get-layout("block-spacing", "std") get-layout("block-spacing", "x-large") get-layout("block-spacing", "std") 0;
     }
 
     .button-contribute {

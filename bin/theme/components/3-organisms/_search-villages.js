@@ -87,10 +87,24 @@ var $view = {};
         // Click button behavior
         villagesMap.$button.click(function () {
           villagesMap.hideMapButton();
+          $view.fakeSubmit.attr('disabled', true);
           $view.submit.click();
         });
 
-        // Insertion dans le DOM HTML
+        // Gestion d'un "fake" submit
+        $view.fakeSubmit = $('<button type="submit" class="button-action big block search">' + $view.submit.val() + '</button>');
+
+        // Hide
+        $view.submit.hide();
+
+        // Click relay
+        $view.fakeSubmit.click(function (e) {
+          e.preventDefault();
+          $view.fakeSubmit.attr('disabled', true);
+          $view.submit.click();
+        });
+
+        // Insertions dans le DOM HTML
         villagesMap.$wrapper.empty();
         villagesMap.$wrapper.append(
           villagesMap.$holder
@@ -98,6 +112,9 @@ var $view = {};
           villagesMap.$buttonWrapper.append(
             villagesMap.$button
           )
+        );
+        $view.submit.after(
+          $view.fakeSubmit
         );
 
         // Instanciation Mapbox
@@ -268,7 +285,7 @@ var $view = {};
         // Affichage d'un message concernant le nombre maximum affiché
         villagesMap.displayMessage = function () {
 
-          alert('// @todo: Reste à dynamiser => Le nombre de points possible d‘afficher a été dépassée');
+          alert(Drupal.t('Maximum list villages have been reached. Please, use the filters or zoom-in'));
         };
 
         // On affiche les données
@@ -280,6 +297,9 @@ var $view = {};
 
         // On affiche les données
         villagesMap.reloadDatas(villagesDatas);
+
+        // On supprime le disabled sur le bouton
+        $view.fakeSubmit.removeAttr('disabled');
       }
     });
   };

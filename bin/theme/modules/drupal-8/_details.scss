@@ -17,7 +17,7 @@ details {
 }
 
 details > .details-wrapper {
-  @extend %block-border-std;
+  @extend %box-border-std;
   @extend %border-grayscale-medium;
   padding: get-layout("block-spacing", "std");
 }
