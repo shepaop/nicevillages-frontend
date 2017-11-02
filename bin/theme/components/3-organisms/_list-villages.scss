@@ -53,6 +53,18 @@ Styleguide 4.2
     padding-bottom: (get-layout("block-spacing", "x-large") / 2);
   }
 
+  .view-villages .view-content & {
+    padding-top: 0;
+
+    @include breakpoint("desktop") {
+      padding-top: 0;
+    }
+
+    @include breakpoint("desktop-large") {
+      padding-top: 0;
+    }
+  }
+
   &--title {
     @extend %fs-std-up-2;
     text-align: center;
@@ -68,6 +80,18 @@ Styleguide 4.2
 
     @include breakpoint("desktop-large") {
       margin-bottom: (get-layout("block-spacing", "x-large") / 2);
+    }
+
+    .view-header & {
+      padding-top: get-layout("block-spacing", "std");
+
+      @include breakpoint("desktop") {
+        padding-top: get-layout("block-spacing", "large");
+      }
+
+      @include breakpoint("desktop-large") {
+        padding-top: get-layout("block-spacing", "x-large");
+      }
     }
   }
 

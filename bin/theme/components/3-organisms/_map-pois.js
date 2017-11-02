@@ -100,8 +100,7 @@
 
           // Instanciation du marker
           output.marker = new mapboxgl.Marker(
-            $marker[0],
-            [0, 20]
+            $marker[0]
           ).setLngLat(
             [output.lng, output.lat]
           ).setPopup(
@@ -150,11 +149,16 @@
         // Affichages des datas
         poisMap.displayDatas = function (datas) {
 
+          var bounds = new mapboxgl.LngLatBounds();
           $.each(datas, function (i, liDatas) {
 
             // On insère un marker
             poisMap.addMarker(liDatas);
+            bounds.extend([liDatas.lng, liDatas.lat]);
           });
+
+          // Fit bounds
+          poisMap.mapbox.fitBounds(bounds);
         };
 
         // On affiche les données
