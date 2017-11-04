@@ -21,7 +21,7 @@ Styleguide 5.3.23
 #sliding-popup {
   @extend %fs-std-down-1;
   @extend %color-grayscale-dark;
-  @extend %background-grayscale-soft;
+  @extend %background-grayscale-medium;
   line-height: 1;
   display: block;
   margin: 0;
@@ -31,7 +31,7 @@ Styleguide 5.3.23
   padding: get-layout("block-spacing", "small") 0;
 
   &.sliding-popup-bottom {
-    position: absolute;
+    position: fixed;
   }
 
   &.sliding-popup-top {

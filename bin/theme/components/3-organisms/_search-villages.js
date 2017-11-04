@@ -37,6 +37,12 @@ var $view = {};
               html: true
             }
           },
+          url: {
+            rule: '.teaser-village--content',
+            cfg: {
+              attribute: 'href'
+            }
+          },
           lat: {
             rule: 'meta[itemprop="latitude"]',
             cfg: {
@@ -62,6 +68,13 @@ var $view = {};
 
         // On instancie villagesMap
         villagesMap = {};
+
+        // Gestion de la langue
+        villagesMap.lang = 'en';
+        var curLang = $('html:first').attr('lang');
+        if (typeof curLang === 'string') {
+          villagesMap.lang = curLang;
+        }
 
         // Création du wrapper
         var cssPrefix = 'map-search';
@@ -172,6 +185,14 @@ var $view = {};
           villagesMap.showMapButton();
         });
 
+        // Ajout de l'évènement "load"
+        villagesMap.mapbox.on('load', function () {
+
+          // Changement des noms des pays
+          villagesMap.mapbox.setLayoutProperty('place-city-lg-n', 'text-field', '{name_' + villagesMap.lang + '}');
+          villagesMap.mapbox.setLayoutProperty('country-label-lg', 'text-field', '{name_' + villagesMap.lang + '}');
+        });
+
         // Afficher/masquer le bouton de recherche
         villagesMap.showMapButton = function () {
           villagesMap.$button.show();
@@ -199,7 +220,7 @@ var $view = {};
           }).setLngLat(
             [output.lng, output.lat]
           ).setHTML(
-            '<div class="teaser-village">' + output.html + '</div>'
+            '<div class="teaser-village"><a href="' + output.url + '" target=_blank" class="teaser-village--content">' + output.html + '</a></div>'
           ).addTo(
             villagesMap.mapbox
           );

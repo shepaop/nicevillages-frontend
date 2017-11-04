@@ -2,16 +2,12 @@
   @extend %icon-map_std--standalone;
   cursor: pointer;
 
+  &:active,
   &:hover {
-    @extend %icon-map_plain--standalone;
+    @extend %icon-map_highlight--standalone;
   }
 
   &:active {
     opacity: .75;
-  }
-
-  &:active,
-  &.active {
-    @extend %icon-map_highlight--standalone;
   }
 }
