@@ -1,0 +1,27 @@
+.view-glossary {
+
+  .attachment-before {
+    @extend .content-tab-system--section;
+    padding-bottom: 0 !important;
+    text-align: center;
+
+    .views-summary {
+      @extend %fs-std-down-1;
+
+      a {
+        @extend %typeface-heading;
+        @extend %fs-heading-root;
+
+        &.is-active,
+        &:active,
+        &:hover {
+          @extend %color-ui-follow;
+        }
+
+        &:active {
+          opacity: .8;
+        }
+      }
+    }
+  }
+}

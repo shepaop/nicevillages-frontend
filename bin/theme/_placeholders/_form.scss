@@ -67,6 +67,14 @@
     }
   }
 
+  &-required {
+
+    &::after {
+      content: " *";
+      @extend %color-system-error;
+    }
+  }
+
   &-fieldset {
     margin: get-layout("block-spacing", "small") 0 get-layout("block-spacing", "large");
     border-top: 1px dotted get-color("grayscale", "strong");

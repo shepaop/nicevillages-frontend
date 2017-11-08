@@ -483,6 +483,10 @@ details .details-description {
   // font-size: .929em;
 }
 
+.form-required {
+  @extend %form-required;
+}
+
 .form-wrapper .field-multiple-table .label {
   // font-size: inherit;
 }

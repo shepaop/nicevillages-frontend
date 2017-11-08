@@ -127,3 +127,7 @@ Styleguide 5.3.17
 .comment-footer {
   display: table-row;
 }
+
+.comment-form__title {
+  @extend %h3;
+}
