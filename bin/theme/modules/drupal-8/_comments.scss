@@ -29,6 +29,7 @@ Styleguide 5.3.17
   margin-bottom: get-layout("block-spacing", "std");
   vertical-align: top;
   display: table;
+  width: 100%;
 }
 
 .comment__meta {
@@ -81,6 +82,12 @@ Styleguide 5.3.17
   width: 80%;
   word-break: break-all;
 
+  h2 {
+    @extend %typeface-heading;
+    @extend %fs-heading-up-1;
+    margin-bottom: get-layout("text-spacing", "std");
+  }
+
   h3 {
     @extend %typeface-heading;
     @extend %fs-heading-root;
@@ -126,6 +133,10 @@ Styleguide 5.3.17
 
 .comment-footer {
   display: table-row;
+}
+
+.comment-form #edit-field-note {
+  width: auto;
 }
 
 .comment-form__title {

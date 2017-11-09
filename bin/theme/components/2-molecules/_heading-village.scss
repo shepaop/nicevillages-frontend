@@ -64,7 +64,7 @@ Styleguide 3.7
   &--picture {
     position: relative;
     overflow: hidden;
-    max-height: 75vh;
+    max-height: 60vh;
 
     img {
       @extend %flex-image-from-mobile;

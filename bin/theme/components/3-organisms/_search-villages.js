@@ -1,10 +1,11 @@
+var villagesMapReady = false;
 var villagesMap;
 var villagesDatas;
 var $view = {};
 
 (function ($) {
 
-  var maxItemsDisplay = 400;
+  var maxItemsDisplay = 100;
   var searchVillages = function () {
 
     var cssClass = 'search-villages';
@@ -292,7 +293,7 @@ var $view = {};
         // Affichages des datas
         villagesMap.displayDatas = function (datas) {
 
-          if (datas.length >= maxItemsDisplay) {
+          if (datas.length >= maxItemsDisplay && villagesMapReady) {
             villagesMap.displayMessage();
           }
 
@@ -311,6 +312,8 @@ var $view = {};
 
         // On affiche les données
         villagesMap.displayDatas(villagesDatas);
+
+        villagesMapReady = true;
       }
       else {
 

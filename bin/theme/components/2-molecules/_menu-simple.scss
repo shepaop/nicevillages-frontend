@@ -56,7 +56,9 @@ Styleguide 3.11
       margin-bottom: get-layout("text-spacing", "std");
 
       &::before {
-        content: "- ";
+        content: "\002D";
+        display: inline-block;
+        margin-right: get-layout("text-spacing", "small");
       }
     }
 
