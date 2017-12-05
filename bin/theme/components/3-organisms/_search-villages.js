@@ -5,7 +5,7 @@ var $view = {};
 
 (function ($) {
 
-  var maxItemsDisplay = 100;
+  // var maxItemsDisplay = 48;
   var searchVillages = function () {
 
     var cssClass = 'search-villages';
@@ -137,7 +137,7 @@ var $view = {};
           container: villagesMap.$holder[0],
           style: 'mapbox://styles/mapbox/outdoors-v10',
           zoom: 8,
-          minZoom: 4,
+          minZoom: 1,
           maxZoom: 17,
           dragRotate: false,
           center: [0, 0],
@@ -163,7 +163,7 @@ var $view = {};
           villagesMap.mapbox.fitBounds([[lngMin, latMin], [lngMax, latMax]]);
         }
         else {
-          villagesMap.mapbox.fitBounds([[-2.5, 41.41], [11.22, 45.84]]);
+          villagesMap.mapbox.fitBounds([[-22.860179, 30.014604], [31.983572, 60.033416]]);
         }
 
         // Ajout de l'évènement "move"
@@ -293,9 +293,9 @@ var $view = {};
         // Affichages des datas
         villagesMap.displayDatas = function (datas) {
 
-          if (datas.length >= maxItemsDisplay && villagesMapReady) {
-            villagesMap.displayMessage();
-          }
+          // if (datas.length >= maxItemsDisplay && villagesMapReady) {
+          //   villagesMap.displayMessage();
+          // }
 
           $.each(datas, function (i, liDatas) {
 
@@ -305,10 +305,10 @@ var $view = {};
         };
 
         // Affichage d'un message concernant le nombre maximum affiché
-        villagesMap.displayMessage = function () {
-
-          alert(Drupal.t('Maximum list villages have been reached. Please, use the filters or zoom-in'));
-        };
+        // villagesMap.displayMessage = function () {
+        //
+        //   alert(Drupal.t('Maximum list villages have been reached. Please, use the filters or zoom-in'));
+        // };
 
         // On affiche les données
         villagesMap.displayDatas(villagesDatas);

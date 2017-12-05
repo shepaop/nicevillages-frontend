@@ -6,17 +6,19 @@ $name: "teaser-village";
 Aperçu dans une liste d'un village
 
 Markup:
-<div class="#{$name}">
+<div class="#{$name}" itemscope itemtype="http://schema.org/City">
   <a href="#" class="#{$name}--content">
-    <div class="#{$name}--picture">
-      <img src="img/models/teaser-village.jpg" alt="" width="400" height="225" />
+    <div class="#{$name}--picture" itemprop="image" itemscope  itemtype="http://schema.org/ImageObject">
+      <img src="img/models/teaser-village.jpg" alt="" width="400" height="225" itemprop="contentUrl" />
     </div>
     <div class="#{$name}--overlay">
       <h2 class="#{$name}--title">
-        Civita di Bagnoregio&nbsp;<span class="#{$name}--flag"><img src="img/models/it.jpg" alt="" width="75" height="50" /></span>
+        <span itemprop="name">Civita di Bagnoregio</span>&nbsp;<span class="#{$name}--flag"><img src="img/models/it.jpg" alt="" width="75" height="50" /></span>
       </h2>
-      <meta itemprop="latitude" content="0" />
-      <meta itemprop="longitude" content="0" />
+      <div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+        <meta itemprop="latitude" content="0" />
+        <meta itemprop="longitude" content="0" />
+      </div>
       <p class="#{$name}--labels">
         <img src="img/models/lpbvi.png" alt="" width="296" height="160" />
         <img src="img/models/unesco.jpg" alt="" width="500" height="500" />

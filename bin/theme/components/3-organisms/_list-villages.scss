@@ -95,6 +95,12 @@ Styleguide 4.2
     }
   }
 
+  &--note {
+    @extend %fs-std-root;
+    display: block;
+    text-align: center;
+  }
+
   &--list {
     @extend %grid-strech-flex-from-tablet;
   }
