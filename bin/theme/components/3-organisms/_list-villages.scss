@@ -124,10 +124,5 @@ Styleguide 4.2
       margin: (get-layout("block-spacing", "large") / 2) 0;
       padding: 0 get-layout("block-spacing", "large");
     }
-
-    @include breakpoint("desktop-large") {
-      margin: (get-layout("block-spacing", "x-large") / 2) 0;
-      padding: 0 get-layout("block-spacing", "x-large");
-    }
   }
 }

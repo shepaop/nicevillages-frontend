@@ -19,10 +19,6 @@
     padding: (get-layout("block-spacing", "std") - get-layout("box-border", "large")) (get-layout("block-spacing", "large") - get-layout("box-border", "large"));
   }
 
-  @include breakpoint("desktop-large") {
-    padding: (get-layout("block-spacing", "std") - get-layout("box-border", "large")) (get-layout("block-spacing", "x-large") - get-layout("box-border", "large"));
-  }
-
   &--focus,
   &--active {
     outline: none;

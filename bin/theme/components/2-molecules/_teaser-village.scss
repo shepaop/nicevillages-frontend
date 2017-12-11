@@ -19,10 +19,9 @@ Markup:
         <meta itemprop="latitude" content="0" />
         <meta itemprop="longitude" content="0" />
       </div>
-      <p class="#{$name}--labels">
-        <img src="img/models/lpbvi.png" alt="" width="296" height="160" />
-        <img src="img/models/unesco.jpg" alt="" width="500" height="500" />
-      </p>
+      <div class="#{$name}--rating">
+        <sg-insert>2.6-4</sg-insert>
+      </div>
     </div>
   </a>
   <sg-insert>3.5</sg-insert>
@@ -112,34 +111,12 @@ Styleguide 3.6
     }
   }
 
-  &--labels {
+  &--rating {
     position: absolute;
     right: 0;
     top: 0;
     max-width: 100%;
     box-sizing: border-box;
     padding: get-layout("block-spacing", "small") get-layout("block-spacing", "small") 0 0;
-
-    @include breakpoint("desktop-large") {
-      padding: get-layout("block-spacing", "std") get-layout("block-spacing", "std") 0 0;
-    }
-
-    img {
-      display: inline-block;
-      width: auto;
-      height: 2.5em;
-      margin-left: get-layout("block-spacing", "x-small");
-    }
-  }
-
-  &--label {
-    display: inline-block;
-    margin-left: get-layout("block-spacing", "x-small");
-
-    img {
-      display: block;
-      width: auto;
-      height: 2.5em;
-    }
   }
 }

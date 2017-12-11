@@ -130,11 +130,6 @@ Styleguide 4.8
         margin: (get-layout("block-spacing", "std") / 2) 0;
         padding: 0 get-layout("block-spacing", "std");
       }
-
-      @include breakpoint("desktop-large") {
-        margin: (get-layout("block-spacing", "large") / 2) 0;
-        padding: 0 get-layout("block-spacing", "large");
-      }
     }
   }
 

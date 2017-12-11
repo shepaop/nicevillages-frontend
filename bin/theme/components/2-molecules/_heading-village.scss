@@ -36,14 +36,9 @@ Markup:
         Azenhas do Mar&nbsp;<img class="#{$name}--flag" src="img/models/it.jpg" alt="" width="75" height="50" />
       </h1>
     </div>
-    <p class="#{$name}--labels">
-      <a href="#" class="#{$name}--label">
-        <img src="img/models/lpbvi.png" alt="" width="296" height="160" />
-      </a>
-      <a href="#" class="#{$name}--label">
-        <img src="img/models/unesco.jpg" alt="" width="500" height="500" />
-      </a>
-    </p>
+    <div class="#{$name}--rating">
+      <sg-insert>2.6-4</sg-insert>
+    </div>
     <p class="#{$name}--itinerary">
       <sg-insert>2.5.1-6</sg-insert>
     </p>
@@ -123,7 +118,7 @@ Styleguide 3.7
     }
   }
 
-  &--labels {
+  &--rating {
     position: absolute;
     right: 0;
     bottom: 100%;
@@ -139,29 +134,6 @@ Styleguide 3.7
 
     @include breakpoint("desktop") {
       padding: get-layout("block-spacing", "large") get-layout("block-spacing", "large") 0 0;
-    }
-
-    @include breakpoint("desktop-large") {
-      padding: get-layout("block-spacing", "x-large") get-layout("block-spacing", "x-large") 0 0;
-    }
-
-    a {
-
-      &:hover,
-      &:active {
-        opacity: .9;
-      }
-    }
-  }
-
-  &--label {
-    display: inline-block;
-    margin-left: get-layout("block-spacing", "x-small");
-
-    img {
-      display: block;
-      width: auto;
-      height: 2.5em;
     }
   }
 
@@ -263,6 +235,10 @@ Styleguide 3.7
 
     .#{$name} {
 
+      &--picture {
+        max-height: none;
+      }
+
       &--overlay {
 
         @include breakpoint("tablet") {
@@ -292,6 +268,7 @@ Styleguide 3.7
         }
       }
 
+      &--rating,
       &--actions,
       &--itinerary,
       &--toggler {

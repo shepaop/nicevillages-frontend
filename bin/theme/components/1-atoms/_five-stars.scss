@@ -1,0 +1,141 @@
+$name: "five-stars";
+
+/*
+#{$name}
+
+Five stars
+
+onedotzero             - 1.0
+onedotfive             - 1.5
+twodotzero             - 2.0
+twodotfive             - 2.5
+threedotzero           - 3.0
+threedotfive           - 3.5
+fourdotzero            - 4.0
+fourdotfive            - 4.5
+fivedotzero            - 5.0
+
+sg-filename:
+#{$name}
+
+Markup:
+<p class="#{$name} {$modifiers}" itemprop="rating" itemscope itemtype="http://schema.org/AggregateRating">
+  <span class="#{$name}--star"></span>
+  <span class="#{$name}--star"></span>
+  <span class="#{$name}--star"></span>
+  <span class="#{$name}--star"></span>
+  <span class="#{$name}--star"></span>
+  <meta itemprop="ratingValue" content="2.5" />
+  <meta itemprop="bestRating" content="5" />
+  <meta itemprop="ratingCount" content="32" />
+</p>
+
+sg-wrapper:
+<div style="padding:10px;background:#cccccc;">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 2.6
+*/
+
+.#{$name} {
+
+  &--star {
+    @extend %icon-tools_star-empty--standalone;
+  }
+
+  &.onedotzero {
+
+    .#{$name}--star:nth-child(1) {
+      @extend %icon-tools_star--standalone;
+    }
+  }
+
+  &.onedotfive {
+
+    .#{$name}--star:nth-child(1) {
+      @extend %icon-tools_star--standalone;
+    }
+
+    .#{$name}--star:nth-child(2) {
+      @extend %icon-tools_star-half--standalone;
+    }
+  }
+
+  &.twodotzero {
+
+    .#{$name}--star:nth-child(1),
+    .#{$name}--star:nth-child(2) {
+      @extend %icon-tools_star--standalone;
+    }
+  }
+
+  &.twodotfive {
+
+    .#{$name}--star:nth-child(1),
+    .#{$name}--star:nth-child(2) {
+      @extend %icon-tools_star--standalone;
+    }
+
+    .#{$name}--star:nth-child(3) {
+      @extend %icon-tools_star-half--standalone;
+    }
+  }
+
+  &.threedotzero {
+
+    .#{$name}--star:nth-child(1),
+    .#{$name}--star:nth-child(2),
+    .#{$name}--star:nth-child(3) {
+      @extend %icon-tools_star--standalone;
+    }
+  }
+
+  &.threedotfive {
+
+    .#{$name}--star:nth-child(1),
+    .#{$name}--star:nth-child(2),
+    .#{$name}--star:nth-child(3) {
+      @extend %icon-tools_star--standalone;
+    }
+
+    .#{$name}--star:nth-child(4) {
+      @extend %icon-tools_star-half--standalone;
+    }
+  }
+
+  &.fourdotzero {
+
+    .#{$name}--star:nth-child(1),
+    .#{$name}--star:nth-child(2),
+    .#{$name}--star:nth-child(3),
+    .#{$name}--star:nth-child(4) {
+      @extend %icon-tools_star--standalone;
+    }
+  }
+
+  &.fourdotfive {
+
+    .#{$name}--star:nth-child(1),
+    .#{$name}--star:nth-child(2),
+    .#{$name}--star:nth-child(3),
+    .#{$name}--star:nth-child(4) {
+      @extend %icon-tools_star--standalone;
+    }
+
+    .#{$name}--star:nth-child(5) {
+      @extend %icon-tools_star-half--standalone;
+    }
+  }
+
+  &.fivedotzero {
+
+    .#{$name}--star:nth-child(1),
+    .#{$name}--star:nth-child(2),
+    .#{$name}--star:nth-child(3),
+    .#{$name}--star:nth-child(4),
+    .#{$name}--star:nth-child(5) {
+      @extend %icon-tools_star--standalone;
+    }
+  }
+}
