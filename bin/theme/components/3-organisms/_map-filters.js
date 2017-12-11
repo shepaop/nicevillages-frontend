@@ -1,6 +1,7 @@
 var mapFiltersParams = [{
   min: 'input[name="field_note_value[min]"]',
   max: 'input[name="field_note_value[max]"]',
+  step: .5,
   suffix: '',
   format: function (value) {
     return value;
@@ -8,6 +9,7 @@ var mapFiltersParams = [{
 }, {
   min: 'input[name="field_population_value[min]"]',
   max: 'input[name="field_population_value[max]"]',
+  step: 500,
   suffix: '',
   format: function (value) {
     return value;
@@ -94,7 +96,7 @@ var mapFiltersParams = [{
               $holder.slider({
                 range: true,
                 animate: true,
-                step: 500,
+                step: mapFiltersParams[i].step,
                 min: mapFiltersParams[i].valMin,
                 max: mapFiltersParams[i].valMax,
                 values: [min, max],

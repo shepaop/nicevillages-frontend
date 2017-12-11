@@ -10,7 +10,10 @@ sg-filename:
 
 Markup:
 <div class="#{$name}">
-  <h2 class="#{$name}--title">6 village(s) found</h2>
+  <h2 class="#{$name}--title">
+    6 village(s)
+    <span class="#{$name}--note">over 6 found(s)</span>
+  </h2>
   <ul class="#{$name}--list">
     <li class="#{$name}--item">
       <sg-insert>3.6</sg-insert>
