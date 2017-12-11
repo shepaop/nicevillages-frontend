@@ -82,6 +82,7 @@ Styleguide 3.7
     @extend %text-shadow-large;
     @extend %color-grayscale-light;
     @extend %background-grayscale-dark;
+    line-height: 1;
     text-align: center;
     padding: get-layout("block-spacing", "std");
 
@@ -119,17 +120,20 @@ Styleguide 3.7
   }
 
   &--rating {
-    position: absolute;
-    right: 0;
-    bottom: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    padding: 0 get-layout("block-spacing", "small") get-layout("block-spacing", "small") 0;
+    @extend %background-grayscale-dark;
+    display: block;
+    text-align: center;
+    padding: 0 get-layout("block-spacing", "std") get-layout("block-spacing", "std") get-layout("block-spacing", "std");
 
     @include breakpoint("tablet") {
-      bottom: auto;
+      position: absolute;
+      right: 0;
       top: 0;
+      max-width: 100%;
+      box-sizing: border-box;
+      text-align: right;
       padding: get-layout("block-spacing", "std") get-layout("block-spacing", "std") 0 0;
+      background-color: transparent;
     }
 
     @include breakpoint("desktop") {
@@ -248,6 +252,7 @@ Styleguide 3.7
 
       &--title {
         @extend %fs-heading-up-4;
+        line-height: 1;
 
         @include breakpoint("tablet") {
           z-index: 1;
