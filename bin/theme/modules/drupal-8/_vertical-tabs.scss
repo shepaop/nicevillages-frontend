@@ -174,17 +174,20 @@ Styleguide 5.3.21
 .vertical-tabs {
   @extend %grid-strech-flex-from-mobile;
   flex-wrap: nowrap;
+  width: calc(100% - 15em);
+  border: 0;
   margin-bottom: get-layout("block-spacing", "std");
 }
 
 .vertical-tabs__menu {
-  width: 20%;
+  width: 15em;
   box-sizing: border-box;
   list-style: none;
+  border-top-color: transparent;
 }
 
 .vertical-tabs__panes {
-  width: 80%;
+  width: calc(100% + 15em);
   box-sizing: border-box;
   @extend %box-border-std;
   @extend %border-grayscale-medium;
@@ -198,6 +201,10 @@ Styleguide 5.3.21
 .vertical-tabs__panes > details {
   margin-top: 0;
   margin-bottom: 0;
+
+  > .details-wrapper {
+    border: 0;
+  }
 }
 
 .vertical-tabs__menu-item {

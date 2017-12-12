@@ -20,6 +20,29 @@ details > .details-wrapper {
   @extend %box-border-std;
   @extend %border-grayscale-medium;
   padding: get-layout("block-spacing", "std");
+
+  table.admin-table {
+    width: 100%;
+    margin: get-layout('block-spacing', 'std') 0;
+
+    td {
+      padding-right: get-layout('block-spacing', 'small');
+    }
+
+    thead {
+
+      th {
+        @extend %typeface-heading;
+        @extend %fs-heading-root;
+        text-align: left;
+        padding-bottom: get-layout('block-spacing', 'std');
+      }
+    }
+
+    .image-widget-data {
+      @extend %fs-std-down-1;
+    }
+  }
 }
 
 summary {

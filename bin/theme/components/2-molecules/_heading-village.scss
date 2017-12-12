@@ -221,6 +221,7 @@ Styleguide 3.7
 
     &-prev,
     &-next {
+      display: none;
 
       @include breakpoint("tablet") {
         opacity: .3;
@@ -288,6 +289,8 @@ Styleguide 3.7
 
       &-prev,
       &-next {
+        display: block;
+        background-color: rgba(get-color('grayscale', 'dark'), .7);
 
         @include breakpoint("tablet") {
           opacity: 1;
@@ -295,6 +298,7 @@ Styleguide 3.7
         }
 
         &.off {
+          background-color: rgba(get-color('grayscale', 'dark'), .4);
 
           @include breakpoint("tablet") {
             opacity: .5;

@@ -1,0 +1,105 @@
+$name: "admin-table";
+
+/*
+#{$name}
+
+Tableau d'administration côté front
+
+Markup:
+<table data-striping="1" class="admin-table">
+  <thead>
+    <tr>
+      <th>Language</th>
+      <th>Translation</th>
+      <th>Status</th>
+      <th>Operations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td><strong>English (Original language)</strong></td>
+      <td><a href="/village/ravello" hreflang="en">Ravello</a></td>
+      <td><span class="status">Published</span></td>
+      <td>
+        <div class="dropbutton-wrapper dropbutton-single">
+          <div class="dropbutton-widget">
+            <ul class="dropbutton">
+              <li class="edit dropbutton-action"><a href="/node/131/edit" hreflang="en">Edit</a></li>
+            </ul>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr class="even">
+      <td>French</td>
+      <td>n/a</td>
+      <td>Not translated</td>
+      <td>
+        <div class="dropbutton-wrapper dropbutton-single">
+          <div class="dropbutton-widget">
+            <ul class="dropbutton">
+              <li class="add dropbutton-action"><a href="/fr/node/131/translations/add/en/fr" hreflang="fr">Add</a></li>
+            </ul>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+sg-wrapper:
+<div class="container">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 5.3.24
+*/
+
+.container > .#{$name} {
+  @extend %table;
+  width: calc(100% - #{get-layout('block-spacing', 'small') * 2});
+  box-sizing: border-box;
+  margin: get-layout('block-spacing', 'large') get-layout('block-spacing', 'small');
+
+  @extend %grid-tablet-10;
+  @include breakpoint("tablet") {
+    margin: get-layout('block-spacing', 'large') map-get($grid-system, 'grid-tablet-1');
+  }
+
+  @extend %grid-desktop-8;
+  @include breakpoint("desktop") {
+    margin: get-layout('block-spacing', 'large') map-get($grid-system, 'grid-desktop-2');
+  }
+
+  @extend %grid-desktop-large-6;
+  @include breakpoint("desktop-large") {
+    margin: get-layout('block-spacing', 'large') map-get($grid-system, 'grid-desktop-large-3');
+  }
+
+  tr {
+    background-color: transparent;
+  }
+
+  .dropbutton {
+
+    a {
+      @extend %button-contribute;
+
+      &:focus {
+        @extend %button-contribute--focus;
+      }
+
+      &:hover {
+        @extend %button-contribute--hover;
+      }
+
+      &:active {
+        @extend %button-contribute--active;
+      }
+
+      &.current {
+        @extend %button-contribute--hover;
+      }
+    }
+  }
+}

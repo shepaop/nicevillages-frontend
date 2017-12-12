@@ -31,7 +31,7 @@
   th,
   td {
     @extend %box-border-bottom-std;
-    @extend %border-grayscale-light;
+    @extend %border-grayscale-soft;
     text-align: left;
     padding: get-layout("text-spacing", "std") 0 get-layout("text-spacing", "small");
   }

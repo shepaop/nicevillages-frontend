@@ -1,5 +1,6 @@
 .one-col,
-.node-village-edit-form {
+.node-village-edit-form,
+.node-village-form {
   padding: get-layout("block-spacing", "std");
 
   @include breakpoint("table") {

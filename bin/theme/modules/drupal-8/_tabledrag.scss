@@ -1,11 +1,18 @@
-tr.drag {
-  @extend %background-grayscale-light;
-}
-
 tr.drag-previous {
-  @extend %background-grayscale-soft;
+  // background-color: rgba(get-color('ui', 'contribute'), .1);
 }
 
-.tabledrag-changed-warning {
-  margin-bottom: get-layout("block-spacing", "std");
+tr.even {
+  background-color: rgba(get-color('system', 'warning'), .1);
+}
+
+tr.drag {
+  background-color: rgba(get-color('system', 'info'), .1);
+}
+
+.tabledrag-changed {
+
+  &.warning {
+    @extend %color-system-error;
+  }
 }
