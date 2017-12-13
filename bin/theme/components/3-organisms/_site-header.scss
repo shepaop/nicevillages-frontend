@@ -105,6 +105,24 @@ Styleguide 4.9
     }
   }
 
+  &--username {
+
+    &::before {
+      @extend %icon-ui_user-std--standalone;
+      margin-right: get-layout('text-spacing', 'small');
+      transition: background $css-transition-std linear;
+    }
+
+    &:hover,
+    &:active {
+
+      &::before {
+        @extend %icon-ui_user-focus;
+      }
+    }
+  }
+
+  &--username,
   &--register {
     @extend %typeface-heading;
     @extend %fs-heading-root;

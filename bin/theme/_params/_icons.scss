@@ -2403,6 +2403,104 @@ $icon-system: map-merge($icon-system, $unit);
   background-size: 42px 20px;
 }
 
+// Référentiel des icônes
+$unit: (
+  'icon-ui_user-focus': (
+    'width': 16px,
+    'height': 16px
+  )
+);
+$icon-system: map-merge($icon-system, $unit);
+
+// Regroupement par familles
+
+@if ("icon-ui") != "icon-styleguide" {
+
+  @if map-has-key($icons-map, "icon-ui") == false {
+    $icons-map: map-merge(
+      $icons-map,
+      (
+        "icon-ui": true
+      )
+    );
+
+    $styleguide-icons: $styleguide-icons + styleguide-print-title("icon-ui");
+    $styleguide-icons: $styleguide-icons + styleguide-print-desc("Télécharger le fichier Illustrator: <a target=\"_blank\" href=\"../bin/icons/icon-ui.ai\" download>icon-ui.ai</a>");
+    $styleguide-icons: $styleguide-icons + styleguide-print-separator();
+    $styleguide-icons: $styleguide-icons + "<br /><br />";
+  }
+
+  $styleguide-icons: $styleguide-icons + "<div style=\"text-align:center;font-size:12px;min-height:#{$styleguide-item-box-height};min-width:#{$styleguide-item-box-width};margin-right:#{$styleguide-item-box-margin};margin-bottom:#{$styleguide-item-box-margin};display:inline-block;vertical-align:top;\">";
+  $styleguide-icons: $styleguide-icons + "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBkPSJNOCAxLjVjMS4yIDAgMi4xIDEgMi4xIDIuMXYxLjVjMCAxLjItMSAyLjEtMi4xIDIuMXMtMi4xLTEtMi4xLTIuMVYzLjZjMC0xLjEuOS0yLjEgMi4xLTIuMW0yIDEwYzEuOSAwIDMuNSAxLjMgNCAzSDJjLjUtMS43IDIuMS0zIDQtM2g0TTggMEM2IDAgNC40IDEuNiA0LjQgMy42djEuNWMwIDIgMS42IDMuNiAzLjYgMy42czMuNi0xLjYgMy42LTMuNlYzLjZDMTEuNiAxLjYgMTAgMCA4IDB6bTIgMTBINkMzLjEgMTAgLjYgMTIuMy40IDE1LjJjMCAuMi4xLjQuMi42LjIuMS40LjIuNi4yaDEzLjdjLjIgMCAuNC0uMS42LS4yLjEtLjIuMi0uNC4yLS42LS4zLTIuOS0yLjgtNS4yLTUuNy01LjJ6IiBmaWxsPSIjZTU4ZjNhIi8+PC9zdmc+\" alt=\"\" width=\"16\" height=\"16\" style=\"background-color:#e0dfdf;\" />";
+  $styleguide-icons: $styleguide-icons + "<div style=\"margin-top:#{$styleguide-item-box-margin};\">";
+  $styleguide-icons: $styleguide-icons + "icon-ui_user-focus";
+  $styleguide-icons: $styleguide-icons + "</div>";
+  $styleguide-icons: $styleguide-icons + "</div>";
+}
+
+%icon-ui_user-focus {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBkPSJNOCAxLjVjMS4yIDAgMi4xIDEgMi4xIDIuMXYxLjVjMCAxLjItMSAyLjEtMi4xIDIuMXMtMi4xLTEtMi4xLTIuMVYzLjZjMC0xLjEuOS0yLjEgMi4xLTIuMW0yIDEwYzEuOSAwIDMuNSAxLjMgNCAzSDJjLjUtMS43IDIuMS0zIDQtM2g0TTggMEM2IDAgNC40IDEuNiA0LjQgMy42djEuNWMwIDIgMS42IDMuNiAzLjYgMy42czMuNi0xLjYgMy42LTMuNlYzLjZDMTEuNiAxLjYgMTAgMCA4IDB6bTIgMTBINkMzLjEgMTAgLjYgMTIuMy40IDE1LjJjMCAuMi4xLjQuMi42LjIuMS40LjIuNi4yaDEzLjdjLjIgMCAuNC0uMS42LS4yLjEtLjIuMi0uNC4yLS42LS4zLTIuOS0yLjgtNS4yLTUuNy01LjJ6IiBmaWxsPSIjZTU4ZjNhIi8+PC9zdmc+");
+  background-repeat: no-repeat;
+}
+
+%icon-ui_user-focus--standalone {
+  content: "";
+  @extend %icon-ui_user-focus;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-size: 16px 16px;
+}
+
+// Référentiel des icônes
+$unit: (
+  'icon-ui_user-std': (
+    'width': 16px,
+    'height': 16px
+  )
+);
+$icon-system: map-merge($icon-system, $unit);
+
+// Regroupement par familles
+
+@if ("icon-ui") != "icon-styleguide" {
+
+  @if map-has-key($icons-map, "icon-ui") == false {
+    $icons-map: map-merge(
+      $icons-map,
+      (
+        "icon-ui": true
+      )
+    );
+
+    $styleguide-icons: $styleguide-icons + styleguide-print-title("icon-ui");
+    $styleguide-icons: $styleguide-icons + styleguide-print-desc("Télécharger le fichier Illustrator: <a target=\"_blank\" href=\"../bin/icons/icon-ui.ai\" download>icon-ui.ai</a>");
+    $styleguide-icons: $styleguide-icons + styleguide-print-separator();
+    $styleguide-icons: $styleguide-icons + "<br /><br />";
+  }
+
+  $styleguide-icons: $styleguide-icons + "<div style=\"text-align:center;font-size:12px;min-height:#{$styleguide-item-box-height};min-width:#{$styleguide-item-box-width};margin-right:#{$styleguide-item-box-margin};margin-bottom:#{$styleguide-item-box-margin};display:inline-block;vertical-align:top;\">";
+  $styleguide-icons: $styleguide-icons + "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBkPSJNOCAxLjVjMS4yIDAgMi4xIDEgMi4xIDIuMXYxLjVjMCAxLjItMSAyLjEtMi4xIDIuMXMtMi4xLTEtMi4xLTIuMVYzLjZjMC0xLjEuOS0yLjEgMi4xLTIuMW0yIDEwYzEuOSAwIDMuNSAxLjMgNCAzSDJjLjUtMS43IDIuMS0zIDQtM2g0TTggMEM2IDAgNC40IDEuNiA0LjQgMy42djEuNWMwIDIgMS42IDMuNiAzLjYgMy42czMuNi0xLjYgMy42LTMuNlYzLjZDMTEuNiAxLjYgMTAgMCA4IDB6bTIgMTBINkMzLjEgMTAgLjYgMTIuMy40IDE1LjJjMCAuMi4xLjQuMi42LjIuMS40LjIuNi4yaDEzLjdjLjIgMCAuNC0uMS42LS4yLjEtLjIuMi0uNC4yLS42LS4zLTIuOS0yLjgtNS4yLTUuNy01LjJ6IiBmaWxsPSIjZmZmIi8+PC9zdmc+\" alt=\"\" width=\"16\" height=\"16\" style=\"background-color:#e0dfdf;\" />";
+  $styleguide-icons: $styleguide-icons + "<div style=\"margin-top:#{$styleguide-item-box-margin};\">";
+  $styleguide-icons: $styleguide-icons + "icon-ui_user-std";
+  $styleguide-icons: $styleguide-icons + "</div>";
+  $styleguide-icons: $styleguide-icons + "</div>";
+}
+
+%icon-ui_user-std {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBkPSJNOCAxLjVjMS4yIDAgMi4xIDEgMi4xIDIuMXYxLjVjMCAxLjItMSAyLjEtMi4xIDIuMXMtMi4xLTEtMi4xLTIuMVYzLjZjMC0xLjEuOS0yLjEgMi4xLTIuMW0yIDEwYzEuOSAwIDMuNSAxLjMgNCAzSDJjLjUtMS43IDIuMS0zIDQtM2g0TTggMEM2IDAgNC40IDEuNiA0LjQgMy42djEuNWMwIDIgMS42IDMuNiAzLjYgMy42czMuNi0xLjYgMy42LTMuNlYzLjZDMTEuNiAxLjYgMTAgMCA4IDB6bTIgMTBINkMzLjEgMTAgLjYgMTIuMy40IDE1LjJjMCAuMi4xLjQuMi42LjIuMS40LjIuNi4yaDEzLjdjLjIgMCAuNC0uMS42LS4yLjEtLjIuMi0uNC4yLS42LS4zLTIuOS0yLjgtNS4yLTUuNy01LjJ6IiBmaWxsPSIjZmZmIi8+PC9zdmc+");
+  background-repeat: no-repeat;
+}
+
+%icon-ui_user-std--standalone {
+  content: "";
+  @extend %icon-ui_user-std;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-size: 16px 16px;
+}
+
 /*
 Icons
 

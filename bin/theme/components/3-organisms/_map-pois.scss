@@ -46,6 +46,14 @@ Styleguide 4.7
   }
 
   &--marker {
-    @extend %map-marker;
+    position: absolute;
+
+    &::before {
+      @extend %map-marker;
+      position: absolute;
+      left: -(get-icon("icon-map_std") / 2);
+      bottom: -4px;
+      margin-left: 50%;
+    }
   }
 }
