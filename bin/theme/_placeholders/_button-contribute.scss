@@ -19,6 +19,15 @@
     padding: (get-layout("block-spacing", "std") - get-layout("box-border", "large")) (get-layout("block-spacing", "large") - get-layout("box-border", "large"));
   }
 
+  &--small {
+    @extend %fs-heading-down-1;
+    padding: get-layout("block-spacing", "x-small") get-layout("block-spacing", "std");
+
+    @include breakpoint("desktop") {
+      padding: get-layout("block-spacing", "x-small") get-layout("block-spacing", "std");
+    }
+  }
+
   &--focus,
   &--active {
     outline: none;

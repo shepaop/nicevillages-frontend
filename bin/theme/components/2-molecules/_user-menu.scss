@@ -1,0 +1,55 @@
+$name: "user-menu";
+
+/*
+#{$name}
+
+Menu utilisateur de la partie compte
+
+sg-filename:
+#{$name}
+
+Markup:
+<ul class="menu #{$name}">
+  <li class="menu-item active">
+    <a href="/user" data-drupal-link-system-path="user">My account</a>
+  </li>
+  <li class="menu-item">
+    <a href="/user/logout" data-drupal-link-system-path="user/logout">Log out</a>
+  </li>
+  <li class="menu-item">
+    <a href="/user/password" data-drupal-link-system-path="user/password">Forgot password</a>
+  </li>
+</ul>
+
+Styleguide 3.13
+*/
+
+.#{$name} {
+  @extend %inline-list-from-mobile;
+  margin-bottom: get-layout('block-spacing', 'x-large');
+
+  > li {
+    margin-right: get-layout('text-spacing', 'small');
+  }
+
+  a {
+    @extend %button-contribute;
+    @extend %button-contribute--small;
+
+    &:focus {
+      @extend %button-contribute--focus;
+    }
+
+    &:hover {
+      @extend %button-contribute--hover;
+    }
+
+    &:active {
+      @extend %button-contribute--active;
+    }
+
+    &.active {
+      @extend %button-contribute--hover;
+    }
+  }
+}

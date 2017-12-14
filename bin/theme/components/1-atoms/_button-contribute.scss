@@ -18,6 +18,24 @@ Markup:
 Styleguide 2.5.4
 */
 
+/*
+Bouton de contribution
+
+button-contribute
+
+default     - Version de base
+current     - Version en cours
+:hover      - Roll-over
+
+sg-filename:
+#{$name}
+
+Markup:
+<button class="#{$name} small {$modifiers}">Lorem ipsum</button>
+
+Styleguide 2.5.4.1
+*/
+
 .#{$name} {
   @extend %button-contribute;
 
@@ -35,5 +53,9 @@ Styleguide 2.5.4
 
   &.current {
     @extend %button-contribute--hover;
+  }
+
+  &.small {
+    @extend %button-contribute--small;
   }
 }
