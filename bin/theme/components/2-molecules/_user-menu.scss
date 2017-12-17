@@ -11,13 +11,13 @@ sg-filename:
 Markup:
 <ul class="menu #{$name}">
   <li class="menu-item active">
-    <a href="/user" data-drupal-link-system-path="user">My account</a>
+    <a href="/user">My account</a>
   </li>
   <li class="menu-item">
-    <a href="/user/logout" data-drupal-link-system-path="user/logout">Log out</a>
+    <a href="/user/logout">Log out</a>
   </li>
   <li class="menu-item">
-    <a href="/user/password" data-drupal-link-system-path="user/password">Forgot password</a>
+    <a href="/user/password">Forgot password</a>
   </li>
 </ul>
 

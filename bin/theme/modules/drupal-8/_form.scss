@@ -330,6 +330,11 @@ Styleguide 5.3.7
 .form-item {
   margin-bottom: get-layout("block-spacing", "std");
 
+  .form-grid-1 &,
+  .form-grid-2 & {
+    margin-bottom: 0;
+  }
+
   .description {
     @extend %form-field--description;
   }
@@ -337,6 +342,11 @@ Styleguide 5.3.7
   .form-radios &,
   .form-checkboxes & {
     margin-bottom: get-layout("text-spacing", "small");
+
+    .form-grid-1 &,
+    .form-grid-2 & {
+      margin-bottom: 0;
+    }
   }
 }
 
