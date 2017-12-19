@@ -112,27 +112,6 @@ Styleguide 4.8
     }
   }
 
-  .list-villages {
-    padding-top: 0;
-
-    &--item {
-      @extend %grid-tablet-12;
-      @extend %grid-desktop-6;
-      @extend %grid-desktop-large-4;
-      margin: get-layout("block-spacing", "small") 0;
-      padding: 0 get-layout("block-spacing", "small");
-
-      @include breakpoint("tablet") {
-        margin: (get-layout("block-spacing", "small") / 2) 0;
-      }
-
-      @include breakpoint("desktop") {
-        margin: (get-layout("block-spacing", "std") / 2) 0;
-        padding: 0 get-layout("block-spacing", "std");
-      }
-    }
-  }
-
   .heading-village--title {
     @extend %color-grayscale-dark;
     background: none;

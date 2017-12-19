@@ -130,6 +130,7 @@
 
               // On centre la carte
               poisMap.mapbox.setCenter([output.lng, output.lat]);
+              poisMap.mapbox.setZoom(16);
             });
           });
 

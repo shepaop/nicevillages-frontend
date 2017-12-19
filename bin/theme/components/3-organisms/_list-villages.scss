@@ -5,11 +5,14 @@ $name: "list-villages";
 
 liste de villages
 
+default     - Version standard
+smaller     - Version avec règles responsive différentes (par 3 en desktop/desktop-large)
+
 sg-filename:
 #{$name}
 
 Markup:
-<div class="#{$name}">
+<div class="#{$name} {$mofifiers}">
   <h2 class="#{$name}--title">
     6 village(s)
     <span class="#{$name}--note">over 6 found(s)</span>
@@ -123,6 +126,26 @@ Styleguide 4.2
     @include breakpoint("desktop") {
       margin: (get-layout("block-spacing", "large") / 2) 0;
       padding: 0 get-layout("block-spacing", "large");
+    }
+  }
+
+  &.smaller {
+
+    .#{$name}--item {
+      @extend %grid-tablet-12;
+      @extend %grid-desktop-6;
+      @extend %grid-desktop-large-4;
+      margin: get-layout("block-spacing", "small") 0;
+      padding: 0 get-layout("block-spacing", "small");
+
+      @include breakpoint("tablet") {
+        margin: (get-layout("block-spacing", "small") / 2) 0;
+      }
+
+      @include breakpoint("desktop") {
+        margin: (get-layout("block-spacing", "std") / 2) 0;
+        padding: 0 get-layout("block-spacing", "std");
+      }
     }
   }
 }

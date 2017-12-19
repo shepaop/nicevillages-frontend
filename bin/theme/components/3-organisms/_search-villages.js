@@ -256,6 +256,7 @@ var $view = {};
 
               // On centre la carte
               villagesMap.mapbox.setCenter([output.lng, output.lat]);
+              villagesMap.mapbox.setZoom(9);
             });
           });
 
