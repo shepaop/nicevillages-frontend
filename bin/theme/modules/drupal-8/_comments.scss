@@ -84,13 +84,13 @@ Styleguide 5.3.17
 
   h2 {
     @extend %typeface-heading;
-    @extend %fs-heading-up-1;
+    @extend %fs-heading-root;
     margin-bottom: get-layout("text-spacing", "std");
   }
 
   h3 {
     @extend %typeface-heading;
-    @extend %fs-heading-root;
+    @extend %fs-heading-down-1;
     margin-bottom: get-layout("text-spacing", "std");
   }
 
@@ -98,6 +98,19 @@ Styleguide 5.3.17
     @extend %typeface-std;
     @extend %fs-std-down-1;
     margin-bottom: get-layout("text-spacing", "std");
+  }
+
+  .five-stars {
+    margin: 0 0 get-layout("text-spacing", "std");
+
+    @include breakpoint("tablet") {
+      margin: 0 0 get-layout("text-spacing", "std");
+    }
+
+    @include breakpoint("desktop") {
+      float: right;
+      margin: 0 0 get-layout("block-spacing", "small") get-layout("block-spacing", "large");
+    }
   }
 }
 
