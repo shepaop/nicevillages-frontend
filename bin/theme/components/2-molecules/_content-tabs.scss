@@ -10,7 +10,7 @@ sg-filename:
 
 Markup:
 <ul class="#{$name}">
-  <li class="active poi">Points of interest</li>
+  <li class="active poi">Points of interest <span class="#{$name}--preview">(1)</span></li>
   <li class="info">More info</li>
   <li class="urls">Usefull links</li>
   <li class="related">Related villages</li>
@@ -27,6 +27,24 @@ Styleguide 3.8
   @extend %background-grayscale-soft;
   @extend %table-list-from-mobile;
   line-height: 1;
+
+  &--preview {
+    @extend %typeface-std;
+    font-size: .75em;
+    margin-left: get-layout('text-spacing', 'small');
+
+    @include breakpoint("desktop") {
+      position: absolute;
+      top: get-layout("block-spacing", "small") / 2;
+      right: get-layout("block-spacing", "small") / 2;
+    }
+
+    @include breakpoint("desktop-large") {
+      font-size: 1em;
+      top: get-layout("block-spacing", "std") / 2;
+      right: get-layout("block-spacing", "std") / 2;
+    }
+  }
 
   li {
     @extend %box-border-std;
@@ -161,12 +179,15 @@ Styleguide 3.8
 
     &.active {
       @extend %color-brand-first;
-      @extend %background-grayscale-light;
       border-bottom: 0;
 
       & + li {
         border-left-color: get-color("grayscale", "dark");
       }
+    }
+
+    &.active:not(.button-action) {
+      @extend %background-grayscale-light;
     }
   }
 }

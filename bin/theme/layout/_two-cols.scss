@@ -2,15 +2,23 @@
   @extend %grid-strech-flex-from-tablet;
 
   &--section {
-    @extend %grid-tablet-8;
+    @extend %grid-tablet-7;
     @extend %grid-desktop-8;
     @extend %grid-desktop-large-9;
+
+    @include breakpoint("tablet") {
+      order: 2;
+    }
   }
 
   &--aside {
-    @extend %grid-tablet-4;
+    @extend %grid-tablet-5;
     @extend %grid-desktop-4;
     @extend %grid-desktop-large-3;
     @extend %background-grayscale-soft;
+
+    @include breakpoint("tablet") {
+      order: 1;
+    }
   }
 }

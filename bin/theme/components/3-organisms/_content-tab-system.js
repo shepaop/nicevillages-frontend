@@ -15,9 +15,9 @@
       if (typeof $target.data('init-' + cssClass) === 'undefined') {
         $target.data('init-' + cssClass, true);
 
-        var $lis = $('> li', $target);
+        var $lis = $('> .' + cssClass + '--group', $target);
         $target.rsAccordion({
-          group: '> li',
+          group: '> .' + cssClass + '--group',
           trigger: '> .' + cssClass + '--heading',
           section: '> .' + cssClass + '--section',
           startOpened: '',

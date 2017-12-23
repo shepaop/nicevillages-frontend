@@ -43,7 +43,7 @@ var mapFiltersParams = [{
           if ($min.length && $max.length) {
 
             // On cache les éléments
-            $min.hide();
+            $min.hide().parents('.form-item:first').show();
             $max.parents('.form-item:first').hide();
 
             // On récupère les valeurs

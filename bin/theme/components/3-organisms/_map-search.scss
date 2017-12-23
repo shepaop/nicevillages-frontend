@@ -14,7 +14,9 @@ Markup:
     <sg-insert>4.3</sg-insert>
   </div>
   <div class="#{$name}--section">
-    <div class="#{$name}--map-canvas" id="mapTest"></div>
+    <div class="#{$name}--map-canvas" id="mapTest">
+      <div class="ajax-loader"></div>
+    </div>
     <div class="#{$name}--search">
       <sg-insert>2.5.1-5</sg-insert>
     </div>
@@ -63,6 +65,7 @@ Styleguide 4.4
     @extend %grid-desktop-large-9;
     @extend %background-grayscale-soft;
     position: relative;
+    max-height: 700px;
 
     .ajax-loader {
       position: absolute;
@@ -96,6 +99,8 @@ Styleguide 4.4
     padding: get-layout("block-spacing", "std") get-layout("block-spacing", "std") (get-layout("block-spacing", "std") + 80px);
 
     @include breakpoint("desktop") {
+      max-height: 80vh;
+      overflow: auto;
       padding: get-layout("block-spacing", "std") get-layout("block-spacing", "large") (get-layout("block-spacing", "large") + 80px);
     }
 
@@ -108,6 +113,10 @@ Styleguide 4.4
       left: 0;
       bottom: 0;
       width: 100%;
+    }
+
+    .form-item {
+      display: none;
     }
   }
 

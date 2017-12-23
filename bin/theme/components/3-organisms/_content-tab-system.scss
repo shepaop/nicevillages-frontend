@@ -9,41 +9,44 @@ sg-filename:
 #{$name}
 
 Markup:
-<ul class="#{$name}">
-  <li>
+<div class="#{$name}">
+  <div class="#{$name}--group">
     <h2 class="#{$name}--heading poi">Points of Interest</h2>
     <div class="#{$name}--section">
       <sg-insert>4.7</sg-insert>
     </div>
-  </li>
-  <li>
+  </div>
+  <div class="#{$name}--group">
     <h2 class="#{$name}--heading info">More info</h2>
     <div class="#{$name}--section">
       <sg-insert>3.1</sg-insert>
     </div>
-  </li>
-  <li>
+  </div>
+  <div class="#{$name}--group">
     <h2 class="#{$name}--heading urls">Usefull links</h2>
     <div class="#{$name}--section">
       <sg-insert>4.6</sg-insert>
     </div>
-  </li>
-  <li>
+  </div>
+  <div class="#{$name}--group">
     <h2 class="#{$name}--heading related">Related villages</h2>
     <div class="#{$name}--section">
       <sg-insert>4.2</sg-insert>
     </div>
-  </li>
-  <li>
+  </div>
+  <div class="#{$name}--group">
     <h2 class="#{$name}--heading comments">Comments</h2>
     <div class="#{$name}--section">
       <sg-insert>5.3.17</sg-insert>
     </div>
-  </li>
-  <li>
+  </div>
+  <div class="#{$name}--group">
     <h2 class="#{$name}--heading button-action share"></h2>
-  </li>
-</ul>
+    <div class="#{$name}--section text-center-from-mobile">
+      <sg-insert>3.12</sg-insert>
+    </div>
+  </div>
+</div>
 
 Styleguide 4.8
 */
