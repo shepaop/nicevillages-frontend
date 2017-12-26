@@ -514,6 +514,13 @@ details .details-description {
 .form-actions {
   text-align: right;
   margin-top: get-layout("block-spacing", "std");
+
+  input[type="submit"] {
+
+    &#edit-preview {
+      display: none;
+    }
+  }
 }
 
 // Node Form
