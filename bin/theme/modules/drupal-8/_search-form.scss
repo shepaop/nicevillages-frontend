@@ -16,17 +16,34 @@ Styleguide 5.3.19
 */
 
 .search-form {
-  @extend %grid-strech-flex-from-mobile;
-  flex-wrap: nowrap;
 
-  .form-item {
+  > .container-inline {
+    @extend %grid-strech-flex-from-tablet;
+    justify-content: space-between;
     width: 100%;
+
+    .form-type-search {
+      @extend %strech-child-from-tablet;
+      width: auto;
+
+      @include breakpoint("tablet") {
+        flex: 1;
+        padding: 0 get-layout('block-spacing', 'std') 0 0;
+      }
+    }
   }
 
-  .form-item,
   .form-actions {
-    @extend %strech-child-from-mobile;
     margin: 0;
+  }
+
+  .search-help-link {
+    @extend .icon-help;
+    margin-top: get-layout('block-spacing', 'std');
+  }
+
+  & + h2 {
+    @extend %h2;
   }
 }
 
