@@ -105,7 +105,7 @@ var $view = {};
 
         // Création du bouton
         villagesMap.$button = $('<div />', {
-          class: 'button-action search'
+          class: 'button-action small search'
         }).text(
           Drupal.t('Search here')
         ).hide();
@@ -154,7 +154,7 @@ var $view = {};
           dragRotate: false,
           center: [0, 0],
           scrollZoom: false,
-          logoPosition: 'top-left'
+          logoPosition: 'bottom-left'
         });
         villagesMap.mapbox.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
         villagesMap.mapbox.addControl(new mapboxgl.GeolocateControl({
@@ -163,6 +163,9 @@ var $view = {};
           },
           trackUserLocation: true
         }));
+        villagesMap.mapbox.addControl(new MapboxGeocoder({
+          accessToken: mapboxgl.accessToken
+        }), 'top-left');
 
         // Récupération d'éventuel filtres précédemment renseignés
         // var latMin = parseFloat($view.latMin.val());

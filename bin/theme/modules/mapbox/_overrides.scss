@@ -151,3 +151,15 @@
   @extend %background-grayscale-light;
   border: 0;
 }
+
+.mapboxgl-ctrl-geocoder input[type='text'],
+.mapboxgl-ctrl-geocoder ul {
+  @extend %typeface-std;
+  @extend %fs-std-down-1;
+}
+
+.mapboxgl-ctrl-geocoder,
+.mapboxgl-ctrl-geocoder ul {
+  border-radius: 0;
+}
+

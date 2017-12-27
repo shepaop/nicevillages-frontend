@@ -38,7 +38,8 @@
     "gMap": true,
     "gb": true,
     "Countdown": true,
-    "mapboxgl": true
+    "mapboxgl": true,
+    "MapboxGeocoder": true
   },
   "rules": {
     // Errors.

@@ -70,27 +70,26 @@ Styleguide 4.3
     @extend %fs-heading-up-3;
     line-height: 1;
     text-transform: uppercase;
-    margin-bottom: get-layout("block-spacing", "std");
+    margin-bottom: get-layout("block-spacing", "small");
 
     @include breakpoint("desktop") {
-      margin-bottom: get-layout("block-spacing", "large");
-    }
-
-    @include breakpoint("desktop-large") {
-      margin-bottom: get-layout("block-spacing", "x-large");
+      margin-bottom: get-layout("block-spacing", "std");
     }
   }
 
   &--smaller {
     @extend %fs-heading-up-2;
     line-height: 1;
-    display: block;
     text-transform: none;
+
+    @include breakpoint("desktop-large") {
+      display: block;
+    }
   }
 
   &--datas {
     @extend %typeface-heading;
-    @extend %fs-heading-root;
+    @extend %fs-heading-down-1;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -109,10 +108,12 @@ Styleguide 4.3
   }
 
   &--prefix {
+    @extend %typeface-std;
     margin-right: get-layout("text-spacing", "smaller");
   }
 
   &--suffix {
+    @extend %typeface-std;
     margin-left: get-layout("text-spacing", "smaller");
   }
 
@@ -132,6 +133,14 @@ Styleguide 4.3
     .form-item {
       display: block;
       margin-right: 0;
+    }
+  }
+
+  .form-item {
+    margin-bottom: get-layout("block-spacing", "small");
+
+    &.form-type-select {
+      margin-bottom: 0;
     }
   }
 }
