@@ -55,12 +55,24 @@ var $view = {};
             cfg: {
               attribute: 'content'
             }
+          },
+          rating: {
+            rule: '.teaser-village--rating .five-stars',
+            cfg: {
+              attribute: 'class'
+            }
           }
         }
       );
+
       $.each(villagesDatas, function (i, datas) {
         datas.lat = parseFloat(datas.lat);
         datas.lng = parseFloat(datas.lng);
+
+        if (typeof datas.rating === 'string') {
+          datas.rating = datas.rating.split('five-stars');
+          datas.rating = datas.rating[1];
+        }
       });
 
       if (typeof villagesMap === 'undefined') {
@@ -153,18 +165,20 @@ var $view = {};
         }));
 
         // Récupération d'éventuel filtres précédemment renseignés
-        var latMin = parseFloat($view.latMin.val());
-        var latMax = parseFloat($view.latMax.val());
-        var lngMin = parseFloat($view.lngMin.val());
-        var lngMax = parseFloat($view.lngMax.val());
+        // var latMin = parseFloat($view.latMin.val());
+        // var latMax = parseFloat($view.latMax.val());
+        // var lngMin = parseFloat($view.lngMin.val());
+        // var lngMax = parseFloat($view.lngMax.val());
 
-        // Si oui, on ajuste la carte à ces précédents points
-        if (!(isNaN(latMin) || isNaN(latMax) || isNaN(lngMin) || isNaN(lngMax))) {
-          villagesMap.mapbox.fitBounds([[lngMin, latMin], [lngMax, latMax]]);
-        }
-        else {
-          villagesMap.mapbox.fitBounds([[-22.860179, 30.014604], [31.983572, 60.033416]]);
-        }
+        // On ajuste la carte aux markers en cours
+        var bounds = new mapboxgl.LngLatBounds();
+        $.each(villagesDatas, function (i, liDatas) {
+          // On étend les bounds
+          bounds.extend([liDatas.lng, liDatas.lat]);
+        });
+
+        // Fit bounds
+        villagesMap.mapbox.fitBounds(bounds);
 
         // Ajout de l'évènement "move"
         villagesMap.mapbox.on('move', function () {
@@ -214,6 +228,10 @@ var $view = {};
           var $marker = $('<div />', {
             class: cssPrefix + '--marker'
           });
+
+          if (typeof datas.rating === 'string') {
+            $marker.addClass(datas.rating);
+          }
 
           // Instanciation de la popup
           output.popup = new mapboxgl.Popup({
@@ -308,8 +326,8 @@ var $view = {};
         // Affichage d'un message concernant le nombre maximum affiché
         // villagesMap.displayMessage = function () {
         //
-        //   alert(Drupal.t('Maximum list villages have been reached. Please, use the filters or zoom-in'));
-        // };
+        //   alert(Drupal.t('Maximum list villages have been reached. Please,
+        // use the filters or zoom-in')); };
 
         // On affiche les données
         villagesMap.displayDatas(villagesDatas);

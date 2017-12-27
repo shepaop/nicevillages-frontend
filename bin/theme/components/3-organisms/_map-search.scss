@@ -53,7 +53,6 @@ Styleguide 4.4
 */
 
 .#{$name} {
-
   @extend %grid-strech-flex-from-tablet;
   @include breakpoint("tablet") {
     flex-wrap: nowrap;
@@ -123,12 +122,141 @@ Styleguide 4.4
   &--marker {
     position: absolute;
 
-    &::before {
+    $iconWidth: get-icon("icon-map_std", "width");
+    $iconHeight: get-icon("icon-map_std", "height");
+    $offsetY: -4px;
+
+    @mixin iconByNotation($ratio: 1) {
       @extend %map-marker;
       position: absolute;
-      left: -(get-icon("icon-map_std") / 2);
-      bottom: -4px;
+      left: 0;
+      bottom: $offsetY * $ratio;
       margin-left: 50%;
+      width: $iconWidth * $ratio;
+      height: $iconHeight * $ratio;
+      transform: translateX(-50%);
+      background-size: 100% 100%;
+    }
+
+    &::before {
+      @include iconByNotation(.6);
+    }
+
+    &.onedotzero::before {
+      @include iconByNotation(.6);
+
+      &:active,
+      &:hover {
+        @extend %icon-map_highlight;
+      }
+
+      &:active {
+        opacity: .75;
+      }
+    }
+
+    &.onedotfive::before {
+      @include iconByNotation(.7);
+
+      &:active,
+      &:hover {
+        @extend %icon-map_highlight;
+      }
+
+      &:active {
+        opacity: .75;
+      }
+    }
+
+    &.twodotzero::before {
+      @include iconByNotation(.8);
+
+      &:active,
+      &:hover {
+        @extend %icon-map_highlight;
+      }
+
+      &:active {
+        opacity: .75;
+      }
+    }
+
+    &.twodotfive::before {
+      @include iconByNotation(.9);
+
+      &:active,
+      &:hover {
+        @extend %icon-map_highlight;
+      }
+
+      &:active {
+        opacity: .75;
+      }
+    }
+
+    &.threedotzero::before {
+      @include iconByNotation(1);
+
+      &:active,
+      &:hover {
+        @extend %icon-map_highlight;
+      }
+
+      &:active {
+        opacity: .75;
+      }
+    }
+
+    &.threedotfive::before {
+      @include iconByNotation(1.1);
+
+      &:active,
+      &:hover {
+        @extend %icon-map_highlight;
+      }
+
+      &:active {
+        opacity: .75;
+      }
+    }
+
+    &.fourdotzero::before {
+      @include iconByNotation(1.2);
+
+      &:active,
+      &:hover {
+        @extend %icon-map_highlight;
+      }
+
+      &:active {
+        opacity: .75;
+      }
+    }
+
+    &.fourdotfive::before {
+      @include iconByNotation(1.3);
+
+      &:active,
+      &:hover {
+        @extend %icon-map_highlight;
+      }
+
+      &:active {
+        opacity: .75;
+      }
+    }
+
+    &.fivedotzero::before {
+      @include iconByNotation(1.4);
+
+      &:active,
+      &:hover {
+        @extend %icon-map_highlight;
+      }
+
+      &:active {
+        opacity: .75;
+      }
     }
   }
 }

@@ -99,11 +99,28 @@ Styleguide 4.3
 
     &-left {
       text-align: left;
+      white-space: nowrap;
     }
 
     &-right {
       text-align: right;
+      white-space: nowrap;
     }
+  }
+
+  &--prefix {
+    margin-right: get-layout("text-spacing", "smaller");
+  }
+
+  &--suffix {
+    margin-left: get-layout("text-spacing", "smaller");
+  }
+
+  &--star {
+    @extend %icon-tools_star-dark--standalone;
+    width: get-icon('icon-tools_star-dark', 'width') / 2;
+    height: get-icon('icon-tools_star-dark', 'height') / 2;
+    background-size: 100% 100%;
   }
 
   &--slider-wrapper {

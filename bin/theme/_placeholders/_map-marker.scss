@@ -4,7 +4,7 @@
 
   &:active,
   &:hover {
-    @extend %icon-map_highlight--standalone;
+    @extend %icon-map_highlight;
   }
 
   &:active {

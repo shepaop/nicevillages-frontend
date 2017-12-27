@@ -2,7 +2,9 @@ var mapFiltersParams = [{
   min: 'input[name="field_note_value[min]"]',
   max: 'input[name="field_note_value[max]"]',
   step: .5,
-  suffix: '',
+  prefixMin: '<span class="map-filters--prefix">' + Drupal.t('From') + '</span>',
+  prefixMax: '<span class="map-filters--prefix">' + Drupal.t('To') + '</span>',
+  suffix: '<span class="map-filters--star map-filters--suffix"></span>',
   format: function (value) {
     return value;
   }
@@ -10,7 +12,9 @@ var mapFiltersParams = [{
   min: 'input[name="field_population_value[min]"]',
   max: 'input[name="field_population_value[max]"]',
   step: 500,
-  suffix: '',
+  prefixMin: '<span class="map-filters--prefix">' + Drupal.t('From') + '</span>',
+  prefixMax: '<span class="map-filters--prefix">' + Drupal.t('To') + '</span>',
+  suffix: '<span class="map-filters--suffix">' + Drupal.t('hab.') + '</span>',
   format: function (value) {
     return value;
   }
@@ -70,13 +74,13 @@ var mapFiltersParams = [{
               });
               var $left = $('<div />', {
                 class: cssClass + '--datas-left'
-              }).text(
-                slider.format(min) + slider.suffix
+              }).html(
+                slider.prefixMin + slider.format(min) + slider.suffix
               );
               var $right = $('<div />', {
                 class: cssClass + '--datas-right'
-              }).text(
-                slider.format(max) + slider.suffix
+              }).html(
+                slider.prefixMax + slider.format(max) + slider.suffix
               );
 
               // Insertion dans le DOM HTML
@@ -102,17 +106,18 @@ var mapFiltersParams = [{
                 values: [min, max],
                 slide: function (event, ui) {
 
-                  var $valueTarget = $left;
                   if (ui.value !== ui.values[0]) {
-                    $valueTarget = $right;
                     $max.val(ui.values[1]);
+                    $right.html(
+                      slider.prefixMax + slider.format(ui.value) + slider.suffix
+                    );
                   }
                   else {
                     $min.val(ui.values[0]);
+                    $left.html(
+                      slider.prefixMin + slider.format(ui.value) + slider.suffix
+                    );
                   }
-                  $valueTarget.text(
-                    slider.format(ui.value) + slider.suffix
-                  );
                 }
               });
             }
