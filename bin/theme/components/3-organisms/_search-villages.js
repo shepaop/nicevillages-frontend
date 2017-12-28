@@ -242,7 +242,7 @@ var $view = {};
           }).setLngLat(
             [output.lng, output.lat]
           ).setHTML(
-            '<div class="teaser-village"><a href="' + output.url + '" target=_blank" class="teaser-village--content">' + output.html + '</a></div>'
+            '<div class="teaser-village"><a href="' + output.url + '" class="teaser-village--content">' + output.html + '</a></div>'
           ).addTo(
             villagesMap.mapbox
           );
