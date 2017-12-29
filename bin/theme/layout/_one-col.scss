@@ -14,4 +14,19 @@
   @include breakpoint("desktop-large") {
     padding: get-layout("block-spacing", "x-large") map-get($grid-system, "grid-desktop-large-3");
   }
+
+  .one-col {
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.node-village-form {
+
+  .one-col & {
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
 }

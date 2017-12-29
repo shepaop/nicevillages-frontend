@@ -1,0 +1,11 @@
+$name: "book-list";
+
+.#{$name} {
+  @extend %grid-strech-flex-from-mobile;
+  justify-content: space-around;
+  padding: get-layout('block-spacing', 'std');
+
+  &--item {
+    margin: get-layout('text-spacing', 'small');
+  }
+}
