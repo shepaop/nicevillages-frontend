@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+<head>
+    <meta charset="utf-8">
+
+    <title>Geocoding</title>
+
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+
+
+
+</head>
+
+<body>
+  <div id="test-gmap" style="width:100%;height: 500px;"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMVX_2qlfvNfsnOFvOnkuyMR2Uv0AM0dw"></script>
+<script src="_google-map.js"></script>
+<script src="_datas.js"></script>
+<script>
+  var geocodingMap = new gMap(jQuery('#test-gmap'), {
+    style: [{"featureType": "poi", "elementType": "all", "stylers": [{"visibility": "off"}]}, {"featureType": "poi", "elementType": "all", "stylers": [{"visibility": "off"}]}, {"featureType": "road", "elementType": "all", "stylers": [{"visibility": "on"}, {"color": "#e0dad1"}]}, {"featureType": "road", "elementType": "labels.text", "stylers": [{"visibility": "off"}, {"color": "#2d2d2f"}, {"weight": 0.1}]}, {"featureType": "road", "elementType": "geometry.stroke", "stylers": [{"visibility": "on"}, {"color": "#ccbeaf"}]}, {"featureType": "transit.station", "elementType": "all", "stylers": [{"visibility": "off"}]}, {"featureType": "landscape.man_made", "elementType": "geometry", "stylers": [{"visibility": "off"}]}, {"featureType": "water", "elementType": "all", "stylers": [{"color": "#b6d2ed"}]}, {"featureType": "administrative.locality", "elementType": "labels.text.fill", "stylers": [{"visibility": "on"}, {"color": "#2d2d2f"}]}],
+    options: {
+      center: [0,0],
+      zoom: 2,
+      positionControl: 'BOTTOM_RIGHT', scrollwheel: false
+      // mapTypeControl: false,
+      // streetViewControl: false,
+      // mapTypeId: 'roadmap' | 'satellite' | 'hybrid' | 'terrain'
+    },
+    markerList: [],
+    geocoder: {
+      activate: true,
+      callback: function (results, status) {}
+    }
+  });
+
+  var leftVillages = {};
+  $.each(villagesDatas, function(i){
+    if(typeof villagesDatas[i]['lat'] === 'undefined'){
+      leftVillages[i] = villagesDatas[i];
+    }
+  });
+
+  var index = 0;
+  var keys = Object.keys(leftVillages);
+  var geocode;
+  geocode = setInterval(function(){
+    if(typeof villagesDatas[keys[index]] === 'object'){
+
+      var id = index;
+      var address = villagesDatas[keys[id]].name + ', ' + villagesDatas[keys[id]].ISO;
+      geocodingMap.geocoder.geocode({address: address}, function(results, status){
+        console.log(address, villagesDatas[keys[id]].name, results[0].geometry);
+        if(status === 'OK' && typeof results[0] === 'object' && typeof results[0].geometry !== 'undefined'){
+          villagesDatas[keys[id]]['lat'] = Math.round(results[0].geometry.location.lat() * 1000000) / 1000000;
+          villagesDatas[keys[id]]['lng'] = Math.round(results[0].geometry.location.lng() * 1000000) / 1000000;
+        }
+        else {
+          console.log(villagesDatas[keys[id]].name, status);
+        }
+      });
+      console.log(address, villagesDatas[index]);
+
+      index++;
+    }
+    else {
+      clearInterval(geocode);
+      console.log(villagesDatas);
+      console.log(JSON.stringify(villagesDatas));
+    }
+  }, 2000);
+</script>
+</body>
+</html>

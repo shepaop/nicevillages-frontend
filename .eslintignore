@@ -5,3 +5,4 @@ jsdoc/**/*.js
 styleguide/**/*.js
 gulpfile.js
 bin/js/jquery.ui.touch-punch.min.js
+geocoding/_datas.js

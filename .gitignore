@@ -7,6 +7,7 @@ dist/**/*.html
 dist/css/*
 !dist/css/*.js
 index.html
+!geocoding/index.html
 
 # Bin folder #
 ###################
