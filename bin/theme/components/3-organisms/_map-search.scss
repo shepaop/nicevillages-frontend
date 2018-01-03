@@ -156,7 +156,7 @@ Styleguide 4.4
     }
 
     &.onedotfive::before {
-      @include iconByNotation(.7);
+      @include iconByNotation(.6);
 
       &:active,
       &:hover {
@@ -169,7 +169,7 @@ Styleguide 4.4
     }
 
     &.twodotzero::before {
-      @include iconByNotation(.8);
+      @include iconByNotation(.7);
 
       &:active,
       &:hover {
@@ -182,7 +182,7 @@ Styleguide 4.4
     }
 
     &.twodotfive::before {
-      @include iconByNotation(.9);
+      @include iconByNotation(.7);
 
       &:active,
       &:hover {
@@ -195,7 +195,7 @@ Styleguide 4.4
     }
 
     &.threedotzero::before {
-      @include iconByNotation(1);
+      @include iconByNotation(.8);
 
       &:active,
       &:hover {
@@ -208,7 +208,7 @@ Styleguide 4.4
     }
 
     &.threedotfive::before {
-      @include iconByNotation(1.1);
+      @include iconByNotation(.8);
 
       &:active,
       &:hover {
@@ -221,7 +221,7 @@ Styleguide 4.4
     }
 
     &.fourdotzero::before {
-      @include iconByNotation(1.2);
+      @include iconByNotation(.9);
 
       &:active,
       &:hover {
@@ -234,7 +234,7 @@ Styleguide 4.4
     }
 
     &.fourdotfive::before {
-      @include iconByNotation(1.3);
+      @include iconByNotation(.9);
 
       &:active,
       &:hover {
@@ -247,7 +247,7 @@ Styleguide 4.4
     }
 
     &.fivedotzero::before {
-      @include iconByNotation(1.4);
+      @include iconByNotation(1);
 
       &:active,
       &:hover {

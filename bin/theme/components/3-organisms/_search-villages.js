@@ -180,8 +180,13 @@ var $view = {};
           bounds.extend([liDatas.lng, liDatas.lat]);
         });
 
-        // Fit bounds
-        villagesMap.mapbox.fitBounds(bounds);
+        if (!villagesDatas.length) {
+          villagesMap.mapbox.fitBounds([[-22.860179, 30.014604], [31.983572, 60.033416]]);
+        }
+        else {
+          // Fit bounds
+          villagesMap.mapbox.fitBounds(bounds);
+        }
 
         // Ajout de l'évènement "move"
         villagesMap.mapbox.on('move', function () {

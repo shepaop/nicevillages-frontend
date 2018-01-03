@@ -34,6 +34,16 @@
       @extend %color-grayscale-strong;
       display: block;
       margin: get-layout("text-spacing", "small") 0 get-layout("text-spacing", "std");
+
+      a {
+        @extend %color-ui-follow;
+        text-decoration: underline;
+
+        &:hover,
+        &:active {
+          @extend %color-ui-submit;
+        }
+      }
     }
   }
 

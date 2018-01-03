@@ -147,15 +147,30 @@
           return output.marker;
         };
 
+        // On récupère les coordonnées qui concernent le village
+        var $holderVillage = $('.heading-village--overlay div[itemprop="geo"]');
+        var villageLat = parseFloat($('meta[itemprop="latitude"]', $holderVillage).attr('content'));
+        var villageLng = parseFloat($('meta[itemprop="longitude"]', $holderVillage).attr('content'));
+
         // Affichages des datas
         poisMap.displayDatas = function (datas) {
 
           var bounds = new mapboxgl.LngLatBounds();
+
+          // On étend les bounds
+          bounds.extend([villageLng, villageLat]);
+
+          // On parcours les datas des POIS
           $.each(datas, function (i, liDatas) {
 
-            // On insère un marker
-            poisMap.addMarker(liDatas);
-            bounds.extend([liDatas.lng, liDatas.lat]);
+            if (!isNaN(liDatas.lng) && !isNaN(liDatas.lat)) {
+
+              // On insère un marker
+              poisMap.addMarker(liDatas);
+
+              // On étend les bounds
+              bounds.extend([liDatas.lng, liDatas.lat]);
+            }
           });
 
           // Fit bounds
