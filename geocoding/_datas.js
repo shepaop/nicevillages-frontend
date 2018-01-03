@@ -2155,7 +2155,9 @@ var villagesDatas = [
     "label": "it",
     "name": "Buonconvento",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.136057,
+    "lng": 11.479605
   },
   {
     "label": "it",
@@ -2169,7 +2171,9 @@ var villagesDatas = [
     "label": "it",
     "name": "Campodimele",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 41.386974,
+    "lng": 13.532632
   },
   {
     "label": "it",
@@ -2183,7 +2187,9 @@ var villagesDatas = [
     "label": "it",
     "name": "Caramanico Terme",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.161112,
+    "lng": 14.008598
   },
   {
     "label": "it",
@@ -2197,7 +2203,9 @@ var villagesDatas = [
     "label": "it",
     "name": "Cassinetta di Lugagnano",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 45.425904,
+    "lng": 8.907445
   },
   {
     "label": "it",
@@ -2211,7 +2219,9 @@ var villagesDatas = [
     "label": "it",
     "name": "Castel di Tora",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.218311,
+    "lng": 12.97234
   },
   {
     "label": "it",
@@ -2225,7 +2235,9 @@ var villagesDatas = [
     "label": "it",
     "name": "Castelfranco Piandiscò",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.621213,
+    "lng": 11.556909
   },
   {
     "label": "it",
@@ -2239,7 +2251,9 @@ var villagesDatas = [
     "label": "it",
     "name": "Castellabate",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 40.282088,
+    "lng": 14.957415
   },
   {
     "label": "it",
@@ -2253,7 +2267,9 @@ var villagesDatas = [
     "label": "it",
     "name": "Castelli",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.484574,
+    "lng": 13.71176
   },
   {
     "label": "it",
@@ -2267,7 +2283,9 @@ var villagesDatas = [
     "label": "it",
     "name": "Castelmola",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 37.859021,
+    "lng": 15.277826
   },
   {
     "label": "it",
@@ -2281,7 +2299,9 @@ var villagesDatas = [
     "label": "it",
     "name": "Castelsardo",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 40.913692,
+    "lng": 8.708592
   },
   {
     "label": "it",
@@ -2295,7 +2315,9 @@ var villagesDatas = [
     "label": "it",
     "name": "Castiglione del Lago",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.12645,
+    "lng": 12.04784
   },
   {
     "label": "it",
@@ -2309,7 +2331,9 @@ var villagesDatas = [
     "label": "it",
     "name": "Castiglione di Sicilia",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 37.86766,
+    "lng": 15.055742
   },
   {
     "label": "it",
@@ -2323,7 +2347,9 @@ var villagesDatas = [
     "label": "it",
     "name": "Cefalù",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 38.008417,
+    "lng": 14.018844
   },
   {
     "label": "it",
@@ -2337,13 +2363,17 @@ var villagesDatas = [
     "label": "it",
     "name": "Cetona",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.963185,
+    "lng": 11.900072
   },
   {
     "label": "it",
     "name": "Chianale (frazione di Pontechianale)",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 44.648329,
+    "lng": 6.996396
   },
   {
     "label": "it",
@@ -2357,7 +2387,9 @@ var villagesDatas = [
     "label": "it",
     "name": "Chiusa",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 46.680256,
+    "lng": 11.531819
   },
   {
     "label": "it",
@@ -2371,7 +2403,9 @@ var villagesDatas = [
     "label": "it",
     "name": "Cison di Valmarino",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 45.972312,
+    "lng": 12.165142
   },
   {
     "label": "it",
@@ -2385,13 +2419,17 @@ var villagesDatas = [
     "label": "it",
     "name": "Città Sant'Angelo",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.517648,
+    "lng": 14.060208
   },
   {
     "label": "it",
     "name": "Civita",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 39.853151,
+    "lng": 16.305177
   },
   {
     "label": "it",
@@ -2405,7 +2443,9 @@ var villagesDatas = [
     "label": "it",
     "name": "Clauiano (frazione di Trivignano Udinese)",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 45.931354,
+    "lng": 13.334209
   },
   {
     "label": "it",
@@ -2419,7 +2459,9 @@ var villagesDatas = [
     "label": "it",
     "name": "Colletta di Castelbianco",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 44.111321,
+    "lng": 8.065956
   },
   {
     "label": "it",
@@ -2433,13 +2475,17 @@ var villagesDatas = [
     "label": "it",
     "name": "Corciano",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.123787,
+    "lng": 12.28926
   },
   {
     "label": "it",
     "name": "Cordovado",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 45.845256,
+    "lng": 12.880459
   },
   {
     "label": "it",
@@ -2453,7 +2499,9 @@ var villagesDatas = [
     "label": "it",
     "name": "Corinaldo",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.648797,
+    "lng": 13.049839
   },
   {
     "label": "it",
@@ -2467,13 +2515,17 @@ var villagesDatas = [
     "label": "it",
     "name": "Dozza",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 44.358768,
+    "lng": 11.625741
   },
   {
     "label": "it",
     "name": "Egna",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 46.31159,
+    "lng": 11.272514
   },
   {
     "label": "it",
@@ -2487,13 +2539,17 @@ var villagesDatas = [
     "label": "it",
     "name": "Fagagna",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 46.117736,
+    "lng": 13.08185
   },
   {
     "label": "it",
     "name": "Ferla",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 37.119438,
+    "lng": 14.940008
   },
   {
     "label": "it",
@@ -2507,7 +2563,9 @@ var villagesDatas = [
     "label": "it",
     "name": "Fiumalbo",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 44.177895,
+    "lng": 10.649536
   },
   {
     "label": "it",
@@ -2521,13 +2579,17 @@ var villagesDatas = [
     "label": "it",
     "name": "Fornelli",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 41.610391,
+    "lng": 14.140795
   },
   {
     "label": "it",
     "name": "Fortunago",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 44.921154,
+    "lng": 9.183379
   },
   {
     "label": "it",
@@ -2541,13 +2603,17 @@ var villagesDatas = [
     "label": "it",
     "name": "Frontino",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.769913,
+    "lng": 12.36357
   },
   {
     "label": "it",
     "name": "Frosolone",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 41.599324,
+    "lng": 14.449635
   },
   {
     "label": "it",
@@ -2561,13 +2627,17 @@ var villagesDatas = [
     "label": "it",
     "name": "Gangi",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 37.79665,
+    "lng": 14.205906
   },
   {
     "label": "it",
     "name": "Garbagna",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 44.779031,
+    "lng": 8.995321
   },
   {
     "label": "it",
@@ -2581,13 +2651,17 @@ var villagesDatas = [
     "label": "it",
     "name": "Gerace",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 38.272021,
+    "lng": 16.221787
   },
   {
     "label": "it",
     "name": "Geraci Siculo",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 37.85189,
+    "lng": 14.152703
   },
   {
     "label": "it",
@@ -2601,13 +2675,17 @@ var villagesDatas = [
     "label": "it",
     "name": "Giove",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.510698,
+    "lng": 12.334255
   },
   {
     "label": "it",
     "name": "Glorenza",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 46.670629,
+    "lng": 10.552948
   },
   {
     "label": "it",
@@ -2621,13 +2699,17 @@ var villagesDatas = [
     "label": "it",
     "name": "Gradella (frazione di Pandino)",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 45.424833,
+    "lng": 9.532232
   },
   {
     "label": "it",
     "name": "Gradisca d'Isonzo",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 45.892425,
+    "lng": 13.500194
   },
   {
     "label": "it",
@@ -2641,13 +2723,17 @@ var villagesDatas = [
     "label": "it",
     "name": "Greccio[4][5]",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.407933,
+    "lng": 12.776802
   },
   {
     "label": "it",
     "name": "Gromo",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 45.965381,
+    "lng": 9.927165
   },
   {
     "label": "it",
@@ -2661,13 +2747,17 @@ var villagesDatas = [
     "label": "it",
     "name": "Gualtieri",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 44.889787,
+    "lng": 10.611503
   },
   {
     "label": "it",
     "name": "Guardia Perticara",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 40.360997,
+    "lng": 16.098979
   },
   {
     "label": "it",
@@ -2681,13 +2771,17 @@ var villagesDatas = [
     "label": "it",
     "name": "Introdacqua",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.008221,
+    "lng": 13.897702
   },
   {
     "label": "it",
     "name": "Laigueglia",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.978338,
+    "lng": 8.152975
   },
   {
     "label": "it",
@@ -2701,13 +2795,17 @@ var villagesDatas = [
     "label": "it",
     "name": "Loro Ciuffenna",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.592769,
+    "lng": 11.631905
   },
   {
     "label": "it",
     "name": "Lovere",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 45.80879,
+    "lng": 10.067354
   },
   {
     "label": "it",
@@ -2721,13 +2819,17 @@ var villagesDatas = [
     "label": "it",
     "name": "Macerata Feltria",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.803213,
+    "lng": 12.440741
   },
   {
     "label": "it",
     "name": "Marina di Conca (frazione di Conca dei Marini)",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 40.615889,
+    "lng": 14.575686
   },
   {
     "label": "it",
@@ -2741,19 +2843,25 @@ var villagesDatas = [
     "label": "it",
     "name": "Mezzano",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 46.154741,
+    "lng": 11.808243
   },
   {
     "label": "it",
     "name": "Milazzo",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 38.22071,
+    "lng": 15.241933
   },
   {
     "label": "it",
     "name": "Millesimo",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 44.344862,
+    "lng": 8.204895
   },
   {
     "label": "it",
@@ -2767,13 +2875,17 @@ var villagesDatas = [
     "label": "it",
     "name": "Mondolfo",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.753573,
+    "lng": 13.095758
   },
   {
     "label": "it",
     "name": "Moneglia",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 44.239147,
+    "lng": 9.488618
   },
   {
     "label": "it",
@@ -2787,19 +2899,25 @@ var villagesDatas = [
     "label": "it",
     "name": "Montalbano Elicona",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 38.022948,
+    "lng": 15.016392
   },
   {
     "label": "it",
     "name": "Monte Castello di Vibio",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.837947,
+    "lng": 12.348275
   },
   {
     "label": "it",
     "name": "Monte Grimano Terme",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.884857,
+    "lng": 12.475464
   },
   {
     "label": "it",
@@ -2813,13 +2931,17 @@ var villagesDatas = [
     "label": "it",
     "name": "Monte San Giovanni Campano",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 41.64092,
+    "lng": 13.511783
   },
   {
     "label": "it",
     "name": "Montecassiano",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.364433,
+    "lng": 13.437496
   },
   {
     "label": "it",
@@ -2833,19 +2955,25 @@ var villagesDatas = [
     "label": "it",
     "name": "Montefabbri (frazione di Vallefoglia)",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.826878,
+    "lng": 12.802723
   },
   {
     "label": "it",
     "name": "Montefalco",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.889294,
+    "lng": 12.650284
   },
   {
     "label": "it",
     "name": "Montefiore Conca",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.888399,
+    "lng": 12.611423
   },
   {
     "label": "it",
@@ -2859,19 +2987,25 @@ var villagesDatas = [
     "label": "it",
     "name": "Montegridolfo",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.85848,
+    "lng": 12.687897
   },
   {
     "label": "it",
     "name": "Montelupone",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.342889,
+    "lng": 13.570069
   },
   {
     "label": "it",
     "name": "Montemarcello (frazione di Ameglia)",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 44.045916,
+    "lng": 9.96537
   },
   {
     "label": "it",
@@ -2885,13 +3019,17 @@ var villagesDatas = [
     "label": "it",
     "name": "Monterosso Almo",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 37.090417,
+    "lng": 14.765596
   },
   {
     "label": "it",
     "name": "Montesarchio",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 41.063228,
+    "lng": 14.638047
   },
   {
     "label": "it",
@@ -2905,19 +3043,25 @@ var villagesDatas = [
     "label": "it",
     "name": "Monteverde",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 40.999974,
+    "lng": 15.534767
   },
   {
     "label": "it",
     "name": "Montone",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.362323,
+    "lng": 12.323687
   },
   {
     "label": "it",
     "name": "Morano Calabro",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 39.84296,
+    "lng": 16.137958
   },
   {
     "label": "it",
@@ -2931,19 +3075,25 @@ var villagesDatas = [
     "label": "it",
     "name": "Morimondo",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 45.355256,
+    "lng": 8.955083
   },
   {
     "label": "it",
     "name": "Navelli",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.235994,
+    "lng": 13.728443
   },
   {
     "label": "it",
     "name": "Neive",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 44.721832,
+    "lng": 8.103695
   },
   {
     "label": "it",
@@ -2957,19 +3107,25 @@ var villagesDatas = [
     "label": "it",
     "name": "Norcia",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.791675,
+    "lng": 13.094733
   },
   {
     "label": "it",
     "name": "Novara di Sicilia",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 38.012353,
+    "lng": 15.137591
   },
   {
     "label": "it",
     "name": "Nusco",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 40.888265,
+    "lng": 15.089822
   },
   {
     "label": "it",
@@ -2983,19 +3139,25 @@ var villagesDatas = [
     "label": "it",
     "name": "Offida",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.940863,
+    "lng": 13.696505
   },
   {
     "label": "it",
     "name": "Opi",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 34.206801,
+    "lng": -118.417145
   },
   {
     "label": "it",
     "name": "Oratino",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 41.584624,
+    "lng": 14.585511
   },
   {
     "label": "it",
@@ -3009,19 +3171,25 @@ var villagesDatas = [
     "label": "it",
     "name": "Orta San Giulio",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 45.796744,
+    "lng": 8.416219
   },
   {
     "label": "it",
     "name": "Ortignano Raggiolo",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.67334,
+    "lng": 11.718217
   },
   {
     "label": "it",
     "name": "Orvinio",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.134044,
+    "lng": 12.937576
   },
   {
     "label": "it",
@@ -3035,25 +3203,33 @@ var villagesDatas = [
     "label": "it",
     "name": "Otranto",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 40.143898,
+    "lng": 18.491168
   },
   {
     "label": "it",
     "name": "Pacentro",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.051415,
+    "lng": 13.99291
   },
   {
     "label": "it",
     "name": "Paciano",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.027989,
+    "lng": 12.060403
   },
   {
     "label": "it",
     "name": "Palazzolo Acreide",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 37.061862,
+    "lng": 14.904141
   },
   {
     "label": "it",
@@ -3067,19 +3243,25 @@ var villagesDatas = [
     "label": "it",
     "name": "Penne",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.456912,
+    "lng": 13.928129
   },
   {
     "label": "it",
     "name": "Pescocostanzo",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 41.89021,
+    "lng": 14.065595
   },
   {
     "label": "it",
     "name": "Petralia Soprana",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 37.796415,
+    "lng": 14.107877
   },
   {
     "label": "it",
@@ -3093,19 +3275,25 @@ var villagesDatas = [
     "label": "it",
     "name": "Piediluco (frazione di Terni)",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.53256,
+    "lng": 12.7523
   },
   {
     "label": "it",
     "name": "Pietracamela",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.523319,
+    "lng": 13.553981
   },
   {
     "label": "it",
     "name": "Pietramontecorvino",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 41.542609,
+    "lng": 15.128184
   },
   {
     "label": "it",
@@ -3119,25 +3307,33 @@ var villagesDatas = [
     "label": "it",
     "name": "Pitigliano",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.635318,
+    "lng": 11.669991
   },
   {
     "label": "it",
     "name": "Poffabro (frazione di Frisanco)",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 46.218091,
+    "lng": 12.708662
   },
   {
     "label": "it",
     "name": "Polcenigo",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 46.036914,
+    "lng": 12.497398
   },
   {
     "label": "it",
     "name": "Pomponesco",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 44.929779,
+    "lng": 10.597409
   },
   {
     "label": "it",
@@ -3151,19 +3347,25 @@ var villagesDatas = [
     "label": "it",
     "name": "Porto Ercole (frazione di Monte Argentario)",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.396657,
+    "lng": 11.201569
   },
   {
     "label": "it",
     "name": "Portobuffolé",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 45.858075,
+    "lng": 12.537687
   },
   {
     "label": "it",
     "name": "Posada",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 40.63036,
+    "lng": 9.714892
   },
   {
     "label": "it",
@@ -3177,25 +3379,33 @@ var villagesDatas = [
     "label": "it",
     "name": "Pretoro",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.219296,
+    "lng": 14.140068
   },
   {
     "label": "it",
     "name": "Rango (frazione di Bleggio Superiore)",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 46.018356,
+    "lng": 10.812048
   },
   {
     "label": "it",
     "name": "Ricetto di Candelo (frazione di Candelo)",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 45.545901,
+    "lng": 8.112883
   },
   {
     "label": "it",
     "name": "Rocca San Giovanni",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.250303,
+    "lng": 14.464625
   },
   {
     "label": "it",
@@ -3209,25 +3419,33 @@ var villagesDatas = [
     "label": "it",
     "name": "Sabbioneta",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 44.998985,
+    "lng": 10.488928
   },
   {
     "label": "it",
     "name": "Salemi",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 37.807523,
+    "lng": 12.782478
   },
   {
     "label": "it",
     "name": "Sambuca di Sicilia",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 37.647714,
+    "lng": 13.111111
   },
   {
     "label": "it",
     "name": "San Benedetto Po",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 45.029539,
+    "lng": 10.925239
   },
   {
     "label": "it",
@@ -3241,19 +3459,25 @@ var villagesDatas = [
     "label": "it",
     "name": "San Gemini",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.611675,
+    "lng": 12.547853
   },
   {
     "label": "it",
     "name": "San Ginesio",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.099005,
+    "lng": 13.300983
   },
   {
     "label": "it",
     "name": "San Giorgio (frazione di Sant'Ambrogio di Valpolicella)",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 45.534572,
+    "lng": 10.84969
   },
   {
     "label": "it",
@@ -3267,25 +3491,33 @@ var villagesDatas = [
     "label": "it",
     "name": "San Leo",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.896619,
+    "lng": 12.343226
   },
   {
     "label": "it",
     "name": "San Lorenzo in Banale (frazione di San Lorenzo Dorsino)",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 46.076705,
+    "lng": 10.909271
   },
   {
     "label": "it",
     "name": "San Marco d'Alunzio",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 38.073723,
+    "lng": 14.697948
   },
   {
     "label": "it",
     "name": "Sant'Agata de' Goti",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 41.089581,
+    "lng": 14.499895
   },
   {
     "label": "it",
@@ -3299,25 +3531,33 @@ var villagesDatas = [
     "label": "it",
     "name": "Santa Severina",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 39.147807,
+    "lng": 16.915862
   },
   {
     "label": "it",
     "name": "Santo Stefano di Sessanio",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.344291,
+    "lng": 13.645676
   },
   {
     "label": "it",
     "name": "Sarnano",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.025376,
+    "lng": 13.277892
   },
   {
     "label": "it",
     "name": "Savignano Irpino",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 41.228377,
+    "lng": 15.181418
   },
   {
     "label": "it",
@@ -3331,31 +3571,41 @@ var villagesDatas = [
     "label": "it",
     "name": "Scanno",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 41.899982,
+    "lng": 13.884136
   },
   {
     "label": "it",
     "name": "Scarperia (frazione di Scarperia e San Piero)",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.993749,
+    "lng": 11.353346
   },
   {
     "label": "it",
     "name": "Seborga",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.830371,
+    "lng": 7.700124
   },
   {
     "label": "it",
     "name": "Sepino",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 41.409638,
+    "lng": 14.62407
   },
   {
     "label": "it",
     "name": "Servigliano",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.078685,
+    "lng": 13.489673
   },
   {
     "label": "it",
@@ -3369,25 +3619,33 @@ var villagesDatas = [
     "label": "it",
     "name": "Soncino",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 45.399776,
+    "lng": 9.873389
   },
   {
     "label": "it",
     "name": "Sovana (frazione di Sorano)",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.658136,
+    "lng": 11.645558
   },
   {
     "label": "it",
     "name": "Specchia",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 39.941167,
+    "lng": 18.299996
   },
   {
     "label": "it",
     "name": "Spello",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.987653,
+    "lng": 12.67119
   },
   {
     "label": "it",
@@ -3401,31 +3659,41 @@ var villagesDatas = [
     "label": "it",
     "name": "Sperlonga",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 41.263674,
+    "lng": 13.427141
   },
   {
     "label": "it",
     "name": "Stilo",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 38.46622,
+    "lng": 16.475926
   },
   {
     "label": "it",
     "name": "Subiaco",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 41.924653,
+    "lng": 13.093669
   },
   {
     "label": "it",
     "name": "Sutera",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 37.52085,
+    "lng": 13.735535
   },
   {
     "label": "it",
     "name": "Suvereto",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.076683,
+    "lng": 10.678444
   },
   {
     "label": "it",
@@ -3439,25 +3707,33 @@ var villagesDatas = [
     "label": "it",
     "name": "Tellaro (frazione di Lerici)",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 44.062141,
+    "lng": 9.928201
   },
   {
     "label": "it",
     "name": "Toppo (frazione di Travesio)",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 46.201427,
+    "lng": 12.828352
   },
   {
     "label": "it",
     "name": "Torgiano",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.027316,
+    "lng": 12.432391
   },
   {
     "label": "it",
     "name": "Torre Alfina (frazione di Acquapendente)",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.755456,
+    "lng": 11.943129
   },
   {
     "label": "it",
@@ -3471,31 +3747,41 @@ var villagesDatas = [
     "label": "it",
     "name": "Treia",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 43.309177,
+    "lng": 13.312886
   },
   {
     "label": "it",
     "name": "Tremezzo (frazione di Tremezzina)",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 45.984862,
+    "lng": 9.228819
   },
   {
     "label": "it",
     "name": "Tremosine sul Garda",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 45.789813,
+    "lng": 10.735666
   },
   {
     "label": "it",
     "name": "Trevi",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 42.877641,
+    "lng": 12.748808
   },
   {
     "label": "it",
     "name": "Triora",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 44.006137,
+    "lng": 7.719945
   },
   {
     "label": "it",
@@ -3509,25 +3795,33 @@ var villagesDatas = [
     "label": "it",
     "name": "Valvasone",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 45.994908,
+    "lng": 12.868403
   },
   {
     "label": "it",
     "name": "Venosa",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 40.960767,
+    "lng": 15.815423
   },
   {
     "label": "it",
     "name": "Venzone",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 46.344618,
+    "lng": 13.171702
   },
   {
     "label": "it",
     "name": "Verezzi (frazione di Borgio Verezzi)",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 44.159728,
+    "lng": 8.307475
   },
   {
     "label": "it",
@@ -3541,31 +3835,41 @@ var villagesDatas = [
     "label": "it",
     "name": "Vico del Gargano",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 41.895999,
+    "lng": 15.959619
   },
   {
     "label": "it",
     "name": "Viggianello",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 39.973207,
+    "lng": 16.084394
   },
   {
     "label": "it",
     "name": "Vigoleno (frazione di Vernasca)",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 44.817026,
+    "lng": 9.900417
   },
   {
     "label": "it",
     "name": "Villalago",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 41.935935,
+    "lng": 13.835902
   },
   {
     "label": "it",
     "name": "Vipiteno",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 46.892673,
+    "lng": 11.433619
   },
   {
     "label": "it",
@@ -3579,31 +3883,41 @@ var villagesDatas = [
     "label": "it",
     "name": "Vogogna",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 46.007148,
+    "lng": 8.293944
   },
   {
     "label": "it",
     "name": "Volpedo",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 44.889464,
+    "lng": 8.98363
   },
   {
     "label": "it",
     "name": "Zavattarello",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 44.86838,
+    "lng": 9.265333
   },
   {
     "label": "it",
     "name": "Zuccarello",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 44.111757,
+    "lng": 8.11659
   },
   {
     "label": "it",
     "name": "Zungoli",
     "ISO": "it",
-    "population": ""
+    "population": "",
+    "lat": 41.124609,
+    "lng": 15.201389
   },
   {
     "label": "",
@@ -3617,6 +3931,8 @@ var villagesDatas = [
     "label": "",
     "name": "San Martino",
     "ISO": "si",
-    "population": ""
+    "population": "",
+    "lat": 46.004746,
+    "lng": 13.554137
   }
 ];
