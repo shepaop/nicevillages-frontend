@@ -3,4 +3,13 @@
   .tabledrag-toggle-weight-wrapper {
     display: none;
   }
+
+  #edit-field-field-cvs-labels-wrapper,
+  #edit-field-field-csv-iso-wrapper {
+    display: none;
+
+    .toolbar-fixed & {
+      display: block;
+    }
+  }
 }
