@@ -30,6 +30,11 @@
           accordionEnabled: 'accordion-enabled',
           scrollTo: true,
           tabs: false,
+          onAfterExpand: function (id, self) {
+            if (self.$triggers[id].hasClass('poi')) {
+              poisMap.mapbox.map.resize();
+            }
+          },
           responsive: {
             960: {
               tabs: function (tabs) {

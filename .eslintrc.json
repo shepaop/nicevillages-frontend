@@ -39,7 +39,8 @@
     "gb": true,
     "Countdown": true,
     "mapboxgl": true,
-    "MapboxGeocoder": true
+    "MapboxGeocoder": true,
+    "poisMap": true
   },
   "rules": {
     // Errors.

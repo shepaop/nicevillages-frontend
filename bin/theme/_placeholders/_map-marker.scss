@@ -10,4 +10,13 @@
   &:active {
     opacity: .75;
   }
+
+  &--alternate {
+    @extend %icon-map_alternate--standalone;
+
+    &:active,
+    &:hover {
+      @extend %icon-map_alternate-highlight;
+    }
+  }
 }

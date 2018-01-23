@@ -641,6 +641,104 @@ $icon-system: map-merge($icon-system, $unit);
 
 // Référentiel des icônes
 $unit: (
+  'icon-map_alternate-highlight': (
+    'width': 28px,
+    'height': 44px
+  )
+);
+$icon-system: map-merge($icon-system, $unit);
+
+// Regroupement par familles
+
+@if ("icon-map") != "icon-styleguide" {
+
+  @if map-has-key($icons-map, "icon-map") == false {
+    $icons-map: map-merge(
+      $icons-map,
+      (
+        "icon-map": true
+      )
+    );
+
+    $styleguide-icons: $styleguide-icons + styleguide-print-title("icon-map");
+    $styleguide-icons: $styleguide-icons + styleguide-print-desc("Télécharger le fichier Illustrator: <a target=\"_blank\" href=\"../bin/icons/icon-map.ai\" download>icon-map.ai</a>");
+    $styleguide-icons: $styleguide-icons + styleguide-print-separator();
+    $styleguide-icons: $styleguide-icons + "<br /><br />";
+  }
+
+  $styleguide-icons: $styleguide-icons + "<div style=\"text-align:center;font-size:12px;min-height:#{$styleguide-item-box-height};min-width:#{$styleguide-item-box-width};margin-right:#{$styleguide-item-box-margin};margin-bottom:#{$styleguide-item-box-margin};display:inline-block;vertical-align:top;\">";
+  $styleguide-icons: $styleguide-icons + "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOCIgaGVpZ2h0PSI0NCIgdmlld0JveD0iMCAwIDI4IDQ0Ij48cmFkaWFsR3JhZGllbnQgaWQ9ImEiIGN4PSIxNCIgY3k9IjQwLjExMiIgcj0iMTAuMTY3IiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC4yIDAgMzIuMDkpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLW9wYWNpdHk9Ii42Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLW9wYWNpdHk9IjAiLz48L3JhZGlhbEdyYWRpZW50PjxwYXRoIGQ9Ik0xNCAzNi44YzcuNyAwIDE0IDEuNSAxNCAzLjMgMCAxLjgtNi4zIDMuMy0xNCAzLjNTMCA0MS45IDAgNDAuMWMwLTEuOCA2LjMtMy4zIDE0LTMuM3oiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSJ1cmwoI2EpIi8+PHBhdGggZD0iTTE0IDIuM2M2LjQgMCAxMS42IDUuMyAxMS42IDExLjkgMCAyLjEtLjUgNC4xLTEuNSA1LjlMMTQgMzUuNSAzLjkgMjBjLTEtMS44LTEuNS0zLjgtMS41LTUuOUMyLjQgNy42IDcuNiAyLjMgMTQgMi4zIiBmaWxsPSIjMjYyNjI2Ii8+PHBhdGggZD0iTTE0IDMuMWM2LjEgMCAxMSA1LjEgMTEgMTEuMyAwIDItLjUgMy45LTEuNCA1LjZMMTQgMzQuNyA0LjQgMjBDMy41IDE4LjMgMyAxNi40IDMgMTQuNCAzIDguMiA3LjkgMy4xIDE0IDMuMW0wLTNDNi4zLjEgMCA2LjUgMCAxNC40YzAgMi42LjcgNSAxLjkgNy4xTDE0IDQwLjFsMTIuMS0xOC42YzEuMi0yLjEgMS45LTQuNSAxLjktNy4xQzI4IDYuNSAyMS43LjEgMTQgLjF6IiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTE0IDYuMmMtLjUgMC0uOS4yLTEuMy41LS4zLjQtLjUuOC0uNSAxLjNzLjIuOS41IDEuM2MuNC40LjguNSAxLjMuNXMuOS0uMiAxLjMtLjVjLjMtLjMuNS0uOC41LTEuM3MtLjItLjktLjUtMS4zYy0uNC0uMy0uOC0uNS0xLjMtLjV6bTIuMyA1LjljLTEuNi4yLTMuMy40LTQuOS42bC0uMi43aC40Yy4zIDAgLjUuMS42LjIuMi4xLjIuMy4yLjUgMCAuMy0uMS40LS4yIDFMMTAuNSAyMWMtLjEuNS0uMi45LS4yIDEuMiAwIC41LjIuOC41IDEuMi4zLjMgMS4zLjQgMS45LjQgMS40IDAgMy43LS44IDUtMi45bC0xLS42Yy0uNS44LTEuNSAxLjQtMS45IDEuNi0uNS4yLS43LjItLjkuMi0uMSAwLS4yIDAtLjItLjEtLjEtLjEtLjEtLjItLjEtLjMgMC0uMi4xLS41LjItMWwyLjUtOC42eiIgZmlsbD0iIzUxNTE1MSIvPjwvc3ZnPg==\" alt=\"\" width=\"28\" height=\"44\" style=\"background-color:#e0dfdf;\" />";
+  $styleguide-icons: $styleguide-icons + "<div style=\"margin-top:#{$styleguide-item-box-margin};\">";
+  $styleguide-icons: $styleguide-icons + "icon-map_alternate-highlight";
+  $styleguide-icons: $styleguide-icons + "</div>";
+  $styleguide-icons: $styleguide-icons + "</div>";
+}
+
+%icon-map_alternate-highlight {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOCIgaGVpZ2h0PSI0NCIgdmlld0JveD0iMCAwIDI4IDQ0Ij48cmFkaWFsR3JhZGllbnQgaWQ9ImEiIGN4PSIxNCIgY3k9IjQwLjExMiIgcj0iMTAuMTY3IiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC4yIDAgMzIuMDkpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLW9wYWNpdHk9Ii42Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLW9wYWNpdHk9IjAiLz48L3JhZGlhbEdyYWRpZW50PjxwYXRoIGQ9Ik0xNCAzNi44YzcuNyAwIDE0IDEuNSAxNCAzLjMgMCAxLjgtNi4zIDMuMy0xNCAzLjNTMCA0MS45IDAgNDAuMWMwLTEuOCA2LjMtMy4zIDE0LTMuM3oiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSJ1cmwoI2EpIi8+PHBhdGggZD0iTTE0IDIuM2M2LjQgMCAxMS42IDUuMyAxMS42IDExLjkgMCAyLjEtLjUgNC4xLTEuNSA1LjlMMTQgMzUuNSAzLjkgMjBjLTEtMS44LTEuNS0zLjgtMS41LTUuOUMyLjQgNy42IDcuNiAyLjMgMTQgMi4zIiBmaWxsPSIjMjYyNjI2Ii8+PHBhdGggZD0iTTE0IDMuMWM2LjEgMCAxMSA1LjEgMTEgMTEuMyAwIDItLjUgMy45LTEuNCA1LjZMMTQgMzQuNyA0LjQgMjBDMy41IDE4LjMgMyAxNi40IDMgMTQuNCAzIDguMiA3LjkgMy4xIDE0IDMuMW0wLTNDNi4zLjEgMCA2LjUgMCAxNC40YzAgMi42LjcgNSAxLjkgNy4xTDE0IDQwLjFsMTIuMS0xOC42YzEuMi0yLjEgMS45LTQuNSAxLjktNy4xQzI4IDYuNSAyMS43LjEgMTQgLjF6IiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTE0IDYuMmMtLjUgMC0uOS4yLTEuMy41LS4zLjQtLjUuOC0uNSAxLjNzLjIuOS41IDEuM2MuNC40LjguNSAxLjMuNXMuOS0uMiAxLjMtLjVjLjMtLjMuNS0uOC41LTEuM3MtLjItLjktLjUtMS4zYy0uNC0uMy0uOC0uNS0xLjMtLjV6bTIuMyA1LjljLTEuNi4yLTMuMy40LTQuOS42bC0uMi43aC40Yy4zIDAgLjUuMS42LjIuMi4xLjIuMy4yLjUgMCAuMy0uMS40LS4yIDFMMTAuNSAyMWMtLjEuNS0uMi45LS4yIDEuMiAwIC41LjIuOC41IDEuMi4zLjMgMS4zLjQgMS45LjQgMS40IDAgMy43LS44IDUtMi45bC0xLS42Yy0uNS44LTEuNSAxLjQtMS45IDEuNi0uNS4yLS43LjItLjkuMi0uMSAwLS4yIDAtLjItLjEtLjEtLjEtLjEtLjItLjEtLjMgMC0uMi4xLS41LjItMWwyLjUtOC42eiIgZmlsbD0iIzUxNTE1MSIvPjwvc3ZnPg==");
+  background-repeat: no-repeat;
+}
+
+%icon-map_alternate-highlight--standalone {
+  content: "";
+  @extend %icon-map_alternate-highlight;
+  display: inline-block;
+  width: 28px;
+  height: 44px;
+  background-size: 28px 44px;
+}
+
+// Référentiel des icônes
+$unit: (
+  'icon-map_alternate': (
+    'width': 28px,
+    'height': 44px
+  )
+);
+$icon-system: map-merge($icon-system, $unit);
+
+// Regroupement par familles
+
+@if ("icon-map") != "icon-styleguide" {
+
+  @if map-has-key($icons-map, "icon-map") == false {
+    $icons-map: map-merge(
+      $icons-map,
+      (
+        "icon-map": true
+      )
+    );
+
+    $styleguide-icons: $styleguide-icons + styleguide-print-title("icon-map");
+    $styleguide-icons: $styleguide-icons + styleguide-print-desc("Télécharger le fichier Illustrator: <a target=\"_blank\" href=\"../bin/icons/icon-map.ai\" download>icon-map.ai</a>");
+    $styleguide-icons: $styleguide-icons + styleguide-print-separator();
+    $styleguide-icons: $styleguide-icons + "<br /><br />";
+  }
+
+  $styleguide-icons: $styleguide-icons + "<div style=\"text-align:center;font-size:12px;min-height:#{$styleguide-item-box-height};min-width:#{$styleguide-item-box-width};margin-right:#{$styleguide-item-box-margin};margin-bottom:#{$styleguide-item-box-margin};display:inline-block;vertical-align:top;\">";
+  $styleguide-icons: $styleguide-icons + "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOCIgaGVpZ2h0PSI0NCIgdmlld0JveD0iMCAwIDI4IDQ0Ij48cmFkaWFsR3JhZGllbnQgaWQ9ImEiIGN4PSIxNCIgY3k9IjQwLjExMiIgcj0iMTAuMTY3IiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC4yIDAgMzIuMDkpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLW9wYWNpdHk9Ii42Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLW9wYWNpdHk9IjAiLz48L3JhZGlhbEdyYWRpZW50PjxwYXRoIGQ9Ik0xNCAzNi44YzcuNyAwIDE0IDEuNSAxNCAzLjMgMCAxLjgtNi4zIDMuMy0xNCAzLjNTMCA0MS45IDAgNDAuMWMwLTEuOCA2LjMtMy4zIDE0LTMuM3oiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSJ1cmwoI2EpIi8+PHBhdGggZD0iTTE0IC4xQzYuMy4xIDAgNi41IDAgMTQuNGMwIDIuNi43IDUgMS45IDcuMUwxNCA0MC4xbDEyLjEtMTguNmMxLjItMi4xIDEuOS00LjUgMS45LTcuMUMyOCA2LjUgMjEuNy4xIDE0IC4xeiIgZmlsbD0iI2UwZTBlMCIvPjxwYXRoIGQ9Ik0xNCAyLjNjNi40IDAgMTEuNiA1LjMgMTEuNiAxMS45IDAgMi4xLS41IDQuMS0xLjUgNS45TDE0IDM1LjUgMy45IDIwYy0xLTEuOC0xLjUtMy44LTEuNS01LjlDMi40IDcuNiA3LjYgMi4zIDE0IDIuMyIgZmlsbD0iIzI2MjYyNiIvPjxwYXRoIGQ9Ik0xNCA2LjJjLS41IDAtLjkuMi0xLjMuNS0uMy40LS41LjgtLjUgMS4zcy4yLjkuNSAxLjNjLjQuNC44LjUgMS4zLjVzLjktLjIgMS4zLS41Yy4zLS4zLjUtLjguNS0xLjNzLS4yLS45LS41LTEuM2MtLjQtLjMtLjgtLjUtMS4zLS41em0yLjMgNS45Yy0xLjYuMi0zLjMuNC00LjkuNmwtLjIuN2guNGMuMyAwIC41LjEuNi4yLjIuMS4yLjMuMi41IDAgLjMtLjEuNC0uMiAxTDEwLjUgMjFjLS4xLjUtLjIuOS0uMiAxLjIgMCAuNS4yLjguNSAxLjIuMy4zIDEuMy40IDEuOS40IDEuNCAwIDMuNy0uOCA1LTIuOWwtMS0uNmMtLjUuOC0xLjUgMS40LTEuOSAxLjYtLjUuMi0uNy4yLS45LjItLjEgMC0uMiAwLS4yLS4xLS4xLS4xLS4xLS4yLS4xLS4zIDAtLjIuMS0uNS4yLTFsMi41LTguNnoiIGZpbGw9IiM1MTUxNTEiLz48L3N2Zz4=\" alt=\"\" width=\"28\" height=\"44\" style=\"background-color:#e0dfdf;\" />";
+  $styleguide-icons: $styleguide-icons + "<div style=\"margin-top:#{$styleguide-item-box-margin};\">";
+  $styleguide-icons: $styleguide-icons + "icon-map_alternate";
+  $styleguide-icons: $styleguide-icons + "</div>";
+  $styleguide-icons: $styleguide-icons + "</div>";
+}
+
+%icon-map_alternate {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOCIgaGVpZ2h0PSI0NCIgdmlld0JveD0iMCAwIDI4IDQ0Ij48cmFkaWFsR3JhZGllbnQgaWQ9ImEiIGN4PSIxNCIgY3k9IjQwLjExMiIgcj0iMTAuMTY3IiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC4yIDAgMzIuMDkpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLW9wYWNpdHk9Ii42Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLW9wYWNpdHk9IjAiLz48L3JhZGlhbEdyYWRpZW50PjxwYXRoIGQ9Ik0xNCAzNi44YzcuNyAwIDE0IDEuNSAxNCAzLjMgMCAxLjgtNi4zIDMuMy0xNCAzLjNTMCA0MS45IDAgNDAuMWMwLTEuOCA2LjMtMy4zIDE0LTMuM3oiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSJ1cmwoI2EpIi8+PHBhdGggZD0iTTE0IC4xQzYuMy4xIDAgNi41IDAgMTQuNGMwIDIuNi43IDUgMS45IDcuMUwxNCA0MC4xbDEyLjEtMTguNmMxLjItMi4xIDEuOS00LjUgMS45LTcuMUMyOCA2LjUgMjEuNy4xIDE0IC4xeiIgZmlsbD0iI2UwZTBlMCIvPjxwYXRoIGQ9Ik0xNCAyLjNjNi40IDAgMTEuNiA1LjMgMTEuNiAxMS45IDAgMi4xLS41IDQuMS0xLjUgNS45TDE0IDM1LjUgMy45IDIwYy0xLTEuOC0xLjUtMy44LTEuNS01LjlDMi40IDcuNiA3LjYgMi4zIDE0IDIuMyIgZmlsbD0iIzI2MjYyNiIvPjxwYXRoIGQ9Ik0xNCA2LjJjLS41IDAtLjkuMi0xLjMuNS0uMy40LS41LjgtLjUgMS4zcy4yLjkuNSAxLjNjLjQuNC44LjUgMS4zLjVzLjktLjIgMS4zLS41Yy4zLS4zLjUtLjguNS0xLjNzLS4yLS45LS41LTEuM2MtLjQtLjMtLjgtLjUtMS4zLS41em0yLjMgNS45Yy0xLjYuMi0zLjMuNC00LjkuNmwtLjIuN2guNGMuMyAwIC41LjEuNi4yLjIuMS4yLjMuMi41IDAgLjMtLjEuNC0uMiAxTDEwLjUgMjFjLS4xLjUtLjIuOS0uMiAxLjIgMCAuNS4yLjguNSAxLjIuMy4zIDEuMy40IDEuOS40IDEuNCAwIDMuNy0uOCA1LTIuOWwtMS0uNmMtLjUuOC0xLjUgMS40LTEuOSAxLjYtLjUuMi0uNy4yLS45LjItLjEgMC0uMiAwLS4yLS4xLS4xLS4xLS4xLS4yLS4xLS4zIDAtLjIuMS0uNS4yLTFsMi41LTguNnoiIGZpbGw9IiM1MTUxNTEiLz48L3N2Zz4=");
+  background-repeat: no-repeat;
+}
+
+%icon-map_alternate--standalone {
+  content: "";
+  @extend %icon-map_alternate;
+  display: inline-block;
+  width: 28px;
+  height: 44px;
+  background-size: 28px 44px;
+}
+
+// Référentiel des icônes
+$unit: (
   'icon-map_highlight': (
     'width': 28px,
     'height': 44px

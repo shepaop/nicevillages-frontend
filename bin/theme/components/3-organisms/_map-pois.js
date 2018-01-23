@@ -1,3 +1,4 @@
+var poisMap = {};
 (function ($) {
 
   var mapPois = function (context, settings) {
@@ -14,8 +15,6 @@
 
       if (typeof $target.data('init-' + cssClass) === 'undefined') {
         $target.data('init-' + cssClass, true);
-
-        var poisMap = {};
 
         poisMap.$list = $('.' + cssClass + '--content .light-list ul.light-list--list > li', $target);
         poisMap.$mapHolder = $('.' + cssClass + '--map', $target);
@@ -84,7 +83,7 @@
 
           // Custom marker
           var $marker = $('<div />', {
-            class: cssClass + '--marker'
+            class: cssClass + '--marker poi'
           });
 
           // Instanciation de la popup
@@ -157,8 +156,22 @@
 
           var bounds = new mapboxgl.LngLatBounds();
 
-          // On étend les bounds
+          // On étend les bounds au village
           bounds.extend([villageLng, villageLat]);
+
+          // Marker village
+          var $marker = $('<div />', {
+            class: cssClass + '--marker'
+          });
+
+          // Instanciation du marker village
+          new mapboxgl.Marker(
+            $marker[0]
+          ).setLngLat(
+            [villageLng, villageLat]
+          ).addTo(
+            poisMap.mapbox
+          );
 
           // On parcours les datas des POIS
           $.each(datas, function (i, liDatas) {

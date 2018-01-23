@@ -55,5 +55,14 @@ Styleguide 4.7
       bottom: -4px;
       margin-left: 50%;
     }
+
+    &.poi {
+
+      &::before {
+        @extend %map-marker--alternate;
+        left: -(get-icon("icon-map_std") / 2);
+        bottom: -4px;
+      }
+    }
   }
 }
