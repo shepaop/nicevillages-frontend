@@ -24,6 +24,10 @@
         });
         $togglerButton.text(Drupal.t('See pictures'));
 
+        var $close = $('<div />', {
+          class: cssClass + '--close'
+        });
+
         // Slider
         var $pictures = $('.' + cssClass + '--picture > ul', $target);
         $('> li', $pictures).show();
@@ -42,6 +46,13 @@
         // Click behavior
         $togglerButton.click(function () {
           $target.addClass('focus');
+          $target.append(
+            $close
+          );
+        });
+        $close.click(function () {
+          $target.removeClass('focus');
+          $close.detach();
         });
 
         // DOM HTML insertion

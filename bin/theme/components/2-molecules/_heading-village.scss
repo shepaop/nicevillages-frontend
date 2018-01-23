@@ -217,6 +217,34 @@ Styleguide 3.7
     }
   }
 
+  &--close {
+    @extend %icon-ui_close-reversed--standalone;
+    display: none;
+
+    @include breakpoint("tablet") {
+      display: block;
+      z-index: 3;
+      position: absolute;
+      right: 0;
+      top: 0;
+      cursor: pointer;
+      margin: get-layout("block-spacing", "std") get-layout("block-spacing", "std") 0 0;
+    }
+
+    @include breakpoint("desktop") {
+      margin: get-layout("block-spacing", "large") get-layout("block-spacing", "large") 0 0;
+    }
+
+    @include breakpoint("desktop-large") {
+      margin: get-layout("block-spacing", "x-large") get-layout("block-spacing", "x-large") 0 0;
+    }
+
+    &:active,
+    &:hover {
+      @extend %icon-ui_close-std;
+    }
+  }
+
   .responsive-slider--pager {
 
     &-prev,
