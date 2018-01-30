@@ -32,7 +32,8 @@
           tabs: false,
           onAfterExpand: function (id, self) {
             if (self.$triggers[id].hasClass('poi')) {
-              poisMap.mapbox.map.resize();
+              poisMap.mapbox.resize();
+              poisMap.mapbox.fitBounds(poisMap.targetedBounds, {padding: _boundsPadding});
             }
           },
           responsive: {

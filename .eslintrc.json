@@ -21,6 +21,7 @@
     "window": true,
     "console": true,
     "_duration": true,
+    "_boundsPadding": true,
     "Raphael": true,
     "BurgerMenu": true,
     "dropMenu": true,

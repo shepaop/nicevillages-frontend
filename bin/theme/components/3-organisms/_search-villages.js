@@ -181,11 +181,11 @@ var $view = {};
         });
 
         if (!villagesDatas.length) {
-          villagesMap.mapbox.fitBounds([[-22.860179, 30.014604], [31.983572, 60.033416]]);
+          villagesMap.mapbox.fitBounds([[-22.860179, 30.014604], [31.983572, 60.033416]], {padding: _boundsPadding});
         }
         else {
           // Fit bounds
-          villagesMap.mapbox.fitBounds(bounds);
+          villagesMap.mapbox.fitBounds(bounds, {padding: _boundsPadding});
         }
 
         // Ajout de l'évènement "move"

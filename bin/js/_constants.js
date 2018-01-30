@@ -10,3 +10,10 @@ var domReadyRegistry = {};
  */
 // Timing de base des animations JS
 var _duration = 500;
+
+/**
+ * @var {number} _boundsPadding=40
+ * @description Padding à appliquer au fitBounds
+ */
+// Timing de base des animations JS
+var _boundsPadding = 40;

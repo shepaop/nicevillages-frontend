@@ -187,7 +187,8 @@ var poisMap = {};
           });
 
           // Fit bounds
-          poisMap.mapbox.fitBounds(bounds);
+          poisMap.targetedBounds = bounds;
+          poisMap.mapbox.fitBounds(bounds, {padding: _boundsPadding});
         };
 
         // On affiche les données
