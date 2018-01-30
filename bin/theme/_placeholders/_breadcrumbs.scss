@@ -1,12 +1,28 @@
 %breadcrumbs {
-  @extend %typeface-std;
-  @extend %fs-std-root;
+  @extend %typeface-heading;
+  @extend %fs-std-down-1;
+  @extend %color-grayscale-dark;
+  padding: get-layout('text-spacing', 'smaller') get-layout("block-spacing", "small");
+
+  @include breakpoint("tablet") {
+    padding: get-layout('text-spacing', 'smaller') get-layout("block-spacing", "std");
+  }
+
+  @include breakpoint("desktop") {
+    padding: get-layout('text-spacing', 'small') get-layout("block-spacing", "large");
+  }
+
+  @include breakpoint("desktop-large") {
+    padding: get-layout('text-spacing', 'small') get-layout("block-spacing", "x-large");
+  }
 
   &--item {
     display: inline-block;
 
     &::before {
-      content: " > ";
+      content: "-";
+      display: inline-block;
+      margin: 0 get-layout('text-spacing', 'small');
     }
 
     &:first-child {
@@ -18,6 +34,7 @@
 
     a {
 
+      &:active,
       &:hover {
         @extend %color-brand-first;
       }

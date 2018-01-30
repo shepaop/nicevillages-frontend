@@ -178,6 +178,11 @@ Styleguide 4.11
 
       > .form-item {
         flex: 1;
+
+        input[type="search"] {
+          border-radius: 0;
+          appearance: none;
+        }
       }
 
       > .form-item,

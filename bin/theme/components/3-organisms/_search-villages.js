@@ -281,8 +281,8 @@ var $view = {};
             animatedScrollTo(villagesMap.$wrapper, function () {
 
               // On centre la carte
-              villagesMap.mapbox.setCenter([output.lng, output.lat]);
-              villagesMap.mapbox.setZoom(9);
+              // villagesMap.mapbox.setCenter([output.lng, output.lat]);
+              // villagesMap.mapbox.setZoom(9);
             });
           });
 

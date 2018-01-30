@@ -116,6 +116,7 @@ Styleguide 3.7
       height: .5em;
       width: auto;
       margin-left: get-layout("text-spacing", "std");
+      box-shadow: get-layout('text-shadow', 'large');
     }
   }
 
@@ -264,7 +265,32 @@ Styleguide 3.7
     }
   }
 
+  .breadcrumbs {
+
+    @include breakpoint("tablet") {
+      z-index: 3;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      color: get-color('grayscale', 'light');
+      text-shadow: get-layout('text-shadow', 'std');
+      padding: 0 0 get-layout("block-spacing", "std") get-layout("block-spacing", "std");
+    }
+
+    @include breakpoint("desktop") {
+      padding: 0 0 get-layout("block-spacing", "large") get-layout("block-spacing", "large");
+    }
+
+    @include breakpoint("desktop-large") {
+      padding: 0 0 get-layout("block-spacing", "x-large") get-layout("block-spacing", "x-large");
+    }
+  }
+
   &.focus {
+
+    .breadcrumbs {
+      display: none;
+    }
 
     .#{$name} {
 

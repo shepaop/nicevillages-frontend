@@ -108,6 +108,7 @@ Styleguide 3.6
       height: .6em;
       width: auto;
       margin-left: get-layout("text-spacing", "std");
+      box-shadow: get-layout('text-shadow', 'std');
     }
   }
 
