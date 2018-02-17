@@ -1,24 +1,33 @@
 %wysiwyg {
   @extend %body;
 
+  > *:first-child {
+    margin-top: 0;
+  }
+
   h2 {
     @extend %h2;
+    margin-top: get-layout('block-spacing', 'large');
   }
 
   h3 {
     @extend %h3;
+    margin-top: get-layout('block-spacing', 'large');
   }
 
   h4 {
     @extend %h4;
+    margin-top: get-layout('block-spacing', 'large');
   }
 
   h5 {
     @extend %h5;
+    margin-top: get-layout('block-spacing', 'large');
   }
 
   h6 {
     @extend %h6;
+    margin-top: get-layout('block-spacing', 'large');
   }
 
   table {
@@ -30,7 +39,7 @@
   ul,
   ol {
     @extend %typeface-std;
-    @extend %fs-std-root--baseline;
+    @extend %fs-std-root--baseline-simple;
 
     p,
     ul,
@@ -51,10 +60,6 @@
       &:active {
         @extend %color-ui-submit;
       }
-    }
-
-    &.baseline-simple {
-      @extend %fs-std-root--baseline-simple;
     }
   }
 
