@@ -53,10 +53,10 @@ var poisMap = {};
         );
 
         // Instanciation Mapbox
-        mapboxgl.accessToken = 'pk.eyJ1Ijoic2hlcGFvcDA3IiwiYSI6ImNqNjE5NThxZzByOHUzM21yd2Vtdjd2NmUifQ.KWUdy8hQ5LcLZvrQeoj1Zw';
+        mapboxgl.accessToken = _pk;
         poisMap.mapbox = new mapboxgl.Map({
           container: poisMap.$holder[0],
-          style: 'mapbox://styles/mapbox/outdoors-v10',
+          style: 'mapbox://' + _mapboxStyle,
           zoom: 8,
           minZoom: 4,
           maxZoom: 17,
@@ -188,7 +188,7 @@ var poisMap = {};
 
           // Fit bounds
           poisMap.targetedBounds = bounds;
-          poisMap.mapbox.fitBounds(bounds, {padding: _boundsPadding});
+          poisMap.mapbox.fitBounds(bounds, {padding: _boundsPadding, linear: true});
         };
 
         // On affiche les données

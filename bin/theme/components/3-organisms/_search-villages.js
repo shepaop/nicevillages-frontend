@@ -144,10 +144,10 @@ var $view = {};
         );
 
         // Instanciation Mapbox
-        mapboxgl.accessToken = 'pk.eyJ1Ijoic2hlcGFvcDA3IiwiYSI6ImNqNjE5NThxZzByOHUzM21yd2Vtdjd2NmUifQ.KWUdy8hQ5LcLZvrQeoj1Zw';
+        mapboxgl.accessToken = _pk;
         villagesMap.mapbox = new mapboxgl.Map({
           container: villagesMap.$holder[0],
-          style: 'mapbox://styles/mapbox/outdoors-v10',
+          style: 'mapbox://' + _mapboxStyle,
           zoom: 8,
           minZoom: 1,
           maxZoom: 17,
@@ -181,11 +181,11 @@ var $view = {};
         });
 
         if (!villagesDatas.length) {
-          villagesMap.mapbox.fitBounds([[-22.860179, 30.014604], [31.983572, 60.033416]], {padding: _boundsPadding});
+          villagesMap.mapbox.fitBounds([[-22.860179, 30.014604], [31.983572, 60.033416]], {padding: _boundsPadding, linear: true});
         }
         else {
           // Fit bounds
-          villagesMap.mapbox.fitBounds(bounds, {padding: _boundsPadding});
+          villagesMap.mapbox.fitBounds(bounds, {padding: _boundsPadding, linear: true});
         }
 
         // Ajout de l'évènement "move"

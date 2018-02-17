@@ -41,7 +41,9 @@
     "Countdown": true,
     "mapboxgl": true,
     "MapboxGeocoder": true,
-    "poisMap": true
+    "poisMap": true,
+    "_pk": true,
+    "_mapboxStyle": true
   },
   "rules": {
     // Errors.

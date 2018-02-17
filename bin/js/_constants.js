@@ -17,3 +17,17 @@ var _duration = 500;
  */
 // Timing de base des animations JS
 var _boundsPadding = 40;
+
+/**
+ * @var {string} _pk='pk.eyJ1Ijoic2hlcGFvcDA3IiwiYSI6ImNqNjE5NThxZzByOHUzM21yd2Vtdjd2NmUifQ.KWUdy8hQ5LcLZvrQeoj1Zw'
+ * @description Mapbox public token
+ */
+// Mapbox public token
+var _pk = 'pk.eyJ1Ijoic2hlcGFvcDA3IiwiYSI6ImNqNjE5NThxZzByOHUzM21yd2Vtdjd2NmUifQ.KWUdy8hQ5LcLZvrQeoj1Zw';
+
+/**
+ * @var {string} _mapboxStyle='styles/mapbox/outdoors-v10'
+ * @description Mapbox style
+ */
+// Mapbox style
+var _mapboxStyle = 'styles/mapbox/outdoors-v10';
