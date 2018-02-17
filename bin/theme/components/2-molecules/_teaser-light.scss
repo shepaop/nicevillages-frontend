@@ -10,6 +10,9 @@ sg-filename:
 
 Markup:
 <div class="#{$name}">
+  <div class="#{$name}--picture">
+    <img src="" alt="" width="100" height="100" />
+  </div>
   <div class="#{$name}--actions">
     <sg-insert>2.5.3</sg-insert>
   </div>
@@ -49,6 +52,13 @@ Styleguide 3.9
   &--desc {
     @extend %typeface-std;
     @extend %fs-std-root;
+  }
+
+  &--picture {
+    @extend %strech-child-from-mobile;
+    float: left;
+    margin-right: get-layout("block-spacing", "std");
+    margin-bottom: get-layout("block-spacing", "std");
   }
 
   &--actions {
