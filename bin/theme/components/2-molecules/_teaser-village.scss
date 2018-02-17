@@ -51,6 +51,14 @@ Styleguide 3.6
           transform: scale(1.1);
         }
       }
+
+      .#{$name}--overlay {
+        background-color: rgba(get-color('grayscale', 'dark'), 0);
+      }
+
+      .#{$name}--rating {
+        opacity: .5;
+      }
     }
 
     &:active {
@@ -80,6 +88,8 @@ Styleguide 3.6
   &--overlay {
     @extend %overlay-from-mobile;
     @extend %color-grayscale-light;
+    transition: background $css-transition-std linear;
+    background-color: rgba(get-color('grayscale', 'dark'), .4);
   }
 
   &--title {
@@ -118,6 +128,8 @@ Styleguide 3.6
     top: 0;
     max-width: 100%;
     box-sizing: border-box;
+    opacity: 1;
     padding: get-layout("block-spacing", "small") get-layout("block-spacing", "small") 0 0;
+    transition: opacity $css-transition-std linear;
   }
 }
