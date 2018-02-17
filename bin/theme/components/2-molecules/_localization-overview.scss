@@ -1,0 +1,29 @@
+$name: "localization-overview";
+
+/*
+#{$name}
+
+Aperçu sur la carte
+
+sg-filename:
+#{$name}
+
+Markup:
+<div class="#{$name}">
+  <img src="https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/static/url-http%3A%2F%2Fwww.nice-villages.com%2Fthemes%2Fnicevillages%2Fimg%2Ficon-map_plain.png(0.277972%2C45.481595)/0.277972,45.481595,5/400x300?access_token=pk.eyJ1Ijoic2hlcGFvcDA3IiwiYSI6ImNqNjE5NThxZzByOHUzM21yd2Vtdjd2NmUifQ.KWUdy8hQ5LcLZvrQeoj1Zw" alt="" class="{$name}--map">
+</div>
+
+sg-wrapper:
+<div style="">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 3.15
+*/
+
+.#{$name} {
+
+  &--map {
+    @extend %flex-image-from-mobile;
+  }
+}
